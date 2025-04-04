@@ -1,0 +1,1 @@
+the user prefers that you do not wait for the user to confirm the detailed plan. My github username is chirag127. Use the web search if any help is needed in the implementation of this browser extension. Also use the sequential thinking mcp server
