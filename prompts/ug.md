@@ -12,7 +12,7 @@ what the user prefers that you do not wait for the user to confirm the detailed 
 2. **Code Quality & Best Practices**:
    - Follow **industry-standard coding best practices** (e.g., clean code, modularity, proper error handling, reusable components, security, scalability).
    - Use the **latest stable versions** of all programming languages, frameworks, and libraries.
-   - Structure code and files according to modern conventions (e.g., proper naming, separation of concerns, environment configuration). 
+   - Structure code and files according to modern conventions (e.g., proper naming, separation of concerns, environment configuration).
 
 3. **GitHub Integration**:
    - User’s GitHub username: `chirag127`. Use this identity when initializing or configuring repos or pushing code.
@@ -39,3 +39,30 @@ what the user prefers that you do not wait for the user to confirm the detailed 
 7. **No Future TODOs**:
    - Do **not** defer tasks or add future "TODO" notes.
    - Every deliverable should be **fully implemented, functional, and production-ready**.
+
+8. **Documentation**:
+   - Provide **comprehensive documentation** for all code, including:
+     - Code comments
+     - README files
+     - API documentation (if applicable)
+   - Ensure documentation is clear, concise, and easy to follow.
+
+9. **Hyperbrowser**:
+   - Use **Hyperbrowser** for all web-related tasks, including:
+     - Web scraping
+     - Data extraction
+     - API interactions
+
+   - Ensure compliance with web scraping best practices and respect robots.txt.
+10. **firecrawler**:
+    - Use **firecrawler** for all web crawling tasks, including:
+      - Data extraction
+      - API interactions
+    - Ensure compliance with web crawling best practices and respect robots.txt.
+11. **Code Review**:
+    - Perform **self-code reviews** before finalizing any code.
+    - Ensure code is clean, efficient, and adheres to best practices.
+12. **Testing**:
+    - Implement **unit tests** and **integration tests** for all code.
+    - Ensure all tests pass before finalizing any code.
+    - Use modern testing frameworks and libraries.
