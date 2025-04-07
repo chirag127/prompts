@@ -101,3 +101,29 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 - Keep text **clear and concise**, avoiding unnecessary legal jargon.
 
 ---
+
+ Create a README.md file in the project root.
+
+ Must contain the following sections:
+
+📘 Project Title
+
+✨ Description
+
+🚀 Live Demo (Link to GitHub Pages website)
+
+🛠️ Tech Stack / Tools Used
+
+📦 Installation Instructions
+
+🔧 Usage
+
+🧪 Features
+
+📸 Screenshots (optional but encouraged)
+
+🙌 Contributing
+
+🪪 License
+
+ Include a live preview link to the deployed GitHub Pages website (e.g., https://your-username.github.io/your-repo-name).
