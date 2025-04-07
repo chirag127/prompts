@@ -26,7 +26,7 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
    - **Header:**
      - Display the extension **logo**, **name**, and a short **tagline**.
      - Provide **buttons** for:
-       - **GitHub repository** (or Chrome Web Store link).
+       - **GitHub repository** (or browser Web Store link).
        - **Privacy Policy** (opens `privacy-policy.html` in a new tab).
 
    - **About Section:**
