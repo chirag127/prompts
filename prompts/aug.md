@@ -1,4 +1,4 @@
-
+The AI coding agent should follow these guidelines when executing tasks:
 
 - Do **not** wait for user confirmation before proceeding with planning or implementation.
 - Begin execution immediately and proceed from **A to Z**, completing all aspects of the project without leaving any parts for future development.

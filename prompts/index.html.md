@@ -49,6 +49,8 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 
 ---
 
+## Create a `privacy-policy.html` file in the project root.
+
 ### **Privacy Policy (`privacy-policy.html`) Requirements**
 
 1. **Title & Heading**
@@ -127,3 +129,4 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 🪪 License
 
  Include a live preview link to the deployed GitHub Pages website (e.g., https://your-username.github.io/your-repo-name).
+
