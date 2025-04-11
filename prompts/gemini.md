@@ -1,4 +1,4 @@
-example code for gemeni 2.0 flash lite
+this following is example code for gemeni 2.0 flash lite api
 const {
   GoogleGenerativeAI,
   HarmCategory,
