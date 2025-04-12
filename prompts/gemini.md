@@ -1,4 +1,5 @@
-this following is example code for gemeni 2.0 flash lite api
+this following is example code for Gemini 2.0 Flash Thinking Experimental 01-21
+
 const {
   GoogleGenerativeAI,
   HarmCategory,
@@ -11,14 +12,14 @@ const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
 
 const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash-lite",
+  model: "gemini-2.0-flash-thinking-exp-01-21",
 });
 
 const generationConfig = {
-  temperature: 1,
+  temperature: 0.7,
   topP: 0.95,
-  topK: 40,
-  maxOutputTokens: 8192,
+  topK: 64,
+  maxOutputTokens: 65536,
   responseModalities: [
   ],
   responseMimeType: "text/plain",

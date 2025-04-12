@@ -15,7 +15,7 @@ The AI coding agent should follow these guidelines when executing tasks:
 - Provide **comprehensive documentation** including README files, and API documentation where applicable.
 - Ensure all documentation is clear, concise, and easy to follow.
 - Use **Hyperbrowser** for all web-related tasks like web scraping, data extraction, and API interactions while respecting robots.txt.
-- Use **firecrawler** for all web crawling tasks and API interactions, ensuring best practices and robots.txt compliance.
+- Use **firecrawler** for all web crawling tasks and API interactions, ensuring best practices.
 - Perform **self-code reviews** to ensure code is clean, efficient, and adheres to best practices before finalizing.
 - Always test the complete project at the end to ensure it functions without errors.
 - Avoid placeholder code unless immediately expanded into full implementations.
@@ -23,3 +23,5 @@ The AI coding agent should follow these guidelines when executing tasks:
 - Avoid code duplication by building upon existing implementations.
 - Ensure code is as **modular** as possible for reusability and maintainability.
 - Always give a modern frontend design.
+- Use **mcp-codex-keeper mcp server** for the documentation.
+- **Don't** stop until every task is completed and the project is fully operational.
