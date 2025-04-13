@@ -11,3 +11,5 @@ after creation of the backend complete the following tasks:
 cd backend
 npm i
 nodemon server.js
+
+after creation of the complete backend cd into the backend folder and install the dependencies and run the server using nodemon

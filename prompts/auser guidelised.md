@@ -15,7 +15,8 @@
 - Avoid placeholder code unless immediately expanded into full implementations.
 - Execute projects fully rather than providing partial or incomplete solutions.
 - Avoid code duplication by building upon existing implementations.
-- Ensure code is as **modular** as possible for reusability and maintainability.
 - Always give a modern frontend design.
 - **Don't** stop until every task is completed and the project is fully operational.
 - If necessary or you encounter any errors, consult additional resources or documentation from the web to enhance implementation quality.
+- don't add placeholder icons or images, if you need to add any icon or image first make a svg icon or image and then add it to the project and then convert it to png using js code and install the dependencies and run the script.
+- After creation of the complete backend cd into the backend folder , install the dependencies by using `cd backend ; npm i` and run the server using nodemon.
