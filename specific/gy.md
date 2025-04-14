@@ -54,7 +54,7 @@ give the each section of the document a proper heading and subheading and make i
 
 - Frontend: React Native Expo app using JavaScript.
 - ML: Uses Gemini 2.0 Flash-Lite.
-- Backend: Express.js + Gemini 2.0 Flash-Lite API for ai + ytdlp-nodejs for youtube video link validation and fetching video title and thumbnail and transcript it can be install with `npm i ytdlp-nodejs`
+- Backend: python fast api + yt-dlp + Gemini 2.0 Flash-Lite API for ai + mongodb for storage.
 - Project Structure:
   - frontend/ folder for React Native app code.
   - backend/ folder for backend code.
