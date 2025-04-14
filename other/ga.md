@@ -32,7 +32,7 @@ Sharing generated summaries directly from the app.
 - give the summary in a card format with the following details:
   - Video Title
   - Video Thumbnail
-  - Summary Text
+  - Summary Text(parsed in markdown format)
   - Summary Type (Brief, Detailed, Key Point)
   - Summary Length (Short, Medium, Long)
   - Read Aloud Button
@@ -40,6 +40,10 @@ Sharing generated summaries directly from the app.
   - Delete Button
   - Edit Button (to change summary type and length)
 - The app should have a history screen that displays all previously generated summaries in a list format.
+- the summary should be in the markdown format.
+- the app should have a settings screen where users can adjust the text-to-speech settings (speed, pitch, voice).
+-
+
 
 - Frontend: React Native Expo app using JavaScript.
 - ML: Uses Gemini 2.0 Flash-Lite.
