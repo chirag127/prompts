@@ -47,11 +47,14 @@ Sharing generated summaries directly from the app.
 
 - Frontend: React Native Expo app using JavaScript.
 - ML: Uses Gemini 2.0 Flash-Lite.
-- Backend: fast api + ytdlp for fetching video information.
+- Backend: Express.js + Gemini 2.0 Flash-Lite API for ai + ytdlp-nodejs for youtube video link validation and fetching video title and thumbnail and transcript it can be install with `npm i ytdlp-nodejs`
 - Project Structure:
   - frontend/ folder for React Native app code.
   - backend/ folder for backend code.
   - Storage: superbase for storage
 - Authentication: Use superbase for authentication and authorization.
+- Additional Features:
+  - Implement error handling for video link validation.
+  - Ensure the app is optimized for performance across all platforms.
 don't leave anything for future , this is a prd for final product not a mvp
 - Make Project Structure as modular as possible.
