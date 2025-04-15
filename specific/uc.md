@@ -1,2 +1,3 @@
 Then I ran $ npx expo-doctor@latest and $ npx expo install --check. Then, I selected yes to allow npm/expo to fix my dependencies and restarted the program.
 
+The app is not available in the list of the shareable link of the youtube, like when I share the link from the youtube app, the app dont appear in the list of the apps available to share the link with. like Whatsapp Telegram. Other apps are available, but this app is not available in the list

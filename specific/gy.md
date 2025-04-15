@@ -33,14 +33,11 @@ user can share the youtube videos links and it provides the summary of the video
     The transcript don't need to be in the English language. They can be in the any language The transcript can be in the any language, but the summay will always be in the English language. Update the prompt of the gemini model to always give the summary in the English language The transcript don't need to be in the English language only The subtitle don't need to be in the English language only. But always prefer the English language transcript
     the fallback plan if a video doesn't have transcripts or captions available is the Should app inform the user it cannot summarize this video?
     fetching the video_title, video_thumbnail is not critical? summary generation Should not fail if the title, thumbnail can't be retrieved?
-    fetch the Captions/subtitles by using the youtube api and then pass the captions/subtitles to the gemini 2.0 flash-lite api for summary generation.
-    don't use third party libraries for fetching the captions/subtitles from the youtube video. use the youtube api for fetching the captions/subtitles.
 -   The app should have a modern and user-friendly design, with a focus on usability and accessibility.
 -   The app should support dark mode and light mode for better user experience.
 
 -   this app will be android, ios and web compatible.
 -   The app should be built using React Native and Expo for cross-platform compatibility.
-the app should be built using the javascript programming language in the frontend and express.js javascript framework in the backend.
     Sharing generated summaries directly from the app.
 -   give the summary in a card format with the following details:
     -   Video Title
@@ -110,7 +107,9 @@ ask the agent to Don't withhold yourself from searching anything on the web. If 
 
 -   Frontend: React Native Expo app using JavaScript.
 -   ML: Uses Gemini 2.0 Flash-Lite.
--   Backend: express.js + Gemini 2.0 Flash-Lite API for ai + mongodb for storage + youtube api for fetching video details.
+-   Backend: fast api + Gemini 2.0 Flash-Lite API for ai + mongodb for storage + yt-dlp python library for youtube video transcript and thumbnail fetching and other details.
+- the app should be built using the javascript programming language in the frontend and fast api python framework in the backend.
+
 -   Project Structure:
     -   frontend/ folder for React Native app code.
     -   backend/ folder for backend code.
