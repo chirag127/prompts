@@ -4,8 +4,10 @@ user can share the youtube videos links and it provides the summary of the video
 
 -   The app allows the user to read aloud the summary using text-to-speech functionality.
 -   the app should highlight the text being read aloud words by words.
--   add a next and previous button to read the next sentence or previous sentence.
+- the app should scroll the text being read aloud to the top of the screen.
 -   don't read aloud the markdown symbols like #, \*, etc.
+-   add a next and previous button to read the next sentence or previous sentence.
+
 -   The app should provide a way for users to adjust the text-to-speech settings (speed, pitch, voice).
 -   The app should provide a way for users to pause and resume the read-aloud feature.
 -   The app should provide a way for users to stop the read-aloud feature.
@@ -28,7 +30,7 @@ user can share the youtube videos links and it provides the summary of the video
     When displaying a summary, the video's title and thumbnail should always be fetched and displayed alongside it?
     In the history list, information should be shown for each entry Thumbnail + Title
     users Shouldbe able to delete summaries from their history?
-
+The transcript don't need to be in the English language. They can be in the any language The transcript can be in the any language, but the summay will always be in the English language. Update the prompt of the gemini model to always give the summary in the English language The transcript don't need to be in the English language only The subtitle don't need to be in the English language only. But always prefer the English language transcript
 the fallback plan if a video doesn't have transcripts or captions available is the Should app inform the user it cannot summarize this video?
 fetching the video_title, video_thumbnail is not critical? summary generation Should not fail if the title, thumbnail can't be retrieved?
 
@@ -57,7 +59,7 @@ fetching the video_title, video_thumbnail is not critical? summary generation Sh
 
 -   Frontend: React Native Expo app using JavaScript.
 -   ML: Uses Gemini 2.0 Flash-Lite.
--   Backend: python fast api + yt-dlp + Gemini 2.0 Flash-Lite API for ai + mongodb for storage.
+-   Backend: python express.js + Gemini 2.0 Flash-Lite API for ai + mongodb for storage + youtube api for fetching video details.
 -   Project Structure:
     -   frontend/ folder for React Native app code.
     -   backend/ folder for backend code.
@@ -72,3 +74,4 @@ fetching the video_title, video_thumbnail is not critical? summary generation Sh
 assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it. The agent should also ensure that the app is compatible with all platforms (Android, iOS, and Web) and can be installed as a progressive web app on mobile devices. The agent should also ensure that the app is user-friendly and provides a seamless experience for users.
 give me the prd as long as possible
 ask the agent to ensure that the frontend is error-free
+    give me the prd as long as possible
