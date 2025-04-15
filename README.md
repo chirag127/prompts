@@ -2,8 +2,8 @@
 
 
 cd ..
-npx create-expo-app --template blank YTSummarizer8-react-native-expo-app
-cd YTSummarizer8-react-native-expo-app
+npx create-expo-app --template blank YTSummarizer11-react-native-expo-app
+cd YTSummarizer11-react-native-expo-app
 code .
 
 
