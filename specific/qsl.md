@@ -53,6 +53,7 @@ answer: The user can still save/restore sessions locally when offline. When they
 answer: The user can still save/restore sessions locally, but they will not be able to sync the data with the backend until they create an account.
 
 the sign up and sign in button will be available in the extension popup and the user can create an account or sign in to their existing account.
+only the buttons will be shown not the form.
 
 
 20 . will user be able to see the saved sessions in the extension popup without signing in?
@@ -98,14 +99,11 @@ Is building a browser extension with the following setup:
 - Project Structure:
   - extension/ folder for browser extension code.
   - backend/ folder for backend code.
-- make the project structure as modular as possible and easy to maintain.
-
   - Storage: MongoDB for storage.
 
-the name of the browser extension will be "Quick Switch Login".
+the name of the browser extension will be "Session Sync Pro".
 
 - don't leave anything for future , this is a prd for final product not a mvp
 
 
 assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain.
-give me the prd as long as possible to cover all aspects of the project, including detailed specifications, user stories, and acceptance criteria.
