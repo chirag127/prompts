@@ -9,13 +9,13 @@ To help refine the implementation plan, here are some questions and answers to c
 1.  **What constitutes a "session"?** Are you planning to store *only* cookies, or also other session-related data like `localStorage` or `sessionStorage` for the specific website? (Restoring `localStorage`/`sessionStorage` is more complex than cookies).
 answer: I am planning to store all the session related data like cookies, localStorage and sessionStorage for the specific website.
 2.  **How granular is the storage?** Will it save the session for the exact domain (e.g., `app.example.com`) or for the entire base domain (e.g., all of `*.example.com`)?
-answer: I am planning to store all the session related data like cookies, localStorage and sessionStorage for the specific website.
+answer: I am planning to store all the session related data like cookies for the specific website only and not for the entire base domain.
 3.  **How is a session saved?** Will the user manually click a "Save Session" button in the extension's popup/interface when they are on the target website? Or is there any automatic saving logic?
-answer: I am planning to store all the session related data like cookies, localStorage and sessionStorage automatically when the user is on the any website.
+answer: I am planning to allow the user to manually click a "Save Session" button in the extension's popup/interface when they are on the target website.
 4.  **How are saved sessions identified/named?** Does the user provide a custom name for each saved session (e.g., "Work Account," "Test User Login")? Or is it just timestamped?
 answer: I am planning to allow users to provide a custom name for each saved session.
 5.  **How is a session restored?** Does the user navigate to the website first and *then* click a "Restore" button for a specific saved session? What happens if they are already logged in with a *different* session on that site when they try to restore?
-answer: when the user clicks on the restore button and if they are already logged in with a different session on that site then the extension will ask the user to confirm if they want to restore the session or not. and if the user confirms then the extension will restore the session and also save the current session in the backend.
+answer: when the user clicks on the restore button and if they are already logged in with a different session on that site then the extension will ask the user if they want to replace the current session with the saved one.
 6.  **What happens to existing cookies when restoring?** Does restoring *replace* all current cookies for that domain with the saved ones, or does it try to merge/add them? (Replacing is usually simpler and more effective for login sessions).
 answer: restoring will replace all current cookies for that domain with the saved ones.
 7.  **HttpOnly Cookies:** Are you aware that browser extensions often cannot *read* `HttpOnly` cookies (a common security measure for session cookies)? They *can* usually set/delete them with the right permissions. How will your extension handle situations where it might not be able to fully "see" the session it's trying to save?
@@ -32,7 +32,7 @@ answer: Each saved session will display the website's name and logo for easy ide
 11. **What feedback does the user get after saving or restoring a session?** (Success message? Error message if it fails?)
 answer: The user will receive a success message upon saving or restoring a session, and an error message if the operation fails, ensuring they are informed of the outcome.
 12. **Does the extension need to reload the page after restoring a session for the changes to take effect?** Will it do this automatically or prompt the user?
-answer: The extension will automatically reload the page after restoring a session to ensure that the changes take effect immediately.
+answer: ask the user.
 
 **III. Authentication & Synchronization:**
 
@@ -48,6 +48,20 @@ answer: HTTP/HTTPS will be used to secure data during transit between the extens
 answer: The extension will sync with the backend on every save/restore.
 18. **What happens if the user is offline?** Can they still save/restore sessions locally? How is syncing handled when they come back online?
 answer: The user can still save/restore sessions locally when offline. When they come back online, the extension will automatically sync the local data with the backend.
+
+19. what happens if the user does not have an account?
+answer: The user can still save/restore sessions locally, but they will not be able to sync the data with the backend until they create an account.
+
+the sign up and sign in button will be available in the extension popup and the user can create an account or sign in to their existing account.
+
+
+20 . will user be able to see the saved sessions in the extension popup without signing in?
+answer: yes the user will be able to see the saved sessions in the extension popup without signing in, but they will not be able to sync the data with the backend until they create an account.
+
+21. **How will the extension handle session expiration?** (e.g., if a session is no longer valid, will it notify the user?)
+answer: The extension will notify the user if a session is no longer valid and provide options to refresh or re-authenticate as needed.
+22. **Will the user be able to disable the extension for specific websites?** (e.g., a whitelist/blacklist feature?)
+answer: The user will be able to disable the extension for specific websites using a whitelist/blacklist feature.
 
 **IV. Security & Permissions:**
 
@@ -70,8 +84,8 @@ answer: The extension will be designed to handle changes in cookie structure or 
 give me the prd in a markdown format with the following sections:
 # Product Requirements Document (PRD) for Browser Extension
 1. **Overview**
-   - The goal is to create a browser extension that allows users to save and restore sessions for specific websites, including cookies, `localStorage`, and `sessionStorage`. The extension will support user authentication for syncing sessions across devices.
-    - The extension will provide a user-friendly interface for saving and restoring sessions, with options for automatic saving and custom naming of sessions.
+   - The goal is to create a browser extension that allows users to save and restore sessions for specific websites, including cookies, `localStorage`, and `sessionStorage``. The extension will support user authentication for syncing sessions across devices.
+    - The extension will provide a user-friendly interface for saving and restoring sessions, with options for custom naming of sessions.
     - The extension will also ensure secure handling of session data, including encryption and robust authentication mechanisms.
 ### 4. Core Features and Functional Requirements
 
