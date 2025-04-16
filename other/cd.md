@@ -22,3 +22,9 @@ Is building a browser extension with the following setup:
 - Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
 - Project Structure:
   - extension/ folder for browser extension code.
+        don't leave anything for future , this is a prd for final product not a mvp
+
+
+assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
+
+ask the agent to ensure that the frontend is error-free
