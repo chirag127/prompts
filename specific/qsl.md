@@ -107,3 +107,4 @@ the name of the browser extension will be "Session Sync Pro".
 
 
 assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain.
+give the prd as concise as necessary and in a markdown format.

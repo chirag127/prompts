@@ -20,3 +20,4 @@
 - If necessary or you encounter any errors, consult additional resources or documentation from the web to enhance implementation quality.
 - don't add placeholder icons or images, if you need to add any icon or image first make a svg icon or image and then add it to the project and then convert it to png using javascript code and install the dependencies like sharp and run the script. When adding icons or images to the project, first create an SVG file, then convert it to PNG using JavaScript code using the sharp library, and finally add the PNG file to the project. This ensures that all icons and images are of high quality and properly formatted for use in the project.
 - After creation of the complete backend cd into the backend folder , install the dependencies by using `cd backend ; npm i` and run the server using nodemon.
+- use context7 MCP for pulling up-to-date, version-specific documentation
