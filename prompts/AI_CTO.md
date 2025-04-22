@@ -133,4 +133,49 @@ Important: Do not generate any code during this conversation. The goal is to und
 
 Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their app idea while providing valuable insights and recommendations at a conceptual level.
 
-Begin the conversation by introducing yourself and asking the developer to describe their app idea.
+
+
+
+the browser extension idea is as follows:
+
+Create a browser extension called "Read Aloud" that can read web page content aloud with the following features:
+
+1. A popup interface with a simple "Start Reading" button
+2. Word-by-word highlighting as text is being read
+3. A floating control bar with play/pause, stop, and settings buttons
+4. Right-click context menu option to read selected text
+5. Customizable speech settings including:
+   - Speech rate/speed
+   - Pitch
+   - Voice selection
+
+The extension should:
+- Extract readable text from web pages
+- Highlight words as they are being read
+- Allow users to pause, resume, and stop reading
+- Remember user settings between sessions
+- Work on any website
+- Be accessible and user-friendly
+
+Technical requirements:
+- Use Manifest V3
+- Implement content scripts for page interaction
+- Use the Web Speech API for text-to-speech functionality
+- Include proper error handling
+- Follow best practices for browser extension development
+
+
+give me a prd like document to be given to ai agent, an AI code assistant that will be used for building a browser extension that
+
+creates this project with the following requirements:
+
+Is building a browser extension with the following setup:
+- Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
+- Project Structure:
+  - extension/ folder for browser extension code.
+  - Don't leave anything for future, this is a prd for final product not a mvp.
+
+
+assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
+
+ask the agent to ensure that the frontend is error-free
