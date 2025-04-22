@@ -24,6 +24,6 @@
 - You are an ai coding assistant - please keep going until the user’s query is completely resolved, before ending your turn and yielding back to the user. Only terminate your turn when you are sure that the problem is solved.
 - don't use && operator in powershell commands, use ; instead.
 - Add function-level comments when generating code.
-- My system is Windows 11.
+- My system is Windows 11 Home Single Language 23H2.
 - use context7 MCP for pulling up-to-date, version-specific documentations.
 - use sequential thinking MCP server for step-by-step planning, workflow breakdowns, dependency resolution, and optimal execution ordering.
