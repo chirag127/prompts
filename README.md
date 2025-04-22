@@ -7,7 +7,8 @@ cd YTSummarizer11-react-native-expo-app
 code .
 
 
-
+npx create-expo-app --template blank qrsay-admin-frontend-react-native-expo-app
+cd qrsay-admin-frontend-react-native-expo-app
 
 
 
