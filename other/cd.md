@@ -23,7 +23,6 @@ Is building a browser extension with the following setup:
 - Project Structure:
   - extension/ folder for browser extension code.
   - backend/ folder for backend code.
-  - Storage: MongoDB for storage.
 
 
 Is building a browser extension with the following setup:
