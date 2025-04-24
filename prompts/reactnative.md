@@ -4,7 +4,6 @@ use the following Tools and Packages to build a React Native app in 2025
 ### Core Setup
 
 *   **Framework:** **Expo** is strongly recommended for all new React Native projects in 2025. It simplifies development, provides a smoother experience, and is favored by major companies.
-*   **Typescript:** Highly recommended for improved code quality, easier debugging, and overall developer experience. The compiler and IDE can help you catch errors early.
 *   **Navigation:**
     *   **Expo Router:** Preferred by the speaker. It leverages file-based routing, offering a more cross-platform approach and simplified setup. Includes features like API routes and dynamic components.
     *   **React Navigation:** A viable option, particularly if you prioritize screen-based navigation.
@@ -37,7 +36,6 @@ use the following Tools and Packages to build a React Native app in 2025
 *   **Clerk:**  The preferred choice for user authentication and management, including social providers.
 *   **React Native Gesture Handler:** Essential for capturing gestures, including pen gestures, rotations, flings, and long presses. Often included in Expo projects.
 *   **Error Tracking:** **Bugsnag** is also a great tool for tracking errors in production.
-*   **React Native Vision Camera:** The best option for capturing photos, videos, QR codes, and barcode scanning, with optimal performance.
 
 
 
@@ -48,7 +46,7 @@ scans the qr code.
 
 The agent should ensure that the browser extension is built with the following setup:
 
-- Frontend: React Native Expo app using typescript.
+- Frontend: React Native Expo app using javascript.
 - Project Structure:
   - frontend/ folder for React Native app code.
     -   Don't leave anything for future, this is a prd for final product not a mvp.
