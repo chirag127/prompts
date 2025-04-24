@@ -39,3 +39,21 @@ use the following Tools and Packages to build a React Native app in 2025
 *   **React Native Gesture Handler:** Essential for capturing gestures, including pen gestures, rotations, flings, and long presses. Often included in Expo projects.
 *   **Error Tracking:** **Bugsnag** is also a great tool for tracking errors in production.
 *   **React Native Vision Camera:** The best option for capturing photos, videos, QR codes, and barcode scanning, with optimal performance.
+
+
+
+give me a prd like document to be given to ai agent, an AI code assistant that will be used for building a react native app that
+
+scans the qr code.
+
+
+The agent should ensure that the browser extension is built with the following setup:
+
+- Frontend: React Native Expo app using typescript.
+- Project Structure:
+  - frontend/ folder for React Native app code.
+    -   Don't leave anything for future, this is a prd for final product not a mvp.
+
+Assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
+
+Ask the agent to ensure that the frontend is error-free
