@@ -128,20 +128,18 @@ Remember to maintain a friendly, supportive tone throughout the conversation. Sp
 
 
 
-the browser extension idea is as follows:
-Auto-TL;DR: Summarizes long articles or PDFs with one click.
-
 give me a prd like document to be given to ai agent, an AI code assistant that will be used for building a browser extension that
 
-Auto-TL;DR: Summarizes long articles or PDFs with one click.
+Minimalist Mode: Strips any website down to pure text + essential images, like a super clean "reading mode" for the whole internet.
 
-Is building a browser extension with the following setup:
+
+The agent should ensure that the browser extension is built with the following setup:
 
 -   Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
 -   Project Structure:
     -   extension/ folder for browser extension code.
     -   Don't leave anything for future, this is a prd for final product not a mvp.
 
-assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
+Assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
 
-ask the agent to ensure that the frontend is error-free
+Ask the agent to ensure that the frontend is error-free
