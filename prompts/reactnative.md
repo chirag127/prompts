@@ -27,7 +27,6 @@ use the following Tools and Packages to build a React Native app in 2025
     *   **Maestro:**  Highly recommended for UI testing; it's easy to set up and use.
     *   **React Native Testing Library:** Offers great documentation, code examples and is the recommended library for testing.
 *   **Monitoring:**  **Sentry** is essential for monitoring bugs and application performance.
-*   **Error Tracking:** **Bugsnag** is also a great tool for tracking errors in production.
 
 ### Must-Have Packages
 
