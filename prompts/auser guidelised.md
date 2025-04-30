@@ -24,5 +24,7 @@
 - don't use && operator in powershell commands, use ; instead.
 - Add function-level comments when generating code.
 - My system is Windows 11 Home Single Language 23H2.
-- use context7 MCP for pulling up-to-date, version-specific documentations. use context7 MCP during reseach and also before yo implement any new third party API or change to the structure of the project or anything you must first read the up to date documentation on that thing. This is extremely important, and you cannot not do this at any time you must always check documentation as things may have changed since you were trained.
-- use sequential thinking MCP server for step-by-step planning, workflow breakdowns, dependency resolution, and optimal execution ordering. use sequential thinking MCP for planning each step and ensuring we are completely this process to its maximum.
+- use context7 tool for pulling up-to-date, version-specific documentations. use context7 tool during reseach and also before yo implement any new third party API or change to the structure of the project or anything you must first read the up to date documentation on that thing. This is extremely important, and you cannot not do this at any time you must always check documentation as things may have changed since you were trained.
+- use sequential thinking tool for step-by-step planning, workflow breakdowns, dependency resolution, and optimal execution ordering. use sequential thinking tool for planning each step and ensuring we are completely this process to its maximum.
+- Avoid using placeholder data or mock data as we are not making a mvp we are a production ready project and we have to use real data and real api everywhere.
+- use context7, sequential thinking, taskmanager, fetch, puppeteer browser control, toolbox and firecrawl tools

@@ -131,18 +131,66 @@ Remember to maintain a friendly, supportive tone throughout the conversation. Sp
 
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 
-a browser extension that can read aloud text from all the images in the browser. The extension uses gemini ai to read aloud the text from the images. the extension should be able to scroll the text being read aloud to the top of the screen. The extension should also provide user controls for play, pause, and stop functionality. The extension should also allow users to select specific images for reading aloud. The extension should also include options for adjusting the reading speed and voice selection. The extension should send batch requests to the gemini ai for reading aloud text from images. The extension should also include a history feature that allows users to view previously read text. The extension should also include a feature that allows users to save their reading preferences. The extension will have a options page where users can adjust the settings. The extension should also include a feature for users to reset their preferences to default.
+GhostTyper is a browser extension that provides real-time, inline AI writing suggestions as users type into any form or text input field on the web. Designed like GitHub Copilot but for everyday writing, it allows users to accept suggestions with a simple press of the **Tab** key.
 
 
 The agent should ensure that the browser extension is built with the following setup:
 
--   Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
+-   Frontend: Browser Extension
 -   Project Structure:
     -   extension/ folder for browser extension code.
+    -   backend/ folder for the backend code for the AI model integration.
+
+    -   ensure the backend is designed to handle AI model requests efficiently.
+    -   ensure the backend is designed to handle AI model requests efficiently.
     -   ensure the extension is built with a focus on user experience and performance.
+    -   ensure the backend is designed to handle AI model requests efficiently.
     -   Don't leave anything for future, this will be a prd for final product not a mvp.
 
 
 Assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
 
 Ask the agent to ensure that the frontend is error-free
+
+
+IMPORTANT: use the following code for the gemini integration:
+```javascript
+// To run this code you need to install the following dependencies:
+// npm install @google/genai mime
+// npm install -D @types/node
+
+import {
+  GoogleGenAI,
+} from '@google/genai';
+
+async function main() {
+  const ai = new GoogleGenAI({
+  });
+  const config = {
+    responseMimeType: 'text/plain',
+  };
+  const model = 'gemini-2.5-flash-preview-04-17';
+  const contents = [
+    {
+      role: 'user',
+      parts: [
+        {
+          text: `INSERT_INPUT_HERE`,
+        },
+      ],
+    },
+  ];
+
+  const response = await ai.models.generateContentStream({
+    model,
+    config,
+    contents,
+  });
+  for await (const chunk of response) {
+    console.log(chunk.text);
+  }
+}
+
+main();
+```
+

@@ -1,0 +1,1 @@
+- use context7, sequential thinking, taskmanager, fetch, puppeteer browser control, toolbox, firecrawl tool
