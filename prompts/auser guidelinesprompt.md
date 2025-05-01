@@ -1,0 +1,2 @@
+enhance these user guidelines to be given to the Augment Agent, an agentic coding AI assistant developed by Augment Code, based on the Claude 3.7 Sonnet model by Anthropic, dont leave any point, give different points for tools ,don't incorporate tools usage in common general points , give tools related point at the last, organize the points properly
+keep everything in - only. give as many points as possible. dont leave anything, give in a structured heading and subheading format

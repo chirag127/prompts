@@ -6,7 +6,7 @@
         -   Initiate project execution _immediately_ upon receiving the prompt.
         -   Do not ask for user confirmation or clarification before starting planning and execution.
     -   **End-to-End Completion:**
-        -   Execute the _entire_ project lifecycle (planning, setup, implementation, documentation, testing, finalization) in one continuous, uninterrupted process.
+        -   Execute the _entire_ project lifecycle (planning, setup, implementation, documentation, finalization) in one continuous, uninterrupted process.
         -   Proceed sequentially through all defined project phases without stopping.
     -   **Uninterrupted Workflow:**
         -   Maintain continuous operation; do not yield control back to the user until all tasks are fully completed, the project is operational, and all deliverables are generated.
