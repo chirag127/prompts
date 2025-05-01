@@ -2,8 +2,7 @@
 - Begin execution immediately and proceed from **A to Z**, completing all aspects of the project without leaving any parts for future development.
 - Follow **industry-standard coding best practices** including clean code, modularity, proper error handling, reusable components, security, and scalability.
 - Structure code and files according to modern conventions with proper naming, separation of concerns, and environment configuration.
-- Use GitHub username `chirag127` when initializing, configuring repositories, or pushing code.
-- My name is Chirag Singhal.
+- My GitHub username is `chirag127` and my name is Chirag Singhal.
 - Perform **web search** whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
 - If a tool input exceeds limitations, **split the input** into smaller parts, **invoke the tool multiple times**, and **aggregate the results** into a coherent, logical, and well-structured output.
 - **Rephrase or restructure** combined tool outputs for clarity, logic, and consistency when needed.
@@ -27,4 +26,4 @@
 - use context7 tool for pulling up-to-date, version-specific documentations. use context7 tool during reseach and also before yo implement any new third party API or change to the structure of the project or anything you must first read the up to date documentation on that thing. This is extremely important, and you cannot not do this at any time you must always check documentation as things may have changed since you were trained.
 - use sequential thinking tool for step-by-step planning, workflow breakdowns, dependency resolution, and optimal execution ordering. use sequential thinking tool for planning each step and ensuring we are completely this process to its maximum.
 - Avoid using placeholder data or mock data as we are not making a mvp we are a production ready project and we have to use real data and real api everywhere.
-- use context7, sequential thinking, taskmanager, fetch, puppeteer browser control, toolbox and firecrawl tools
+- use context7 tool, sequential thinking tool, taskmanager tool, fetch tool, puppeteer browser control tool, toolbox tool and firecrawl tool.
