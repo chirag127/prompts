@@ -132,13 +132,13 @@
 -   **Strictly prohibit** hardcoding API keys, passwords, tokens, or any sensitive information directly into source code.
 -   Implement/recommend API key security best practices (generate strong/unique keys, rotate regularly, apply least privilege, monitor usage) in documentation.
 
-## Asset Generation (Icons/Images)
+## Asset Generation (Icons/Images) & Placeholder Avoidance (Mandatory & Strict Prohibition)
 
 -   **Do not** use placeholder images or icons (e.g., grey boxes, "coming soon" text). Avoid entirely.
 
 ### SVG-to-PNG Workflow (Mandatory)
 
--   If generating icons or simple graphical images:
+-   If generating icons or simple graphical images you **must** follow this workflow:
     -   Step 1: Create the graphic as SVG (markup or `.svg` file).
     -   Step 2: Write a build script (e.g., `scripts/generate-pngs.js`) using the `sharp` image processing library.
     -   Step 3: Ensure `sharp` (and other script dependencies) are installed as a development dependency (e.g., `npm install --save-dev sharp`).
