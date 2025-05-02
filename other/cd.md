@@ -4,6 +4,7 @@ creates this project with the following requirements:
 
 Is building a browser extension with the following setup:
 - Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
+- ML: Uses Gemini 2.0 Flash Lite.
 - Project Structure:
   - extension/ folder for browser extension code.
   - backend/ folder for backend code.

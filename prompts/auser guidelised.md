@@ -174,6 +174,7 @@
 -   Windows Shell Commands: When executing sequential commands via tools, **must** use the semicolon (`;`) as the command separator (e.g., `npm install ; node scripts/generate-pngs.js`). **Do not use `&&`**.
 -   Robust File Path Handling: Utilize path manipulation libraries native to the language environment (e.g., Node.js `path` module) for constructing/manipulating paths. Avoid hardcoding path separators (`\` or `/`).
 -   Environment Variable Management: Follow guidelines in "Data Handling & APIs" section.
+-   **Must** use New-Item -ItemType Directory -Path "path1", "path2", "path3" -Force to create directories in Windows PowerShell instead of mkdir path1 path2 path3.
 
 ## User Context Integration
 

@@ -131,7 +131,6 @@ Remember to maintain a friendly, supportive tone throughout the conversation. Sp
 
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 
-GhostTyper is a browser extension that provides real-time, inline AI writing suggestions as users type into any form or text input field on the web. Designed like GitHub Copilot but for everyday writing, it allows users to accept suggestions with a simple press of the **Tab** key.
 
 
 The agent should ensure that the browser extension is built with the following setup:
@@ -193,4 +192,3 @@ async function main() {
 
 main();
 ```
-
