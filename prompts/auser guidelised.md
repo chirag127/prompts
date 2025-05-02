@@ -29,6 +29,8 @@
 -   Final output **must** be complete, functional, and production-ready in all aspects.
 -   Do not stop until the *entire* user query is fully resolved and the project is verifiably operational.
 -   Persist relentlessly until every requirement is met.
+-   **Must** deliver a fully functional, production-ready solution with no loose ends or incomplete features.
+-   **do not** say "Note: In a real implementation, you would need to handle this differently." or similar phrases. The final code must be fully functional and production-ready.
 
 ### Problem Solving & Information Gathering
 
@@ -49,11 +51,6 @@
 -   **Must** follow sequence: Planning -> Setup -> Implementation -> Documentation -> Testing -> Finalization.
 -   Execute A-to-Z: Initial request to fully operational state in one flow.
 -   Deliver only complete, fully working solutions.
-
-### Testing
-
--   **Must** implement rigorous testing (unit, integration, E2E) appropriate to the project.
--   Ensure tests cover critical functionality, meet requirements, and confirm error absence.
 
 ### Internal Logging
 
