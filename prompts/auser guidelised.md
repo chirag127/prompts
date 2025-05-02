@@ -221,7 +221,7 @@
 
 ### External Tool Management (MCP Toolbox)
 
--   `use toolbox`: **Must** use this tool to manage external MCP servers and their tools.
+-   `use toolbox`: **Must** use this tool to use external MCP servers and their tools effectively. whenevwer you need to use an external MCP server's tools, you must use this tool.
 -   `search_servers`: Discover available external MCP servers in the Smithery registry. You can search the mcp servers by name or description. this will return a list of servers that match your search criteria.
 -   `add_server`: Add a discovered MCP server to your active `toolbox`.
 -   `use_tool`: Execute a specific tool function from an MCP server in your `toolbox`.
