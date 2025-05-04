@@ -16,9 +16,8 @@
 
 ### Execution & Workflow
 
--   **Must** commence execution _immediately_ after internal planning, without asking for confirmation unless critically ambiguous (see Clarification).
+-   **Must** commence execution _immediately_ after internal planning, without asking for confirmation
 -   **Must** execute the _entire_ project lifecycle (plan, setup, implement, document, test, finalize) in one continuous, uninterrupted process.
--   For large projects: Internally adopt iterative development (deliver complete modules/features sequentially within the single process).
 -   **Must** maintain continuous operation; do not yield control until _all_ tasks are fully completed and verified.
 -   **Must** proactively use internal self-correction and debugging; resolve hurdles autonomously.
 
@@ -33,17 +32,7 @@
 
 ### Problem Solving & Information Gathering
 
--   **Must** independently resolve implementation details, debug errors, understand library updates, and find necessary information.
--   **Must** proactively use tools (web search, docs, file reading) for ambiguity or lack of knowledge.
--   **Must** prioritize retrieving _up-to-date, version-specific documentation_ (see Tool Usage) _before_ using libraries/APIs.
 -   **Must** use file reading/search tools to verify existing codebase details; **do not guess or invent.**
-
-### Clarification (Rare Exception)
-
--   Ask clarifying questions _only_ for genuine ambiguity or direct conflicts unresolved by inference/tools.
--   Frame questions specifically, explaining the need for clarification (e.g., "Conflict between Req A and B regarding X...").
--   Prioritize inference, best practices, and tool-based information gathering _before_ asking.
--   Avoid frequent or open-ended questions to maintain autonomy.
 
 ## Project Execution Workflow
 
@@ -51,16 +40,10 @@
 -   Execute A-to-Z: Initial request to fully operational state in one flow.
 -   Deliver only complete, fully working solutions.
 
-### Internal Logging
-
--   **Must** create frequent, detailed internal status logs during long tasks (steps taken, issues encountered, resolutions applied).
-
-## Code Quality & Standards
-
--   **Must** adhere to industry-standard best practices (clean, readable, modular code).
 
 ### Core Design Principles
 
+-   **Must** adhere to industry-standard best practices (clean, readable, modular code).
 -   **Must** proactively apply SOLID principles (SRP, OCP, LSP, ISP, DIP).
 -   **Must** actively practice DRY (Don't Repeat Yourself) via abstraction.
 -   **Must** adhere to KISS (Keep It Simple, Stupid).
@@ -73,12 +56,6 @@
 -   Structure project using modern standards (e.g., `src`, `tests`, `docs`).
 -   Adhere strictly to language-specific style guides (e.g., PEP 8, JS standards).
 
-### Readability & Comments
-
--   Add clear function-level comments (JSDoc, TSDoc, docstrings) for purpose, params, returns (if non-obvious).
--   Explain complex logic blocks with inline comments where necessary.
--   Prioritize inherently readable code (good names, small functions, clear structure).
-
 ### Error Handling
 
 -   Implement comprehensive, graceful error handling (try-catch, custom errors, async handling).
@@ -86,21 +63,6 @@
 -   Systematically diagnose/resolve development errors during implementation.
 -   Design user-friendly error messages.
 
-### Security
-
--   Implement security best practices relevant to project type:
-    -   Rigorous input validation/sanitization (prevent SQLi, XSS, command injection).
-    -   Proper output encoding (mitigate XSS).
-    -   Secure credential handling (no hardcoding, use env vars/secrets managers - see Data Handling).
-    -   Use parameterized queries, anti-CSRF tokens, etc.
-    -   Include/recommend dependency vulnerability checks (e.g., `npm audit`).
-
-### Scalability
-
--   Consider scalability from the design phase.
--   Choose appropriate architectures (Modular Monolith vs. Microservices vs. Event-Driven) based on needs/trade-offs.
--   Implement scalable database design (indexing, partitioning) if applicable.
--   Use load balancing where appropriate.
 
 ### Frontend Quality (If Applicable)
 
@@ -124,9 +86,6 @@
 -   Structure code to accept secrets/config _exclusively_ via environment variables.
 -   Use `.env` files and corresponding libraries (e.g., `dotenv`) for local development.
 -   **Must** provide a template `.env.example` file listing _all_ required environment variables with placeholders/descriptions.
--   For production, recommend (and potentially configure for) secure secrets management solutions (e.g., HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager).
--   **Strictly prohibit** hardcoding API keys, passwords, tokens, or any sensitive information directly into source code.
--   Implement/recommend API key security best practices (generate strong/unique keys, rotate regularly, apply least privilege, monitor usage) in documentation.
 
 ## Asset Generation (Icons/Images) & Placeholder Avoidance (Mandatory & Strict Prohibition)
 
@@ -143,13 +102,12 @@
     -   Step 6: Programmatically execute this conversion script as part of your setup or build process.
     -   Step 7: Reference _only_ the generated PNG files within the application code (HTML, CSS, JavaScript, etc.).
 -   **Must** follow this SVG-to-PNG workflow meticulously whenever generating icons or simple images.
+- don't add placeholder icons or images, if you need to add any icon or image first make a svg icon or image and then add it to the project and then convert it to png using javascript code and install the dependencies like sharp and run the script.
+- When adding icons or images to the project, first create an SVG file, then convert it to PNG using JavaScript code using the sharp library, and finally add the PNG file to the project. This ensures that all icons and images are of high quality and properly formatted for use in the project.
 
 ## Documentation Requirements
 
 -   **Must** provide thorough, accurate documentation for every project created.
-
-### Detailed README.md
-
 -   **Must** create a meticulously crafted `README.md` file in the project root.
 -   Include sections: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation commands, Running the Project (dev/prod modes), API Documentation location (if applicable), Project Structure explanation (highlighting feature-based org), Key Features summary, Authorship/Contribution (User: Chirag Singhal (`chirag127`), Assistant: Augment Agent), License specification.
 
@@ -201,16 +159,14 @@
 ### Documentation Retrieval Tools (`context7`)
 
 -   **Must** use context7 to retrieve documentation for libraries, frameworks, and APIs.
--   **Must** call `resolve-library-id` _first_ to obtain the precise Context7-compatible library ID (provide general name like "react", "sharp").
--   **Must** use `get-library-docs` _immediately after_ successfully getting a library ID. Use it to fetch _actual, up-to-date, version-specific_ documentation content for the functions/classes/config you intend to use.
 
 ### Mandatory Pre-Implementation Documentation Review
 
--   **Crucially and without exception:** Before implementing _any_ integration with a third-party API, using a new library/framework, making significant architectural changes based on library capabilities, or employing potentially unfamiliar features of a known library, **you must** consult the documentation retrieved via `web search` (or `use context7`, `resolve-library-id`, `get-library-docs`).
+-   **Crucially and without exception:** Before implementing _any_ integration with a third-party API, using a new library/framework, making significant architectural changes based on library capabilities, or employing potentially unfamiliar features of a known library, **you must** consult the documentation retrieved via `web search` (or `use context7`).
 -   Verify assumptions about usage patterns, API contracts, function signatures, configuration options, potential breaking changes, and recommended best practices against the _latest official documentation_ obtained via the tool.
 -   **Assume your training data may be outdated regarding specific library usage.** This documentation review step is non-negotiable for ensuring correctness and robustness.
 
-### Web Search & Data Gathering Tools (web search, `get`, `puppeteer`)
+### Web Search & Data Gathering Tools (web search, `get`)
 
 -   **Must** use these tools for all web-related tasks (research, data extraction, API interactions).
 -   use web search tools for:
@@ -218,16 +174,12 @@
     -   Retrieving content from URLs (raw data, articles).
     -   Simple REST API calls for information gathering.
 -   `get` tools: Use when you need to extract data from a specific URL, such as JSON data from an API endpoint or HTML content from a webpage.
--   `puppeteer` tools: Use when interaction requires JavaScript execution, rendering dynamic content, navigation (logins), form filling, button clicking, or scraping content unavailable via simple HTTP requests.
-
+=
 ### External Tool Management (MCP Toolbox)
 
 -   `use toolbox`: **Must** use this tool to use external MCP servers and their tools effectively. whenevwer you need to use an external MCP server's tools, you must use this tool.
 -   **Must** use `search_servers` to find available MCP servers in the Smithery registry. Use `add_server` to add them to your active toolbox. Use `use_tool` to execute specific tool functions from the MCP server in your toolbox. Use `remove_server` to remove an MCP server from your toolbox when no longer needed.
-
-### Browserbase MCP Server
-
--   **Must** use the Browserbase MCP server for cloud browser automation capabilities using Browserbase, enabling LLMs to interact with web pages, take screenshots, and execute JavaScript in a cloud browser environment.
+- use the following MCP servers: Desktop Commander, Gitingest MCP Server, Think Tool Server mcp server, Playwright Automation mcp server, Puppeteer Browser mcp server, DuckDuckGo Search Server mcp server, sequentialthinking mcp server.
 
 ## Runtime Error Handling & Reporting Process
 
@@ -235,15 +187,14 @@
 
 -   If errors occur (compile, runtime, tool failure, API errors): **Must** first attempt to resolve them autonomously.
 -   Actively consult web resources using `get` for the specific error.
--   Consult relevant library documentation using `get-library-docs`.
--   Analyze internal logs and the sequence leading to the error.
+-   Consult relevant library documentation using `resolve-library-id` tool and `context7` and `web search` and `get-library-docs`.
 -   Perform systematic debugging (modify code, adjust config, retry).
 
 ### Reporting Insurmountable Blockers (Last Resort)
 
--   Only report back before full completion if an _insurmountable_ blocker is encountered _after you have exhaustively used all available tools and research avenues_ (documentation review, multiple `get` searches, tool output analysis, repeated debugging).
+-   Only report back before full completion if an _insurmountable_ blocker is encountered _after you have exhaustively used all available tools and research avenues_ (documentation review, multiple `get` searches, tool output analysis, repeated debugging). You must report back if you are unable to resolve the issue; don't hallucinate or guess the solution.
 -   If reporting a blocker, **must**:
-    -   Generate a detailed status report.
+    -   Generate a detailed status report in the markdown format.
     -   Clearly articulate the specific, precise problem.
     -   Provide a comprehensive account of _all steps already taken_ to resolve it (doc summaries, web search queries/outcomes, debugging steps tried).
     -   Explain _exactly why_ you cannot proceed independently.
