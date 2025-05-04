@@ -34,3 +34,17 @@ Is building a browser extension with the following setup:
   - extension/ folder for browser extension code.
   - backend/ folder for backend code.
   - Storage: MongoDB for storage.
+
+  
+The agent should ensure that the browser extension is built with the following setup:
+
+-   Frontend: Browser Extension
+-   Project Structure:
+    -   extension/ folder for browser extension code.
+    -   backend/ folder for the backend code for the AI model integration.
+
+    -   ensure the backend is designed to handle AI model requests efficiently.
+    -   ensure the backend is designed to handle AI model requests efficiently.
+    -   ensure the extension is built with a focus on user experience and performance.
+    -   ensure the backend is designed to handle AI model requests efficiently.
+    -   Don't leave anything for future, this will be a prd for final product not a mvp.

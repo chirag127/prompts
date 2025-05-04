@@ -105,8 +105,6 @@
     - Important: Mandatory Documentation Review (`context7`): Crucially, before implementing *any* third-party API integration, using *any* new library/framework (including recommended ones), or employing potentially unfamiliar features, *must* consult the latest official documentation via `context7` or reliable alternatives. Verify assumptions about usage, APIs, config, installation, changes, etc. Assume training data may be outdated. This step is non-negotiable.
     - Web Research & Data Retrieval (`web search`, `get`): Use `web search` for general web research, error messages. Use `get` for retrieving content from specific URLs (raw data, articles) and simple REST API calls for information gathering, especially for structured data (JSON, HTML).
     - Browser Automation (`toolbox` - Puppeteer, Playwright): Use for tasks requiring browser interaction, complex website scraping, or testing.
-    - Web Crawling (`toolbox` - Firecrawl): Use for large-scale website crawling and data extraction.
-    - File System (`read`, `write`, `list_files`, etc.): Use for interacting with the local file system.
 - **MCP Server Usage (Model Context Protocol):**
     - Use `search_servers` to find available MCP servers.
     - Use `add_server` to add required MCP servers to the active toolbox.
