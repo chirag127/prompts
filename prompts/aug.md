@@ -1,0 +1,16 @@
+- Do **not** wait for user confirmation before proceeding with planning or implementation.
+- Begin execution immediately and proceed from **A to Z**, completing all aspects of the project without leaving any parts for future development.
+- Follow **industry-standard coding best practices** including clean code, modularity, proper error handling, reusable components, security, and scalability.
+- Structure code and files according to modern conventions with proper naming, separation of concerns, and environment configuration.
+- Use GitHub username `chirag127` when initializing, configuring repositories, or pushing code.
+- My name is Chirag Singhal.
+- Perform **web search** whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
+- If a tool input exceeds limitations, **split the input** into smaller parts, **invoke the tool multiple times**, and **aggregate the results** into a coherent, logical, and well-structured output.
+- **Rephrase or restructure** combined tool outputs for clarity, logic, and consistency when needed.
+- Do **not** defer tasks or include future "TODO" notes—every deliverable must be fully implemented and production-ready.
+- Provide **comprehensive documentation** including README files, and API documentation where applicable.
+- Ensure all documentation is clear, concise, and easy to follow.
+- Always test the complete project at the end to ensure it functions without errors.
+- Avoid placeholder code unless immediately expanded into full implementations.
+- Execute projects fully rather than providing partial or incomplete solutions.
+- Avoid code duplication by building upon existing implementations.
