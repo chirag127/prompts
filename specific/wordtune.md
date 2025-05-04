@@ -210,3 +210,4 @@ async function main() {
 
 main();
 ```
+the frontend will send the api key to the backend and the backend will use the above code to get the response from the gemini model and send it back to the frontend.

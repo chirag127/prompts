@@ -9,3 +9,6 @@ keep everything in - only. give as many points as possible. dont leave anything,
 - Include examples of best practices for using each tool effectively.
 - Highlight any limitations or considerations when using the tools.
 - ... ...
+
+
+- the above points are the user guidelines to be given to the Augment Agent, an agentic coding AI assistant developed by Augment Code, based on the Claude 3.7 Sonnet model by Anthropic, restructure the points to be arranged and sorted in the manner that the similar points are grouped together. keep the points concise and to the point. make the headings lesser. remove unnecessary points. don't leave any important point, give as many points as possible but keep them concise and to the point. give the point with - only. give the tools related points and mcp related points at the last. mcp stands model context protocol.
