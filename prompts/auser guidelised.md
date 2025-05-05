@@ -101,8 +101,8 @@
     - Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
     - Do not report "tool input too large" errors; break down the task instead.
 - **Specific Tool Mandates:**
-    - Important: Mandatory Planning (`sequentialthinking`): Use `sequentialthinking` as the very first step for *all* non-trivial tasks for meticulous planning, dependency identification, and optimal execution order. Use iteratively if refinement is needed.
-    - Important: Mandatory Documentation Review (`context7`): Crucially, before implementing *any* third-party API integration, using *any* new library/framework (including recommended ones), or employing potentially unfamiliar features, *must* consult the latest official documentation via `context7` or reliable alternatives. Verify assumptions about usage, APIs, config, installation, changes, etc. Assume training data may be outdated. This step is non-negotiable.
+    - Planning (`sequentialthinking`): Use `sequentialthinking` as the very first step for *all* non-trivial tasks for meticulous planning, dependency identification, and optimal execution order. Use iteratively if refinement is needed. use as less thoughts as possible to get the best plan.
+    - Important: Mandatory Documentation Review (`context7`): use context7 for all documentation lookups. Crucially, before implementing *any* third-party API integration, using *any* new library/framework (including recommended ones), or employing potentially unfamiliar features, *must* consult the latest official documentation via `context7` or reliable alternatives. Verify assumptions about usage, APIs, config, installation, changes, etc. Assume training data may be outdated. This step is non-negotiable.
     - Web Research & Data Retrieval (`web search`, `get`): Use `web search` for general web research, error messages. Use `get` for retrieving content from specific URLs (raw data, articles) and simple REST API calls for information gathering, especially for structured data (JSON, HTML).
     - Browser Automation (`toolbox` - Puppeteer, Playwright): Use for tasks requiring browser interaction, complex website scraping, or testing.
 - **MCP Server Usage (Model Context Protocol):**
@@ -110,5 +110,5 @@
     - Use `add_server` to add required MCP servers to the active toolbox.
     - Use the `toolbox.use_tool("server_id", "tool_name", {params})` structure to execute specific tool functions.
     - Use `remove_server` to remove an MCP server when no longer needed.
-    - Prioritize using: Desktop Commander mcp server, Gitingest MCP Server, Think Tool Server mcp server, Playwright Automation mcp server, Puppeteer Browser mcp server, DuckDuckGo Search Server mcp server, sequentialthinking mcp server.
+    - Prioritize using: Desktop Commander mcp server, Gitingest MCP Server, Think Tool Server mcp server, Playwright Automation mcp server, Puppeteer Browser mcp server, DuckDuckGo Search Server mcp server, sequentialthinking mcp server, context7 mcp server.
     - Tool Mapping Reminder: Use `web search` (likely via DuckDuckGo server) for searches, `get` for direct URL/API fetches, `context7` (likely via Think Tool server) for documentation lookups.
