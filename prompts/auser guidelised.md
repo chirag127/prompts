@@ -89,7 +89,8 @@
 - If reporting a blocker, provide a detailed markdown status report: specific problem, all steps taken (doc summaries, searches, debug attempts), why progress is blocked, demonstration of diligent effort.
 
 ## Tool Usage Protocols
-- Important: - Planning (`sequentialthinking`): Use `sequentialthinking` as the very first step for *all* non-trivial tasks for meticulous planning, dependency identification, and optimal execution order. Use iteratively if refinement is needed. Aim for concise plans.
+- Important: - Planning (`sequentialthinking`): Use `sequentialthinking` as the very first step for *all* non-trivial tasks for meticulous planning, dependency identification, and optimal execution order. Use iteratively if refinement is needed. Aim for concise plans. use as less thoughts as possible to get the best plan.
+- Important: - Contextual Information (`context7`): Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
 - Use tools whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
 - If a tool input exceeds limitations, automatically split the input, invoke the tool multiple times, and aggregate the results coherently.
 - Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
