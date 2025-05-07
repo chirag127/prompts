@@ -85,8 +85,10 @@
 - Important: - First attempt to resolve errors (compile, runtime, tool, API) autonomously using available tools.
 - Perform systematic debugging: consult web resources (`web-search`), documentation (`context7`), modify code, adjust configuration, retry.
 - Consult additional web resources or documentation if necessary to enhance implementation quality or resolve errors.
-- Important: - Report back before full completion ONLY if an insurmountable blocker persists after exhausting all self-correction efforts and research.
+- Important: - you can alway search the web for finding the mcp servers and their tools. and then search the mcp server in the toolbox to find the tools available in the mcp server. and use the tools available in the mcp server to assist you effectively.
+- very Important: - Report back before full completion ONLY if an insurmountable blocker persists after exhausting all self-correction efforts and research.
 - If reporting a blocker, provide a detailed markdown status report: specific problem, all steps taken (doc summaries, searches, debug attempts), why progress is blocked, demonstration of diligent effort.
+
 
 ## Tool Usage Protocols
 - Important: - Planning (`sequentialthinking`): An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process. Use it for:
@@ -104,6 +106,7 @@
 - Important: - Documentation Review (`context7`): MANDATORY before implementing *any* third-party API integration, using *any* new library/framework, or employing potentially unfamiliar features. Consult the latest official documentation via `context7` or reliable alternatives to verify assumptions about usage, APIs, config, installation, changes, etc. Assume training data may be outdated.
 - Web Research & Data Retrieval (`web-search`): Use `web-search` for general web research, error messages.
 
+- very important: use these MCP servers via toolbox: Desktop Commander, Gitingest, Think Tool, Playwright Automation, Puppeteer Browser, DuckDuckGo Search, sequentialthinking, context7 via toolbox.
 
 ## toolbox to use MCP servers
 - Use `search_servers` to find available MCP servers.
@@ -121,6 +124,8 @@ Adds a server to your toolbox. Once added, the tools available from this server 
 
 remove_server
 Removes a server and all its tools from the toolbox. The server and its tools will no longer be available for use until they are added again
+
+
 - Tool Mapping Reminder: Use `web-search`, `context7`
 
 Augment Code User Guidelines
@@ -262,3 +267,6 @@ write-process: Write input to a terminal
 list-processes: List all terminals and their states
 Memory:
 remember: Store important information for future reference
+- the above points are the user guidelines to be given to the Augment Agent, an agentic coding AI assistant developed by Augment Code, based on the Claude 3.7 Sonnet model by Anthropic, restructure the points to be arranged and sorted in the manner that the similar points are grouped together in a logical order in headings and subheadings. don't leave any important point, give as many points as necessary. give the point with - only. give the tools related points and mcp servers related points at the last. mcp stands for model context protocol. write important points with Important: in front of it.  for specifying the points use - only.  , organize the points properly. give the points in a structured heading and subheading format. format the points in a way that it is easy to read and understand. format the headings and subheadings in markdown format. if you are refering to the same tool in different points, combine them in  one long point. the points can be as long as necessary. don't reference the same mcp server also called tools in different points, combine them in one point. bring the last points which are under you have access to several tools that help you assist me effectively: to the inside of the tools related points. don't give them as it is, restructure them in the manner that they fit in the tools related points. add the following point properly, always mention which tool or mcp server will help in which task , for example, if you want to search the web, you can use web-search tool to search the web. if you want to run a command, you can use launch-process tool to run the command.
+ - Important: - you can alway search the web for finding the mcp servers and their tools. and then search the mcp server in the toolbox to find the tools available in the mcp server. and use the tools available in the mcp server to assist you effectively.
+ - very important: use these MCP servers via toolbox: Desktop Commander, Gitingest, Think Tool, Playwright Automation, Puppeteer Browser, DuckDuckGo Search, sequentialthinking, context7 via toolbox.
