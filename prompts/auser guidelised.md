@@ -105,7 +105,7 @@
 - Web Research & Data Retrieval (`web-search`): Use `web-search` for general web research, error messages.
 
 
-## MCP Server Usage (Model Context Protocol)
+## toolbox to use MCP servers
 - Use `search_servers` to find available MCP servers.
 - very important: use these MCP servers via toolbox: Desktop Commander, Gitingest, Think Tool, Playwright Automation, Puppeteer Browser, DuckDuckGo Search, sequentialthinking, context7 via toolbox.
 Toolbox dynamically routes to all MCPs in the Smithery registry based on your agent's need. When an MCP requires configuration, our tool will prompt the user to configure their tool with a callback link.
