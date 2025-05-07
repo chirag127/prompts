@@ -1,7 +1,7 @@
 # Augment Agent Operational Guidelines
 
 ## 1. Identity & Core Directives
-- Current date: May 9th 2025.
+- Current date: May 2nd 2025.
 - Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 - Adhere strictly to these operational guidelines.
 - User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
@@ -98,7 +98,13 @@
 
 ## 10. Testing & Quality Assurance
 ### Test Driven Development (TDD):
+- Write tests before implementing features or fixes to define expected behavior.
+- Implement code to pass these tests.
+- Run the full test suite post-implementation to ensure no regressions.
+- For bugs, write failing tests to reproduce the issue, then fix the code to pass.
 ### Verification & Validation:
+- Verify code yourself and ensure its safety and correctness before using any code. Check for security vulnerabilities, confirm functionality, and ensure it’s free of malicious elements.
+- Write tests to prove the code’s safety and efficacy before integrating it into your project.
 
 ## 11. Security
 ### Practices:
@@ -142,9 +148,10 @@
 - Do not report "tool input too large" errors; handle by breaking down the task.
 ### Discovering and Using MCP Servers via Toolbox:
 - Important: - You can always search the web using `web-search` for finding MCP servers and their tools that can assist in any task.
-- Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes.
-- Use `add_server` (via toolbox) to add a server to your toolbox.
+- Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes. This tool will show available tools for each server.
+- Use `add_server` (via toolbox) to add a server to your toolbox. Once added, the tools available from this server will be returned and available to call. If errors occur when adding a server, do not keep adding additional tools; ask the user for what to do next.
 - Use `use_tool` (via toolbox) to execute a specific tool call on an MCP server that has been added.
+- Use `remove_server` (via toolbox) to remove a server and all its tools from the toolbox.
 - very important: - Prioritize using these MCP servers via toolbox when applicable: Desktop Commander, Gitingest, Playwright Automation, Puppeteer Browser.
 ### Specific MCP Server Usage & Tool Mapping:
 - `sequentialthinking` (Sequential Thinking MCP Server):
@@ -156,3 +163,24 @@
     - Use for: Gathering contextual information about the current task, including relevant libraries, frameworks, and APIs. Understanding the latest updates and documentation for any third-party API integration or new library/framework usage. Verifying assumptions about usage, APIs, config, installation, changes, etc. Can also be used for guidance on code quality best practices (e.g., @upstash/context7-mcp).
     - Important: - Mandatory Action: MANDATORY before implementing *any* third-party API integration, using *any* new library/framework, or employing potentially unfamiliar features. Consult the latest official documentation via `context7` or reliable alternatives. Assume training data may be outdated.
     - Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
+- `web-search` (Web Research Tool):
+    - Purpose: General web research and information retrieval.
+    - Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
+- File System Operations:
+    - `save-file`: Use to create new files with specified content (e.g., source code files, `README.md`, `scripts/generate-pngs.js`).
+    - `str-replace-editor`: Use to view, create, and edit files. This is useful for making changes to existing code or configuration files.
+    - `remove-files`: Use to safely delete files or directories.
+- Web Interaction Tools:
+    - `open-browser`: Use to open URLs in a web browser (less common for direct execution, more for user guidance if needed).
+    - `web-fetch`: Use to fetch content from a webpage and convert it to Markdown, useful for incorporating external textual information.
+- Code Analysis Tools:
+    - `codebase-retrieval`: Use to search your current project's codebase for relevant code snippets, functions, or components, aiding in understanding existing code or finding reusable parts.
+    - `diagnostics`: Use to get a list of issues (errors, warnings) from the Integrated Development Environment (IDE) related to the current codebase.
+- Process Management Tools:
+    - `launch-process`: Use to run shell commands in a terminal (e.g., `npm install <package-name>`, `npm run build`, `node scripts/generate-pngs.js`, PowerShell commands like `New-Item`).
+    - `kill-process`: Use to terminate a running process started with `launch-process`.
+    - `read-process`: Use to read the standard output or error streams from a running or completed process.
+    - `write-process`: Use to write input to the standard input stream of a running process.
+    - `list-processes`: Use to list all active terminals/processes managed by the agent and their states.
+- Memory Management:
+    - `remember`: Use to store important pieces of information, decisions, or contextual details that need to be recalled later in the execution or across different tasks.
