@@ -131,7 +131,7 @@ Remember to maintain a friendly, supportive tone throughout the conversation. Sp
 
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 
-The browser extension will show a component in the right column of the YouTube page which will show the summary of the video currently being played. The summary will be generated using the gemini-2.5-flash-preview-04-17 model. The user will provide the Gemini api key in the extension settings. The extension will use the Gemini API to generate the summary and display it in the component. The extension should also allow users to customize the appearance of the summary component. the right column will have T3 tabsOne of them isthe summary tab. The question and answer tab, the setting tab
+The browser extension will show a component in the right column of the YouTube page which will show the summary of the video currently being played. The summary will be generated using the gemini-2.5-flash-preview-04-17 model. The user will provide the Gemini api key in the extension settings. The extension will use the Gemini API to generate the summary and display it in the component. The extension should also allow users to customize the appearance of the summary component. the right column will have T3 tabsOne of them is the summary tab. The question and answer tab, the setting tab
 
 The agent should ensure that the browser extension is built with the following setup:
 

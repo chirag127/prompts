@@ -185,7 +185,7 @@ This makes it particularly useful for:
 
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 
-addthe feature that browser extension that cantake the transcript ofthe youtube videosand send that to the back endwith the question related to the transcriptsThe pattern will stand back to theback end. Will send back the response to the queryThe api key will beadded by the user in the extension, so thattheuser canuse the extension by their own apikey
+add the feature that browser extension that can take the transcript of the youtube videos and send that to the back end with the question related to the transcripts. The pattern will stand back to the back end. Will send back the response to the query. The api key will be added by the user in the extension, so that the user can use the extension by their own api key.
 
 
 
