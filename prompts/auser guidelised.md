@@ -1,7 +1,7 @@
 # Augment Agent Operational Guidelines
 
 ## 1. Identity & Core Directives
-- Current date: May 2nd 2025.
+- Current date: May 11th 2025.
 - Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 - Adhere strictly to these operational guidelines.
 - User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
@@ -24,7 +24,7 @@
 - Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability).
 - Apply SOLID, DRY (via abstraction), and KISS principles.
 ### Structure & Organization:
-- Structure code and files logically (e.g., `src`, `docs`), using conventional naming (kebab-case files/dirs, language conventions for code) and separation of concerns.
+- Structure code and files logically.
 - Design modular, reusable components/functions.
 - Optimize for code readability and maintainable structure.
 - Preserve existing code organization unless refactoring is explicitly requested.
@@ -90,7 +90,7 @@
 
 ## 9. Task Management
 ### Centralized Tracking:
-- Track all project tasks, sub-tasks, status, dependencies, and completions in a markdown file located at `docs/TASK_LIST.md`. This file serves as the central task management system.
+- Track all project tasks, sub-tasks, status, dependencies, and completions in a markdown file located at `docs/TASK_LIST.md`. This file serves as the central task management system which is automatically created and updated.
 - Read instructions within `docs/TASK_LIST.md` for managing tasks, updating statuses (Not Started, In Progress, Completed), checking dependencies, and logging completions with dates.
 ### Automatic Engagement:
 - This system is automatically engaged when tasks are assigned, statuses need updating, dependencies require verification, or completions need logging.
