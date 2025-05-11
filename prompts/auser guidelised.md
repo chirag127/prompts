@@ -59,7 +59,7 @@
 
 ### Core:
 
--   Use Expo framework with TypeScript.
+-   Use Expo framework with javascript.
 
 ### Navigation:
 
@@ -212,11 +212,24 @@
     -   Use for: Gathering contextual information about the current task, including relevant libraries, frameworks, and APIs. Understanding the latest updates and documentation for any third-party API integration or new library/framework usage. Verifying assumptions about usage, APIs, config, installation, changes, etc. Can also be used for guidance on code quality best practices (e.g., @upstash/context7-mcp).
     -   Important: - Mandatory Action: MANDATORY before implementing _any_ third-party API integration, using _any_ new library/framework, or employing potentially unfamiliar features. Consult the latest official documentation via `context7` or reliable alternatives. Assume training data may be outdated.
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
+    -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
+
+### Clear Thought MCP Server
+-   sequentialthinking-A detailed tool for dynamic and reflective problem-solving through thoughts.
+-   mentalmodel-A tool for applying structured mental models to problem-solving.
+-   debuggingapproach-A tool for applying systematic debugging approaches to solve technical issues.
+-   collaborativereasoning-A detailed tool for simulating expert collaboration with diverse perspectives.
+-   decisionframework-A detailed tool for structured decision analysis and rational choice.
+-   metacognitivemonitoring-A detailed tool for systematic self-monitoring of knowledge and reasoning quality.
+-   scientificmethod-A detailed tool for applying formal scientific reasoning to questions and problems.
+-   structuredargumentation-A detailed tool for systematic dialectical reasoning and argument analysis.
+-   visualreasoning-A tool for visual thinking, problem-solving, and communication.
+
+### internal tools
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
     -   Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
 -   File System Operations:
--   `Web_search`: Search the web using Exa AI - performs real-time web searches and can scrape content from specific URLs. Supports configurable result counts and returns the content from the most relevant websites.
     -   `save-file`: Use to create new files with specified content (e.g., source code files, `README.md`, `scripts/generate-pngs.js`).
     -   `str-replace-editor`: Use to view, create, and edit files. This is useful for making changes to existing code or configuration files.
     -   `remove-files`: Use to safely delete files or directories.

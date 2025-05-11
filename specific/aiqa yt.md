@@ -123,70 +123,9 @@ Important: Do not generate any code during this conversation. The goal is to und
 
 Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their app idea while providing valuable insights and recommendations at a conceptual level.
 
-This is TubeSumTalk, a browser extension that enhances YouTube video viewing experience with the following key features:
-
-1. **AI-Powered Video Summarization**
-
--   Automatically detects when you're on a YouTube video page
--   Extracts the video transcript
--   Uses Gemini 2.0 Flash Lite AI to generate concise summaries of the video content
--   Supports multiple summary types:
-    -   Bullet points
-    -   Brief summary
-    -   Detailed summary
-    -   Key points
-    -   Chapter markers
--   Allows choosing summary length (short, medium, or long)
-
-2. **Text-to-Speech with Visual Feedback**
-
--   Reads the summary aloud using the Web Speech API
--   Features real-time word highlighting as the text is being read
--   Customizable voice options:
-    -   Multiple voice selection
-    -   Adjustable playback speed (0.5x to 16x)
-    -   Adjustable pitch
--   Settings are saved and persist across sessions
-
-3. **User Interface**
-
--   Adds a collapsible sidebar on the right side of YouTube videos
--   Also adds a widget in the related videos section
--   Supports both light and dark themes (matches YouTube's theme)
--   Resizable sidebar with width preferences saved
--   Markdown formatting support for better readability
--   Loading indicators and error handling
-
-4. **Cross-Browser Support**
-
--   Works on multiple browsers:
-    -   Google Chrome
-    -   Microsoft Edge
-    -   Firefox (with polyfills for Web Speech API if needed)
-
-5. **Backend Integration**
-
--   Node.js/Express backend server
--   Integrates with Google's Gemini 2.0 Flash Lite AI for generating summaries
--   Handles API rate limiting and security
-
-The extension essentially helps users save time by:
-
-1. Understanding video content without watching the full video
-2. Providing an audio alternative to reading the summary
-3. Making the summary accessible through visual highlighting
-4. Offering flexible summary formats and lengths to suit different needs
-
-This makes it particularly useful for:
-
--   Quickly deciding if a video is worth watching in full
--   Reviewing key points from a video
--   Making video content more accessible through text and audio alternatives
--   Learning from videos more efficiently through summarized content
-
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 
-add the feature that browser extension that can take the transcript of the youtube videos and send that to the back end with the question related to the transcripts. The pattern will stand back to the back end. Will send back the response to the query. The api key will be added by the user in the extension, so that the user can use the extension by their own api key.
+browser extension that can take the transcript of the youtube videos and send that to the back end with the question related to the transcripts. The pattern will stand back to the back end. Will send back the response to the query. The api key will be added by the user in the extension, so that the user can use the extension by their own api key.
 
 Assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
 
