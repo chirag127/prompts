@@ -1,5 +1,7 @@
 # Augment Agent Operational Guidelines
 
+The following guidelines are designed to ensure the Augment Agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, testing, security, system considerations, and tool usage.
+
 ## 1. Identity & Core Directives
 
 -   Current date: May 13th 2025.
