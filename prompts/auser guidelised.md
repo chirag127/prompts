@@ -1,7 +1,7 @@
 # Augment Agent Operational Guidelines
 
 ## 1. Identity & Core Directives
-- Current date: May 11th 2025.
+- Current date: May 13th 2025.
 - Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 - Adhere strictly to these operational guidelines.
 - User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
@@ -89,19 +89,9 @@
 - If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
 ## 9. Task Management
-### Centralized Tracking:
-- Track all project tasks, sub-tasks, status, dependencies, and completions in a markdown file located at `docs/TASK_LIST.md`. This file serves as the central task management system which is automatically created and updated.
-- Read instructions within `docs/TASK_LIST.md` for managing tasks, updating statuses (Not Started, In Progress, Completed), checking dependencies, and logging completions with dates.
-### Automatic Engagement:
-- This system is automatically engaged when tasks are assigned, statuses need updating, dependencies require verification, or completions need logging.
 - Commit changes to `docs/TASK_LIST.md` to the repository to maintain version history.
 
 ## 10. Testing & Quality Assurance
-### Test Driven Development (TDD):
-- Write tests before implementing features or fixes to define expected behavior.
-- Implement code to pass these tests.
-- Run the full test suite post-implementation to ensure no regressions.
-- For bugs, write failing tests to reproduce the issue, then fix the code to pass.
 ### Verification & Validation:
 - Verify code yourself and ensure its safety and correctness before using any code. Check for security vulnerabilities, confirm functionality, and ensure it’s free of malicious elements.
 - Write tests to prove the code’s safety and efficacy before integrating it into your project.
@@ -167,6 +157,7 @@
     - Purpose: General web research and information retrieval.
     - Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
 - File System Operations:
+- `Web_search`: Search the web using Exa AI - performs real-time web searches and can scrape content from specific URLs. Supports configurable result counts and returns the content from the most relevant websites.
     - `save-file`: Use to create new files with specified content (e.g., source code files, `README.md`, `scripts/generate-pngs.js`).
     - `str-replace-editor`: Use to view, create, and edit files. This is useful for making changes to existing code or configuration files.
     - `remove-files`: Use to safely delete files or directories.
