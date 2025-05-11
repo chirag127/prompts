@@ -193,11 +193,7 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 ### Discovering and Using MCP Servers via Toolbox:
 
 -   Important: - You can always search the web using `web-search` for finding MCP servers and their tools that can assist in any task.
--   Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes. This tool will show available tools for each server.
--   Use `add_server` (via toolbox) to add a server to your toolbox. Once added, the tools available from this server will be returned and available to call. If errors occur when adding a server, do not keep adding additional tools; ask the user for what to do next.
--   Use `use_tool` (via toolbox) to execute a specific tool call on an MCP server that has been added.
--   Use `remove_server` (via toolbox) to remove a server and all its tools from the toolbox.
--   very important: - Prioritize using these MCP servers via toolbox when applicable: Desktop Commander, Gitingest, Playwright Automation, Puppeteer Browser.
+-   Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes.
 
 ### Specific MCP Server Usage & Tool Mapping:
 
