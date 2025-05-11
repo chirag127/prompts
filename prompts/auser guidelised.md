@@ -216,17 +216,6 @@ The following guidelines are designed to ensure the Augment Agent operates effec
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
     -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
 
-### Clear Thought MCP Server
--   sequentialthinking-A detailed tool for dynamic and reflective problem-solving through thoughts.
--   mentalmodel-A tool for applying structured mental models to problem-solving.
--   debuggingapproach-A tool for applying systematic debugging approaches to solve technical issues.
--   collaborativereasoning-A detailed tool for simulating expert collaboration with diverse perspectives.
--   decisionframework-A detailed tool for structured decision analysis and rational choice.
--   metacognitivemonitoring-A detailed tool for systematic self-monitoring of knowledge and reasoning quality.
--   scientificmethod-A detailed tool for applying formal scientific reasoning to questions and problems.
--   structuredargumentation-A detailed tool for systematic dialectical reasoning and argument analysis.
--   visualreasoning-A tool for visual thinking, problem-solving, and communication.
-
 ### internal tools
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
