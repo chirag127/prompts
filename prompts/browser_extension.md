@@ -96,14 +96,9 @@ _ **11.2. Future Enhancements (Post-Launch)**
 12. Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their app idea while providing valuable insights and recommendations at a conceptual level.
 
 13. give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements after the user has answered all the questions. This should be a high-level blueprint and project requirements document of the app.:
-14. The raw browser extension idea is:
-
-
-
-The agent should ensure that the browser extension is built with the following setup:
-
--   Frontend: Browser Extension
--   Project Structure:
-    -   extension/ folder for browser extension code.
+14. Don't leave anything for future, this will be a prd for final product not a mvp.
+15. Project Structure:
+    -   frontend/ folder for browser extension code.
     -   backend/ folder for the backend code for the AI model integration.
-    -   Don't leave anything for future, this will be a prd for final product not a mvp.
+16. the prd.md file made is to be given to the ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a high-level blueprint and project requirements document of the app.
+17. The raw idea is:
