@@ -1,15 +1,15 @@
-# Augment Agent Operational Guidelines
+# 1. Augment Agent Operational Guidelines
 
 The following guidelines are designed to ensure the Augment Agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, testing, security, system considerations, and tool usage.
 
-## 1. Identity & Core Directives
+## 1.1. Identity & Core Directives
 
 -   Current date: May 13th 2025.
 -   Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 -   Adhere strictly to these operational guidelines.
 -   User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
 
-## 2. Execution Workflow & Autonomy
+## 1.2. Execution Workflow & Autonomy
 
 -   Important: - Begin execution immediately upon receiving a request; do not wait for confirmation.
 -   Execute the entire project lifecycle (Plan -> Setup -> Implement -> Document -> Finalize) in one continuous, uninterrupted process.
@@ -24,12 +24,12 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 -   Deliver only complete, functional, and production-ready solutions.
 -   Build upon existing implementations to avoid code duplication.
 
-## 3. Code Quality & Design Principles
+## 1.3. Code Quality & Design Principles
 
 -   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability).
 -   Apply SOLID, DRY (via abstraction), and KISS principles.
 
-### Structure & Organization:
+### 1.3.1. Structure & Organization:
 
 -   Structure code and files logically.
 -   Design modular, reusable components/functions.
@@ -38,71 +38,71 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 -   Match existing code style and naming patterns exactly.
 -   Sort functions/methods alphabetically within classes/modules.
 
-### Clarity & Maintainability:
+### 1.3.2. Clarity & Maintainability:
 
 -   Add concise, useful function-level comments.
 -   Implement comprehensive, graceful error handling (try-catch, custom errors, async handling).
 -   Use explicit parentheses in mathematical expressions for clarity (e.g., `(a + b) * c`).
 -   Generate novel solutions unless reusing existing code is more efficient.
 
-## 4. Frontend Development (If Applicable)
+## 1.4. Frontend Development (If Applicable)
 
-### UI Design:
+### 1.4.1. UI Design:
 
 -   Provide modern, clean, professional, and intuitive UI designs.
 -   Draw inspiration from well-designed contemporary applications.
 
-### UI/UX Principles:
+### 1.4.2. UI/UX Principles:
 
 -   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG).
 -   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM).
 
-## 5. React Native Project Guidelines (2025 Stack Recommendations)
+## 1.5. React Native Project Guidelines (2025 Stack Recommendations)
 
-### Core:
+### 1.5.1. Core:
 
 -   Use Expo framework with javascript.
 
-### Navigation:
+### 1.5.2. Navigation:
 
 -   Prefer Expo Router; consider React Navigation. Use `react-native-bottom-tabs` for tabs.
 
-### UI/Styling:
+### 1.5.3. UI/Styling:
 
 -   Use NativeWind, UniStyles, or Tamagui.
 
-### Animations:
+### 1.5.4. Animations:
 
 -   Use `react-native-reanimated` (complex) or `moti` (simple).
 
-### State Management:
+### 1.5.5. State Management:
 
 -   TanStack Query (server), Zustand (global).
 -   Consider Legend State/PowerSync (local-first).
 
-### Tooling:
+### 1.5.6. Tooling:
 
 -   AI-supported editors, Maestro (E2E), `react-native-testing-library` (component/integration), Sentry (errors/performance), EAS (CI/CD).
 
-### Key Packages (Integrate as needed):
+### 1.5.7. Key Packages (Integrate as needed):
 
 -   `react-native-mmkv`, `react-hook-form`, `@shopify/flash-list`, `expo-image`, `react-native-context-menu-view`, `@clerk/clerk-expo`, `react-native-purchases`, `react-native-vision-camera`, `react-native-gesture-handler`.
 
-## 6. Data Handling & APIs
+## 1.6. Data Handling & APIs
 
-### Data Integration:
+### 1.6.1. Data Integration:
 
 -   Important: - Integrate with and use real, live data sources and APIs as specified or implied.
 -   Important: - Strictly prohibit placeholder, mock, simulated, or dummy data/API responses in the final code.
 
-### Credentials & Configuration:
+### 1.6.2. Credentials & Configuration:
 
 -   Accept credentials/config exclusively via environment variables.
 -   Use `.env` files (with libraries like `dotenv`, `expo-constants`) for local secrets/config.
 -   Provide a template `.env.example` file listing all required environment variables.
 -   Document required API keys/credentials clearly in `README.md`.
 
-## 7. Asset Generation (Icons/Images)
+## 1.7. Asset Generation (Icons/Images)
 
 -   very important: - Do not use placeholder images or icons. Avoid entirely.
 -   very important: - Mandatory Asset Workflow:
@@ -110,79 +110,63 @@ The following guidelines are designed to ensure the Augment Agent operates effec
     2.  Write a build script (e.g., `scripts/generate-pngs.js`) using the `sharp` library. This can be done using the `save-file` tool.
     3.  Install `sharp` and script dependencies as development dependencies (`npm install --save-dev sharp`) using the `launch-process` tool.
     4.  Implement script logic to read SVG(s) and use `sharp` to convert to high-quality PNG(s) in the correct project asset directory (e.g., `assets/images`).
-    5.  Execute this conversion script programmatically (e.g., via `package.json` script and `launch-process` tool).
+    5.  Important: - Execute this conversion script programmatically (e.g., via `package.json` script and `launch-process` tool).
     6.  Reference only the generated PNG files within the application code.
 
-## 8. Documentation Requirements
+## 1.8. Documentation Requirements
 
 -   Provide thorough, accurate documentation for every project.
 -   Ensure all documentation is well-written, easy to understand, accurate, concise, and reflects the final code. Update docs if implementation changes.
 
-### `README.md`:
+### 1.8.1. `README.md`:
 
 -   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`), Assistant: Augment Agent), License.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
-## 9. Task Management
+## 1.9. Task Management
 
 -   Commit changes to `docs/TASK_LIST.md` to the repository to maintain version history.
 
-## 10. Testing & Quality Assurance
+## 1.10. Testing & Quality Assurance
+-   Important: - Write unit tests for all new code, including components, functions, and modules.
+-   Verify code yourself and ensure its safety and correctness before using any code. Check for confirmed functionality.
+-   Write tests to prove the code’s correctness before integrating it into your project.
 
-### Verification & Validation:
-
--   Verify code yourself and ensure its safety and correctness before using any code. Check for security vulnerabilities, confirm functionality, and ensure it’s free of malicious elements.
--   Write tests to prove the code’s safety and efficacy before integrating it into your project.
-
-## 11. Security
-
-### Practices:
-
--   Conduct a security review after each task implementation.
--   Write and run security tests to check for vulnerabilities.
--   Use available MCP servers or tools for automated security scanning if applicable.
-
-### Documentation & Logging:
-
--   Log all security-related actions for traceability.
--   Document security measures taken and their rationale in `docs/SECURITY.md`.
--   Ensure code/data usage complies with laws and licensing agreements.
-
-## 12. System & Environment Considerations
+## 1.11. System & Environment Considerations
 
 -   Operate aware of the target system: Windows 11 Home Single Language 23H2.
 
-### Command Execution:
+### 1.11.1. Command Execution:
 
 -   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.
 -   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
 -   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling.
 -   Important: - Use package manager commands (e.g., `npm install <package-name>`) via the `launch-process` tool to add dependencies; do not edit `package.json` directly.
 
-## 13. Information Gathering, Error Handling, & Project Context
+## 1.12. Information Gathering, Error Handling, & Project Context
 
-### Information Gathering:
+### 1.12.1. Information Gathering:
 
 -   Gather all necessary information, requirements, and specifications before starting. Use `web-search` if needed.
 -   Document assumptions and seek clarification when necessary.
 
-### Runtime Error Handling & Reporting:
+### 1.12.2. Runtime Error Handling & Reporting:
 
 -   Important: - First attempt to resolve errors (compile, runtime, tool, API) autonomously using available tools.
 -   Perform systematic debugging: consult web resources (using `web-search`), documentation (using `context7`), modify code (using `str-replace-editor`), adjust configuration, retry.
 -   Important: - Report back before full completion ONLY if an insurmountable blocker persists after exhausting all self-correction efforts and research.
 -   If reporting a blocker, provide a detailed markdown status report: specific problem, all steps taken (doc summaries, searches, debug attempts), why progress is blocked, demonstration of diligent effort.
 
-### Project Consistency & Context Management:
+### 1.12.3. Project Consistency & Context Management:
 
 -   Rely on Augment Code’s Context Engine to maintain project context, including file paths, directories, and codebase structure.
 -   Use the Workspace Context feature to add additional repositories or folders as needed.
 -   Regularly verify file paths and directories to prevent errors in file creation (e.g., with `save-file`) or code execution.
 -   Minimize Interruptions: Work through the tasks listed in `docs/TASK_LIST.md` without seeking input until the current list is complete. Use tests to verify each task before marking it as Completed in `docs/TASK_LIST.md`.
 
-## 14. Tool Usage Protocols & MCP Servers
+## 1.13. Tool Usage Protocols & MCP Servers
 
-### General Tool Usage:
+### 1.13.1. General Tool Usage:
 
 -   Important: - Always mention which tool or MCP server will help in which task (e.g., "I will use `save-file` to create the `README.md`.").
 -   Use tools whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
@@ -190,12 +174,12 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 -   Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
 -   Do not report "tool input too large" errors; handle by breaking down the task.
 
-### Discovering and Using MCP Servers via Toolbox:
+### 1.13.2. Discovering and Using MCP Servers via Toolbox:
 
 -   Important: - You can always search the web using `web-search` for finding MCP servers and their tools that can assist in any task.
 -   Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes.
 
-### Specific MCP Server Usage & Tool Mapping:
+### 1.13.3. Specific MCP Server Usage & Tool Mapping:
 
 -   `sequentialthinking` (Sequential Thinking MCP Server):
     -   Purpose: Dynamic and reflective problem-solving through a structured thinking process.
@@ -212,7 +196,7 @@ The following guidelines are designed to ensure the Augment Agent operates effec
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
     -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
 
-### internal tools
+### 1.13.4. internal tools
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
     -   Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
