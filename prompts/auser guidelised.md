@@ -1,6 +1,6 @@
-# 1. Augment Agent Operational Guidelines
+# 1. Agent Operational Guidelines
 
-The following guidelines are designed to ensure the Augment Agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, testing, security, system considerations, and tool usage.
+The following guidelines are designed to ensure the agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, testing, security, system considerations, and tool usage.
 
 ## 1.1. Identity & Core Directives
 
@@ -120,7 +120,7 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 
 ### 1.8.1. `README.md`:
 
--   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`), Assistant: Augment Agent), License.
+-   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`)), License.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
 ## 1.9. Task Management
@@ -159,7 +159,7 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 
 ### 1.12.3. Project Consistency & Context Management:
 
--   Rely on Augment Code’s Context Engine to maintain project context, including file paths, directories, and codebase structure.
+-   Rely on agent’s Context Engine to maintain project context, including file paths, directories, and codebase structure.
 -   Use the Workspace Context feature to add additional repositories or folders as needed.
 -   Regularly verify file paths and directories to prevent errors in file creation (e.g., with `save-file`) or code execution.
 -   Minimize Interruptions: Work through the tasks listed in `docs/TASK_LIST.md` without seeking input until the current list is complete. Use tests to verify each task before marking it as Completed in `docs/TASK_LIST.md`.

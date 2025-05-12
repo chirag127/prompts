@@ -85,26 +85,16 @@ _ ...
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 **8. UI/UX Requirements & Design**
-_ **8.1. Wireframes / Mockups**
-_ **8.2. Key UI Elements** \* **8.3. User Flow Diagrams**
-
+don't give this section
 **9. Data Requirements**
-_ **9.1. Data Model**
-_ **9.2. Data Migration** \* **9.3. Analytics & Tracking**
-
+don't give this section
 **10. Release Criteria**
-_ **10.1. Functional Criteria**
-_ **10.2. Non-Functional Criteria**
-_ **10.3. Testing Criteria**
-_ **10.4. Documentation Criteria**
+don't give this section
 
 **11. Open Issues / Future Considerations**
 _ **11.1. Open Issues**
 _ **11.2. Future Enhancements (Post-Launch)**
 
-**12. Appendix & Glossary**
-_ **12.1. Glossary**
-_ **12.2. Related Documents**
 
 **13. Document History / Revisions**
 

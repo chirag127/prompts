@@ -1,55 +1,40 @@
-this following is example code for Gemini 2.0 Flash Thinking Experimental 01-21
+IMPORTANT: use the following code strictly for the gemini integration:
 
-const {
-  GoogleGenerativeAI,
-  HarmCategory,
-  HarmBlockThreshold,
-} = require("@google/generative-ai");
-const fs = require("node:fs");
-const mime = require("mime-types");
+```javascript
+// To run this code you need to install the following dependencies:
+// npm install @google/genai mime
+// npm install -D @types/node
 
-const apiKey = process.env.GEMINI_API_KEY;
-const genAI = new GoogleGenerativeAI(apiKey);
+import { GoogleGenAI } from "@google/genai";
 
-const model = genAI.getGenerativeModel({
-  model: "gemini-2.0-flash-thinking-exp-01-21",
-});
+async function main() {
+    const ai = new GoogleGenAI({});
+    const config = {
+        responseMimeType: "text/plain",
+    };
+    const model = "gemini-2.5-flash-preview-04-17";
+    const contents = [
+        {
+            role: "user",
+            parts: [
+                {
+                    text: `INSERT_INPUT_HERE`,
+                },
+            ],
+        },
+    ];
 
-const generationConfig = {
-  temperature: 0.7,
-  topP: 0.95,
-  topK: 64,
-  maxOutputTokens: 65536,
-  responseModalities: [
-  ],
-  responseMimeType: "text/plain",
-};
-
-async function run() {
-  const chatSession = model.startChat({
-    generationConfig,
-    history: [
-    ],
-  });
-
-  const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
-  // TODO: Following code needs to be updated for client-side apps.
-  const candidates = result.response.candidates;
-  for(let candidate_index = 0; candidate_index < candidates.length; candidate_index++) {
-    for(let part_index = 0; part_index < candidates[candidate_index].content.parts.length; part_index++) {
-      const part = candidates[candidate_index].content.parts[part_index];
-      if(part.inlineData) {
-        try {
-          const filename = `output_${candidate_index}_${part_index}.${mime.extension(part.inlineData.mimeType)}`;
-          fs.writeFileSync(filename, Buffer.from(part.inlineData.data, 'base64'));
-          console.log(`Output written to: ${filename}`);
-        } catch (err) {
-          console.error(err);
-        }
-      }
+    const response = await ai.models.generateContentStream({
+        model,
+        config,
+        contents,
+    });
+    for await (const chunk of response) {
+        console.log(chunk.text);
     }
-  }
-  console.log(result.response.text());
 }
 
-run();
+main();
+```
+
+```
