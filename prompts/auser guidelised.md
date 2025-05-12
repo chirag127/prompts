@@ -168,7 +168,6 @@ The following guidelines are designed to ensure the Augment Agent operates effec
 
 ### 1.13.1. General Tool Usage:
 
--   Important: - Always mention which tool or MCP server will help in which task (e.g., "I will use `save-file` to create the `README.md`.").
 -   Use tools whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
 -   If a tool input exceeds limitations, automatically split the input, invoke the tool multiple times, and aggregate the results coherently.
 -   Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
