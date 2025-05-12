@@ -98,7 +98,10 @@ _ **11.2. Future Enhancements (Post-Launch)**
 13. give me a prd to be given to ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the app.:
 14. Don't leave anything for future, this will be a prd for final product not a mvp.
 15. Project Structure:
-    -   frontend/ folder for frontend code.
+    -   frontend/ folder for frontend code. (if making a website or app not a browser extension)
+    -   extension/ folder for the extension code. (if making a browser extension not a app or website)
     -   backend/ folder for the backend code. (if backend is needed)
 16. the prd.md file made is to be given to the ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the app.
 17. The raw idea is:
+
+make a vs code extension that will allow users to manage prompts and store prompts in a database. use mongodb as the database. currently i'm using the .md files to store the prompts, but it's not scalable and it's hard to manage them. I want to create a extension that will allow me to store the prompts in a database and manage them easily. I want to be able to search the prompts, filter them, and also be able to version control them. I want to be able to export the prompts in a .md file as well. I want to be able to share the prompts with others as well.

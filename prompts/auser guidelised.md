@@ -123,62 +123,58 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`)), License.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
-## 1.9. Task Management
 
--   Commit changes to `docs/TASK_LIST.md` to the repository to maintain version history.
-
-## 1.10. Testing & Quality Assurance
+## 1.9. Testing & Quality Assurance
 -   Important: - Write unit tests for all new code, including components, functions, and modules.
 -   Verify code yourself and ensure its safety and correctness before using any code. Check for confirmed functionality.
 -   Write tests to prove the code’s correctness before integrating it into your project.
 
-## 1.11. System & Environment Considerations
+## 1.10. System & Environment Considerations
 
 -   Operate aware of the target system: Windows 11 Home Single Language 23H2.
 
-### 1.11.1. Command Execution:
+### 1.10.1. Command Execution:
 
 -   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.
 -   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
 -   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling.
 -   Important: - Use package manager commands (e.g., `npm install <package-name>`) via the `launch-process` tool to add dependencies; do not edit `package.json` directly.
 
-## 1.12. Information Gathering, Error Handling, & Project Context
+## 1.11. Information Gathering, Error Handling, & Project Context
 
-### 1.12.1. Information Gathering:
+### 1.11.1. Information Gathering:
 
 -   Gather all necessary information, requirements, and specifications before starting. Use `web-search` if needed.
 -   Document assumptions and seek clarification when necessary.
 
-### 1.12.2. Runtime Error Handling & Reporting:
+### 1.11.2. Runtime Error Handling & Reporting:
 
 -   Important: - First attempt to resolve errors (compile, runtime, tool, API) autonomously using available tools.
 -   Perform systematic debugging: consult web resources (using `web-search`), documentation (using `context7`), modify code (using `str-replace-editor`), adjust configuration, retry.
 -   Important: - Report back before full completion ONLY if an insurmountable blocker persists after exhausting all self-correction efforts and research.
 -   If reporting a blocker, provide a detailed markdown status report: specific problem, all steps taken (doc summaries, searches, debug attempts), why progress is blocked, demonstration of diligent effort.
 
-### 1.12.3. Project Consistency & Context Management:
+### 1.11.3. Project Consistency & Context Management:
 
 -   Rely on agent’s Context Engine to maintain project context, including file paths, directories, and codebase structure.
 -   Use the Workspace Context feature to add additional repositories or folders as needed.
 -   Regularly verify file paths and directories to prevent errors in file creation (e.g., with `save-file`) or code execution.
--   Minimize Interruptions: Work through the tasks listed in `docs/TASK_LIST.md` without seeking input until the current list is complete. Use tests to verify each task before marking it as Completed in `docs/TASK_LIST.md`.
 
-## 1.13. Tool Usage Protocols & MCP Servers
+## 1.12. Tool Usage Protocols & MCP Servers
 
-### 1.13.1. General Tool Usage:
+### 1.12.1. General Tool Usage:
 
 -   Use tools whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
 -   If a tool input exceeds limitations, automatically split the input, invoke the tool multiple times, and aggregate the results coherently.
 -   Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
 -   Do not report "tool input too large" errors; handle by breaking down the task.
 
-### 1.13.2. Discovering and Using MCP Servers via Toolbox:
+### 1.12.2. Discovering and Using MCP Servers via Toolbox:
 
 -   Important: - You can always search the web using `web-search` for finding MCP servers and their tools that can assist in any task.
 -   Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes.
 
-### 1.13.3. Specific MCP Server Usage & Tool Mapping:
+### 1.12.3. Specific MCP Server Usage & Tool Mapping:
 
 -   `sequentialthinking` (Sequential Thinking MCP Server):
     -   Purpose: Dynamic and reflective problem-solving through a structured thinking process.
@@ -195,7 +191,7 @@ The following guidelines are designed to ensure the agent operates effectively a
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
     -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
 
-### 1.13.4. internal tools
+### 1.12.4. internal tools
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
     -   Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
