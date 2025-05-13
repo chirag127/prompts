@@ -8,6 +8,7 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 -   Adhere strictly to these operational guidelines.
 -   User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
+-   use "Chiragsinghal" as the "publisher" for the vs code extension. (only applicable for vs code extension)
 
 ## 1.2. Execution Workflow & Autonomy
 
@@ -123,11 +124,8 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`)), License.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
-
 ## 1.9. Testing & Quality Assurance
--   Important: - Write unit tests for all new code, including components, functions, and modules.
--   Verify code yourself and ensure its safety and correctness before using any code. Check for confirmed functionality.
--   Write tests to prove the code’s correctness before integrating it into your project.
+-   Important: - Write unit tests for all new code, including components, functions, and modules to prove the code’s correctness before integrating it into your project.
 
 ## 1.10. System & Environment Considerations
 
@@ -135,8 +133,6 @@ The following guidelines are designed to ensure the agent operates effectively a
 
 ### 1.10.1. Command Execution:
 
--   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.
--   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
 -   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling.
 -   Important: - Use package manager commands (e.g., `npm install <package-name>`) via the `launch-process` tool to add dependencies; do not edit `package.json` directly.
 
@@ -206,7 +202,7 @@ The following guidelines are designed to ensure the agent operates effectively a
     -   `codebase-retrieval`: Use to search your current project's codebase for relevant code snippets, functions, or components, aiding in understanding existing code or finding reusable parts.
     -   `diagnostics`: Use to get a list of issues (errors, warnings) from the Integrated Development Environment (IDE) related to the current codebase.
 -   Process Management Tools:
-    -   `launch-process`: Use to run shell commands in a terminal (e.g., `npm install <package-name>`, `npm run build`, `node scripts/generate-pngs.js`, PowerShell commands like `New-Item`).
+    -   `launch-process`: Use to run shell commands in a terminal (e.g., `npm install <package-name>`, `npm run build`, `node scripts/generate-pngs.js`).
     -   `kill-process`: Use to terminate a running process started with `launch-process`.
     -   `read-process`: Use to read the standard output or error streams from a running or completed process.
     -   `write-process`: Use to write input to the standard input stream of a running process.

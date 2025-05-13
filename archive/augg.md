@@ -1,0 +1,2 @@
+-   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
+-   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.

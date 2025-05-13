@@ -99,9 +99,10 @@ _ **11.2. Future Enhancements (Post-Launch)**
 14. Don't leave anything for future, this will be a prd for final product not a mvp.
 15. Project Structure:
     -   frontend/ folder for frontend code. (if making a website or app not a browser extension)
-    -   extension/ folder for the extension code. (if making a browser extension not a app or website)
+    -   extension/ folder for the extension code. (if making a browser/vs code extension not a app or website)
     -   backend/ folder for the backend code. (if backend is needed)
 16. the prd.md file made is to be given to the ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the app.
-17. The raw idea is:
+17. feel free to add any additional features or requirements that you think would be beneficial for the app.
+18. The raw idea is:
 
-make a vs code extension that will allow users to manage prompts and store prompts in a database. use mongodb as the database. currently i'm using the .md files to store the prompts, but it's not scalable and it's hard to manage them. I want to create a extension that will allow me to store the prompts in a database and manage them easily. I want to be able to search the prompts, filter them, and also be able to version control them. I want to be able to export the prompts in a .md file as well. I want to be able to share the prompts with others as well.
+The vs code extension will do text to speech conversion of the current file opened in the vs code editor. The extension will have a button to start and stop the text to speech conversion. The extension will also have a button to pause and resume the text to speech conversion. The extension will also have a button to change the voice of the text to speech conversion. The extension will also have a button to change the speed of the text to speech conversion. The extension will also have a button to change the volume of the text to speech conversion. The extension will also have a button to change the pitch of the text to speech conversion. The extension will also have a button to change the language of the text to speech conversion. The extension will also have a button to change the accent of the text to speech conversion. The extension will also have a button in the context menu to convert the selected text to speech.
