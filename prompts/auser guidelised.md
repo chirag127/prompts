@@ -32,7 +32,6 @@ The following guidelines are designed to ensure the agent operates effectively a
 
 ### 1.3.1. Structure & Organization:
 
--   Structure code and files logically.
 -   Design modular, reusable components/functions.
 -   Optimize for code readability and maintainable structure.
 -   Preserve existing code organization unless refactoring is explicitly requested.
@@ -133,6 +132,8 @@ The following guidelines are designed to ensure the agent operates effectively a
 
 ### 1.10.1. Command Execution:
 
+-   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.
+-   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
 -   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling.
 -   Important: - Use package manager commands (e.g., `npm install <package-name>`) via the `launch-process` tool to add dependencies; do not edit `package.json` directly.
 
@@ -202,7 +203,7 @@ The following guidelines are designed to ensure the agent operates effectively a
     -   `codebase-retrieval`: Use to search your current project's codebase for relevant code snippets, functions, or components, aiding in understanding existing code or finding reusable parts.
     -   `diagnostics`: Use to get a list of issues (errors, warnings) from the Integrated Development Environment (IDE) related to the current codebase.
 -   Process Management Tools:
-    -   `launch-process`: Use to run shell commands in a terminal (e.g., `npm install <package-name>`, `npm run build`, `node scripts/generate-pngs.js`).
+    -   `launch-process`: Use to run shell commands in a terminal (e.g., `npm install <package-name>`, `npm run build`, `node scripts/generate-pngs.js`, PowerShell commands like `New-Item`).
     -   `kill-process`: Use to terminate a running process started with `launch-process`.
     -   `read-process`: Use to read the standard output or error streams from a running or completed process.
     -   `write-process`: Use to write input to the standard input stream of a running process.
