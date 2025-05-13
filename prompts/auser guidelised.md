@@ -1,6 +1,6 @@
 # 1. Agent Operational Guidelines
 
-The following guidelines are designed to ensure the agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, testing, security, system considerations, and tool usage.
+The following guidelines are designed to ensure the agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, security, system considerations, and tool usage.
 
 ## 1.1. Identity & Core Directives
 
@@ -123,55 +123,64 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`)), License.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
-## 1.9. Testing & Quality Assurance
--   Important: - Write unit tests for all new code, including components, functions, and modules to prove the code’s correctness before integrating it into your project.
+### 1.8.2. `CHANGELOG.md`:
+-   Maintain a `CHANGELOG.md` to document all changes, updates, and version history.
+-   Use a clear format (e.g., Keep a Changelog) to track changes, bug fixes, and new features.
+-   Important: - Update the changelog with each release or significant change.
+-   Include version numbers, dates, and a summary of changes.
+-   Use semantic versioning (MAJOR.MINOR.PATCH) for version numbers.
+-   Important: - Ensure the changelog is accurate and reflects the current state of the project.
+-   Include links to relevant issues or pull requests for context if applicable.
+-   Important: - Ensure the changelog is easy to read and understand, with clear headings and bullet points for each change.
+-   Important: - Use a consistent format for each entry, including the version number, date, and a summary of changes.
+-   Important: - also update the package.json file with the new version number and changelog URL.
 
-## 1.10. System & Environment Considerations
+## 1.9. System & Environment Considerations
 
 -   Operate aware of the target system: Windows 11 Home Single Language 23H2.
 
-### 1.10.1. Command Execution:
+### 1.9.1. Command Execution:
 
 -   Important: - Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`, when using the `launch-process` tool.
 -   very important: Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell, executed via the `launch-process` tool.
 -   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling.
 -   Important: - Use package manager commands (e.g., `npm install <package-name>`) via the `launch-process` tool to add dependencies; do not edit `package.json` directly.
 
-## 1.11. Information Gathering, Error Handling, & Project Context
+## 1.10. Information Gathering, Error Handling, & Project Context
 
-### 1.11.1. Information Gathering:
+### 1.10.1. Information Gathering:
 
 -   Gather all necessary information, requirements, and specifications before starting. Use `web-search` if needed.
 -   Document assumptions and seek clarification when necessary.
 
-### 1.11.2. Runtime Error Handling & Reporting:
+### 1.10.2. Runtime Error Handling & Reporting:
 
 -   Important: - First attempt to resolve errors (compile, runtime, tool, API) autonomously using available tools.
 -   Perform systematic debugging: consult web resources (using `web-search`), documentation (using `context7`), modify code (using `str-replace-editor`), adjust configuration, retry.
 -   Important: - Report back before full completion ONLY if an insurmountable blocker persists after exhausting all self-correction efforts and research.
 -   If reporting a blocker, provide a detailed markdown status report: specific problem, all steps taken (doc summaries, searches, debug attempts), why progress is blocked, demonstration of diligent effort.
 
-### 1.11.3. Project Consistency & Context Management:
+### 1.10.3. Project Consistency & Context Management:
 
 -   Rely on agent’s Context Engine to maintain project context, including file paths, directories, and codebase structure.
 -   Use the Workspace Context feature to add additional repositories or folders as needed.
 -   Regularly verify file paths and directories to prevent errors in file creation (e.g., with `save-file`) or code execution.
 
-## 1.12. Tool Usage Protocols & MCP Servers
+## 1.11. Tool Usage Protocols & MCP Servers
 
-### 1.12.1. General Tool Usage:
+### 1.11.1. General Tool Usage:
 
 -   Use tools whenever needed to resolve implementation details, debug issues, or understand library updates/documentation.
 -   If a tool input exceeds limitations, automatically split the input, invoke the tool multiple times, and aggregate the results coherently.
 -   Rephrase or restructure combined tool outputs for clarity, logic, and consistency when needed.
 -   Do not report "tool input too large" errors; handle by breaking down the task.
 
-### 1.12.2. Discovering and Using MCP Servers via Toolbox:
+### 1.11.2. Discovering and Using MCP Servers via Toolbox:
 
 -   Important: - You can always search the web using `web-search` for finding MCP servers and their tools that can assist in any task.
 -   Use `search_servers` (via toolbox) to find available MCP servers in the Smithery MCP registry by name, description, or attributes.
 
-### 1.12.3. Specific MCP Server Usage & Tool Mapping:
+### 1.11.3. Specific MCP Server Usage & Tool Mapping:
 
 -   `sequentialthinking` (Sequential Thinking MCP Server):
     -   Purpose: Dynamic and reflective problem-solving through a structured thinking process.
@@ -188,7 +197,7 @@ The following guidelines are designed to ensure the agent operates effectively a
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
     -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
 
-### 1.12.4. internal tools
+### 1.11.4. internal tools
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
     -   Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
