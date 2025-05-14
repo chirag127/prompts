@@ -34,6 +34,7 @@ The following guidelines are designed to ensure the agent operates effectively a
 ### 1.3.1. Structure & Organization:
 
 -   Design modular, reusable components/functions.
+-   The code should be as modular as possible.
 -   Optimize for code readability and maintainable structure.
 -   Preserve existing code organization unless refactoring is explicitly requested.
 -   Match existing code style and naming patterns exactly.
@@ -125,6 +126,7 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
 ### 1.8.2. `CHANGELOG.md`:
+
 -   Maintain a `CHANGELOG.md` to document all changes, updates, and version history.
 -   Use a clear format (e.g., Keep a Changelog) to track changes, bug fixes, and new features.
 -   Important: - Update the changelog with each release or significant change.
@@ -185,24 +187,88 @@ The following guidelines are designed to ensure the agent operates effectively a
 
 ### 1.11.3. Specific MCP Server Usage & Tool Mapping:
 
+#### 1.11.3.1. clear thought MCP servers:
+
 -   `sequentialthinking` (Sequential Thinking MCP Server):
-    -   Purpose: Dynamic and reflective problem-solving through a structured thinking process.
-    -   Features:
-        -   Break down complex problems into manageable steps
-        -   Revise and refine thoughts as understanding deepens
-        -   Branch into alternative paths of reasoning
-        -   Adjust the total number of thoughts dynamically
-        -   Generate and verify solution hypotheses
--   `context7` (Contextual Information & Documentation Review MCP Server):
-    -   Purpose: pulls up-to-date, version-specific documentation and code examples straight from the source — and places them directly into your prompt.
-    -   Use for: Gathering contextual information about the current task, including relevant libraries, frameworks, and APIs. Understanding the latest updates and documentation for any third-party API integration or new library/framework usage. Verifying assumptions about usage, APIs, config, installation, changes, etc. Can also be used for guidance on code quality best practices (e.g., @upstash/context7-mcp).
-    -   Important: - Mandatory Action: MANDATORY before implementing _any_ third-party API integration, using _any_ new library/framework, or employing potentially unfamiliar features. Consult the latest official documentation via `context7` or reliable alternatives. Assume training data may be outdated.
-    -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
-    -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
+
+    -   Purpose: For breaking down complex problems into manageable steps.
+    -   Use for: Problems requiring step-by-step analysis, planning, and design tasks that need revision.
+    -   Implementation: Use the `sequentialthinking_clear_thought` tool when faced with multi-step problems.
+
+-   `mentalmodel` (Mental Models MCP Server):
+
+    -   Purpose: For applying structured problem-solving approaches (First Principles, Opportunity Cost, etc.).
+    -   Use for: Situations requiring systematic analysis through established frameworks.
+    -   Implementation: Use the `mentalmodel_clear_thought` tool with appropriate model selection.
+
+-   `designpattern` (Design Patterns MCP Server):
+
+    -   Purpose: For applying software architecture and implementation patterns.
+    -   Use for: Software design challenges requiring established patterns.
+    -   Implementation: Use the `designpattern_clear_thought` tool with appropriate pattern selection.
+
+-   `programmingparadigm` (Programming Paradigms MCP Server):
+
+    -   Purpose: For applying different programming approaches (OOP, Functional, etc.).
+    -   Use for: Code implementation requiring specific paradigm-based solutions.
+    -   Implementation: Use the `programmingparadigm_clear_thought` tool with appropriate paradigm selection.
+
+-   `debuggingapproach` (Debugging Approaches MCP Server):
+
+    -   Purpose: For systematic debugging of technical issues.
+    -   Use for: Troubleshooting complex errors using established debugging methodologies.
+    -   Implementation: Use the `debuggingapproach_clear_thought` tool with appropriate approach selection.
+
+-   `collaborativereasoning` (Collaborative Reasoning MCP Server):
+
+    -   Purpose: For simulating expert collaboration with diverse perspectives.
+    -   Use for: Problems benefiting from multiple viewpoints and expertise.
+    -   Implementation: Use the `collaborativereasoning_clear_thought` tool with appropriate persona configuration.
+
+-   `decisionframework` (Decision Frameworks MCP Server):
+
+    -   Purpose: For structured decision analysis and rational choice.
+    -   Use for: Evaluating options with multiple criteria and outcomes.
+    -   Implementation: Use the `decisionframework_clear_thought` tool with appropriate analysis type.
+
+-   `metacognitivemonitoring` (Metacognitive Monitoring MCP Server):
+
+    -   Purpose: For tracking knowledge boundaries and reasoning quality.
+    -   Use for: Self-assessment of knowledge confidence and reasoning validity.
+    -   Implementation: Use the `metacognitivemonitoring_clear_thought` tool with appropriate stage selection.
+
+-   `scientificmethod` (Scientific Method MCP Server):
+
+    -   Purpose: For applying formal scientific reasoning to questions and problems.
+    -   Use for: Hypothesis testing and evidence-based problem solving.
+    -   Implementation: Use the `scientificmethod_clear_thought` tool with appropriate stage selection.
+
+-   `structuredargumentation` (Structured Argumentation MCP Server):
+
+    -   Purpose: For dialectical reasoning and argument analysis.
+    -   Use for: Developing and evaluating competing arguments.
+    -   Implementation: Use the `structuredargumentation_clear_thought` tool with appropriate argument type.
+
+-   `visualreasoning` (Visual Reasoning MCP Server):
+    -   Purpose: For visual thinking, problem-solving, and communication.
+    -   Use for: Creating and interpreting visual representations of problems and solutions.
+    -   Implementation: Use the `visualreasoning_clear_thought` tool with appropriate diagram type.
+
+#### 1.11.3.2. context7 MCP server:
+
+-   `context7` (Documentation & Library Research MCP Server):
+    -   Purpose: Fetches up-to-date documentation and code examples from official sources.
+    -   Use for: Libraries, frameworks, APIs, and best practices research.
+    -   Important: - MANDATORY before implementing any third-party integrations or using new libraries.
+    -   Engagement: Automatically used when documentation needed.
+
+#### 1.11.3.3. date and time MCP server:
+
     -   use `getCurrentDateTime_node` tool if you need to get the current date in indian standard time format and time in indian standard time format any point in the implementation.
     -   add last updated date and time to the `README.md` file using `getCurrentDateTime_node` tool.
 
 ### 1.11.4. internal tools
+
 -   `web-search` (Web Research Tool):
     -   Purpose: General web research and information retrieval.
     -   Use for: Finding solutions to error messages, general web research, gathering information on libraries/technologies, or discovering MCP servers and their capabilities.
