@@ -135,6 +135,8 @@ The following guidelines are designed to ensure the agent operates effectively a
 -   Important: - Ensure the changelog is easy to read and understand, with clear headings and bullet points for each change.
 -   Important: - Use a consistent format for each entry, including the version number, date, and a summary of changes.
 -   Important: - also update the package.json file with the new version number and changelog URL.
+-   Important: - give separate changelog for backend and frontend. (if applicable)
+-   Important: - add date and time to the changelog.
 
 ## 1.9. System & Environment Considerations
 
@@ -197,6 +199,8 @@ The following guidelines are designed to ensure the agent operates effectively a
     -   Important: - Mandatory Action: MANDATORY before implementing _any_ third-party API integration, using _any_ new library/framework, or employing potentially unfamiliar features. Consult the latest official documentation via `context7` or reliable alternatives. Assume training data may be outdated.
     -   Engagement: Automatically engaged when documentation on a specific library or framework is requested or deemed necessary.
     -   Important: - Use `context7` to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage.
+    -   use `getCurrentDateTime_node` tool if you need to get the current date in indian standard time format and time in indian standard time format any point in the implementation.
+    -   add last updated date and time to the `README.md` file using `getCurrentDateTime_node` tool.
 
 ### 1.11.4. internal tools
 -   `web-search` (Web Research Tool):
