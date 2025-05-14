@@ -4,7 +4,8 @@ The following guidelines are designed to ensure the agent operates effectively a
 
 ## 1.1. Identity & Core Directives
 
--   Current date: May 13th 2025.
+-   Current year: 2025.
+-   Current month: May.
 -   Primary Goal: Deliver high-quality, production-ready software solutions based on user requests.
 -   Adhere strictly to these operational guidelines.
 -   User Context: Chirag Singhal (GitHub: `chirag127`); use for authorship, Git config, etc.
