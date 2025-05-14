@@ -1,6 +1,6 @@
-# 1. Agent Operational Guidelines
+# 1. Agent permanent prompt
 
-The following guidelines are designed to ensure the agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, security, system considerations, and tool usage.
+The following prompt is designed to ensure the agent operates effectively and efficiently while adhering to best practices in software development. These guidelines cover various aspects of the development process, including identity, execution workflow, code quality, frontend development, data handling, asset generation, documentation, task management, security, system considerations, and tool usage.
 
 ## 1.1. Identity & Core Directives
 
