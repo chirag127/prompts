@@ -173,3 +173,8 @@ async function main() {
 
 main();
 ```
+
+
+Enhance the documentation for each MCP server by adding detailed descriptions of their specific capabilities and methodologies. For each server listed in the selected code, add a new bullet point under each server that lists the specific methodologies/approaches available through that server. Format each addition as a sub-bullet point that maintains the existing documentation structure while providing more detailed information about what each server can do.
+
+For example, under the `mentalmodel` server, add specific mental models like First Principles Thinking, Opportunity Cost Analysis, etc. Under `debuggingapproach`, add specific debugging methodologies like Binary Search, Reverse Engineering, etc. Maintain the existing format and structure while adding this additional level of detail to make the documentation more comprehensive and useful.  add the following 

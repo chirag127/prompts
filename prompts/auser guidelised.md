@@ -189,70 +189,70 @@ The following prompt is designed to ensure the agent operates effectively and ef
 
 #### 1.11.3.1. clear thought MCP servers:
 
--   `sequentialthinking` (Sequential Thinking MCP Server):
-
-    -   Purpose: For breaking down complex problems into manageable steps.
-    -   Use for: Problems requiring step-by-step analysis, planning, and design tasks that need revision.
-    -   Implementation: Use the `sequentialthinking_clear_thought` tool when faced with multi-step problems.
-
 -   `mentalmodel` (Mental Models MCP Server):
 
-    -   Purpose: For applying structured problem-solving approaches (First Principles, Opportunity Cost, etc.).
+    -   Purpose: For applying structured problem-solving approaches (FFirst Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor).
     -   Use for: Situations requiring systematic analysis through established frameworks.
     -   Implementation: Use the `mentalmodel_clear_thought` tool with appropriate model selection.
 
 -   `designpattern` (Design Patterns MCP Server):
 
-    -   Purpose: For applying software architecture and implementation patterns.
+    -   Purpose: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns).
     -   Use for: Software design challenges requiring established patterns.
     -   Implementation: Use the `designpattern_clear_thought` tool with appropriate pattern selection.
 
 -   `programmingparadigm` (Programming Paradigms MCP Server):
 
-    -   Purpose: For applying different programming approaches (OOP, Functional, etc.).
+    -   Purpose: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming).
     -   Use for: Code implementation requiring specific paradigm-based solutions.
     -   Implementation: Use the `programmingparadigm_clear_thought` tool with appropriate paradigm selection.
 
 -   `debuggingapproach` (Debugging Approaches MCP Server):
 
-    -   Purpose: For systematic debugging of technical issues.
+    -   Purpose: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing).
     -   Use for: Troubleshooting complex errors using established debugging methodologies.
     -   Implementation: Use the `debuggingapproach_clear_thought` tool with appropriate approach selection.
 
 -   `collaborativereasoning` (Collaborative Reasoning MCP Server):
 
-    -   Purpose: For simulating expert collaboration with diverse perspectives.
+    -   Purpose: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis).
     -   Use for: Problems benefiting from multiple viewpoints and expertise.
     -   Implementation: Use the `collaborativereasoning_clear_thought` tool with appropriate persona configuration.
 
 -   `decisionframework` (Decision Frameworks MCP Server):
 
-    -   Purpose: For structured decision analysis and rational choice.
+    -   Purpose: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling).
     -   Use for: Evaluating options with multiple criteria and outcomes.
     -   Implementation: Use the `decisionframework_clear_thought` tool with appropriate analysis type.
 
 -   `metacognitivemonitoring` (Metacognitive Monitoring MCP Server):
 
-    -   Purpose: For tracking knowledge boundaries and reasoning quality.
+    -   Purpose: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification).
     -   Use for: Self-assessment of knowledge confidence and reasoning validity.
     -   Implementation: Use the `metacognitivemonitoring_clear_thought` tool with appropriate stage selection.
 
 -   `scientificmethod` (Scientific Method MCP Server):
 
-    -   Purpose: For applying formal scientific reasoning to questions and problems.
+    -   Purpose: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation).
     -   Use for: Hypothesis testing and evidence-based problem solving.
     -   Implementation: Use the `scientificmethod_clear_thought` tool with appropriate stage selection.
 
 -   `structuredargumentation` (Structured Argumentation MCP Server):
 
-    -   Purpose: For dialectical reasoning and argument analysis.
+    -   Purpose: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping).
     -   Use for: Developing and evaluating competing arguments.
     -   Implementation: Use the `structuredargumentation_clear_thought` tool with appropriate argument type.
 
 -   `visualreasoning` (Visual Reasoning MCP Server):
-    -   Purpose: For visual thinking, problem-solving, and communication.
+    -   Purpose: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation).
     -   Use for: Creating and interpreting visual representations of problems and solutions.
     -   Implementation: Use the `visualreasoning_clear_thought` tool with appropriate diagram type.
+
+-   `sequentialthinking` (Sequential Thinking MCP Server):
+
+    -   Purpose: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance).
+    -   Use for: Problems requiring step-by-step analysis, planning, and design tasks that need revision.
+    -   Implementation: Use the `sequentialthinking_clear_thought` tool when faced with multi-step problems.
 
 #### 1.11.3.2. context7 MCP server:
 
