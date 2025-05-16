@@ -104,6 +104,16 @@ The following prompt is designed to ensure the agent operates effectively and ef
 -   Provide a template `.env.example` file listing all required environment variables.
 -   Document required API keys/credentials clearly in `README.md`.
 
+### 1.6.3. API Endpoint Configuration:
+
+-   Important: - Centralize all API endpoint URLs in a single location (e.g., a configuration file, constants module, or environment variables).
+-   Never hardcode API endpoint URLs directly in service/component files.
+-   Create a dedicated configuration module (e.g., `apiConfig.js`, `endpoints.ts`) that exports all endpoint URLs.
+-   For larger applications, organize endpoints by domain or feature area within the centralized configuration.
+-   Use environment-specific endpoint configurations (development, staging, production) through environment variables.
+-   Implement a mechanism to dynamically construct endpoint URLs from base URLs and path segments.
+-   When refactoring existing code, identify all files where API endpoints are hardcoded and update them to reference the centralized configuration.
+
 ## 1.7. Asset Generation (Icons/Images)
 
 -   very important: - Do not use placeholder images or icons. Avoid entirely.
@@ -239,6 +249,7 @@ The following prompt is designed to ensure the agent operates effectively and ef
     -   Implementation: Use the `structuredargumentation_clear_thought` tool with appropriate argument type.
 
 -   `visualreasoning` (Visual Reasoning MCP Server):
+
     -   Purpose: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation).
     -   Use for: Creating and interpreting visual representations of problems and solutions.
     -   Implementation: Use the `visualreasoning_clear_thought` tool with appropriate diagram type.
