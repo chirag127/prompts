@@ -8,7 +8,7 @@ Your task is to help a developer understand and plan their product idea through 
 This file serves as a prompt for generating a comprehensive masterplan.md file based on a raw product idea. The process works as follows:
 
 1. The user will provide a raw idea at the end of this file
-2. You will analyze this raw idea and generate a series of questions to clarify any ambiguities
+2. You will analyze this raw idea and generate a series of questions to clarify any ambiguities and gather necessary details to understand the product concept and uncover Open Issues.
 3. The user will answer these questions
 4. Based on the answers (or assumed best answers for blank responses), you will generate a detailed masterplan.md file
 
@@ -395,3 +395,51 @@ When a user provides a raw idea, follow this process:
     - Process this raw idea according to the instructions above
 
 ## The raw idea is:
+
+
+
+Create a browser extension that can be clicked into a sidebar appears on the web page that can be used to perform chat to all web page content don't limit chat to the main content also other information of the web page like url,title, meta tags, etc. The back end will use the fast api python framework for the backend server Traditional python server on a PaaS, which will use the Gemini API to perform the answering chat. The answer will be able to text to speech with the settings available to change the speed of the voice 0 to 16x, The voice can also be changed. The API key will be entered by the user in the extension settings. The extension will also have a settings screen where users can adjust the text-to-speech settings (speed, pitch, voice). The extension will be able to work on all the websites and the user can ask questions about the content of the web page. The extension will also have a feature to save the answers to the local storage of the browser. users open the extension's sidebar Clicking a browser toolbar icon for the extension. , Right-clicking on the page and selecting an option from the context menu.and  A keyboard shortcut. The model used for the chat is gemini 2.5 flash preview 04-17 if the token limit of 200k is reached then switch to gemini 2.0 flash lite.
+
+
+use strictly the following code for the gemini integration:
+
+```
+# To run this code you need to install the following dependencies:
+# pip install google-genai
+
+import base64
+import os
+from google import genai
+from google.genai import types
+
+
+def generate():
+    client = genai.Client(
+        api_key=os.environ.get("GEMINI_API_KEY"),
+    )
+
+    model = "gemini-2.5-flash-preview-04-17"
+    contents = [
+        types.Content(
+            role="user",
+            parts=[
+                types.Part.from_text(text="""INSERT_INPUT_HERE"""),
+            ],
+        ),
+    ]
+    generate_content_config = types.GenerateContentConfig(
+        response_mime_type="text/plain",
+    )
+
+    for chunk in client.models.generate_content_stream(
+        model=model,
+        contents=contents,
+        config=generate_content_config,
+    ):
+        print(chunk.text, end="")
+
+if __name__ == "__main__":
+    generate()
+```
+
+continue with the masterplan.md generation with the suggested answers to the questions.
