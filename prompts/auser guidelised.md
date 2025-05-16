@@ -130,15 +130,10 @@ The following prompt is designed to ensure the agent operates effectively and ef
 -   Maintain a `CHANGELOG.md` to document all changes, updates, and version history.
 -   Use a clear format (e.g., Keep a Changelog) to track changes, bug fixes, and new features.
 -   Important: - Update the changelog with each release or significant change.
--   Include version numbers, dates, and a summary of changes.
 -   Use semantic versioning (MAJOR.MINOR.PATCH) for version numbers.
--   Important: - Ensure the changelog is accurate and reflects the current state of the project.
--   Include links to relevant issues or pull requests for context if applicable.
--   Important: - Ensure the changelog is easy to read and understand, with clear headings and bullet points for each change.
--   Important: - Use a consistent format for each entry, including the version number, date, and a summary of changes.
 -   Important: - also update the package.json file with the new version number and changelog URL.
 -   Important: - give separate changelog for backend and frontend. (if applicable)
--   Important: - add date and time to the changelog.
+-   very important - use `getCurrentDateTime_node` tool to add the date and time of the changelog.
 
 ## 1.9. System & Environment Considerations
 
@@ -264,8 +259,8 @@ The following prompt is designed to ensure the agent operates effectively and ef
 
 #### 1.11.3.3. date and time MCP server:
 
-    -   use `getCurrentDateTime_node` tool if you need to get the current date in indian standard time format and time in indian standard time format any point in the implementation.
-    -   add last updated date and time to the `README.md` file using `getCurrentDateTime_node` tool.
+    -   use `getCurrentDateTime_node` tool if you need to get the current date in UTC format and time in UTC format at any point in the implementation.
+    -   add last updated date and time of UTC format to the `README.md` file using `getCurrentDateTime_node` tool.
 
 ### 1.11.4. internal tools
 
