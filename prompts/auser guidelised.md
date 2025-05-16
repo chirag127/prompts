@@ -103,6 +103,10 @@ The following prompt is designed to ensure the agent operates effectively and ef
 -   Use `.env` files (with libraries like `dotenv`, `expo-constants`) for local secrets/config.
 -   Provide a template `.env.example` file listing all required environment variables.
 -   Document required API keys/credentials clearly in `README.md`.
+-   Important: - Ensure all environment variables defined in `.env` files are properly loaded and utilized in the application code.
+-   Regularly audit environment variables to identify and remove unused ones, maintaining clean configuration.
+-   When refactoring code, verify that all environment variables are still being referenced correctly.
+-   Implement proper validation for required environment variables at application startup.
 
 ### 1.6.3. API Endpoint Configuration:
 
