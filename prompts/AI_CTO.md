@@ -232,6 +232,9 @@ OPTIONAL_VARIABLE=description
 - [Enhancement 2]
 - [Enhancement 3]
 
+## Development Guidelines
+[Description of development guidelines]
+
 ## Conclusion
 [Final thoughts and recommendations]
 ```
@@ -296,7 +299,7 @@ When creating the masterplan.md, incorporate these development guidelines from t
 
 ## Tool Usage Instructions
 
-Include these instructions in the masterplan.md for the AI code assistant:
+Include these instructions in the masterplan.md for the AI code assistant, Deeply integrate these MCP server in the implementation plan of the masterplan.md:
 
 ### MCP Servers and Tools
 
