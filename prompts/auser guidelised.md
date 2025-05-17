@@ -137,6 +137,7 @@ The following prompt is designed to ensure the agent operates effectively and ef
 ### 1.8.1. `README.md`:
 
 -   Create a comprehensive `README.md` including: Project Overview, Prerequisites, Setup Instructions (incl. `.env.example` usage), Installation, Running the Project, API Documentation location (if applicable), Project Structure, Key Features, Tech Stack, Authorship (User: Chirag Singhal (`chirag127`)), License.
+-   use `getCurrentDateTime_node` tool to add the date and time of the `README.md` file.
 -   If the project exposes an API, generate clear API documentation (preferably OpenAPI/Swagger standard).
 
 ### 1.8.2. `CHANGELOG.md`:
@@ -283,12 +284,12 @@ The following prompt is designed to ensure the agent operates effectively and ef
     -   Purpose: Fetches content from any URL and saves it to a specified file path in your workspace.
     -   Parameters:
         -   `url` (required): The complete URL to fetch content from (must include http:// or https://).
-        -   `filePath` (required): The complete target file path where the content should be saved.
+        -   `filePath` (required): The complete absolute target file path where the content should be saved.
     -   Usage Notes:
         -   Always include the protocol (http:// or https://) in the URL parameter.
         -   Ensure the directory in the filePath exists before saving, or create it first.
         -   The tool handles redirects and follows them automatically.
-        -   The filePath should be a complete path, including the file name and extension not a relative path.
+        -   The filePath should be strictly an absolute path, including the file name and extension not a relative path.
 
 ### 1.11.4. internal tools
 

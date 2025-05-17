@@ -401,3 +401,4 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
+There should be a mcp server. that will generate the commit messages and commit the changes ,done in the code base

@@ -1,0 +1,97 @@
+
+{
+  "mcpServers": {
+    "pieces mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-remote",
+        "http://localhost:39300/model_context_protocol/2024-11-05/sse"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "context7": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "toolbox": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery/toolbox",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "typescript-sdk Docs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-remote",
+        "https://gitmcp.io/modelcontextprotocol/typescript-sdk"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "Date and Time": {
+      "command": "node",
+      "args": [
+        "D:\\AM\\GitHub\\date-and-time-mcp-server\\dist\\index.js"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "clear thought": {
+      "command": "node",
+      "args": [
+        "D:\\AM\\GitHub\\Clear-Thought-MCP-server\\dist\\index.js"
+      ]
+    }
+  }
+}
+
+{
+  "mcpServers": {
+    "URL Content Saver MCP Server": {
+      "command": "node",
+      "args": [
+        "D:\\AM\\GitHub\\URL-Content-Saver-MCP-Server\\dist\\index.js"
+      ]
+    }
+  }
+}
