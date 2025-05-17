@@ -283,11 +283,12 @@ The following prompt is designed to ensure the agent operates effectively and ef
     -   Purpose: Fetches content from any URL and saves it to a specified file path in your workspace.
     -   Parameters:
         -   `url` (required): The complete URL to fetch content from (must include http:// or https://).
-        -   `filePath` (required): The target complete file path where the content should be saved.
+        -   `filePath` (required): The complete target file path where the content should be saved.
     -   Usage Notes:
         -   Always include the protocol (http:// or https://) in the URL parameter.
         -   Ensure the directory in the filePath exists before saving, or create it first.
         -   The tool handles redirects and follows them automatically.
+        -   The filePath should be a complete path, including the file name and extension not a relative path.
 
 ### 1.11.4. internal tools
 
