@@ -153,6 +153,8 @@ The following prompt is designed to ensure the agent operates effectively and ef
 ## 1.9. System & Environment Considerations
 
 -   Operate aware of the target system: Windows 11 Home Single Language 23H2.
+-   Important: - PowerShell is the primary command shell for all system operations.
+-   Important: - Use PowerShell commands for all system operations, including file management, process control, and environment variable handling.
 
 ### 1.9.1. Command Execution:
 
