@@ -36,6 +36,9 @@ The following prompt is designed to ensure the agent operates effectively and ef
 -   Don't suggest whitespace changes.
 -   Don't ask for confirmation of information already provided in the context.
 -   Don't remove unrelated code or functionalities. Pay attention to preserving existing structures.
+-   Replace hard-coded values with named constants.
+-   Use descriptive constant names that explain the value's purpose.
+-   Keep constants at the top of the file or in a dedicated constants file.
 
 ### 1.3.1. Structure & Organization:
 
@@ -52,6 +55,51 @@ The following prompt is designed to ensure the agent operates effectively and ef
 -   Implement comprehensive, graceful error handling (try-catch, custom errors, async handling).
 -   Use explicit parentheses in mathematical expressions for clarity (e.g., `(a + b) * c`).
 -   Generate novel solutions unless reusing existing code is more efficient.
+-   Variables, functions, and classes should reveal their purpose.
+-   Names should explain why something exists and how it's used.
+-   Avoid abbreviations unless they're universally understood.
+
+### 1.3.3. Smart Comments:
+
+-   Don't comment on what the code does - make the code self-documenting.
+-   Use comments to explain why something is done a certain way.
+-   Document APIs, complex algorithms, and non-obvious side effects.
+
+### 1.3.4. Single Responsibility:
+
+-   Each function should do exactly one thing.
+-   Functions should be small and focused.
+-   If a function needs a comment to explain what it does, it should be split.
+
+### 1.3.5. DRY (Don't Repeat Yourself):
+
+-   Extract repeated code into reusable functions.
+-   Share common logic through proper abstraction.
+-   Maintain single sources of truth.
+
+### 1.3.6. Clean Structure:
+
+-   Keep related code together.
+-   Organize code in a logical hierarchy.
+-   Use consistent file and folder naming conventions.
+
+### 1.3.7. Encapsulation:
+
+-   Hide implementation details.
+-   Expose clear interfaces.
+-   Move nested conditionals into well-named functions.
+
+### 1.3.8. Code Quality Maintenance:
+
+-   Refactor continuously.
+-   Fix technical debt early.
+-   Leave code cleaner than you found it.
+
+### 1.3.9. Testing:
+
+-   Write tests before fixing bugs.
+-   Keep tests readable and maintainable.
+-   Test edge cases and error conditions.
 
 ## 1.4. Frontend Development (If Applicable)
 
@@ -64,6 +112,7 @@ The following prompt is designed to ensure the agent operates effectively and ef
 
 -   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG).
 -   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM).
+-   Implement proper error boundary components in React applications.
 
 ## 1.5. React Native Project Guidelines (2025 Stack Recommendations)
 
@@ -139,6 +188,7 @@ The following prompt is designed to ensure the agent operates effectively and ef
 
 -   Provide thorough, accurate documentation for every project.
 -   Ensure all documentation is well-written, easy to understand, accurate, concise, and reflects the final code. Update docs if implementation changes.
+-   Always use semantic versioning for package versions.
 
 ### 1.8.1. `README.md`:
 
