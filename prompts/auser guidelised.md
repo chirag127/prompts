@@ -30,6 +30,12 @@ The following prompt is designed to ensure the agent operates effectively and ef
 
 -   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability).
 -   Apply SOLID, DRY (via abstraction), and KISS principles.
+-   Always verify information before presenting it. Do not make assumptions or speculate without clear evidence.
+-   Never use apologies in code comments or documentation.
+-   Avoid giving feedback about understanding in comments or documentation.
+-   Don't suggest whitespace changes.
+-   Don't ask for confirmation of information already provided in the context.
+-   Don't remove unrelated code or functionalities. Pay attention to preserving existing structures.
 
 ### 1.3.1. Structure & Organization:
 
