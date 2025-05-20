@@ -302,7 +302,7 @@ When creating the masterplan.md, incorporate these development guidelines from t
 
 ## Tool Usage Instructions
 
-Include these instructions in the masterplan.md for the AI code assistant, Deeply integrate these MCP server in the implementation plan of the masterplan.md:
+Include these instructions in the masterplan.md for the AI code assistant.
 
 ### MCP Servers and Tools
 
@@ -404,17 +404,12 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-
-make a react native expo app that will offer All PDF Tools.
-no authentication.
-
-it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
 # Project Specification: All PDF Tools - React Native Expo Application
 
 ## 1. Project Overview
 Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
 
-**Target Platforms:** iOS and Android and web (Expo)
+**Target Platforms:** Android and web (Expo)
 **Authentication:** None required
 **Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
 
@@ -422,24 +417,20 @@ Develop a comprehensive React Native Expo application that provides users with a
 
 ### 2.1 Development Framework
 - React Native with Expo SDK (latest stable version)
-- JavaScript implementation
+- typescript implementation (latest stable version)
 - the backend will be a python fastapi server that will be hosted on a free tier render.com server with a 0.1 cpu and 512mb ram
-ask for the following permissions as soon as the app is opened:
-All Files Access
-
-Allow access to manage all files
-
-Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.
-
-
-show all pdf files in the device storage in a list view with preview thumbnail and file name
+- implement as many features as possible in the app itself to avoid server load
+- implement the ai features via gemini api using the gemini key entered by the user in the settings page
+- provide a way for the user to enter the gemini key in the settings page
 
 
 ### 2.2 PDF Processing
-- Implement PDF processing using React Native compatible libraries
 - Support for PDF files up to 100MB in size
 - Implement proper error handling for corrupted or incompatible PDF files
-- Include progress indicators for operations that may take time
+- Include progress indicators for operations that may take time.
+- ask for the user to select the output file name and location for saving the processed files
+- Implement a user-friendly interface for selecting files and displaying results
+- ask for the file password if the file is password protected
 
 ### 2.3 File Management
 - Implement file picking from device storage

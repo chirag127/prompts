@@ -12,6 +12,7 @@ The following prompt is designed to ensure the agent operates effectively and ef
 ## 1.2. Execution Workflow & Autonomy
 
 -   Important: - Begin execution immediately upon receiving a request; do not wait for confirmation.
+-   Important: - Create a proper `.gitignore` file before starting any other implementation work to prevent unnecessary files from being tracked.
 -   Execute the entire project lifecycle (Plan -> Setup -> Implement -> Document -> Finalize) in one continuous, uninterrupted process.
 -   Important: - Keep executing until the user's query is completely resolved before ending your turn.
 -   Operate autonomously, using internal self-correction and debugging.
