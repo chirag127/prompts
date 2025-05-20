@@ -2,173 +2,166 @@ make a react native expo app that will offer All PDF Tools.
 no authentication.
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
-Organize PDF
+# Project Specification: All PDF Tools - React Native Expo Application
+
+## 1. Project Overview
+Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
+
+**Target Platforms:** iOS and Android and web (Expo)
+**Authentication:** None required (serverless implementation)
+**Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
+
+## 2. Technical Requirements
+
+### 2.1 Development Framework
+- React Native with Expo SDK (latest stable version)
+- JavaScript implementation (TypeScript optional)
+- No backend server requirements (fully client-side implementation)
+
+### 2.2 PDF Processing
+- Implement PDF processing using React Native compatible libraries (e.g., react-native-pdf-lib, pdf-lib)
+- All PDF operations must be performed on-device to ensure privacy
+- Support for PDF files up to 100MB in size
+- Implement proper error handling for corrupted or incompatible PDF files
+- Include progress indicators for operations that may take time
+
+### 2.3 File Management
+- Implement file picking from device storage
+- Request appropriate permissions for file access
+- Support saving modified PDFs to device storage
+- Implement temporary file cleanup to prevent storage bloat
+
+## 3. Feature Categories and Requirements
+
 Merge PDF
 Split PDF
-Remove pages
-Extract pages
-Organize PDF
-Scan to PDF
-Optimize PDF
 Compress PDF
-Repair PDF
-OCR PDF
-Convert to PDF
-JPG to PDF
-WORD to PDF
-POWERPOINT to PDF
-EXCEL to PDF
-HTML to PDF
-Convert from PDF
-PDF to JPG
-PDF to WORD
-PDF to POWERPOINT
-PDF to EXCEL
-PDF to PDF/A
 Edit PDF
-Rotate PDF
-Add page numbers
-Add watermark
-Crop PDF
-Edit PDF
-PDF security
-Unlock PDF
-Protect PDF
 Sign PDF
-Redact PDF
-Compare PDF
-Every tool you need to work with PDFs in one place
-Every tool you need to use PDFs, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.
-Merge PDF
-Combine PDFs in the order you want with the easiest PDF merger available.
-
-Split PDF
-Separate one page or a whole set for easy conversion into independent PDF files.
-
-Compress PDF
-Reduce file size while optimizing for maximal PDF quality.
-
-PDF to Word
-Easily convert your PDF files into easy to edit DOC and DOCX documents. The converted WORD document is almost 100% accurate.
-
-PDF to PowerPoint
-Turn your PDF files into easy to edit PPT and PPTX slideshows.
-
-PDF to Excel
-Pull data straight from PDFs into Excel spreadsheets in a few short seconds.
-
-Word to PDF
-Make DOC and DOCX files easy to read by converting them to PDF.
-
-PowerPoint to PDF
-Make PPT and PPTX slideshows easy to view by converting them to PDF.
-
-Excel to PDF
-Make EXCEL spreadsheets easy to read by converting them to PDF.
-
-New!
-Edit PDF
-Add text, images, shapes or freehand annotations to a PDF document. Edit the size, font, and color of the added content.
-
-PDF to JPG
-Convert each PDF page into a JPG or extract all images contained in a PDF.
-
-JPG to PDF
-Convert JPG images to PDF in seconds. Easily adjust orientation and margins.
-
-Sign PDF
-Sign yourself or request electronic signatures from others.
-
-Watermark
-Stamp an image or text over your PDF in seconds. Choose the typography, transparency and position.
-
-Rotate PDF
-Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once!
-
-HTML to PDF
-Convert webpages in HTML to PDF. Copy and paste the URL of the page you want and convert it to PDF with a click.
-
-Unlock PDF
-Remove PDF password security, giving you the freedom to use your PDFs as you want.
-
-Protect PDF
-Protect PDF files with a password. Encrypt PDF documents to prevent unauthorized access.
-
-Organize PDF
-Sort pages of your PDF file however you like. Delete PDF pages or add PDF pages to your document at your convenience.
-
-PDF to PDF/A
-Transform your PDF to PDF/A, the ISO-standardized version of PDF for long-term archiving. Your PDF will preserve formatting when accessed in the future.
-
-Repair PDF
-Repair a damaged PDF and recover data from corrupt PDF. Fix PDF files with our Repair tool.
-
-Page numbers
-Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.
-
-Scan to PDF
-Capture document scans from your mobile device and send them instantly to your browser.
-
-OCR PDF
-Easily convert scanned PDF into searchable and selectable documents.
-
-New!
-Compare PDF
-Show a side-by-side document comparison and easily spot changes between different file versions.
-
-New!
-Redact PDF
-Redact text and graphics to permanently remove sensitive information from a PDF.
-
-New!
-Crop PDF
-Crop margins of PDF documents or select specific areas, then apply the changes to one page or the whole document.
-Compress
-Compress PDF
-Convert
 PDF Converter
-
-Organize
-Merge PDF
-Split PDF
-Rotate PDF
-Delete PDF Pages
-Extract PDF Pages
-Organize PDF
-View & Edit
-Edit PDF
-PDF Annotator
-PDF Reader
-Number Pages
-Crop PDF
-Redact PDF
-Watermark PDF
-Share PDF
-Convert from PDF
-PDF to Word
-PDF to Excel
-PDF to PPT
-PDF to JPG
 Convert to PDF
-Word to PDF
-Excel to PDF
-PPT to PDF
-JPG to PDF
-PDF OCR
-Sign
-Sign PDF
-More
-Unlock PDF
+Convert PDF to ...
+Images to PDF
+PDF to images
+Extract PDF images
 Protect PDF
-Flatten PDF
-Scan
-PDF Scanner
+Unlock PDF
+Rotate PDF pages
+Remove PDF pages
+Extract PDF pages
+Rearrange PDF pages
+Webpage to PDF
+Create PDF job application
+Create PDF with a camera
+PDF OCR
+Add watermark
+Add page numbers
+View as PDF
+PDF Overlay
+Compare PDFs
+Web optimize PDF
+Annotate PDF
+Redact PDF
+Create PDf
+### 3.1 Document Organization
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
+| Split PDF | Separate PDF into multiple documents by page ranges or individual pages | High |
+| Remove Pages | Delete specific pages from a PDF document | High |
+| Extract Pages | Save selected pages as a new PDF document | High |
+| Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
 
-AI PDF
-Chat with PDF
-AI PDF Summarizer
-Translate PDF
-AI Question Generator
+
+PDF to images
+PDF to Word
+PDF to PowerPoint
+PDF to Excel
+PDF to JPG
+PDF to PNG
+PDF to SVG
+PDF to DOCX
+PDF to PPTX
+PDF to XLSX
+PDF to ODT
+PDF to ODS
+PDF to ODP
+PDF to Text
+PDF to RTF
+PDF to EPUB
+PDF to HTML
+PDF to secure PDF
+PDF to PDF/A
+### 3.2 Conversion Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
+| PDF to JPG/PNG/webp/word/powerpoint/excel/html | Extract pages as images or convert entire document to  other files | High |
+
+### 3.3 Editing Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
+| Add Page Numbers | Insert customizable page numbers with position and format options | Medium |
+| Add Watermark | Apply text or image watermarks with opacity and position controls | Medium |
+| Crop PDF | Adjust page margins or crop to specific dimensions | Medium |
+| Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
+
+### 3.4 Security Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Unlock PDF | Remove password protection from PDF files | High |
+| Protect PDF | Add password protection to PDF files | High |
+| Sign PDF | Add digital signatures to documents | Medium |
+| Redact PDF | Permanently remove sensitive information from documents | Low |
+
+### 3.5 Enhancement Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Compress PDF | Reduce file size while maintaining reasonable quality | High |
+| Repair PDF | Attempt to fix corrupted PDF files | Medium |
+| OCR PDF | Convert scanned documents to searchable text | Medium |
+| Scan to PDF | Use device camera to scan documents and convert to PDF | Medium |
+| Compare PDF | Show differences between two PDF documents | Low |
+
+### 3.6 AI Features (Gemini API Integration)
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Chat with PDF | Interactive Q&A with PDF content using RAG | High |
+| AI PDF Summarizer | Generate concise summaries of PDF documents | High |
+| Translate PDF | Translate PDF content between languages | Medium |
+| AI Question Generator | Create questions based on PDF content | Low |
+
+## 4. AI Implementation Requirements
+
+### 4.1 Gemini API Integration
+- Implement Google's Generative AI capabilities using the official SDK
+- Required installation: `npm install @google/generative-ai`
+- User must provide their own Gemini API key through a settings page
+- Store API key securely using device secure storage (e.g., Expo SecureStore)
+- Implement model selection functionality with appropriate defaults
+
+### 4.2 Retrieval Augmented Generation (RAG)
+- Extract and process text from PDFs for context
+- Implement chunking strategy for large documents (e.g., page-based, section-based)
+- Create appropriate prompts that combine user queries with document context
+- Handle API rate limiting and token limitations gracefully
+- Implement fallback mechanisms for when AI features are unavailable
+
+### 4.3 Model Selection
+- Provide interface for users to select from available Gemini models
+- Implement model listing functionality as shown in the example code:
+```javascript
+async function listModels() {
+  const models = await client.listModels();
+  return models.map(model => ({
+    name: model.name,
+    description: model.description,
+    inputTokenLimit: model.inputTokenLimit,
+    outputTokenLimit: model.outputTokenLimit
+  }));
+}
+```
 
 ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. the ai features will be implemented completely on the frontend. as there is no backend . use retrieval augmented generation for the ai features.
 To get the list of available **Gemini models** (from Google’s Generative AI platform, formerly known as Bard/PaLM) using **JavaScript**, you typically use the **Google Generative AI SDK** (via REST API or Node.js client).

@@ -152,17 +152,9 @@ _ **7.2. Scalability**
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 
-## Project Structure
-```
-project-root/
-├── [directory structure]
-├── [with all major files]
-└── [and directories]
-```
-
 ## Implementation Plan
 
-This section outlines the implementation plan, including phases and tasks. Ensure that each MCP server (including mentalmodel, designpattern, programmingparadigm, debuggingapproach, collaborativereasoning, decisionframework, metacognitivemonitoring, scientificmethod, structuredargumentation, visualreasoning, and sequentialthinking) is explicitly incorporated with specific use cases, implementation details, and integration points.
+This section outlines the implementation plan, including phases and tasks. TThis is the most comprehensive section of the masterplan.md and should include all tasks, sub-tasks, and milestones. it should be detailed enough for an AI code assistant to implement the final product without any additional input. This should not leave any of the details of the features out. It should include all the details of the features and the implementation plan for each feature.
 
 ### Phase 1: Setup & Foundation
 - [Task 1]
@@ -201,6 +193,15 @@ This section outlines the implementation plan, including phases and tasks. Ensur
 - `[field]`: [type] - [description]
 - `[field]`: [type] - [description]
 - `[field]`: [type] - [description]
+
+
+## Project Structure
+```
+project-root/
+├── [directory structure]
+├── [with all major files]
+└── [and directories]
+```
 
 ## Environment Variables
 ```
@@ -408,240 +409,180 @@ make a react native expo app that will offer All PDF Tools.
 no authentication.
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
-Organize PDF
-Merge PDF
-Split PDF
-Remove pages
-Extract pages
-Organize PDF
-Scan to PDF
-Optimize PDF
-Compress PDF
-Repair PDF
-OCR PDF
-Convert to PDF
-JPG to PDF
-WORD to PDF
-POWERPOINT to PDF
-EXCEL to PDF
-HTML to PDF
-Convert from PDF
-PDF to JPG
-PDF to WORD
-PDF to POWERPOINT
-PDF to EXCEL
-PDF to PDF/A
-Edit PDF
-Rotate PDF
-Add page numbers
-Add watermark
-Crop PDF
-Edit PDF
-PDF security
-Unlock PDF
-Protect PDF
-Sign PDF
-Redact PDF
-Compare PDF
-Every tool you need to work with PDFs in one place
-Every tool you need to use PDFs, at your fingertips. All are 100% FREE and easy to use! Merge, split, compress, convert, rotate, unlock and watermark PDFs with just a few clicks.
-Merge PDF
-Combine PDFs in the order you want with the easiest PDF merger available.
+# Project Specification: All PDF Tools - React Native Expo Application
 
-Split PDF
-Separate one page or a whole set for easy conversion into independent PDF files.
+## 1. Project Overview
+Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
 
-Compress PDF
-Reduce file size while optimizing for maximal PDF quality.
+**Target Platforms:** iOS and Android and web (Expo)
+**Authentication:** None required
+**Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
 
-PDF to Word
-Easily convert your PDF files into easy to edit DOC and DOCX documents. The converted WORD document is almost 100% accurate.
+## 2. Technical Requirements
 
-PDF to PowerPoint
-Turn your PDF files into easy to edit PPT and PPTX slideshows.
+### 2.1 Development Framework
+- React Native with Expo SDK (latest stable version)
+- JavaScript implementation
+- the backend will be a python fastapi server that will be hosted on a free tier render.com server with a 0.1 cpu and 512mb ram
+ask for the following permissions as soon as the app is opened:
+All Files Access
 
-PDF to Excel
-Pull data straight from PDFs into Excel spreadsheets in a few short seconds.
+Allow access to manage all files
 
-Word to PDF
-Make DOC and DOCX files easy to read by converting them to PDF.
+Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.
 
-PowerPoint to PDF
-Make PPT and PPTX slideshows easy to view by converting them to PDF.
 
-Excel to PDF
-Make EXCEL spreadsheets easy to read by converting them to PDF.
+show all pdf files in the device storage in a list view with preview thumbnail and file name
 
-New!
-Edit PDF
-Add text, images, shapes or freehand annotations to a PDF document. Edit the size, font, and color of the added content.
 
-PDF to JPG
-Convert each PDF page into a JPG or extract all images contained in a PDF.
+### 2.2 PDF Processing
+- Implement PDF processing using React Native compatible libraries
+- Support for PDF files up to 100MB in size
+- Implement proper error handling for corrupted or incompatible PDF files
+- Include progress indicators for operations that may take time
 
-JPG to PDF
-Convert JPG images to PDF in seconds. Easily adjust orientation and margins.
+### 2.3 File Management
+- Implement file picking from device storage
+- Request appropriate permissions for file access
+- Support saving modified PDFs to device storage
+- Implement temporary file cleanup to prevent storage bloat
 
-Sign PDF
-Sign yourself or request electronic signatures from others.
+## 3. Feature Categories and Requirements
 
-Watermark
-Stamp an image or text over your PDF in seconds. Choose the typography, transparency and position.
+### 3.1 Document Organization
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
+| Split PDF | Separate PDF into multiple documents by page ranges or individual pages | High |
+| Remove Pages | Delete specific pages from a PDF document | High |
+| Extract Pages | Save selected pages as a new PDF document | High |
+| Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
 
-Rotate PDF
-Rotate your PDFs the way you need them. You can even rotate multiple PDFs at once!
 
-HTML to PDF
-Convert webpages in HTML to PDF. Copy and paste the URL of the page you want and convert it to PDF with a click.
+### 3.2 Conversion Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
+| PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
 
-Unlock PDF
-Remove PDF password security, giving you the freedom to use your PDFs as you want.
+### 3.3 Editing Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
+| Add Page Numbers | Insert customizable page numbers with position and format options | Medium |
+| Add Watermark | Apply text or image watermarks with opacity and position controls | Medium |
+| Crop PDF | Adjust page margins or crop to specific dimensions | Medium |
+| Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
 
-Protect PDF
-Protect PDF files with a password. Encrypt PDF documents to prevent unauthorized access.
+### 3.4 Security Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Unlock PDF | Remove password protection from PDF files | High |
+| Protect PDF | Add password protection to PDF files | High |
+| Sign PDF | Add digital signatures to documents | Medium |
+| Redact PDF | Permanently remove sensitive information from documents | Low |
 
-Organize PDF
-Sort pages of your PDF file however you like. Delete PDF pages or add PDF pages to your document at your convenience.
+### 3.5 Enhancement Tools
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Compress PDF | Reduce file size while maintaining reasonable quality | High |
+| Repair PDF | Attempt to fix corrupted PDF files | Medium |
+| OCR PDF | Convert scanned documents to searchable text | Medium |
+| Scan to PDF | Use device camera to scan documents and convert to PDF | Medium |
+| Compare PDF | Show differences between two PDF documents | Low |
 
-PDF to PDF/A
-Transform your PDF to PDF/A, the ISO-standardized version of PDF for long-term archiving. Your PDF will preserve formatting when accessed in the future.
+### 3.6 AI Features (Gemini API Integration)
+| Feature | Description | Priority |
+|---------|-------------|----------|
+| Chat with PDF | Interactive Q&A with PDF content using RAG | High |
+| AI PDF Summarizer | Generate concise summaries of PDF documents | High |
+| Translate PDF | Translate PDF content between languages | Medium |
+| AI Question Generator | Create questions based on PDF content | Low |
 
-Repair PDF
-Repair a damaged PDF and recover data from corrupt PDF. Fix PDF files with our Repair tool.
+## 4. AI Implementation Requirements
 
-Page numbers
-Add page numbers into PDFs with ease. Choose your positions, dimensions, typography.
+### 4.1 Gemini API Integration
+- Implement Google's Generative AI capabilities using the official SDK using python
+- User must provide their own Gemini API key through a settings page
+- Store API key securely using device secure storage (e.g., Expo SecureStore)
+- Implement model selection functionality for AI features
+- Provide a user-friendly interface for selecting models
+### 4.2 Retrieval Augmented Generation (RAG)
+- Extract and process text from PDFs for context
+- Implement chunking strategy for large documents (e.g., page-based, section-based)
+- Create appropriate prompts that combine user queries with document context
+- Handle API rate limiting and token limitations gracefully
+- Implement fallback mechanisms for when AI features are unavailable
+11. Localization / Internationalization (i18n):
+Will the app need to support multiple languages?
+ English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
 
-Scan to PDF
-Capture document scans from your mobile device and send them instantly to your browser.
+### 4.3 Model Selection
+- Provide interface for users to select from available Gemini models
 
-OCR PDF
-Easily convert scanned PDF into searchable and selectable documents.
 
-New!
-Compare PDF
-Show a side-by-side document comparison and easily spot changes between different file versions.
+ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. use retrieval augmented generation for the ai features.
+Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
 
-New!
-Redact PDF
-Redact text and graphics to permanently remove sensitive information from a PDF.
+---
 
-New!
-Crop PDF
-Crop margins of PDF documents or select specific areas, then apply the changes to one page or the whole document.
-Compress
-Compress PDF
-Convert
-PDF Converter
+### ✅ Step-by-step Guide
 
-Organize
-Merge PDF
-Split PDF
-Rotate PDF
-Delete PDF Pages
-Extract PDF Pages
-Organize PDF
-View & Edit
-Edit PDF
-PDF Annotator
-PDF Reader
-Number Pages
-Crop PDF
-Redact PDF
-Watermark PDF
-Share PDF
-Convert from PDF
-PDF to Word
-PDF to Excel
-PDF to PPT
-PDF to JPG
-Convert to PDF
-Word to PDF
-Excel to PDF
-PPT to PDF
-JPG to PDF
-PDF OCR
-Sign
-Sign PDF
-More
-Unlock PDF
-Protect PDF
-Flatten PDF
-Scan
-PDF Scanner
-
-AI PDF
-Chat with PDF
-AI PDF Summarizer
-Translate PDF
-AI Question Generator
-
-ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. the ai features will be implemented completely on the frontend. as there is no backend . use retrieval augmented generation for the ai features.
-To get the list of available **Gemini models** (from Google’s Generative AI platform, formerly known as Bard/PaLM) using **JavaScript**, you typically use the **Google Generative AI SDK** (via REST API or Node.js client).
-
-### 📦 1. Install Google Generative AI SDK (for Node.js)
+#### 📦 1. Install the SDK
 
 ```bash
-npm install @google/generative-ai
+pip install google-generativeai
 ```
 
 ---
 
-### 🔑 2. Setup API Key
+#### 🔑 2. Set Your API Key
 
 Get your API key from: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
 
-```js
-const genAI = require("@google/generative-ai");
+```python
+import google.generativeai as genai
 
-const API_KEY = "YOUR_API_KEY_HERE";
-
-const client = new genAI.GoogleGenerativeAI(API_KEY);
+genai.configure(api_key="YOUR_API_KEY_HERE")
 ```
 
 ---
 
-### 📋 3. List Available Models
+#### 📋 3. List Available Models
 
-Use the `listModels()` function:
+```python
+def list_models():
+    models = genai.list_models()
+    for model in models:
+        print(f"Model name: {model.name}")
+        print(f"  Description: {getattr(model, 'description', 'N/A')}")
+        print(f"  Input token limit: {getattr(model, 'input_token_limit', 'N/A')}")
+        print(f"  Output token limit: {getattr(model, 'output_token_limit', 'N/A')}")
+        print("-" * 40)
 
-```js
-async function listModels() {
-  const models = await client.listModels();
-  models.forEach((model) => {
-    console.log(`Model name: ${model.name}`);
-    console.log(`  Description: ${model.description}`);
-    console.log(`  Input token limit: ${model.inputTokenLimit}`);
-    console.log(`  Output token limit: ${model.outputTokenLimit}`);
-    console.log("---------------------------");
-  });
-}
-
-listModels().catch(console.error);
+list_models()
 ```
 
 ---
 
-### ✅ Output Example
+### 🧠 Example Output
 
-This will return available models like:
-
-```
+```text
 Model name: models/gemini-1.5-pro
-Model name: models/gemini-1.0-pro
+  Description: Gemini 1.5 Pro model
+  Input token limit: 32768
+  Output token limit: 8192
+----------------------------------------
 Model name: models/gemini-1.5-flash
+  Description: Gemini 1.5 Flash model
+  Input token limit: 32768
+  Output token limit: 8192
+----------------------------------------
 ...
 ```
 
----
+Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
 
-### 🧠 Notes
 
-* You must have billing enabled and API access.
-* Only accessible via `@google/generative-ai` client or direct REST calls to:
-
-  ```
-  GET https://generativelanguage.googleapis.com/v1beta/models
-  ```
-
-Would you like a version that uses **plain REST/fetch** instead of the Node.js SDK?
+strictly include the above code in the masterplan.md file to get the list of available models. continue with suggested answers you provided
+- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
