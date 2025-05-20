@@ -7,8 +7,8 @@ cd YTSummarizer11-react-native-expo-app
 code .
 
 cd ..
-npx create-expo-app --template blank all-pdf-tools6
-cd all-pdf-tools6
+npx create-expo-app --template blank all-pdf-tools8
+cd all-pdf-tools8
 code .
 
 
