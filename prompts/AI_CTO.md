@@ -404,83 +404,9 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-# Project Specification: All PDF Tools
-
-## 1. Project Overview
-Develop a comprehensive next.js app that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
-
-**Authentication:** None required
-**Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
-
-## 2. Technical Requirements
-
-### 2.1 Development Framework
-- Next.js (latest stable version)
-- The backend will be a Python FastAPI server that will be hosted on a free tier render.com server with a 0.1 CPU and 512MB RAM
-- Implement as many features as possible in the app itself to avoid server load
-- Implement the AI features via Gemini API using the Gemini key entered by the user in the settings page
-- Provide a way for the user to enter the Gemini key in the settings page
-
-
-### 2.2 PDF Processing
-- Support for PDF files up to 100MB in size
-- Implement proper error handling for corrupted or incompatible PDF files
-- Include progress indicators for operations that may take time.
-- Ask for the user to select the output file name and location for saving the processed files
-- Implement a user-friendly interface for selecting files and displaying results
-- Ask for the file password if the file is password protected
-
-### 2.3 File Management
-- Implement file picking from device storage
-- Request appropriate permissions for file access
-- Support saving modified PDFs to device storage
-- Implement temporary file cleanup to prevent storage bloat
-
-## 3. Feature Categories and Requirements
-
-### 3.1 Document Organization
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
-| Split PDF | Separate PDF into multiple documents by page ranges or individual pages | High |
-| Remove Pages | Delete specific pages from a PDF document | High |
-| Extract Pages | Save selected pages as a new PDF document | High |
-| Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
-
-
-
-### 3.2 Conversion Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
-| PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
-
-### 3.3 Editing Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
-| Add Page Numbers | Insert customizable page numbers with position and format options | Medium |
-| Add Watermark | Apply text or image watermarks with opacity and position controls | Medium |
-| Crop PDF | Adjust page margins or crop to specific dimensions | Medium |
-| Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
-
-### 3.4 Security Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Unlock PDF | Remove password protection from PDF files | High |
-| Protect PDF | Add password protection to PDF files | High |
-| Sign PDF | Add digital signatures to documents | Medium |
-| Redact PDF | Permanently remove sensitive information from documents | Low |
-
-### 3.5 Enhancement Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Compress PDF | Reduce file size while maintaining reasonable quality | High |
-| Repair PDF | Attempt to fix corrupted PDF files | Medium |
-| OCR PDF | Convert scanned documents to searchable text | Medium |
-| Scan to PDF | Use device camera to scan documents and convert to PDF | Medium |
-| Compare PDF | Show differences between two PDF documents | Low |
-
+12. pdf ai tools
+13. tech stack: nextjs, tailwindcss, typescript, nodejs
+Description: A suite of AI-powered tools for working with PDF documents, including text extraction, summarization, ,chat with pdf, summarize pdf. The tools should be easy to use and integrate with existing workflows.
 ### 3.6 AI Features (Gemini API Integration)
 | Feature | Description | Priority |
 |---------|-------------|----------|
@@ -492,7 +418,8 @@ Develop a comprehensive next.js app that provides users with a complete suite of
 ## 4. AI Implementation Requirements
 
 ### 4.1 Gemini API Integration
-- Implement Google's Generative AI capabilities using the official SDK using python
+- Implement Google's Generative AI capabilities using the official SDK using javaScript
+- Use the Gemini API for AI features, leveraging the user's provided API key
 - User must provide their own Gemini API key through a settings page
 - Store API key securely using device secure storage (e.g., Expo SecureStore)
 - Implement model selection functionality for AI features
@@ -576,5 +503,7 @@ Let me know if you want code for **calling a specific Gemini model** or **stream
 
 strictly include the above code in the masterplan.md file to get the list of available models.
 
+ continue with suggested answers you provided
+- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
  continue with suggested answers you provided
 - Treat this as an indication that the user accepts all your suggested answers and wants to move forward
