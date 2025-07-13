@@ -404,106 +404,162 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-12. pdf ai tools
-13. tech stack: nextjs, tailwindcss, typescript, nodejs
-Description: A suite of AI-powered tools for working with PDF documents, including text extraction, summarization, ,chat with pdf, summarize pdf. The tools should be easy to use and integrate with existing workflows.
-### 3.6 AI Features (Gemini API Integration)
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Chat with PDF | Interactive Q&A with PDF content using RAG | High |
-| AI PDF Summarizer | Generate concise summaries of PDF documents | High |
-| Translate PDF | Translate PDF content between languages | Medium |
-| AI Question Generator | Create questions based on PDF content | Low |
+# CambioML Senior Backend/DevOps Engineer Coding Challenge: Claude Computer Use
 
-## 4. AI Implementation Requirements
+# **CONFIDENTIALITY NOTICE**
 
-### 4.1 Gemini API Integration
-- Implement Google's Generative AI capabilities using the official SDK using javaScript
-- Use the Gemini API for AI features, leveraging the user's provided API key
-- User must provide their own Gemini API key through a settings page
-- Store API key securely using device secure storage (e.g., Expo SecureStore)
-- Implement model selection functionality for AI features
-- Provide a user-friendly interface for selecting models
-### 4.2 Retrieval Augmented Generation (RAG)
-- Extract and process text from PDFs for context
-- Implement chunking strategy for large documents (e.g., page-based, section-based)
-- Create appropriate prompts that combine user queries with document context
-- Handle API rate limiting and token limitations gracefully
-- Implement fallback mechanisms for when AI features are unavailable
-11. Localization / Internationalization (i18n):
-Will the app need to support multiple languages?
- English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
+This document contains proprietary information. By accessing it, you agree to NDA terms. Unauthorized use, disclosure, or distribution is prohibited and may result in legal action. If you received this in error, notify the sender and delete immediately.
 
-### 4.3 Model Selection
-- Provide interface for users to select from available Gemini models
+By completing this homework, you will learn and demonstrate your ability to build AI agents similar to OpenAI Operator ($200/month).
 
+## Requirement
 
-ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. use retrieval augmented generation for the ai features.
-Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
+**Design a scalable backend for computer use agent session management**
 
----
+1. **Reuse the existing computer use agent stack:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+2. Replace the experimental Streamlit interface with a FastAPI backend that provides:
+    - Session creation and management APIs
+    - Real-time progress streaming via WebSocket, Server-Sent Events (SSE), or your choice.
+    - VNC connection to virtual machine
+    - Database persistence for chat history
+3. Include Docker setup for easy local development and remote deployment
+4. Build a simple frontend (basic HTML/JS) to demonstrate the APIs
 
-### ✅ Step-by-step Guide
+## **Deliverables**
 
-#### 📦 1. Install the SDK
+1. Private GitHub repository with comprehensive README
+    1. Invite`lingjiekong`, `ghamry03` , `goldmermaid`, and `EnergentAI` as collaborators for review.
+2. 5-minute demo video showing working system
 
-```bash
-pip install google-generativeai
-```
+## **Evaluation Focus**
 
----
+Backend design (40%), Real-time streaming (25%), Code quality (20%), Documentation (15%)
 
-#### 🔑 2. Set Your API Key
+## **Appendix**
 
-Get your API key from: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
+To help you quickly understand the computer use agent and the github repo, you can find more details below in the Appendix: [Appendix: Claude Computer Use Agent Background](https://www.notion.so/Appendix-Claude-Computer-Use-Agent-Background-212613d0ce73805ead3efec4edd1b285?pvs=21).
 
-```python
-import google.generativeai as genai
+# Appendix: Claude Computer Use Agent Background
 
-genai.configure(api_key="YOUR_API_KEY_HERE")
-```
+### **Time Allocation Guidance**
 
----
+<aside>
+💡
 
-#### 📋 3. List Available Models
+*We highly recommend using AI coding tools (e.g., Cursor, Windsurf) to assist you.*
 
-```python
-def list_models():
-    models = genai.list_models()
-    for model in models:
-        print(f"Model name: {model.name}")
-        print(f"  Description: {getattr(model, 'description', 'N/A')}")
-        print(f"  Input token limit: {getattr(model, 'input_token_limit', 'N/A')}")
-        print(f"  Output token limit: {getattr(model, 'output_token_limit', 'N/A')}")
-        print("-" * 40)
+</aside>
 
-list_models()
-```
+*This is primarily a backend role assessment. A simple frontend demo is sufficient - use tools like lovable.dev or basic HTML/JavaScript. No frontend experience needed.*
 
----
+- **Read the codebase and play with it (1 hour)**
+- **Backend API (1.5 hours)**:
+    - **Core FastAPI features**: Start a new task session, Interact with agent, Task history management
+    - **Computer Use Integration**: Integrating the Anthropic demo agent
+    - **Database Layer**: Data persistence, basic CRUD
+- **Docker compose (0.5 hour)**
+- **Frontend Demo (0.5 hour)**: Simple interface to test APIs; include VNC connection
+- **Documentation (0.5 hour)**: README with dev setup instruction, API docs, sequence diagram and demo video
 
-### 🧠 Example Output
+## 1. Background
 
-```text
-Model name: models/gemini-1.5-pro
-  Description: Gemini 1.5 Pro model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-Model name: models/gemini-1.5-flash
-  Description: Gemini 1.5 Flash model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-...
-```
+**Computer Use** is a breakthrough capability that lets AI agents control computers like humans do - taking screenshots, clicking buttons, typing text, and navigating software interfaces.
 
-Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
+**Learn more**:
+
+- [Anthropic Demo Video](https://www.youtube.com/watch?v=ODaHJzOyVCQ)
+- [Technical Deep Dive](https://www.youtube.com/watch?v=VDmU0jjklBo)
+
+You are provided with the following starting stack:
+
+- **Download**: https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+- **Current Setup**: Experimental Claude Computer Use stack with Streamlit interface, runs at `http://localhost:8080`
+- **Functionality**: Basic chat interface + VNC screen view + Computer Use API integration
+
+### Current Architecture
+
+Due to limitations with Streamlit, the goal is to rebuild the application using a genuine backend API approach.
+
+![image.png](attachment:0d3cfef5-25b1-4139-9bb1-a125dc1cb6a2:image.png)
+
+## 2. Session Management Features
+
+**Session Management**
+
+Design a backend system that treats each task as a **chat session**. Every user query and each response (including function calls and tool execution results) should be managed through your API, similar to ChatGPT. The UI example above illustrates this concept:
+
+- **Left Bar**: Shows the **Task History**. Below it, there is a button to **Start a New Agent Task**.
+- **Middle Panel**: Displays a **VNC connection** to the running virtual machine, allowing users to see what the agent is doing.
+- **Right Panel (Top)**: Acts as the **Chat Session** area, listing all messages, including user queries, model responses, function calls, and results `in realtime`.
+- **Right Panel (Bottom)**: Reserved for **File Management**
+
+    ![image.png](attachment:dfe2d1ad-76a3-46cf-88c1-14e56015978c:image.png)
 
 
-strictly include the above code in the masterplan.md file to get the list of available models.
+**Core Components to Design:**
 
- continue with suggested answers you provided
-- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
+- **API Design**: RESTful endpoints and WebSocket, Server-Sent Events (SSE), or your chosen  connections for real-time communication
+- **VNC Connection**: Integration with the existing VNC server to provide screen access
+- **Database**: Persistent storage for session data, chat history, and task results
+- **Computer Use Integration**: Seamless integration with the existing Anthropic Computer Use agent loop
+
+**Key API Functionality:**
+
+- Start new agent task sessions
+- Send user queries to active sessions
+- Stream real-time progress updates from the computer use agent
+- Retrieve past session history and interactions
+
+This structure provides a clear, chat-like interface where users can easily follow each step of their session, review past interactions, and start or end tasks as needed - all through well-designed backend APIs.
+
+## 3. Technical Requirements
+
+The revised target architecture requires:
+
+1. **Backend:** A `Python FastAPI` system serving as the core API for session management
+    1. **reusing computer use agent stack of this github repo:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+    2. ***Removing the experimental streamlit layer***, while adding missing backend API, database, etc layer.
+    3. Building docker image and compose for both local development and production deployment.
+
+    ![image.png](attachment:71346550-8ead-427c-b9aa-b2742e5c4290:image.png)
+
+2. **Frontend:** Simple interface for testing backends APIs (***Swagger, OpenAPI, and Streamlit is not allowed***) - use tools like [lovable.dev](https://lovable.dev/) or basic HTML/JavaScript. No frontend experience needed. The UI example below shows the general concept of session management and real-time progress tracking.
+
+This new architecture focuses on building a robust, maintainable backend system that can integrate with any frontend.
+
+## **4. Deliverables**
+
+- Please commit all your work in a private GitHub repository with a detailed README, including:
+    1. Your full name on the first line of the README (e.g. `Author: ...`)
+    2. A fully functional implementation of the proposed architecture.
+    3. A 5-minute demo video
+        1. **Repository and Codebase Overview**
+        2. **Service Launch and Endpoint Functionality**
+        3. **Usage Case Demonstrations**
+            1. **Usage Case 1:**
+                1. Start a new chat session
+                2. Use the prompt “Search the weather in Dubai”.
+                3. Verify that the system correctly opens Firefox, conducts a Google search for the weather in Dubai, and provides a summarized result in `realtime`.
+            2. **Usage Case 2:**
+                1. Start another new chat session
+                2. Use the prompt “Search the weather in San Francisco”.
+                3. Verify that the system correctly opens Firefox, conducts a Google search for the weather in San Francisco, and provides a summarized result in `realtime`.
+                4. Verify both case 1 and case 2 history are properly stored.
+        4. **Streamlit-like UI Behavior Simulation**
+            1. Illustrate that when a task is submitted, the AI agent streams real-time progress for each intermediate step.
+            2. Once the task is complete, demonstrate that the UI prompts the user to enter a new task.
+    4. Use this README as the ONLY place to deliver your work. Please don’t send any of the above details via email (not all reviewers have access to emails).
+- Invite`lingjiekong`, `ghamry03` , `goldmermaid`, and `EnergentAI` as collaborators for review.
+- Once you complete your homework, please kindly reply our email with your private github repo link, as a homework completion notice.
+
+## **5. Evaluation**
+
+All documentation must be written in clear, concise `English` to ensure that every team member can easily understand the project. Your work will be evaluated based on the following clear metrics:
+
+- **Backend Design (40%)**
+- **Real-time Streaming (25%)**
+- **Code Quality (20%)**
+- **Documentation (15%)**a
+
  continue with suggested answers you provided
 - Treat this as an indication that the user accepts all your suggested answers and wants to move forward
