@@ -404,162 +404,106 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-# CambioML Senior Backend/DevOps Engineer Coding Challenge: Claude Computer Use
+https://energent.notion.site/CambioML-Founding-Frontend-Engineer-Coding-Challenge-Energent-ai-Voice-AI-213613d0ce738016bc21f938c2912b1a
 
-# **CONFIDENTIALITY NOTICE**
+# Appendix: https://energent.ai/ web + Voice AI
 
-This document contains proprietary information. By accessing it, you agree to NDA terms. Unauthorized use, disclosure, or distribution is prohibited and may result in legal action. If you received this in error, notify the sender and delete immediately.
+# **CONFIDENTIALITY**
 
-By completing this homework, you will learn and demonstrate your ability to build AI agents similar to OpenAI Operator ($200/month).
+This document contains confidential and proprietary information intended solely for the recipient. By receiving this document, you acknowledge and agree to be bound by the terms of a Non-Disclosure Agreement (NDA), whether explicitly signed or implied by your access to this information.
 
-## Requirement
+Unauthorized use, disclosure, or distribution of this document, in whole or in part, is strictly prohibited and may result in legal action, including but not limited to financial damages and injunctive relief. If you are not the intended recipient, please notify the sender immediately and delete this document.
 
-**Design a scalable backend for computer use agent session management**
+---
 
-1. **Reuse the existing computer use agent stack:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
-2. Replace the experimental Streamlit interface with a FastAPI backend that provides:
-    - Session creation and management APIs
-    - Real-time progress streaming via WebSocket, Server-Sent Events (SSE), or your choice.
-    - VNC connection to virtual machine
-    - Database persistence for chat history
-3. Include Docker setup for easy local development and remote deployment
-4. Build a simple frontend (basic HTML/JS) to demonstrate the APIs
+## **Time to Complete**
 
-## **Deliverables**
+**Within 24 hours.**
 
-1. Private GitHub repository with comprehensive README
-    1. Invite`lingjiekong`, `ghamry03` , `goldmermaid`, and `EnergentAI` as collaborators for review.
-2. 5-minute demo video showing working system
+*(We highly recommend using AI coding tools (e.g., Cursor, Copilot) to assist you.)*
 
-## **Evaluation Focus**
-
-Backend design (40%), Real-time streaming (25%), Code quality (20%), Documentation (15%)
-
-## **Appendix**
-
-To help you quickly understand the computer use agent and the github repo, you can find more details below in the Appendix: [Appendix: Claude Computer Use Agent Background](https://www.notion.so/Appendix-Claude-Computer-Use-Agent-Background-212613d0ce73805ead3efec4edd1b285?pvs=21).
-
-# Appendix: Claude Computer Use Agent Background
-
-### **Time Allocation Guidance**
-
-<aside>
-💡
-
-*We highly recommend using AI coding tools (e.g., Cursor, Windsurf) to assist you.*
-
-</aside>
-
-*This is primarily a backend role assessment. A simple frontend demo is sufficient - use tools like lovable.dev or basic HTML/JavaScript. No frontend experience needed.*
-
-- **Read the codebase and play with it (1 hour)**
-- **Backend API (1.5 hours)**:
-    - **Core FastAPI features**: Start a new task session, Interact with agent, Task history management
-    - **Computer Use Integration**: Integrating the Anthropic demo agent
-    - **Database Layer**: Data persistence, basic CRUD
-- **Docker compose (0.5 hour)**
-- **Frontend Demo (0.5 hour)**: Simple interface to test APIs; include VNC connection
-- **Documentation (0.5 hour)**: README with dev setup instruction, API docs, sequence diagram and demo video
+***Design an interactive React frontend application with AI-powered features.***
 
 ## 1. Background
 
-**Computer Use** is a breakthrough capability that lets AI agents control computers like humans do - taking screenshots, clicking buttons, typing text, and navigating software interfaces.
+You are tasked with creating a modern web application. You can take the website https://energent.ai/ as a reference, you’re going to implement the same style (in color, animation, layout) to make your website looks close to this website. For complex UI components, you can use libraries to save your time.
 
-**Learn more**:
+And you need to add AI integration to the web page, to show your front end development skills.
 
-- [Anthropic Demo Video](https://www.youtube.com/watch?v=ODaHJzOyVCQ)
-- [Technical Deep Dive](https://www.youtube.com/watch?v=VDmU0jjklBo)
+### Technology Stack Requirements:
 
-You are provided with the following starting stack:
+- **Frontend Framework**: React with TypeScript, Next.js or other framework that support React is good but not required.
+- **Styling**: Tailwind CSS
+- **State Management**: Your choice (Context API, Redux, Zustand, etc.)
+- **Knowledge to setup an AI project**: Here’s a project Google Gemini Live API (https://github.com/google-gemini/live-api-web-console), you need to plug it into your website as a section for users to play with it.
 
-- **Download**: https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
-- **Current Setup**: Experimental Claude Computer Use stack with Streamlit interface, runs at `http://localhost:8080`
-- **Functionality**: Basic chat interface + VNC screen view + Computer Use API integration
+## 2. Requirements
 
-### Current Architecture
+### 2.1 Core Requirements
 
-Due to limitations with Streamlit, the goal is to rebuild the application using a genuine backend API approach.
+1. **Project Setup & Architecture**
+Initializing a **React TypeScript project** with a well-structured folder organization that follows industry best practices. Implement **Tailwind CSS** for styling, ensuring proper configuration that allows for efficient custom theming when needed. Set up comprehensive **type definitions** throughout the project.
+2. **Component Design & UI Implementation**
+Craft an user interface inspired by https://energent.ai/ while adding your own **creative touches** that showcase your design sensibilities.
 
-![image.png](attachment:0d3cfef5-25b1-4139-9bb1-a125dc1cb6a2:image.png)
+    Develop a **navigation system** with intuitive routing that guides users naturally through the application. Your implementation should include a compelling **hero section** that immediately communicates value, an **AI Integration Hub** that allows our user to try out our AI feature, and a **sections displaying the elements as the provided example** https://energent.ai/ already have.
 
-## 2. Session Management Features
+    Here’s a Figma skeleton that for your reference to understand the page layout.
 
-**Session Management**
+    ![Group 13 (2).png](attachment:2e808a0e-e269-4570-89ae-3efc054a7c4b:Group_13_(2).png)
 
-Design a backend system that treats each task as a **chat session**. Every user query and each response (including function calls and tool execution results) should be managed through your API, similar to ChatGPT. The UI example above illustrates this concept:
+3. **AI Integration Hub**
+Develop a section within your application that serves as the central point for **Google Gemini Live API integration**. This hub should feature an **AI voice chat** capability that enables natural conversations with the AI assistant. You've been given https://github.com/google-gemini/live-api-web-console.
 
-- **Left Bar**: Shows the **Task History**. Below it, there is a button to **Start a New Agent Task**.
-- **Middle Panel**: Displays a **VNC connection** to the running virtual machine, allowing users to see what the agent is doing.
-- **Right Panel (Top)**: Acts as the **Chat Session** area, listing all messages, including user queries, model responses, function calls, and results `in realtime`.
-- **Right Panel (Bottom)**: Reserved for **File Management**
+    Based on this implementation, you need to extend its functionality by **adding OpenAI integration**, so we can easily switch between OpenAI and Genmini by setting an environment variable.
 
-    ![image.png](attachment:dfe2d1ad-76a3-46cf-88c1-14e56015978c:image.png)
+4. **Deployment**
+Prepare your application for real-world use by deploying it to **Vercel**, configuring appropriate **build settings** that optimize performance. Conduct thorough testing to **ensure the deployed application functions correctly** across different environments and devices.
+
+    Finalize the deployment by providing a **public URL** in your project README that can be used for review and demonstration purposes.
 
 
-**Core Components to Design:**
+### 2.2 Non-Functional Requirements
 
-- **API Design**: RESTful endpoints and WebSocket, Server-Sent Events (SSE), or your chosen  connections for real-time communication
-- **VNC Connection**: Integration with the existing VNC server to provide screen access
-- **Database**: Persistent storage for session data, chat history, and task results
-- **Computer Use Integration**: Seamless integration with the existing Anthropic Computer Use agent loop
+1. **Documentation**
+    - Create a comprehensive README with setup instructions
+    - Document architecture decisions
+    - Include API documentation
+    - Provide user flow diagrams
+2. **Code Quality**
+    - Maintain consistent code style
+    - Use proper TypeScript typing
+    - Implement error handling throughout
+    - Write clean, maintainable code with comments where necessary
+3. **UI matches the requirements**
+Ensure the user interface is modern, visually appealing, and enhances user experience. Incorporate consistent styling, intuitive layouts, and accessible design principles to create an engaging environment for users.
+    - Utilize high-quality images and icons that align with the application's theme.
+    - Implement subtle animations and transitions to make interactions smoother and more engaging.
+    - Choose a harmonious color palette that supports readability and visual appeal.
+4. **Responsive Design:**
+    - Ensure that components adapt seamlessly to various screen sizes using Tailwind CSS utilities.
+    - Test the UI on multiple devices to verify responsiveness.
 
-**Key API Functionality:**
+    **Creative Enhancements:**
 
-- Start new agent task sessions
-- Send user queries to active sessions
-- Stream real-time progress updates from the computer use agent
-- Retrieve past session history and interactions
-
-This structure provides a clear, chat-like interface where users can easily follow each step of their session, review past interactions, and start or end tasks as needed - all through well-designed backend APIs.
-
-## 3. Technical Requirements
-
-The revised target architecture requires:
-
-1. **Backend:** A `Python FastAPI` system serving as the core API for session management
-    1. **reusing computer use agent stack of this github repo:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
-    2. ***Removing the experimental streamlit layer***, while adding missing backend API, database, etc layer.
-    3. Building docker image and compose for both local development and production deployment.
-
-    ![image.png](attachment:71346550-8ead-427c-b9aa-b2742e5c4290:image.png)
-
-2. **Frontend:** Simple interface for testing backends APIs (***Swagger, OpenAPI, and Streamlit is not allowed***) - use tools like [lovable.dev](https://lovable.dev/) or basic HTML/JavaScript. No frontend experience needed. The UI example below shows the general concept of session management and real-time progress tracking.
-
-This new architecture focuses on building a robust, maintainable backend system that can integrate with any frontend.
-
-## **4. Deliverables**
-
+    - Incorporate animations and interactive elements to enhance user engagement.
+    - Utilize a consistent color scheme and typography to maintain visual harmony.
+    - Implement accessible design practices to ensure usability for all users.
 - Please commit all your work in a private GitHub repository with a detailed README, including:
-    1. Your full name on the first line of the README (e.g. `Author: ...`)
-    2. A fully functional implementation of the proposed architecture.
-    3. A 5-minute demo video
-        1. **Repository and Codebase Overview**
-        2. **Service Launch and Endpoint Functionality**
-        3. **Usage Case Demonstrations**
-            1. **Usage Case 1:**
-                1. Start a new chat session
-                2. Use the prompt “Search the weather in Dubai”.
-                3. Verify that the system correctly opens Firefox, conducts a Google search for the weather in Dubai, and provides a summarized result in `realtime`.
-            2. **Usage Case 2:**
-                1. Start another new chat session
-                2. Use the prompt “Search the weather in San Francisco”.
-                3. Verify that the system correctly opens Firefox, conducts a Google search for the weather in San Francisco, and provides a summarized result in `realtime`.
-                4. Verify both case 1 and case 2 history are properly stored.
-        4. **Streamlit-like UI Behavior Simulation**
-            1. Illustrate that when a task is submitted, the AI agent streams real-time progress for each intermediate step.
-            2. Once the task is complete, demonstrate that the UI prompts the user to enter a new task.
-    4. Use this README as the ONLY place to deliver your work. Please don’t send any of the above details via email (not all reviewers have access to emails).
-- Invite`lingjiekong`, `ghamry03` , `goldmermaid`, and `EnergentAI` as collaborators for review.
-- Once you complete your homework, please kindly reply our email with your private github repo link, as a homework completion notice.
+    1. Your full name on the first line of the README (e.g., `Author: ...`).
+        1. Mention https://github.com/remi-guan, https://github.com/lingjiekong, https://github.com/goldmermaid, and https://github.com/EnergentAI for review.
+    2. A fully functional implementation of the required features
+    3. A 3-minute demo video showcasing:
+        - Your application's UI and responsiveness
+        - Core features in action
+        - AI integration functionality
+        - Any advanced features you implemented
+    4. Instructions for running the application locally
+    5. A link to the deployed application on Vercel
+- Invite `[REVIEWER_USERNAME]` as a collaborator for review.
+- Once you complete your assignment, please reply to our email with your private GitHub repo link as a completion notice.
 
-## **5. Evaluation**
+Good luck! We're excited to see what you create.
 
-All documentation must be written in clear, concise `English` to ensure that every team member can easily understand the project. Your work will be evaluated based on the following clear metrics:
 
-- **Backend Design (40%)**
-- **Real-time Streaming (25%)**
-- **Code Quality (20%)**
-- **Documentation (15%)**a
-
- continue with suggested answers you provided
-- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
+This repo already contained the code for google-gemini/live-api-web-console , Use this code for the. Making of the project. And using the Live API web console.
