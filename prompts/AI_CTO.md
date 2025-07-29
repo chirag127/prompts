@@ -5,12 +5,15 @@ Your task is to help a developer understand and plan their product idea through 
 
 ## Purpose
 
-This file serves as a prompt for generating a comprehensive masterplan.md file based on a raw product idea. The process works as follows:
+Your task is to generate a comprehensive masterplan.md file based on a raw product idea. The process works as follows:
 
-1. The user will provide a raw idea at the end of this file
-2. You will analyze this raw idea and generate a series of questions to clarify any ambiguities and gather necessary details to understand the product concept and uncover Open Issues.
-3. The user will answer these questions
-4. Based on the answers (or assumed best answers for blank responses), you will generate a detailed masterplan.md file
+1. The user will provide a raw idea at the end of this document.
+2. This raw idea will be a brief description of the product they want to build.
+3. You will analyze this raw idea and generate a series of questions to clarify any ambiguities and gather necessary details to understand the product concept and uncover Open Issues.
+4. You will ask these questions in a single response, formatted with options and suggested answers to make it easier for the user to respond.
+5. The user will answer these questions, either by providing their own answers or leaving them blank for you to assume the best possible answer.
+6. . The user will answer these questions.
+7. Based on the answers (or assumed best answers for blank responses), you will generate a detailed masterplan.md file
 
 The masterplan.md file will serve as a complete blueprint for the product, providing all necessary information for an AI code assistant to implement the final product.
 
@@ -404,106 +407,16 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-https://energent.notion.site/CambioML-Founding-Frontend-Engineer-Coding-Challenge-Energent-ai-Voice-AI-213613d0ce738016bc21f938c2912b1a
 
-# Appendix: https://energent.ai/ web + Voice AI
-
-# **CONFIDENTIALITY**
-
-This document contains confidential and proprietary information intended solely for the recipient. By receiving this document, you acknowledge and agree to be bound by the terms of a Non-Disclosure Agreement (NDA), whether explicitly signed or implied by your access to this information.
-
-Unauthorized use, disclosure, or distribution of this document, in whole or in part, is strictly prohibited and may result in legal action, including but not limited to financial damages and injunctive relief. If you are not the intended recipient, please notify the sender immediately and delete this document.
-
----
-
-## **Time to Complete**
-
-**Within 24 hours.**
-
-*(We highly recommend using AI coding tools (e.g., Cursor, Copilot) to assist you.)*
-
-***Design an interactive React frontend application with AI-powered features.***
-
-## 1. Background
-
-You are tasked with creating a modern web application. You can take the website https://energent.ai/ as a reference, you’re going to implement the same style (in color, animation, layout) to make your website looks close to this website. For complex UI components, you can use libraries to save your time.
-
-And you need to add AI integration to the web page, to show your front end development skills.
-
-### Technology Stack Requirements:
-
-- **Frontend Framework**: React with TypeScript, Next.js or other framework that support React is good but not required.
-- **Styling**: Tailwind CSS
-- **State Management**: Your choice (Context API, Redux, Zustand, etc.)
-- **Knowledge to setup an AI project**: Here’s a project Google Gemini Live API (https://github.com/google-gemini/live-api-web-console), you need to plug it into your website as a section for users to play with it.
-
-## 2. Requirements
-
-### 2.1 Core Requirements
-
-1. **Project Setup & Architecture**
-Initializing a **React TypeScript project** with a well-structured folder organization that follows industry best practices. Implement **Tailwind CSS** for styling, ensuring proper configuration that allows for efficient custom theming when needed. Set up comprehensive **type definitions** throughout the project.
-2. **Component Design & UI Implementation**
-Craft an user interface inspired by https://energent.ai/ while adding your own **creative touches** that showcase your design sensibilities.
-
-    Develop a **navigation system** with intuitive routing that guides users naturally through the application. Your implementation should include a compelling **hero section** that immediately communicates value, an **AI Integration Hub** that allows our user to try out our AI feature, and a **sections displaying the elements as the provided example** https://energent.ai/ already have.
-
-    Here’s a Figma skeleton that for your reference to understand the page layout.
-
-    ![Group 13 (2).png](attachment:2e808a0e-e269-4570-89ae-3efc054a7c4b:Group_13_(2).png)
-
-3. **AI Integration Hub**
-Develop a section within your application that serves as the central point for **Google Gemini Live API integration**. This hub should feature an **AI voice chat** capability that enables natural conversations with the AI assistant. You've been given https://github.com/google-gemini/live-api-web-console.
-
-    Based on this implementation, you need to extend its functionality by **adding OpenAI integration**, so we can easily switch between OpenAI and Genmini by setting an environment variable.
-
-4. **Deployment**
-Prepare your application for real-world use by deploying it to **Vercel**, configuring appropriate **build settings** that optimize performance. Conduct thorough testing to **ensure the deployed application functions correctly** across different environments and devices.
-
-    Finalize the deployment by providing a **public URL** in your project README that can be used for review and demonstration purposes.
-
-
-### 2.2 Non-Functional Requirements
-
-1. **Documentation**
-    - Create a comprehensive README with setup instructions
-    - Document architecture decisions
-    - Include API documentation
-    - Provide user flow diagrams
-2. **Code Quality**
-    - Maintain consistent code style
-    - Use proper TypeScript typing
-    - Implement error handling throughout
-    - Write clean, maintainable code with comments where necessary
-3. **UI matches the requirements**
-Ensure the user interface is modern, visually appealing, and enhances user experience. Incorporate consistent styling, intuitive layouts, and accessible design principles to create an engaging environment for users.
-    - Utilize high-quality images and icons that align with the application's theme.
-    - Implement subtle animations and transitions to make interactions smoother and more engaging.
-    - Choose a harmonious color palette that supports readability and visual appeal.
-4. **Responsive Design:**
-    - Ensure that components adapt seamlessly to various screen sizes using Tailwind CSS utilities.
-    - Test the UI on multiple devices to verify responsiveness.
-
-    **Creative Enhancements:**
-
-    - Incorporate animations and interactive elements to enhance user engagement.
-    - Utilize a consistent color scheme and typography to maintain visual harmony.
-    - Implement accessible design practices to ensure usability for all users.
-- Please commit all your work in a private GitHub repository with a detailed README, including:
-    1. Your full name on the first line of the README (e.g., `Author: ...`).
-        1. Mention https://github.com/remi-guan, https://github.com/lingjiekong, https://github.com/goldmermaid, and https://github.com/EnergentAI for review.
-    2. A fully functional implementation of the required features
-    3. A 3-minute demo video showcasing:
-        - Your application's UI and responsiveness
-        - Core features in action
-        - AI integration functionality
-        - Any advanced features you implemented
-    4. Instructions for running the application locally
-    5. A link to the deployed application on Vercel
-- Invite `[REVIEWER_USERNAME]` as a collaborator for review.
-- Once you complete your assignment, please reply to our email with your private GitHub repo link as a completion notice.
-
-Good luck! We're excited to see what you create.
-
-
-This repo already contained the code for google-gemini/live-api-web-console , Use this code for the. Making of the project. And using the Live API web console.
+java - the web site should use java, there should be a full fledged online grocery ordering system. it should have a ui website using react, it should use jdbc for database connectivity.
+SNo	Feature	Story number	Description (Card)	Acceptance Criteria (Confirmation)
+1	Online Grocery Ordering - 	US001	For a user, you need to develop a menu list which represents the choices.	A user can perform the action only after the successful login. Unsuccessful login will display the message that "Please Enter Correct UserName and Password". For Example: #Username: admin, #Password: admin123  Option needs to be given to the user after the successful login. Program will end only by selecting the Exit option.  1) Customer Registration (If Press 1): If user selects an option "1" then it performs "Customer Registration" operation.  2) Update Customer Details (If Press 2): If user selects an option "2" then it performs "Update Customer Details" operation.  3) Get Customer Order Details (If Press 3): If user selects an option "3" then it performs "Get Customer Order Details" operation.  4) Customer Search (If Press 4): If user selects an option "4" then it performs "Customer Search" operation.  5) Product Search (If Press 5): If user selects the option "5" then it performs "Product Search" operation.  6) Register Product (If Press 6): If user selects an option "6" then it performs "Register Product" operation.  7) Update Product (If Press 7): If user selects an option "7" then it performs "Update Product" operation.  8) Delete Product (If Press 8): If user selects an option "8" then it performs "Delete Product" operation.  9) Exit (If Press 9): If user selects the option "9" then system should print the message that "Good Bye User!". Terminating the Program".  - Invalid Option (other than 1 to 9): If Administrator is selecting the wrong option then system should print the message that "You have selected an inappropriate option. Kindly select an appropriate option.". After that system will wait for an input from the users.
+2	Customer Registration	US002	As a Customer, I should be able to register myself.	Description: customer_registration() function handles the process of registering new customers for an "Online Grocery Ordering" application. It allows individuals to create an account, providing their necessary information, and subsequently, access the application's features to order groceries online. <br> Requirements: The function should prompt the user to provide the following details for registering:  1) Full Name: Customer's Full Name  2) Email: A valid email address that will serve as the username for login and communication  3) Password: A secure password that meets the application's security criteria  4) Address: Full Customer's Delivery Address  5) Contact Number: A valid phone number for communication and order updates.  Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria.  - Email Address must be in the valid format and also validate that the unique email address is unique and not already registered in the system.  - The Password must meet security requirements (MinLength: 08, Presence of Uppercase, Lowercase and Special Characters)  - Phone Number must follow the exact 10 digits.  Data Storage: - Upon successful registration, store the customer's details in a database and you need to associating the information with unique customer ID (6 Digits - System Generated).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
+3	Update Customer Details	US003	As a Customer, I should be able to update my own details.	Description: customer_update() function handles the process of updating customer information for the "Online Grocery Ordering" application. It allows existing customers to modify their account details, such as Full Name, Email, Password, Address and Contact Number. <br> Requirements: - Before allowing any updates, the function must verify the customer's identity through proper authentication mechanism, such as requiring the customer to log in with their credentials.  User Input: - The function should prompt the user to select the type of information they want to update from a list of options. The available options might include:  - Contact Information (Full Name, Email, Address, Contact Number)  - Password  Validation: - Validate the user input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When updating the email address, validate that the new email is unique and not already associated with another customer account.  - For Password Update, if the customer chooses to update their password, the function should enforce password complexity requirements.  Data Storage: - Upon successful validation, update the customer's details in the database, reflecting the changes made.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the customer update process.
+4	Get Customer Order Details	US004	As a customer, I should be able to see my order history.	Description: get_customer_order_details(customer_id) function allows a customer to fetch their order history from the "Online Grocery Ordering" Application. It retrieves information such as CustomerID, Customer Name, OrderID, OrderDate, ProductID, OrderAmount. <br> Requirements: - CustomerID will be used to query the database ad retrieve the relevant information.  - Before fetching the order details, ensure that the customer is authenticated and authorized to access their own order history.  Data Retrieval: - Fetch the relevant customer information which includes CustomerID and Customer Name.  - Fetch all the orders associated with the given CustomerID and retrieve the OrderID, OrderDate, ProductID and OrderAmount.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the retrieval process.
+5	Search customer details	US005	As a Administrator, I should be able to search customer details by customer name	Description: - As a Administrator, i am able to search the customer details by customer name.  - search_Customer_By_Name(customerName): This function allows administrator to fetch customer details just by entering customer name in the search field. <br> Requirements: - Administrator will be able to search customer details by providing any customer name.  - Before displaying search results ensure that the administrator is login through admin credentials.  (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant customer details which includes customer_id, customer_name,email, password,address, and contact_number  - Display all the customer associated with the entered customer name.  Validations: - If entered customer name is not present in the database then throw an appropriate error message.  - Display password in encrypted format so that admin cannot access it. <br> For example: if Administrator tries to search for "Jetabtree" and if the name is not present in the database then throw an error message as "Customer not found".
+6	Search product details	US006	As a customer, I should be able to search product by product name	Description: - As a customer, i am able to search the product details by product name.  - search_Product_By_Name(productName): This function allows customer to fetch product details just by entering product name in the search field. <br> Requirements: - Customers will be able to search product details by providing any particular product name.  - Before displaying search results ensure that the customer is authenticated and authorized to access the data.  (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant product details which includes product name, product prize, quantity and add to cart button.  - Display all the product associated with the entered product name.  Validations: - If customer is unauthorized to access any details then redirect customer to registration page.  - If entered Product is not present in the database then throw an appropriate error message.  For example: If customer tries to search for "Television" and if it is not present in the database then throw an error message as "Product not found".
+7	Register Product	US007	As an Admin, I should be able to register a new product.	Description: product_registration() function handles the process of registering new products for an "Online Grocery Ordering" application. It allows admin to create a product entry, providing their necessary information, and subsequently, storing them in database in Product Table. <br> Requirements: The function should prompt the user to provide the following details for registering:  1) Product ID - Numeric unique id assigned to product  2) Product Name- Product's Full Name  3) Price- Product's Price  4) Quantity- Product's Quantity  Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria.  - The Quantity of product cannot be a negative number  - Product Price must be only digits.  Data Storage: - Upon successful registration, store the product's details in a database (Product Table) and you must associate the information with unique Product ID (System Generated).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
+8	Update Product	US008	As an Admin, I should be able to update any product.	Description: update_product() function handles the process of updating existing products for an "Online Grocery Ordering" application. It allows admin to update a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt the user to select the type of information they want to update from a list of options. The available options might include:  - Product ID  - Product Name  - Price  - Quantity  - Reserved  - Customer ID  Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When updating the product id, validate that the new one is unique, numeric and not already associated with another product.  Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product update process.
+9	Delete Product	US009	As an Admin, I should be able to delete any product.	Description: delete_product() function handles the process of deleting existing products for an "Online Grocery Ordering" application. It allows admin to delete a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt to select "Product ID" to be deleted.  Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When deleting the product, validate that the product id entered is existing or not.  Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made (entry/item must be deleted).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product delete process.
+10	SQL Injection	US0010	prevent the SQL injection attack and code review for all user stories	This module must handle and prevent the SQL injection attack through the input data from the client/user to the application. This is important so that during code review no threat or risk occurs.  While writing the code for "Online Grocery Ordering" application, the following factors must be taken into consideration:  - There must be no unintended data entry in a program from an untrusted source.  - The input data must be utilized to dynamically create the SQL Query  For example: select id, firstname, lastname from authors <br> Input: Firstname: evil'ex and Lastname: Newman <br> Query string becomes: select id, firstname, lastname from authors where firstname = 'evil'ex' and lastname = 'newman' <br> This will result in ERROR which the database attempts to run as: Incorrect syntax near 'll' as the database tried to execute evil. <br> - The code must maintain the confidentiality of the all the users including admin.  - The code must authenticate the user everytime during login, logout and even while performing various operations that could affect the application/DB.  For example: Validating input from the user by pre-defining length, type of input, of the input field and authenticating the user. <br> - The code must take care of authorization and integrity of the data as there would be sensitive information and data.
