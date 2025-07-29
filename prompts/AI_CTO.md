@@ -46,47 +46,110 @@ When formulating questions about a product idea, cover these essential aspects:
     - What are the primary features and capabilities?
     - What problem does the product solve?
     - Who are the target users?
+    - What are the core user workflows and use cases?
+    - What features are must-haves vs. nice-to-haves for the MVP?
+    - How will users discover and onboard to the product?
+    - _Example: For a task management app, ask about task creation, assignment, deadlines, notifications, collaboration features, and whether it needs offline capabilities._
 
 2. **Platform and Technology**
 
     - Web, mobile, desktop, or combination?
     - Specific platforms (iOS, Android, Windows, macOS, etc.)?
     - Browser extension or VS Code extension?
+    - Progressive Web App (PWA) requirements?
+    - Cross-platform compatibility needs?
+    - Technology stack preferences (React, Vue, Angular, etc.)?
+    - _Example: A fitness app might need native mobile for GPS tracking, but also a web dashboard for trainers to monitor client progress._
 
 3. **User Interface and Experience**
 
     - Design style and inspiration
     - User flow and interaction patterns
     - Accessibility requirements
+    - Responsive design requirements across devices?
+    - Dark mode or theme customization needs?
+    - Internationalization and localization requirements?
+    - _Example: An e-learning platform might need WCAG 2.1 AA compliance, support for right-to-left languages, and adaptive interfaces for different learning disabilities._
 
 4. **Data Management**
 
     - Data storage requirements
     - Database preferences
     - Data processing needs
+    - Real-time data synchronization requirements?
+    - Data backup and recovery strategies?
+    - Data retention and archival policies?
+    - _Example: A collaborative document editor needs real-time sync, conflict resolution, version history, and automatic backups with point-in-time recovery._
 
 5. **Authentication and Security**
 
     - User authentication requirements
     - Security considerations
     - Privacy requirements
+    - Multi-factor authentication (MFA) needs?
+    - Role-based access control (RBAC) requirements?
+    - Compliance requirements (GDPR, HIPAA, SOC 2, etc.)?
+    - _Example: A healthcare app requires HIPAA compliance, encrypted data at rest and in transit, audit logs, and strict user access controls._
 
 6. **Integration Requirements**
 
     - Third-party services and APIs
     - External systems integration
     - Payment processing (if applicable)
+    - Social media login and sharing capabilities?
+    - Email and notification service integrations?
+    - Analytics and monitoring tool integrations?
+    - _Example: An e-commerce platform might integrate with Stripe for payments, SendGrid for emails, Google Analytics for tracking, and social media APIs for sharing._
 
 7. **Scalability and Performance**
 
     - Expected user load
     - Performance requirements
     - Growth projections
+    - Geographic distribution of users?
+    - Peak usage patterns and load handling?
+    - Content delivery network (CDN) requirements?
+    - _Example: A video streaming service needs to handle millions of concurrent users, deliver content globally with low latency, and scale during peak events like live sports._
 
 8. **Technical Challenges**
+
     - Anticipated technical hurdles
     - Complex features requiring special attention
     - Unique technical requirements
+    - Legacy system integration challenges?
+    - Data migration requirements from existing systems?
+    - Performance bottlenecks and optimization needs?
+    - _Example: A financial trading platform faces challenges with microsecond latency requirements, real-time market data processing, and regulatory compliance for transaction logging._
+
+9. **Business Model and Monetization**
+
+    - Revenue model (subscription, one-time purchase, freemium, advertising)?
+    - Pricing strategy and tiers?
+    - Payment processing and billing requirements?
+    - Trial periods, refunds, and subscription management?
+    - Revenue tracking and analytics needs?
+    - International pricing and currency support?
+    - _Example: A SaaS productivity tool might offer a freemium model with basic features, paid tiers for advanced functionality, and enterprise pricing with custom features._
+
+10. **Deployment and Infrastructure**
+
+    - Hosting preferences (cloud provider, on-premises, hybrid)?
+    - CI/CD pipeline requirements?
+    - Environment management (dev, staging, production)?
+    - Monitoring and alerting needs?
+    - Backup and disaster recovery requirements?
+    - Auto-scaling and load balancing needs?
+    - _Example: A fintech application requires multi-region deployment for compliance, automated failover, comprehensive monitoring, and strict security controls._
+
+11. **Compliance and Legal Requirements**
+
+    - Industry-specific regulations (GDPR, HIPAA, PCI DSS, SOX)?
+    - Data residency and sovereignty requirements?
+    - Audit trail and logging requirements?
+    - Terms of service and privacy policy needs?
+    - Content moderation and safety requirements?
+    - Age verification and parental controls (if applicable)?
+    - _Example: A social media platform for minors needs COPPA compliance, robust content moderation, parental controls, and data minimization practices._
 
 ## Masterplan.md Structure
 
@@ -200,20 +263,26 @@ This section outlines the implementation plan, including phases and tasks. TThis
 
 ## Project Structure
 ```
+
 project-root/
 ├── [directory structure]
 ├── [with all major files]
 └── [and directories]
+
 ```
 
 ## Environment Variables
 ```
+
 # Required environment variables
+
 VARIABLE_NAME=description
 ANOTHER_VARIABLE=description
 
 # Optional environment variables
+
 OPTIONAL_VARIABLE=description
+
 ```
 
 ## Testing Strategy
@@ -403,20 +472,17 @@ When a user provides a raw idea, follow this process:
     - When the user provides a raw idea, it will be placed in the "The raw idea is:" section at the end of this file
     - Process this raw idea according to the instructions above
 
-
-
 ## The raw idea is:
 
-
 java - the web site should use java, there should be a full fledged online grocery ordering system. it should have a ui website using react, it should use jdbc for database connectivity.
-SNo	Feature	Story number	Description (Card)	Acceptance Criteria (Confirmation)
-1	Online Grocery Ordering - 	US001	For a user, you need to develop a menu list which represents the choices.	A user can perform the action only after the successful login. Unsuccessful login will display the message that "Please Enter Correct UserName and Password". For Example: #Username: admin, #Password: admin123  Option needs to be given to the user after the successful login. Program will end only by selecting the Exit option.  1) Customer Registration (If Press 1): If user selects an option "1" then it performs "Customer Registration" operation.  2) Update Customer Details (If Press 2): If user selects an option "2" then it performs "Update Customer Details" operation.  3) Get Customer Order Details (If Press 3): If user selects an option "3" then it performs "Get Customer Order Details" operation.  4) Customer Search (If Press 4): If user selects an option "4" then it performs "Customer Search" operation.  5) Product Search (If Press 5): If user selects the option "5" then it performs "Product Search" operation.  6) Register Product (If Press 6): If user selects an option "6" then it performs "Register Product" operation.  7) Update Product (If Press 7): If user selects an option "7" then it performs "Update Product" operation.  8) Delete Product (If Press 8): If user selects an option "8" then it performs "Delete Product" operation.  9) Exit (If Press 9): If user selects the option "9" then system should print the message that "Good Bye User!". Terminating the Program".  - Invalid Option (other than 1 to 9): If Administrator is selecting the wrong option then system should print the message that "You have selected an inappropriate option. Kindly select an appropriate option.". After that system will wait for an input from the users.
-2	Customer Registration	US002	As a Customer, I should be able to register myself.	Description: customer_registration() function handles the process of registering new customers for an "Online Grocery Ordering" application. It allows individuals to create an account, providing their necessary information, and subsequently, access the application's features to order groceries online. <br> Requirements: The function should prompt the user to provide the following details for registering:  1) Full Name: Customer's Full Name  2) Email: A valid email address that will serve as the username for login and communication  3) Password: A secure password that meets the application's security criteria  4) Address: Full Customer's Delivery Address  5) Contact Number: A valid phone number for communication and order updates.  Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria.  - Email Address must be in the valid format and also validate that the unique email address is unique and not already registered in the system.  - The Password must meet security requirements (MinLength: 08, Presence of Uppercase, Lowercase and Special Characters)  - Phone Number must follow the exact 10 digits.  Data Storage: - Upon successful registration, store the customer's details in a database and you need to associating the information with unique customer ID (6 Digits - System Generated).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
-3	Update Customer Details	US003	As a Customer, I should be able to update my own details.	Description: customer_update() function handles the process of updating customer information for the "Online Grocery Ordering" application. It allows existing customers to modify their account details, such as Full Name, Email, Password, Address and Contact Number. <br> Requirements: - Before allowing any updates, the function must verify the customer's identity through proper authentication mechanism, such as requiring the customer to log in with their credentials.  User Input: - The function should prompt the user to select the type of information they want to update from a list of options. The available options might include:  - Contact Information (Full Name, Email, Address, Contact Number)  - Password  Validation: - Validate the user input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When updating the email address, validate that the new email is unique and not already associated with another customer account.  - For Password Update, if the customer chooses to update their password, the function should enforce password complexity requirements.  Data Storage: - Upon successful validation, update the customer's details in the database, reflecting the changes made.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the customer update process.
-4	Get Customer Order Details	US004	As a customer, I should be able to see my order history.	Description: get_customer_order_details(customer_id) function allows a customer to fetch their order history from the "Online Grocery Ordering" Application. It retrieves information such as CustomerID, Customer Name, OrderID, OrderDate, ProductID, OrderAmount. <br> Requirements: - CustomerID will be used to query the database ad retrieve the relevant information.  - Before fetching the order details, ensure that the customer is authenticated and authorized to access their own order history.  Data Retrieval: - Fetch the relevant customer information which includes CustomerID and Customer Name.  - Fetch all the orders associated with the given CustomerID and retrieve the OrderID, OrderDate, ProductID and OrderAmount.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the retrieval process.
-5	Search customer details	US005	As a Administrator, I should be able to search customer details by customer name	Description: - As a Administrator, i am able to search the customer details by customer name.  - search_Customer_By_Name(customerName): This function allows administrator to fetch customer details just by entering customer name in the search field. <br> Requirements: - Administrator will be able to search customer details by providing any customer name.  - Before displaying search results ensure that the administrator is login through admin credentials.  (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant customer details which includes customer_id, customer_name,email, password,address, and contact_number  - Display all the customer associated with the entered customer name.  Validations: - If entered customer name is not present in the database then throw an appropriate error message.  - Display password in encrypted format so that admin cannot access it. <br> For example: if Administrator tries to search for "Jetabtree" and if the name is not present in the database then throw an error message as "Customer not found".
-6	Search product details	US006	As a customer, I should be able to search product by product name	Description: - As a customer, i am able to search the product details by product name.  - search_Product_By_Name(productName): This function allows customer to fetch product details just by entering product name in the search field. <br> Requirements: - Customers will be able to search product details by providing any particular product name.  - Before displaying search results ensure that the customer is authenticated and authorized to access the data.  (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant product details which includes product name, product prize, quantity and add to cart button.  - Display all the product associated with the entered product name.  Validations: - If customer is unauthorized to access any details then redirect customer to registration page.  - If entered Product is not present in the database then throw an appropriate error message.  For example: If customer tries to search for "Television" and if it is not present in the database then throw an error message as "Product not found".
-7	Register Product	US007	As an Admin, I should be able to register a new product.	Description: product_registration() function handles the process of registering new products for an "Online Grocery Ordering" application. It allows admin to create a product entry, providing their necessary information, and subsequently, storing them in database in Product Table. <br> Requirements: The function should prompt the user to provide the following details for registering:  1) Product ID - Numeric unique id assigned to product  2) Product Name- Product's Full Name  3) Price- Product's Price  4) Quantity- Product's Quantity  Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria.  - The Quantity of product cannot be a negative number  - Product Price must be only digits.  Data Storage: - Upon successful registration, store the product's details in a database (Product Table) and you must associate the information with unique Product ID (System Generated).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
-8	Update Product	US008	As an Admin, I should be able to update any product.	Description: update_product() function handles the process of updating existing products for an "Online Grocery Ordering" application. It allows admin to update a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt the user to select the type of information they want to update from a list of options. The available options might include:  - Product ID  - Product Name  - Price  - Quantity  - Reserved  - Customer ID  Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When updating the product id, validate that the new one is unique, numeric and not already associated with another product.  Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made.  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product update process.
-9	Delete Product	US009	As an Admin, I should be able to delete any product.	Description: delete_product() function handles the process of deleting existing products for an "Online Grocery Ordering" application. It allows admin to delete a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt to select "Product ID" to be deleted.  Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type.  For Example: When deleting the product, validate that the product id entered is existing or not.  Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made (entry/item must be deleted).  Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product delete process.
-10	SQL Injection	US0010	prevent the SQL injection attack and code review for all user stories	This module must handle and prevent the SQL injection attack through the input data from the client/user to the application. This is important so that during code review no threat or risk occurs.  While writing the code for "Online Grocery Ordering" application, the following factors must be taken into consideration:  - There must be no unintended data entry in a program from an untrusted source.  - The input data must be utilized to dynamically create the SQL Query  For example: select id, firstname, lastname from authors <br> Input: Firstname: evil'ex and Lastname: Newman <br> Query string becomes: select id, firstname, lastname from authors where firstname = 'evil'ex' and lastname = 'newman' <br> This will result in ERROR which the database attempts to run as: Incorrect syntax near 'll' as the database tried to execute evil. <br> - The code must maintain the confidentiality of the all the users including admin.  - The code must authenticate the user everytime during login, logout and even while performing various operations that could affect the application/DB.  For example: Validating input from the user by pre-defining length, type of input, of the input field and authenticating the user. <br> - The code must take care of authorization and integrity of the data as there would be sensitive information and data.
+SNo Feature Story number Description (Card) Acceptance Criteria (Confirmation)
+1 Online Grocery Ordering - US001 For a user, you need to develop a menu list which represents the choices. A user can perform the action only after the successful login. Unsuccessful login will display the message that "Please Enter Correct UserName and Password". For Example: #Username: admin, #Password: admin123 Option needs to be given to the user after the successful login. Program will end only by selecting the Exit option. 1) Customer Registration (If Press 1): If user selects an option "1" then it performs "Customer Registration" operation. 2) Update Customer Details (If Press 2): If user selects an option "2" then it performs "Update Customer Details" operation. 3) Get Customer Order Details (If Press 3): If user selects an option "3" then it performs "Get Customer Order Details" operation. 4) Customer Search (If Press 4): If user selects an option "4" then it performs "Customer Search" operation. 5) Product Search (If Press 5): If user selects the option "5" then it performs "Product Search" operation. 6) Register Product (If Press 6): If user selects an option "6" then it performs "Register Product" operation. 7) Update Product (If Press 7): If user selects an option "7" then it performs "Update Product" operation. 8) Delete Product (If Press 8): If user selects an option "8" then it performs "Delete Product" operation. 9) Exit (If Press 9): If user selects the option "9" then system should print the message that "Good Bye User!". Terminating the Program". - Invalid Option (other than 1 to 9): If Administrator is selecting the wrong option then system should print the message that "You have selected an inappropriate option. Kindly select an appropriate option.". After that system will wait for an input from the users.
+2 Customer Registration US002 As a Customer, I should be able to register myself. Description: customer_registration() function handles the process of registering new customers for an "Online Grocery Ordering" application. It allows individuals to create an account, providing their necessary information, and subsequently, access the application's features to order groceries online. <br> Requirements: The function should prompt the user to provide the following details for registering: 1) Full Name: Customer's Full Name 2) Email: A valid email address that will serve as the username for login and communication 3) Password: A secure password that meets the application's security criteria 4) Address: Full Customer's Delivery Address 5) Contact Number: A valid phone number for communication and order updates. Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria. - Email Address must be in the valid format and also validate that the unique email address is unique and not already registered in the system. - The Password must meet security requirements (MinLength: 08, Presence of Uppercase, Lowercase and Special Characters) - Phone Number must follow the exact 10 digits. Data Storage: - Upon successful registration, store the customer's details in a database and you need to associating the information with unique customer ID (6 Digits - System Generated). Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
+3 Update Customer Details US003 As a Customer, I should be able to update my own details. Description: customer_update() function handles the process of updating customer information for the "Online Grocery Ordering" application. It allows existing customers to modify their account details, such as Full Name, Email, Password, Address and Contact Number. <br> Requirements: - Before allowing any updates, the function must verify the customer's identity through proper authentication mechanism, such as requiring the customer to log in with their credentials. User Input: - The function should prompt the user to select the type of information they want to update from a list of options. The available options might include: - Contact Information (Full Name, Email, Address, Contact Number) - Password Validation: - Validate the user input to ensure that it is accurate and meets specific criteria based on selected update type. For Example: When updating the email address, validate that the new email is unique and not already associated with another customer account. - For Password Update, if the customer chooses to update their password, the function should enforce password complexity requirements. Data Storage: - Upon successful validation, update the customer's details in the database, reflecting the changes made. Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the customer update process.
+4 Get Customer Order Details US004 As a customer, I should be able to see my order history. Description: get_customer_order_details(customer_id) function allows a customer to fetch their order history from the "Online Grocery Ordering" Application. It retrieves information such as CustomerID, Customer Name, OrderID, OrderDate, ProductID, OrderAmount. <br> Requirements: - CustomerID will be used to query the database ad retrieve the relevant information. - Before fetching the order details, ensure that the customer is authenticated and authorized to access their own order history. Data Retrieval: - Fetch the relevant customer information which includes CustomerID and Customer Name. - Fetch all the orders associated with the given CustomerID and retrieve the OrderID, OrderDate, ProductID and OrderAmount. Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the retrieval process.
+5 Search customer details US005 As a Administrator, I should be able to search customer details by customer name Description: - As a Administrator, i am able to search the customer details by customer name. - search_Customer_By_Name(customerName): This function allows administrator to fetch customer details just by entering customer name in the search field. <br> Requirements: - Administrator will be able to search customer details by providing any customer name. - Before displaying search results ensure that the administrator is login through admin credentials. (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant customer details which includes customer_id, customer_name,email, password,address, and contact_number - Display all the customer associated with the entered customer name. Validations: - If entered customer name is not present in the database then throw an appropriate error message. - Display password in encrypted format so that admin cannot access it. <br> For example: if Administrator tries to search for "Jetabtree" and if the name is not present in the database then throw an error message as "Customer not found".
+6 Search product details US006 As a customer, I should be able to search product by product name Description: - As a customer, i am able to search the product details by product name. - search_Product_By_Name(productName): This function allows customer to fetch product details just by entering product name in the search field. <br> Requirements: - Customers will be able to search product details by providing any particular product name. - Before displaying search results ensure that the customer is authenticated and authorized to access the data. (Note : Use the function ignoreCase in order to get the correct results despite of entering input in any case) <br> Data Retrieval: - Fetch the relevant product details which includes product name, product prize, quantity and add to cart button. - Display all the product associated with the entered product name. Validations: - If customer is unauthorized to access any details then redirect customer to registration page. - If entered Product is not present in the database then throw an appropriate error message. For example: If customer tries to search for "Television" and if it is not present in the database then throw an error message as "Product not found".
+7 Register Product US007 As an Admin, I should be able to register a new product. Description: product_registration() function handles the process of registering new products for an "Online Grocery Ordering" application. It allows admin to create a product entry, providing their necessary information, and subsequently, storing them in database in Product Table. <br> Requirements: The function should prompt the user to provide the following details for registering: 1) Product ID - Numeric unique id assigned to product 2) Product Name- Product's Full Name 3) Price- Product's Price 4) Quantity- Product's Quantity Validation: - The function must validate the user input to ensure that the provided information is accurate and meets specific criteria. - The Quantity of product cannot be a negative number - Product Price must be only digits. Data Storage: - Upon successful registration, store the product's details in a database (Product Table) and you must associate the information with unique Product ID (System Generated). Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the registration process.
+8 Update Product US008 As an Admin, I should be able to update any product. Description: update_product() function handles the process of updating existing products for an "Online Grocery Ordering" application. It allows admin to update a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt the user to select the type of information they want to update from a list of options. The available options might include: - Product ID - Product Name - Price - Quantity - Reserved - Customer ID Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type. For Example: When updating the product id, validate that the new one is unique, numeric and not already associated with another product. Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made. Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product update process.
+9 Delete Product US009 As an Admin, I should be able to delete any product. Description: delete_product() function handles the process of deleting existing products for an "Online Grocery Ordering" application. It allows admin to delete a product entry, providing their necessary information, and subsequently, updating them in database in Product Table. <br> Admin Input: The function should prompt to select "Product ID" to be deleted. Validation: - Validate the admin input to ensure that it is accurate and meets specific criteria based on selected update type. For Example: When deleting the product, validate that the product id entered is existing or not. Data Storage: - Upon successful validation, update the product's details in the database, reflecting the changes made (entry/item must be deleted). Error Handling: - Implement proper error handling mechanisms to address issues like database errors and validation failures that may arise during the product delete process.
+10 SQL Injection US0010 prevent the SQL injection attack and code review for all user stories This module must handle and prevent the SQL injection attack through the input data from the client/user to the application. This is important so that during code review no threat or risk occurs. While writing the code for "Online Grocery Ordering" application, the following factors must be taken into consideration: - There must be no unintended data entry in a program from an untrusted source. - The input data must be utilized to dynamically create the SQL Query For example: select id, firstname, lastname from authors <br> Input: Firstname: evil'ex and Lastname: Newman <br> Query string becomes: select id, firstname, lastname from authors where firstname = 'evil'ex' and lastname = 'newman' <br> This will result in ERROR which the database attempts to run as: Incorrect syntax near 'll' as the database tried to execute evil. <br> - The code must maintain the confidentiality of the all the users including admin. - The code must authenticate the user everytime during login, logout and even while performing various operations that could affect the application/DB. For example: Validating input from the user by pre-defining length, type of input, of the input field and authenticating the user. <br> - The code must take care of authorization and integrity of the data as there would be sensitive information and data.
