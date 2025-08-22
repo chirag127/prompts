@@ -448,40 +448,41 @@ Your preference for Build Phase
 I prefer to build my own idea
 So the basic idea is that the camera will capture the image of the shelves and the email will be sent to the admin regarding which cells are empty and which products are empty. You have to decide the technology in which we are going to make the project. But I don't know about which technology will be best. Suggest me the best technology to you. There are two Apis available for the. Image to text. One is Google AI Studio. Gemini 2.5 Pro	api. And another one is together AI, Llama 3.2 11B Vision Instruct Turbo API,OpenRouter Llama 3.2 11B Vision Instruct then CohereAya Vision 32B
 then Cloudflare Workers AI Llama 3.2 11B Vision Instruct. Try to use the Google Gemini 2.5 Pro API first and if it don't work then use that CohereAya Vision 32B then together AI, lama. Vision API secondly and then Cloudflare Workers AI Llama 3.2 11B Vision Instruct .then OpenRouter Llama 3.2 11B Vision Instruct  Also included in the Prompt That we have to use the reF MCP server. The web search mcp tool. Extensively as possible so that we can make the project very usefully. Inference architecture (where should recognition run) is Cloud-only (send frames to Gemini / other APIs) — simpler but higher bandwidth/cost & privacy. Image capture cadence / latency target is b) Near-real-time snapshots every 5–15 seconds (recommended for shelf monitoring). — Suggested
-Frontend Stack Preference
-a) Next.js + TailwindCSS (Suggested)
-it will be a simple website with a dashboard to show the empty shelves and the products which are empty. The website will be hosted on free platforms like Vercel or Render. the website will also have the option to upload the photo of the shelves.
-2.4 Backend Stack Preference
-a) Node.js + Express + MongoDB (Suggested)
-Posting of the program will be done on free platform like render vercel mongodb Atlas
-Send the mail using the services called as the. Node Mailer. const nodemailer = require("nodemailer");
-
-const sendEmail = async (email, subject, text) => {
-  try {
-
-    if (email) {
-      const transporter = nodemailer.createTransport({
-        host: "smtpout.secureserver.net",
-        port: 465, // Use port 465 for secure connections (SSL/TLS)
-        secure: true,
-        auth: {
-          user: process.env.EMAIL_USERNAME,
-          pass: process.env.EMAIL_PASSWORD,
-        },
-      });
-
-      await transporter.sendMail({
-        from: process.env.EMAIL_USERNAME,
-        to: `${email},qrsayteam@gmail.com`,
-        subject: subject,
-        html: text,
-      });
-
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
-module.exports = sendEmail;
-
+Open the PFP College and the complete website will be our website which will show the. Home page where we can upload the images of the empty or full shelves and the. Output will be in the form of the if the shelves are empty or. They are not empty. This will be done using probably the cloud platform. It will be a simple streamlit file. Streamlit. Website. No note to use the real render or something.
+Posting of the program will be done on free platform streamlit cloud
 The read me file should include how to run the project and the read me file should also include how the project is functioning. Please run the project after the project is completed.
+
+### Refined Prompt for AI ShelfEye – Streamlit Website
+
+We are building a **Streamlit-based website** deployed on **Streamlit Cloud**.
+
+**Functionality:**
+
+* The website will have an **image upload option** where the user uploads a shelf image.
+* The system will use **GenAI Vision APIs** to analyze the uploaded image.
+* Output will include:
+
+  1. Whether the shelf is **empty** or **non-empty**.
+  2. The **number of items detected** in the image.
+  3. Identification of **which specific products are missing** from the shelf.
+
+**Tech Stack & API Usage Order:**
+
+1. **Primary**: Google Gemini 2.5 Pro Vision API
+2. **Fallbacks (in order):**
+
+   * CohereAya Vision 32B
+   * Together AI LLaMA 3.2 11B Vision Instruct Turbo
+   * Cloudflare Workers AI LLaMA 3.2 11B Vision Instruct
+   * OpenRouter LLaMA 3.2 11B Vision Instruct
+
+**Implementation Notes:**
+
+* Recognition inference will be **cloud-only** (frames sent to API).
+* Cadence target: **snapshots every 5–15 seconds** (for real-time demo later, but initial prototype = manual uploads).
+* **No real render/deployment platforms** like Render/Heroku — only **Streamlit Cloud**.
+* A **README file** will be included describing:
+
+  * How to run the project locally and on Streamlit Cloud.
+  * How the system processes uploaded images.
+  * Example inputs/outputs.
