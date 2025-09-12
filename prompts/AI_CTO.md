@@ -797,94 +797,104 @@ The following prompt is designed to ensure the agent operates effectively and ef
     -   `list-processes`: Use to list all active terminals/processes managed by the agent and their states.
 -   Memory Management:
     -   `remember`: Use to store important pieces of information, decisions, or contextual details that need to be recalled later in the execution or across different tasks.
-Got it ✅
-You want a **full prompt** that, when fed to an AI code generator, will produce the **entire Streamlit app** for **AI ShelfEye**, including:
+-
 
-* **Primary model**: Google Gemini 2.5 Pro Vision
-* **Fallbacks (in order)**:
 
-  1. Cohere Aya Vision 32B
-  2. Together AI LLaMA 3.2 11B Vision Instruct Turbo
-  3. Cloudflare Workers AI LLaMA 3.2 11B Vision Instruct
-  4. OpenRouter LLaMA 3.2 11B Vision Instruct
+Step-by-Step Architecture Plan (PDFFusion)
+1. Frontend (User Interface)
 
-Here’s the complete meta-prompt you can give to an AI:
+Framework: Next.js (React-based)
 
----
+Features:
 
-# 📝 Prompt for Code Generator
+Drag & drop multiple PDF files.
 
-You are an expert AI engineer. Generate a **production-ready Streamlit application** called **AI ShelfEye** for real-time retail shelf monitoring.
+File preview (list with reorder option).
 
-## Requirements
+Progress bar for upload/merge.
 
-### 🔹 Functionality
+Dark/light mode UI.
 
-1. User uploads a shelf image (`jpg`, `jpeg`, `png`).
-2. App sends image to **cloud Vision LLM APIs**.
-3. Output must include:
+Download merged file button.
 
-   * Whether the shelf is **empty or not**.
-   * **Number of items detected**.
-   * **List of missing products**.
-   * (Optional) Any anomalies noticed in the shelf.
-4. If the primary API fails, automatically **fall back** to the next API in the given order.
-5. Show both:
+📦 Tools:
 
-   * The **parsed analysis result** (clean text).
-   * The **raw JSON response** in a collapsible section for debugging.
+react-dropzone → drag-and-drop upload.
 
-### 🔹 Tech Stack
+shadcn/ui or Material-UI → clean components.
 
-* Python 3.10+
-* [Streamlit](https://streamlit.io) for frontend
-* `requests` for API calls
-* `Pillow` for image processing
-* Deployable on **Streamlit Cloud**
+TailwindCSS → fast styling.
 
-### 🔹 API Order
+2. Backend (Processing Engine)
 
-1. **Google Gemini 2.5 Pro Vision**
-   Endpoint:
+Framework: Node.js with Express / Fastify
 
-   ```
-   https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=GOOGLE_API_KEY
-   ```
-2. **Cohere Aya Vision 32B**
-   Endpoint: Cohere API Vision Inference
-3. **Together AI – LLaMA 3.2 11B Vision Instruct Turbo**
-4. **Cloudflare Workers AI – LLaMA 3.2 11B Vision Instruct**
-5. **OpenRouter – LLaMA 3.2 11B Vision Instruct**
+PDF Library: pdf-lib (simple) or HummusJS (faster, though less maintained).
 
-### 🔹 Code Expectations
+API endpoints:
 
-* The app should have:
+POST /merge → accepts multiple PDFs, merges them, returns file.
 
-  * `app.py` (main Streamlit app)
-  * `config/settings.py` (to hold API keys for all providers)
-* Each API call should be in its own function.
-* A central **`analyze_shelf(image)`** function should try APIs in sequence until one succeeds.
-* Pretty error handling with `st.error()` if all fail.
-* README.md with instructions for running locally & on Streamlit Cloud.
+GET /status/:id → optional if using job queue for large files.
 
-### 🔹 Output UI
+📦 Tools:
 
-* App Title: **🛒 AI ShelfEye – Retail Shelf Monitoring**
-* Sidebar: Upload image, click **Analyze Shelf**
-* Main Section:
+multer (file upload middleware).
 
-  * Display uploaded image
-  * Display AI analysis
-  * Expandable section for raw JSON
+pdf-lib (mergePDFs(fileList)).
 
----
+3. Storage Layer
 
-## Deliverables
+For small files: Process in-memory, return merged file directly.
 
-* **Complete Streamlit app code** (`app.py` + `config/settings.py`)
-* **README.md** with setup instructions
-* Code must be **ready-to-deploy** on Streamlit Cloud (no placeholders like “TODO”)
+For larger files: Temporarily store in Amazon S3 / Cloud Storage, then delete after merge.
 
----
+4. Processing Options
 
-⚡️ Generate the **full code** directly without explanations.
+Small PDFs (<20MB): Merge in-browser with pdf-lib → No server load.
+
+Large PDFs: Upload → Process server-side → Return merged file.
+
+This hybrid approach gives speed + privacy.
+
+5. Deployment
+
+Frontend & Backend together:
+
+Deploy on Vercel (Next.js + API routes) for simple use.
+
+Or separate:
+
+Frontend on Vercel/Netlify.
+
+Backend as AWS Lambda / Cloud Run.
+
+6. Extra Features (Future-Proofing)
+
+Password-protected PDF merge.
+
+Merge + compress option.
+
+Merge + reorder pages.
+
+User accounts (save history).
+
+Premium plan (higher file size, priority processing).
+
+7. User Flow (Step by Step)
+
+User visits PDFFusion.com.
+
+Uploads PDFs (drag & drop).
+
+Reorders files in UI (if needed).
+
+Clicks Merge Now.
+
+Small files → merged instantly in browser.
+
+Large files → sent to backend, merged, downloadable link returned.
+
+User downloads merged.pdf.
+
+⚡ This setup is scalable, fast, and user-friendly.
