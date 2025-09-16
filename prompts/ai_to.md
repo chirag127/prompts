@@ -404,178 +404,101 @@ When a user provides a raw idea, follow this process:
 
 ## The raw idea is:
 
-# Project Specification: All PDF Tools
+Step-by-Step Architecture Plan (PDFFusion)
+1. Frontend (User Interface)
 
-## 1. Project Overview
-Develop a comprehensive next.js app that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
+Framework: Next.js (React-based)
 
-**Authentication:** None required
-**Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
+Features:
 
-## 2. Technical Requirements
+Drag & drop multiple PDF files.
 
-### 2.1 Development Framework
-- Next.js (latest stable version)
-- The backend will be a Python FastAPI server that will be hosted on a free tier render.com server with a 0.1 CPU and 512MB RAM
-- Implement as many features as possible in the app itself to avoid server load
-- Implement the AI features via Gemini API using the Gemini key entered by the user in the settings page
-- Provide a way for the user to enter the Gemini key in the settings page
+File preview (list with reorder option).
 
+Progress bar for upload/merge.
 
-### 2.2 PDF Processing
-- Support for PDF files up to 100MB in size
-- Implement proper error handling for corrupted or incompatible PDF files
-- Include progress indicators for operations that may take time.
-- Ask for the user to select the output file name and location for saving the processed files
-- Implement a user-friendly interface for selecting files and displaying results
-- Ask for the file password if the file is password protected
+Dark/light mode UI.
 
-### 2.3 File Management
-- Implement file picking from device storage
-- Request appropriate permissions for file access
-- Support saving modified PDFs to device storage
-- Implement temporary file cleanup to prevent storage bloat
+Download merged file button.
 
-## 3. Feature Categories and Requirements
+📦 Tools:
 
-### 3.1 Document Organization
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
-| Split PDF | Separate PDF into multiple documents by page ranges or individual pages | High |
-| Remove Pages | Delete specific pages from a PDF document | High |
-| Extract Pages | Save selected pages as a new PDF document | High |
-| Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
+react-dropzone → drag-and-drop upload.
 
+shadcn/ui or Material-UI → clean components.
 
+TailwindCSS → fast styling.
 
-### 3.2 Conversion Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
-| PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
+2. Backend (Processing Engine)
 
-### 3.3 Editing Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
-| Add Page Numbers | Insert customizable page numbers with position and format options | Medium |
-| Add Watermark | Apply text or image watermarks with opacity and position controls | Medium |
-| Crop PDF | Adjust page margins or crop to specific dimensions | Medium |
-| Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
+Framework: Node.js with Express / Fastify
 
-### 3.4 Security Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Unlock PDF | Remove password protection from PDF files | High |
-| Protect PDF | Add password protection to PDF files | High |
-| Sign PDF | Add digital signatures to documents | Medium |
-| Redact PDF | Permanently remove sensitive information from documents | Low |
+PDF Library: pdf-lib (simple) or HummusJS (faster, though less maintained).
 
-### 3.5 Enhancement Tools
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Compress PDF | Reduce file size while maintaining reasonable quality | High |
-| Repair PDF | Attempt to fix corrupted PDF files | Medium |
-| OCR PDF | Convert scanned documents to searchable text | Medium |
-| Scan to PDF | Use device camera to scan documents and convert to PDF | Medium |
-| Compare PDF | Show differences between two PDF documents | Low |
+API endpoints:
 
-### 3.6 AI Features (Gemini API Integration)
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Chat with PDF | Interactive Q&A with PDF content using RAG | High |
-| AI PDF Summarizer | Generate concise summaries of PDF documents | High |
-| Translate PDF | Translate PDF content between languages | Medium |
-| AI Question Generator | Create questions based on PDF content | Low |
+POST /merge → accepts multiple PDFs, merges them, returns file.
 
-## 4. AI Implementation Requirements
+GET /status/:id → optional if using job queue for large files.
 
-### 4.1 Gemini API Integration
-- Implement Google's Generative AI capabilities using the official SDK using javaScript
-- Use the Gemini API for AI features, leveraging the user's provided API key
-- User must provide their own Gemini API key through a settings page
-- Store API key securely using device secure storage (e.g., Expo SecureStore)
-- Implement model selection functionality for AI features
-- Provide a user-friendly interface for selecting models
-### 4.2 Retrieval Augmented Generation (RAG)
-- Extract and process text from PDFs for context
-- Implement chunking strategy for large documents (e.g., page-based, section-based)
-- Create appropriate prompts that combine user queries with document context
-- Handle API rate limiting and token limitations gracefully
-- Implement fallback mechanisms for when AI features are unavailable
-11. Localization / Internationalization (i18n):
-Will the app need to support multiple languages?
- English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
+📦 Tools:
 
-### 4.3 Model Selection
-- Provide interface for users to select from available Gemini models
+multer (file upload middleware).
 
+pdf-lib (mergePDFs(fileList)).
 
-ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. use retrieval augmented generation for the ai features.
-Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
+3. Storage Layer
 
----
+For small files: Process in-memory, return merged file directly.
 
-### ✅ Step-by-step Guide
+For larger files: Temporarily store in Amazon S3 / Cloud Storage, then delete after merge.
 
-#### 📦 1. Install the SDK
+4. Processing Options
 
-```bash
-pip install google-generativeai
-```
+Small PDFs (<20MB): Merge in-browser with pdf-lib → No server load.
 
----
+Large PDFs: Upload → Process server-side → Return merged file.
 
-#### 🔑 2. Set Your API Key
+This hybrid approach gives speed + privacy.
 
-Get your API key from: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
+5. Deployment
 
-```python
-import google.generativeai as genai
+Frontend & Backend together:
 
-genai.configure(api_key="YOUR_API_KEY_HERE")
-```
+Deploy on Vercel (Next.js + API routes) for simple use.
 
----
+Or separate:
 
-#### 📋 3. List Available Models
+Frontend on Vercel/Netlify.
 
-```python
-def list_models():
-    models = genai.list_models()
-    for model in models:
-        print(f"Model name: {model.name}")
-        print(f"  Description: {getattr(model, 'description', 'N/A')}")
-        print(f"  Input token limit: {getattr(model, 'input_token_limit', 'N/A')}")
-        print(f"  Output token limit: {getattr(model, 'output_token_limit', 'N/A')}")
-        print("-" * 40)
+Backend as AWS Lambda / Cloud Run.
 
-list_models()
-```
+6. Extra Features (Future-Proofing)
 
----
+Password-protected PDF merge.
 
-### 🧠 Example Output
+Merge + compress option.
 
-```text
-Model name: models/gemini-1.5-pro
-  Description: Gemini 1.5 Pro model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-Model name: models/gemini-1.5-flash
-  Description: Gemini 1.5 Flash model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-...
-```
+Merge + reorder pages.
 
-Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
+User accounts (save history).
 
+Premium plan (higher file size, priority processing).
 
-strictly include the above code in the masterplan.md file to get the list of available models.
+7. User Flow (Step by Step)
 
- continue with suggested answers you provided
-- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
+User visits PDFFusion.com.
+
+Uploads PDFs (drag & drop).
+
+Reorders files in UI (if needed).
+
+Clicks Merge Now.
+
+Small files → merged instantly in browser.
+
+Large files → sent to backend, merged, downloadable link returned.
+
+User downloads merged.pdf.
+
+⚡ This setup is scalable, fast, and user-friendly.
