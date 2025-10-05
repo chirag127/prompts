@@ -1,0 +1,115 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ],
+      "env": {},
+      "disabled": true,
+      "autoApprove": []
+    },
+    "context7-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@upstash/context7-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "clear-thought-mcp-server": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@chirag127/clear-thought-mcp-server",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "sequentialthinking"
+      ]
+    },
+    "mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@docfork/mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "get-library-docs"
+      ]
+    },
+    "date-and-time-mcp-server": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@chirag127/date-and-time-mcp-server",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "getCurrentDateTime"
+      ]
+    },
+    "toolbox": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery/toolbox",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ],
+      "disabled": false,
+      "autoApprove": []
+    },
+    "ref-tools-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@ref-tools/ref-tools-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "ref_search_documentation"
+      ]
+    }
+  }
+}
