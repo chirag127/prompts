@@ -25,6 +25,7 @@ No dev server. Scripts are run individually (`python <script>.py` or `node <scri
 - **Structure**: 
   - `prompts/` - General purpose AI prompt templates
   - `specific/` - Project-specific configurations and prompts
+  - `templates/` - Reusable masterplan templates organized by project type
   - `other/` - Utility templates
   - `mcp/` - MCP server configurations
   - `archive/` - Deprecated templates
