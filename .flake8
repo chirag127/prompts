@@ -1,0 +1,9 @@
+# Baseline flake8 configuration for Python scripts in this repository
+# (gemini.py, gce.py, and scripts in the scripts folder)
+# This file provides compatibility with tools that don't read pyproject.toml
+
+[flake8]
+max-line-length = 100
+# E203: whitespace before ':' (conflicts with black)
+# W503: line break before binary operator (conflicts with black)
+ignore = E203, W503

@@ -1,0 +1,12 @@
+# Baseline Python linting configuration for scripts in this repository
+# (gemini.py, gce.py, and scripts in the scripts folder)
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.flake8]
+max-line-length = 100
+# E203: whitespace before ':' (conflicts with black)
+# W503: line break before binary operator (conflicts with black)
+ignore = ['E203', 'W503']
