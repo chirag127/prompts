@@ -2,24 +2,30 @@
 
 ## Commands
 
-**Setup:** No package manager detected. This is a collection of scripts and prompts.
+**Initial Setup:** No package manager or virtual environment needed - files are standalone scripts and markdown documents.
 
-**Build:** N/A
+**Build:** No build step required.
 
-**Lint:** N/A
+**Lint:** No linter configured.
 
-**Tests:** N/A
+**Tests:** No test suite configured.
 
-**Dev Server:** N/A
+**Dev Server:** No dev server - scripts run independently.
 
 ## Tech Stack & Architecture
 
-- **Languages:** Python 3, JavaScript
+- **Languages:** Python 3, JavaScript (Node.js)
 - **Key Scripts:** `script/gemini.py` (Gemini API client), `script/gce.py` (prompt combiner)
-- **Structure:** `/prompts` - AI prompt templates, `/script` - utilities, `/docs` - documentation including specific project docs and MCP server configs
+- **Structure:** 
+  - `prompts/` - AI prompt templates and guidelines
+  - `docs/specific/` - Project-specific configurations and docs
+  - `script/` - Utility scripts (icon generation using sharp)
+  - Root-level Python scripts (`gce.py`, `gemini.py`) and JS files
 
-## Code Style & Conventions
+## Code Conventions
 
 - Python: Standard library focused, minimal dependencies (google-generativeai, requests, beautifulsoup4)
-- No formal linting/testing framework in place
+- Python scripts use standard formatting, no external dependencies visible
+- No consistent code style enforced (no linter/formatter config)
+- Files are self-contained utilities rather than integrated modules
 - Script-based workflow: combine prompts from `/prompts`, send to Gemini API
