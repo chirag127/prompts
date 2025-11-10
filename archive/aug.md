@@ -1,3 +1,17 @@
+## ⚠️ DEPRECATED - ARCHIVE COPY
+
+**Status**: DEPRECATED (Archive Copy)  
+**Deprecated Date**: 2025-01-XX  
+**Replacement**: [other/aug.md](../other/aug.md)  
+
+**Reason**: This is an archived copy. The active version is located at `other/aug.md` with identical content.
+
+**Migration Guide**: Simply use `other/aug.md` instead. No changes needed - the content is identical.
+
+**Note**: This archive copy exists only as a historical reference point during repository reorganization.
+
+---
+
 # Augment Agent Operational Guidelines
 
 ## Identity & Core Directives

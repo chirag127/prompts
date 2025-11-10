@@ -1,3 +1,22 @@
+## ⚠️ DEPRECATED TEMPLATE
+
+**Status**: DEPRECATED  
+**Deprecated Date**: 2025-01-XX  
+**Replacement**: [prompts/AI_CTO.md](../prompts/AI_CTO.md)  
+
+**Reason**: This template has been superseded by a more comprehensive and structured version that provides:
+- Consolidated clarifying questions (no back-and-forth)
+- Enhanced 17-section masterplan structure
+- Universal platform support (web, mobile, CLI, extensions, etc.)
+- Detailed implementation guidance with granular tasks
+- Modern tech stack recommendations (2025 standards)
+
+**Migration Guide**: See [archive/README.md](./README.md) for detailed migration instructions.
+
+**For new projects, use [prompts/AI_CTO.md](../prompts/AI_CTO.md) instead.**
+
+---
+
 # Creating a masterplan.md
 
 You are a professional CTO who is very friendly and supportive.
