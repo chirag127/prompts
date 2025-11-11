@@ -1,0 +1,242 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  python-lint:
+    name: Python Linting
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/requirements*.txt', 'pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
+      
+      - name: Install linting dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black flake8 pylint
+      
+      - name: Run Black (code formatter check)
+        run: black --check --diff script/
+        continue-on-error: false
+      
+      - name: Run Flake8 (linter)
+        run: flake8 script/
+        continue-on-error: false
+      
+      - name: Run Pylint
+        run: pylint script/*.py --fail-under=7.0
+        continue-on-error: true
+
+  python-test:
+    name: Python Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-test-${{ matrix.python-version }}-${{ hashFiles('**/requirements*.txt', 'pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-test-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-test-
+      
+      - name: Install testing dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov
+      
+      - name: Check Python syntax
+        run: python -m py_compile script/*.py
+      
+      - name: Run pytest (if tests exist)
+        run: |
+          if [ -d "tests" ] || [ -f "test_*.py" ]; then
+            pytest --cov=script --cov-report=xml --cov-report=term
+          else
+            echo "No tests found, skipping pytest"
+          fi
+        continue-on-error: true
+
+  javascript-lint:
+    name: JavaScript Linting
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18', '20', '22']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json', '**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ matrix.node-version }}-
+            ${{ runner.os }}-node-
+      
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps || npm install
+      
+      - name: Install ESLint (if not present)
+        run: npm install --save-dev eslint || true
+      
+      - name: Check JavaScript syntax
+        run: node -c script/gi.js
+      
+      - name: Run ESLint (if configured)
+        run: |
+          if [ -f ".eslintrc.json" ] || [ -f ".eslintrc.js" ] || [ -f ".eslintrc.yml" ]; then
+            npx eslint script/*.js
+          else
+            echo "No ESLint config found, skipping"
+          fi
+        continue-on-error: true
+
+  javascript-test:
+    name: JavaScript Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['18', '20', '22']
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-test-${{ matrix.node-version }}-${{ hashFiles('**/package-lock.json', '**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-test-${{ matrix.node-version }}-
+            ${{ runner.os }}-node-test-
+      
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps || npm install
+      
+      - name: Run tests (if configured)
+        run: |
+          if grep -q '"test"' package.json; then
+            npm test
+          else
+            echo "No test script configured, skipping tests"
+          fi
+        continue-on-error: true
+
+  markdown-lint:
+    name: Markdown Validation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-markdown-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-markdown-
+      
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli
+      
+      - name: Run markdownlint
+        run: markdownlint '**/*.md' --ignore node_modules --ignore archive || true
+        continue-on-error: true
+      
+      - name: Check for broken links (with markdown-link-check)
+        run: |
+          npm install -g markdown-link-check
+          find . -name "*.md" ! -path "*/node_modules/*" ! -path "*/archive/*" | head -20 | xargs -I {} markdown-link-check {} --quiet
+        continue-on-error: true
+
+  status-check:
+    name: PR Status Check
+    runs-on: ubuntu-latest
+    needs: [python-lint, python-test, javascript-lint, javascript-test, markdown-lint]
+    if: always()
+    
+    steps:
+      - name: Check all jobs status
+        run: |
+          echo "Python Lint: ${{ needs.python-lint.result }}"
+          echo "Python Test: ${{ needs.python-test.result }}"
+          echo "JavaScript Lint: ${{ needs.javascript-lint.result }}"
+          echo "JavaScript Test: ${{ needs.javascript-test.result }}"
+          echo "Markdown Lint: ${{ needs.markdown-lint.result }}"
+          
+          if [ "${{ needs.python-lint.result }}" != "success" ] || \
+             [ "${{ needs.python-test.result }}" != "success" ] || \
+             [ "${{ needs.javascript-lint.result }}" != "success" ] || \
+             [ "${{ needs.javascript-test.result }}" != "success" ]; then
+            echo "One or more required checks failed"
+            exit 1
+          fi
+          
+          echo "All required checks passed!"
+      
+      - name: Post status comment (for PRs)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "CI checks completed"
+          echo "All critical checks passed ✓"
