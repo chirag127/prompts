@@ -184,8 +184,118 @@ Output: Sprint plans with tasks and timelines
 
 - **mcp/servers-config.json** - MCP server configurations
 - **.gitignore** - Git exclusion rules
-- **pyproject.toml** - Python project configuration
+- **pyproject.toml** - Python project configuration and build system
 - **package-lock.json** - Node.js dependencies
+
+## 🛠️ Build & Validation
+
+This repository includes a comprehensive unified build validation system for ensuring code quality across all languages.
+
+### Python Build Validation
+
+The `build.py` script provides complete Python validation:
+
+```bash
+# Basic validation
+python build.py
+
+# Detailed output
+python build.py --verbose
+
+# Auto-fix formatting issues
+python build.py --fix
+```
+
+**Features:**
+- ✅ Python syntax validation (AST parsing)
+- ✅ Flake8 linting (PEP 8 compliance)
+- ✅ Black formatting checks
+- ✅ Pytest test execution
+- ✅ Comprehensive error reporting
+
+**Exit Codes:**
+- `0` - All checks passed
+- `1` - Validation failures detected
+
+### Cross-Language Validation
+
+Unified validation scripts for Python, JavaScript, JSON, and Markdown:
+
+```bash
+# Linux/Mac
+./validate.sh [--fix] [--verbose]
+
+# Windows
+validate.bat [--fix] [--verbose]
+```
+
+**Features:**
+- ✅ Python validation (via build.py)
+- ✅ JavaScript syntax validation (Node.js)
+- ✅ ESLint linting for JS files
+- ✅ JSON syntax validation
+- ✅ Markdown linting (markdownlint)
+- ✅ Colorized output and progress indicators
+- ✅ Auto-fix support for formatting issues
+
+**Options:**
+- `--fix` or `-f` - Automatically fix issues where possible
+- `--verbose` or `-v` - Show detailed output for all checks
+
+### Build System Configuration
+
+The `pyproject.toml` file includes:
+
+```toml
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",     # Code formatting
+    "flake8>=6.0.0",     # Linting
+    "pytest>=7.0.0",     # Testing
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.flake8]
+max-line-length = 100
+ignore = ['E203', 'W503']  # Black compatibility
+```
+
+### Setup Development Environment
+
+```bash
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Install Gemini API dependencies (optional)
+pip install -e ".[gemini]"
+
+# Install Node.js linters (optional)
+npm install -g eslint markdownlint-cli
+```
+
+### Continuous Validation Workflow
+
+```bash
+# 1. Make code changes
+# 2. Run validation
+./validate.sh --verbose
+
+# 3. Auto-fix formatting issues
+./validate.sh --fix
+
+# 4. Run Python-specific checks
+python build.py --verbose --fix
+
+# 5. Verify all checks pass
+./validate.sh
+```
 
 ## 📖 Documentation
 

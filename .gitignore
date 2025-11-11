@@ -182,3 +182,9 @@ desktop.ini
 
 # npm/markdownlint
 node_modules/
+
+# pytest
+.pytest_cache/
+
+# Generated output files
+final_prompt.txt

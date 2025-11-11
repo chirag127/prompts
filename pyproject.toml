@@ -1,5 +1,35 @@
-# Baseline Python linting configuration for scripts in this repository
+# Build and linting configuration for scripts in this repository
 # (gemini.py, gce.py, and scripts in the scripts folder)
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompts-scripts"
+version = "0.1.0"
+description = "AI prompt templates and utility scripts"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Chirag Singhal", email = "chirag127@users.noreply.github.com"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "pytest>=7.0.0",
+]
+gemini = [
+    "google-generativeai>=0.3.0",
+]
+
+[project.scripts]
+# Script entry points for installed package
+# Note: These scripts can also be run directly with python
+# e.g., python build.py or python script/gce.py
 
 [tool.black]
 line-length = 100
@@ -10,3 +40,13 @@ max-line-length = 100
 # E203: whitespace before ':' (conflicts with black)
 # W503: line break before binary operator (conflicts with black)
 ignore = ['E203', 'W503']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--strict-markers",
+]
