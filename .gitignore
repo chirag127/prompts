@@ -164,6 +164,17 @@ wheels/
 .installed.cfg
 *.egg
 
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
 # Temporary test directories
 test-output/
 temp/

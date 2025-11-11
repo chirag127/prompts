@@ -6,4 +6,10 @@
 max-line-length = 100
 # E203: whitespace before ':' (conflicts with black)
 # W503: line break before binary operator (conflicts with black)
-ignore = E203, W503
+# E501: line too long (handled by B950 from flake8-bugbear)
+ignore = E203, W503, E501
+max-complexity = 10
+select = C,E,F,W,B,B950
+per-file-ignores = 
+    __init__.py:F401
+    tests/*:D100,D101,D102,D103,D104
