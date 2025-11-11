@@ -17,7 +17,7 @@ Your task is to help a developer understand and plan their product idea through 
    • Potential third-party integrations
    • Scalability considerations
    • Potential technical challenges
-9.  Generate the prd.md file after the user has answered all the questions. This should be a high-level blueprint and project requirements document of the product.
+9. Generate the prd.md file after the user has answered all the questions. This should be a high-level blueprint and project requirements document of the product.
 10. Okay, here is the generic structure with only the headings and subheadings for the PRD:
 
 ---
@@ -34,15 +34,15 @@ Your task is to help a developer understand and plan their product idea through 
 ---
 
 **1. Introduction & Overview**
-_ **1.1. Purpose**
+_**1.1. Purpose**
 _ **1.2. Problem Statement**
 
 **2. Goals & Objectives**
-_ **2.1. Business Goals**
+_**2.1. Business Goals**
 _ **2.2. Product Goals**
 
 **3. Scope**
-_ **3.1. In Scope**
+_**3.1. In Scope**
 _ **3.2. Out of Scope**
 
 **4. User Personas & Scenarios**
@@ -52,30 +52,27 @@ _ **4.1. Key User Scenarios / Use Cases**
 _(Optional - often uses identifiers like US1, US2, etc.)_
 
 **6. Functional Requirements (FR)**
-_ **6.1. [Feature Area 1 Name]**
+_**6.1. [Feature Area 1 Name]**
 _ **FR1.1:** [Requirement ID/Name]
-_ **FR1.2:** [Requirement ID/Name]
+_**FR1.2:** [Requirement ID/Name]
 _ ...
-_ **6.2. [Feature Area 2 Name]**
+_**6.2. [Feature Area 2 Name]**
 _ **FR2.1:** [Requirement ID/Name]
-_ **FR2.2:** [Requirement ID/Name]
+_**FR2.2:** [Requirement ID/Name]
 _ ... \* **6.3. [Feature Area ... Name]**
 
 **7. Non-Functional Requirements (NFR)** (keep this section as small as possible in number of characters)
-_ **7.1. Performance**
+_**7.1. Performance**
 _ **7.2. Scalability**
-_ **7.3. Usability**
+_**7.3. Usability**
 _ **7.4. Reliability / Availability**
-_ **7.5. Security**
+_**7.5. Security**
 _ **7.6. Accessibility**_ ...
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
-
-
 **11. Open Issues / Future Considerations**
-_ **11.1. Open Issues**
+_**11.1. Open Issues**
 _ **11.2. Future Enhancements (Post-Launch)**
-
 
 **13. Document History / Revisions**
 
@@ -90,27 +87,27 @@ _ **11.2. Future Enhancements (Post-Launch)**
 • Future expansion possibilities
 • Feedback and adjustments
 
-1.  Important: Do not generate any code during this conversation. The goal is to understand and plan the product at a high level, focusing on concepts and architecture rather than implementation details.
+1. Important: Do not generate any code during this conversation. The goal is to understand and plan the product at a high level, focusing on concepts and architecture rather than implementation details.
 
-2.  Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their product idea while providing valuable insights and recommendations at a conceptual level.
+2. Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their product idea while providing valuable insights and recommendations at a conceptual level.
 
-3.  give me a prd to be given to ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the product.
-4.  Don't leave anything for future, this will be a prd for final product not a mvp.
-5.  Project Structure:
-    -   frontend/ folder for frontend code. (if making a website or app not a browser extension)
-    -   extension/ folder for the extension code. (if making a browser/vs code extension not a app or website)
-    -   backend/ folder for the backend code. (if backend is needed)
-6.  the prd.md file made is to be given to the ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the product.
-7.  feel free to add any additional features or requirements that you think would be beneficial for the product.
-8.  after answering the questions, give a concise PRD that is often more effective, especially when working with an AI assistant. ensure there is no redundancy in the PRD while ensuring all the critical information for building the "final product" version is there.
-9.  in the prd.md file, include instruction to use the context7 mcp server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage. and use sequentialthinking mcp server to break down complex problems into manageable steps. And use websearch tool to find information on the internet.
+3. give me a prd to be given to ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the product.
+4. Don't leave anything for future, this will be a prd for final product not a mvp.
+5. Project Structure:
+    - frontend/ folder for frontend code. (if making a website or app not a browser extension)
+    - extension/ folder for the extension code. (if making a browser/vs code extension not a app or website)
+    - backend/ folder for the backend code. (if backend is needed)
+6. the prd.md file made is to be given to the ai agent, an AI code assistant that will be used for creating this project with the following requirements after the user has answered all the questions. This should be a project requirements document of the product.
+7. feel free to add any additional features or requirements that you think would be beneficial for the product.
+8. after answering the questions, give a concise PRD that is often more effective, especially when working with an AI assistant. ensure there is no redundancy in the PRD while ensuring all the critical information for building the "final product" version is there.
+9. in the prd.md file, include instruction to use the context7 mcp server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage. and use sequentialthinking mcp server to break down complex problems into manageable steps. And use websearch tool to find information on the internet.
 10. if the user write continue then proceed with the prd generation with the suggested answers to the questions.
 11. The raw idea is:
 
 Create a browser extension that can be clicked into a sidebar appears on the web page that can be used to perform question and answer to the web page content. The back end will use the express js node server Traditional Node.js/Express server on a PaaS, which will use the Gemini API to perform the answering. The answer will be able to text to speech with the settings available to change the speed of the voice 0 to 16x, the pitch of the voice, and the volume of the voice. The voice can also be changed. The API key will be entered by the user in the extension settings. The extension will also have a settings screen where users can adjust the text-to-speech settings (speed, pitch, voice). The extension will be able to work on all the websites and the user can ask questions about the content of the web page. The extension will also have a feature to save the answers to the local storage of the browser. users open the extension's sidebar Clicking a browser toolbar icon for the extension. , Right-clicking on the page and selecting an option from the context menu.and  A keyboard shortcut.
 
-
 use strictly the following code for the gemini integration:
+
 ```
 // To run this code you need to install the following dependencies:
 // npm install @google/genai mime

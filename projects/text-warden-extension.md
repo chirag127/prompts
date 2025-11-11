@@ -19,14 +19,14 @@
 
 The browser extension is built with the following setup:
 
--   Frontend: Browser Extension
--   Project Structure:
-    -   extension/ folder for browser extension code
-    -   backend/ folder for the backend code for the AI model integration with gemini-2.5-flash-preview-04-17
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   ensure the extension is built with a focus on user experience and performance.
-    -   Don't leave anything for future, this is a prd for final product not a mvp.
-    -   the extension will store the api key in the browser storage and will be used to make requests to the backend.
+- Frontend: Browser Extension
+- Project Structure:
+  - extension/ folder for browser extension code
+  - backend/ folder for the backend code for the AI model integration with gemini-2.5-flash-preview-04-17
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - ensure the extension is built with a focus on user experience and performance.
+  - Don't leave anything for future, this is a prd for final product not a mvp.
+  - the extension will store the api key in the browser storage and will be used to make requests to the backend.
 the browser extension should use the following code for the gemini integration:
   // To run this code you need to install the following dependencies:
 // npm install @google/genai mime

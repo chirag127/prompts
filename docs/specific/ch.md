@@ -197,20 +197,26 @@ This section outlines the implementation plan, including phases and tasks. TThis
 
 ## Project Structure
 ```
+
 project-root/
 ├── [directory structure]
 ├── [with all major files]
 └── [and directories]
+
 ```
 
 ## Environment Variables
 ```
+
 # Required environment variables
+
 VARIABLE_NAME=description
 ANOTHER_VARIABLE=description
 
 # Optional environment variables
+
 OPTIONAL_VARIABLE=description
+
 ```
 
 ## Testing Strategy
@@ -246,9 +252,9 @@ OPTIONAL_VARIABLE=description
 
 Include the following project structure guidelines in the masterplan.md:
 
--   **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
--   **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
--   **Backend Development**: If a backend is needed, organize code in a `backend/` folder
+- **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
+- **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
+- **Backend Development**: If a backend is needed, organize code in a `backend/` folder
 
 ## Development Guidelines
 
@@ -256,49 +262,49 @@ When creating the masterplan.md, incorporate these development guidelines from t
 
 ### Code Quality & Design Principles
 
--   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
--   Apply SOLID, DRY (via abstraction), and KISS principles
--   Design modular, reusable components/functions
--   Optimize for code readability and maintainable structure
--   Add concise, useful function-level comments
--   Implement comprehensive error handling (try-catch, custom errors, async handling)
+- Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
+- Apply SOLID, DRY (via abstraction), and KISS principles
+- Design modular, reusable components/functions
+- Optimize for code readability and maintainable structure
+- Add concise, useful function-level comments
+- Implement comprehensive error handling (try-catch, custom errors, async handling)
 
 ### Frontend Development
 
--   Provide modern, clean, professional, and intuitive UI designs
--   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
--   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
+- Provide modern, clean, professional, and intuitive UI designs
+- Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
+- Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
 
 ### React Native Guidelines (if applicable)
 
--   Use Expo framework with JavaScript
--   Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
--   Use NativeWind, UniStyles, or Tamagui for styling
--   Use react-native-reanimated (complex) or moti (simple) for animations
--   Use TanStack Query (server), Zustand (global) for state management
+- Use Expo framework with JavaScript
+- Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
+- Use NativeWind, UniStyles, or Tamagui for styling
+- Use react-native-reanimated (complex) or moti (simple) for animations
+- Use TanStack Query (server), Zustand (global) for state management
 
 ### Data Handling & APIs
 
--   Integrate with real, live data sources and APIs as specified or implied
--   Prohibit placeholder, mock, or dummy data/API responses in the final code
--   Accept credentials/config exclusively via environment variables
--   Use `.env` files for local secrets/config with a template `.env.example` file
--   Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
--   Never hardcode API endpoint URLs directly in service/component files
+- Integrate with real, live data sources and APIs as specified or implied
+- Prohibit placeholder, mock, or dummy data/API responses in the final code
+- Accept credentials/config exclusively via environment variables
+- Use `.env` files for local secrets/config with a template `.env.example` file
+- Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
+- Never hardcode API endpoint URLs directly in service/component files
 
 ### Asset Generation
 
--   Do not use placeholder images or icons
--   Create necessary graphics as SVG and convert to PNG using the sharp library
--   Write build scripts to handle asset generation
--   Reference only the generated PNG files within the application code
+- Do not use placeholder images or icons
+- Create necessary graphics as SVG and convert to PNG using the sharp library
+- Write build scripts to handle asset generation
+- Reference only the generated PNG files within the application code
 
 ### Documentation Requirements
 
--   Create a comprehensive README.md including project overview, setup instructions, and other essential information
--   Maintain a CHANGELOG.md to document changes using semantic versioning
--   Document required API keys/credentials clearly
--   Ensure all documentation is well-written, accurate, and reflects the final code
+- Create a comprehensive README.md including project overview, setup instructions, and other essential information
+- Maintain a CHANGELOG.md to document changes using semantic versioning
+- Document required API keys/credentials clearly
+- Ensure all documentation is well-written, accurate, and reflects the final code
 
 ## Tool Usage Instructions
 
@@ -306,52 +312,52 @@ Include these instructions in the masterplan.md for the AI code assistant.
 
 ### MCP Servers and Tools
 
--   Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
+- Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
 
--   Use the clear thought MCP servers for various problem-solving approaches:
+- Use the clear thought MCP servers for various problem-solving approaches:
 
-    -   `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
+  - `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
 
-    -   `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
+  - `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
 
-    -   `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
+  - `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
 
-    -   `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
+  - `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
 
-    -   `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
+  - `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
 
-    -   `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
+  - `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
 
-    -   `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
+  - `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
 
-    -   `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
+  - `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
 
-    -   `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
+  - `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
 
-    -   `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
+  - `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
 
-    -   `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
+  - `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
 
--   Use the date and time MCP server:
+- Use the date and time MCP server:
 
-    -   Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
-    -   Add last updated date and time in UTC format to the `README.md` file
+  - Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
+  - Add last updated date and time in UTC format to the `README.md` file
 
--   Use the websearch tool to find information on the internet when needed
+- Use the websearch tool to find information on the internet when needed
 
 ### System & Environment Considerations
 
--   Target system: Windows 11 Home Single Language 23H2
--   Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
--   Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
--   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
--   Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
+- Target system: Windows 11 Home Single Language 23H2
+- Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
+- Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
+- Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
+- Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
 
 ### Error Handling & Debugging
 
--   First attempt to resolve errors autonomously using available tools
--   Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
--   Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
+- First attempt to resolve errors autonomously using available tools
+- Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
+- Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
 
 ## Raw Idea Processing
 
@@ -400,9 +406,7 @@ When a user provides a raw idea, follow this process:
     - When the user provides a raw idea, it will be placed in the "The raw idea is:" section at the end of this file
     - Process this raw idea according to the instructions above
 
-
-
-## The raw idea is:
+## The raw idea is
 
 # CambioML Senior Backend/DevOps Engineer Coding Challenge: Claude Computer Use
 
@@ -416,7 +420,7 @@ By completing this homework, you will learn and demonstrate your ability to buil
 
 **Design a scalable backend for computer use agent session management**
 
-1. **Reuse the existing computer use agent stack:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+1. **Reuse the existing computer use agent stack:** <https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo>
 2. Replace the experimental Streamlit interface with a FastAPI backend that provides:
     - Session creation and management APIs
     - Real-time progress streaming via WebSocket, Server-Sent Events (SSE), or your choice.
@@ -454,9 +458,9 @@ To help you quickly understand the computer use agent and the github repo, you c
 
 - **Read the codebase and play with it (1 hour)**
 - **Backend API (1.5 hours)**:
-    - **Core FastAPI features**: Start a new task session, Interact with agent, Task history management
-    - **Computer Use Integration**: Integrating the Anthropic demo agent
-    - **Database Layer**: Data persistence, basic CRUD
+  - **Core FastAPI features**: Start a new task session, Interact with agent, Task history management
+  - **Computer Use Integration**: Integrating the Anthropic demo agent
+  - **Database Layer**: Data persistence, basic CRUD
 - **Docker compose (0.5 hour)**
 - **Frontend Demo (0.5 hour)**: Simple interface to test APIs; include VNC connection
 - **Documentation (0.5 hour)**: README with dev setup instruction, API docs, sequence diagram and demo video
@@ -472,7 +476,7 @@ To help you quickly understand the computer use agent and the github repo, you c
 
 You are provided with the following starting stack:
 
-- **Download**: https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+- **Download**: <https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo>
 - **Current Setup**: Experimental Claude Computer Use stack with Streamlit interface, runs at `http://localhost:8080`
 - **Functionality**: Basic chat interface + VNC screen view + Computer Use API integration
 
@@ -495,7 +499,6 @@ Design a backend system that treats each task as a **chat session**. Every user 
 
     ![image.png](attachment:dfe2d1ad-76a3-46cf-88c1-14e56015978c:image.png)
 
-
 **Core Components to Design:**
 
 - **API Design**: RESTful endpoints and WebSocket, Server-Sent Events (SSE), or your chosen  connections for real-time communication
@@ -517,7 +520,7 @@ This structure provides a clear, chat-like interface where users can easily foll
 The revised target architecture requires:
 
 1. **Backend:** A `Python FastAPI` system serving as the core API for session management
-    1. **reusing computer use agent stack of this github repo:** https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo
+    1. **reusing computer use agent stack of this github repo:** <https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo>
     2. ***Removing the experimental streamlit layer***, while adding missing backend API, database, etc layer.
     3. Building docker image and compose for both local development and production deployment.
 
@@ -562,4 +565,5 @@ All documentation must be written in clear, concise `English` to ensure that eve
 - **Documentation (15%)**a
 
  continue with suggested answers you provided
+
 - Treat this as an indication that the user accepts all your suggested answers and wants to move forward

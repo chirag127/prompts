@@ -40,10 +40,8 @@ textwarden is designed to work seamlessly in your browser—no copying or pastin
 • LinkedIn
 • And more!
 
-
-
-
 Is building a browser extension with the following setup:
+
 - Frontend: Browser Extension (Manifest V3) using HTML, CSS, and JS.
 - ML: Uses gemini-2.5-flash-preview-04-17.
 - Backend: Express.js + gemini-2.5-flash-preview-04-17 // npm install @google/genai mime
@@ -53,7 +51,6 @@ Is building a browser extension with the following setup:
   - backend/ folder for backend code.
   - Storage: MongoDB for storage.
   - Don't leave anything for future, this is a prd for final product not a mvp.
-
 
 assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
 

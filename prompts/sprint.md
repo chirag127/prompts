@@ -31,34 +31,34 @@ Transform a raw product idea into a comprehensive masterplan.md file through str
 
 ### 1. Product Foundation
 
--   **Core Problem**: What specific problem does this solve?
--   **Target Users**: Who are the primary and secondary users?
--   **Key Features**: What are the must-have vs. nice-to-have features?
--   **User Workflows**: What are the main user journeys and use cases?
+- **Core Problem**: What specific problem does this solve?
+- **Target Users**: Who are the primary and secondary users?
+- **Key Features**: What are the must-have vs. nice-to-have features?
+- **User Workflows**: What are the main user journeys and use cases?
 
 ### 2. Technical Platform
 
--   **Platform Type**: Web app, mobile app, desktop app, browser extension, or VS Code extension?
--   **Technology Stack**: Preferred frameworks, languages, and tools?
--   **Architecture**: Monolith, microservices, serverless, or hybrid?
+- **Platform Type**: Web app, mobile app, desktop app, browser extension, or VS Code extension?
+- **Technology Stack**: Preferred frameworks, languages, and tools?
+- **Architecture**: Monolith, microservices, serverless, or hybrid?
 
 ### 3. Data & Integration
 
--   **Data Storage**: What type of data needs to be stored and how?
--   **Third-Party APIs**: What external services need integration?
--   **Authentication**: How will users sign in and manage accounts?
+- **Data Storage**: What type of data needs to be stored and how?
+- **Third-Party APIs**: What external services need integration?
+- **Authentication**: How will users sign in and manage accounts?
 
 ### 4. User Experience & Security
 
--   **Design Style**: What's the desired look and feel?
--   **Performance**: What are the speed and responsiveness requirements?
--   **Security**: What security measures and compliance requirements are needed?
+- **Design Style**: What's the desired look and feel?
+- **Performance**: What are the speed and responsiveness requirements?
+- **Security**: What security measures and compliance requirements are needed?
 
 ### 5. Business & Operations
 
--   **Scalability**: Expected user growth and load?
--   **Deployment**: Hosting preferences and infrastructure needs?
--   **Monitoring**: What analytics and monitoring are required?
+- **Scalability**: Expected user growth and load?
+- **Deployment**: Hosting preferences and infrastructure needs?
+- **Monitoring**: What analytics and monitoring are required?
 
 ## Masterplan.md Structure
 
@@ -233,11 +233,11 @@ project-root/
 
 ### 12.2 Code Organization Principles
 
--   Use kebab-case for directories and files
--   Use PascalCase for React components
--   Use camelCase for JavaScript/TypeScript functions and variables
--   Group related functionality together
--   Separate concerns (UI, business logic, data access)
+- Use kebab-case for directories and files
+- Use PascalCase for React components
+- Use camelCase for JavaScript/TypeScript functions and variables
+- Group related functionality together
+- Separate concerns (UI, business logic, data access)
 
 ## 13. Environment Variables and Configuration
 
@@ -263,79 +263,79 @@ API_BASE_URL=http://localhost:3000/api
 
 ### 13.2 Configuration Management
 
--   Environment-specific configurations
--   Secure credential management
--   Configuration validation and error handling
+- Environment-specific configurations
+- Secure credential management
+- Configuration validation and error handling
 
 ## 14. Testing Strategy and Quality Assurance
 
 ### 14.1 Testing Approach
 
--   **Unit Tests**: Individual function and component testing
--   **Integration Tests**: API and service integration testing
--   **End-to-End Tests**: Complete user workflow testing
+- **Unit Tests**: Individual function and component testing
+- **Integration Tests**: API and service integration testing
+- **End-to-End Tests**: Complete user workflow testing
 
 ### 14.2 Testing Tools
 
--   Frontend testing: Jest, React Testing Library, Cypress
--   Backend testing: Jest, Supertest
--   Code coverage requirements (minimum 80%)
+- Frontend testing: Jest, React Testing Library, Cypress
+- Backend testing: Jest, Supertest
+- Code coverage requirements (minimum 80%)
 
 ## 15. Deployment Strategy
 
 ### 15.1 Deployment Architecture
 
--   Production environment architecture
--   Staging and development environments
--   Load balancing and scaling strategy
+- Production environment architecture
+- Staging and development environments
+- Load balancing and scaling strategy
 
 ### 15.2 Deployment Process
 
--   Continuous integration/continuous deployment (CI/CD)
--   Database migration procedures
--   Rollback procedures and disaster recovery
+- Continuous integration/continuous deployment (CI/CD)
+- Database migration procedures
+- Rollback procedures and disaster recovery
 
 ## 16. Maintenance and Risk Management
 
 ### 16.1 Maintenance Strategy
 
--   **Corrective Maintenance**: Bug fixes and issue resolution
--   **Adaptive Maintenance**: Changes for new requirements
--   **Preventive Maintenance**: Proactive issue prevention
+- **Corrective Maintenance**: Bug fixes and issue resolution
+- **Adaptive Maintenance**: Changes for new requirements
+- **Preventive Maintenance**: Proactive issue prevention
 
 ### 16.2 Risk Assessment
 
--   **Technical Risks**: Technology failures, integration issues
--   **Security Risks**: Data breaches, unauthorized access
--   **Operational Risks**: Service outages, performance issues
+- **Technical Risks**: Technology failures, integration issues
+- **Security Risks**: Data breaches, unauthorized access
+- **Operational Risks**: Service outages, performance issues
 
 ### 16.3 Mitigation Strategies
 
--   Risk prevention measures
--   Incident response procedures
--   Business continuity planning
+- Risk prevention measures
+- Incident response procedures
+- Business continuity planning
 
 ## 17. Future Enhancements and Development Guidelines
 
 ### 17.1 Future Roadmap
 
--   Short-term: Performance optimizations and user experience enhancements
--   Medium-term: Major feature additions and platform expansions
--   Long-term: Strategic technology shifts and innovation opportunities
+- Short-term: Performance optimizations and user experience enhancements
+- Medium-term: Major feature additions and platform expansions
+- Long-term: Strategic technology shifts and innovation opportunities
 
 ### 17.2 Development Standards
 
--   Coding style and formatting rules
--   Code review procedures and checklists
--   Git workflow and branching strategy
--   Testing standards and coverage requirements
+- Coding style and formatting rules
+- Code review procedures and checklists
+- Git workflow and branching strategy
+- Testing standards and coverage requirements
 
 ### 17.3 Security and Performance Practices
 
--   Secure coding guidelines
--   Input validation and sanitization
--   Performance optimization techniques
--   Caching strategies and database optimization
+- Secure coding guidelines
+- Input validation and sanitization
+- Performance optimization techniques
+- Caching strategies and database optimization
 
 ## Implementation Guidelines for AI Code Assistant
 
@@ -343,56 +343,56 @@ When generating the masterplan.md, include these essential guidelines:
 
 ### Project Structure Guidelines
 
--   **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
--   **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
--   **Backend Development**: If a backend is needed, organize code in a `backend/` folder
+- **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
+- **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
+- **Backend Development**: If a backend is needed, organize code in a `backend/` folder
 
 ### Code Quality & Design Principles
 
--   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
--   Apply SOLID, DRY (via abstraction), and KISS principles
--   Design modular, reusable components/functions
--   Implement comprehensive error handling (try-catch, custom errors, async handling)
+- Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
+- Apply SOLID, DRY (via abstraction), and KISS principles
+- Design modular, reusable components/functions
+- Implement comprehensive error handling (try-catch, custom errors, async handling)
 
 ### Frontend Development
 
--   Provide modern, clean, professional, and intuitive UI designs
--   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
--   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
+- Provide modern, clean, professional, and intuitive UI designs
+- Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
+- Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
 
 ### React Native Guidelines (if applicable)
 
--   Use Expo framework with JavaScript
--   Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
--   Use NativeWind, UniStyles, or Tamagui for styling
--   Use TanStack Query (server), Zustand (global) for state management
+- Use Expo framework with JavaScript
+- Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
+- Use NativeWind, UniStyles, or Tamagui for styling
+- Use TanStack Query (server), Zustand (global) for state management
 
 ### Data Handling & APIs
 
--   Integrate with real, live data sources and APIs as specified or implied
--   Prohibit placeholder, mock, or dummy data/API responses in the final code
--   Accept credentials/config exclusively via environment variables
--   Centralize all API endpoint URLs in a single location
--   Never hardcode API endpoint URLs directly in service/component files
+- Integrate with real, live data sources and APIs as specified or implied
+- Prohibit placeholder, mock, or dummy data/API responses in the final code
+- Accept credentials/config exclusively via environment variables
+- Centralize all API endpoint URLs in a single location
+- Never hardcode API endpoint URLs directly in service/component files
 
 ### Asset Generation
 
--   Do not use placeholder images or icons
--   Create necessary graphics as SVG and convert to PNG using the sharp library
--   Write build scripts to handle asset generation
+- Do not use placeholder images or icons
+- Create necessary graphics as SVG and convert to PNG using the sharp library
+- Write build scripts to handle asset generation
 
 ### Documentation Requirements
 
--   Create a comprehensive README.md including project overview, setup instructions, and other essential information
--   Maintain a CHANGELOG.md to document changes using semantic versioning
--   Document required API keys/credentials clearly
+- Create a comprehensive README.md including project overview, setup instructions, and other essential information
+- Maintain a CHANGELOG.md to document changes using semantic versioning
+- Document required API keys/credentials clearly
 
 ### Tool Usage Instructions
 
--   Use the context7 MCP server to gather contextual information about the current task
--   Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
--   Use the websearch tool to find information on the internet when needed
--   Use package manager commands via the launch-process tool to add dependencies
+- Use the context7 MCP server to gather contextual information about the current task
+- Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
+- Use the websearch tool to find information on the internet when needed
+- Use package manager commands via the launch-process tool to add dependencies
 
 ## Execution Instructions
 
@@ -406,25 +406,25 @@ When generating the masterplan.md, include these essential guidelines:
 
 ### Question Guidelines
 
--   Ask all questions at once in a single response
--   Format questions with clear options (e.g., option a, option b, etc.)
--   Provide a suggested answer for each question
--   Include an "Answer:" placeholder below each question
--   If the user leaves an answer blank, assume the suggested answer
+- Ask all questions at once in a single response
+- Format questions with clear options (e.g., option a, option b, etc.)
+- Provide a suggested answer for each question
+- Include an "Answer:" placeholder below each question
+- If the user leaves an answer blank, assume the suggested answer
 
 ### Masterplan Generation
 
--   Generate a comprehensive masterplan.md file after collecting information
--   The masterplan.md should serve as a complete blueprint for the product, not just an MVP
--   Include all critical information needed for building the final product version
--   Follow the streamlined structure outlined in the "Masterplan.md Structure" section above
+- Generate a comprehensive masterplan.md file after collecting information
+- The masterplan.md should serve as a complete blueprint for the product, not just an MVP
+- Include all critical information needed for building the final product version
+- Follow the streamlined structure outlined in the "Masterplan.md Structure" section above
 
 ### Special Commands
 
--   If the user responds with "continue", proceed with generating the masterplan.md using the suggested answers
--   Feel free to suggest additional features that would benefit the product
+- If the user responds with "continue", proceed with generating the masterplan.md using the suggested answers
+- Feel free to suggest additional features that would benefit the product
 
-## The raw idea is:
+## The raw idea is
 
 java - the web site should use java, there should be a full fledged online grocery ordering system. it should have a ui website using angular, it should use jdbc for database connectivity ,use jsp. use spring boot for backend. it should have a login page, registration page, product search, customer search, product registration, customer registration, update customer details, get customer order details, update product, delete product and sql injection prevention.  it should be a complete project with all the features mentioned above.
 SNo Feature Story number Description (Card) Acceptance Criteria (Confirmation)

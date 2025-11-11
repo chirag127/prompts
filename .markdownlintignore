@@ -1,0 +1,17 @@
+# Generated files
+node_modules/
+dist/
+build/
+out/
+.venv/
+__pycache__/
+
+# Archives
+archive/
+
+# Logs and caches
+*.log
+.cache/
+
+# Lock files
+package-lock.json

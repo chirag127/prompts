@@ -109,21 +109,26 @@ prompts-repository/
 ## 🚀 Quick Start
 
 ### For General Development Tasks
+
 Use prompts in the `/prompts` directory:
+
 - **AI_CTO.md**: Generate comprehensive technical masterplans
 - **gemini.md**: Integrate Google Gemini API
 - **reactnative.md**: Build React Native applications
 - **sprint.md**: Plan agile sprints
 
 ### For Specific Projects
+
 Browse the `/projects` and `/docs/specific` directories for detailed PRDs and specifications.
 
 ### For Code Generation
+
 Use templates in the `/templates` directory as starting points.
 
 ## 📚 Key Files
 
 ### Core Documentation
+
 - **[REPOSITORY_INDEX.md](REPOSITORY_INDEX.md)** - **📑 Complete file reference and navigation guide**
 - **[AGENTS.md](AGENTS.md)** - Configuration for AI coding agents
 - **[USAGE_GUIDE.md](USAGE_GUIDE.md)** - Comprehensive usage instructions
@@ -131,10 +136,12 @@ Use templates in the `/templates` directory as starting points.
 - **[agent-guidelines.md](agent-guidelines.md)** - Detailed agent operational directives
 
 ### Templates
+
 - **[browser-extension-template.md](templates/browser-extension-template.md)** - Browser extension boilerplate
 - **[web-app-template.md](templates/web-app-template.md)** - Web application template
 
 ### Utility Scripts
+
 - **[gce.py](scripts/gce.py)** - Combine prompt files
 - **[gemini.py](scripts/gemini.py)** - Gemini API utilities
 - **[gi.js](scripts/gi.js)** - Icon generation automation
@@ -142,6 +149,7 @@ Use templates in the `/templates` directory as starting points.
 ## 🎯 Common Use Cases
 
 ### 1. Generate a Technical Masterplan
+
 ```
 Use: prompts/AI_CTO.md
 Purpose: Create comprehensive technical specifications for any project
@@ -149,6 +157,7 @@ Output: Complete masterplan.md with architecture, stack, and implementation plan
 ```
 
 ### 2. Build a Browser Extension
+
 ```
 Use: templates/browser-extension-template.md + docs/specific/[relevant-extension].md
 Purpose: Rapid browser extension development
@@ -156,6 +165,7 @@ Output: Production-ready extension code
 ```
 
 ### 3. Configure MCP Servers
+
 ```
 Use: mcp/main.md or mcp/servers-config.json
 Purpose: Set up Model Context Protocol servers
@@ -163,6 +173,7 @@ Output: Configured AI tool integrations
 ```
 
 ### 4. Plan Development Sprints
+
 ```
 Use: prompts/sprint.md
 Purpose: Organize agile development cycles
@@ -179,11 +190,13 @@ Output: Sprint plans with tasks and timelines
 ## 📖 Documentation
 
 ### Main Guides
+
 - [Usage Guide](USAGE_GUIDE.md) - Detailed usage instructions for all templates
 - [Agent Guidelines](agent-guidelines.md) - Operational directives for AI agents
 - [Changelog](CHANGELOG.md) - Version history and migration guides
 
 ### Specific Documentation
+
 - [MCP Configurations](mcp/main.md) - Model Context Protocol server setup
 - [VS Code Setup](docs/vscode/setup.md) - VS Code integration instructions
 - [Archive Documentation](archive/README.md) - Deprecated template information
@@ -191,6 +204,7 @@ Output: Sprint plans with tasks and timelines
 ## 🤝 Contributing
 
 This repository is a personal collection of AI prompts and templates. Feel free to:
+
 - Report issues with templates
 - Suggest improvements
 - Share your own prompt variations
@@ -206,50 +220,66 @@ See [docs/LICENSE](docs/LICENSE) for details.
 ## 🗂️ Directory Purpose Guide
 
 ### `/prompts` - General Purpose Templates
+
 System prompts and templates for common development tasks. Use these for:
+
 - Project planning and architecture
 - API integrations
 - Development workflows
 - Code generation guidelines
 
 ### `/projects` - Complete Project Specifications
+
 Full PRDs and specifications for complete applications. Use these as:
+
 - Reference implementations
 - Project inspiration
 - Complete specification examples
 
 ### `/templates` - Boilerplate Starting Points
+
 Ready-to-use templates for common project types. Use these to:
+
 - Kickstart new projects quickly
 - Ensure consistent structure
 - Follow best practices
 
 ### `/scripts` - Automation Utilities
+
 Helper scripts for prompt management and asset generation. Use these to:
+
 - Combine multiple prompts
 - Generate icons and assets
 - Automate repetitive tasks
 
 ### `/docs` - Extended Documentation
+
 Detailed guides, configurations, and project-specific documentation. Use these for:
+
 - In-depth learning
 - Project-specific requirements
 - Reference documentation
 
 ### `/mcp` - MCP Server Configurations
+
 Model Context Protocol server setup and configuration files. Use these for:
+
 - Configuring AI tool integrations
 - Setting up context servers
 - Managing MCP tools
 
 ### `/other` - Miscellaneous Utilities
+
 Helper prompts and utilities that don't fit other categories. Use these for:
+
 - Writing assistance
 - Quality assurance
 - General augmentation
 
 ### `/archive` - Deprecated Content
+
 Old versions and deprecated templates. Check these for:
+
 - Migration paths from old templates
 - Historical reference
 - Legacy project support

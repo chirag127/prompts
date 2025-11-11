@@ -19,8 +19,9 @@ Your task is to help a developer understand and plan their product idea through 
    • Potential third-party integrations
    • Scalability considerations
    • Potential technical challenges
-9.  Generate the masterplan.md file after the user has answered all the questions. This should be a high-level blueprint of the product.
+9. Generate the masterplan.md file after the user has answered all the questions. This should be a high-level blueprint of the product.
 10. Okay, here is the generic structure with only the headings and subheadings for the masterplan.md:
+
 ```
 **[Your Product/Feature Name] - Masterplan (masterplan.md)**
 
@@ -106,4 +107,3 @@ _ **11.2. Future Enhancements (Post-Launch)**
 9.  in the masterplan.md file, include instruction to use the context7 mcp server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs. Use it to understand the latest updates and documentation for any third-party API integration or new library/framework usage. and use sequentialthinking mcp server to break down complex problems into manageable steps. And use websearch tool to find information on the internet.
 10. if the user write continue then proceed with the masterplan.md generation with the suggested answers to the questions.
 11. The raw idea is:
-

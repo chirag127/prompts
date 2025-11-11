@@ -179,3 +179,6 @@ secrets/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# npm/markdownlint
+node_modules/

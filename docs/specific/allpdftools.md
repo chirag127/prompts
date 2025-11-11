@@ -2,9 +2,11 @@ make a react native expo app that will offer All PDF Tools.
 no authentication.
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
+
 # Project Specification: All PDF Tools - React Native Expo Application
 
 ## 1. Project Overview
+
 Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
 
 **Target Platforms:** iOS and Android and web (Expo)
@@ -14,11 +16,13 @@ Develop a comprehensive React Native Expo application that provides users with a
 ## 2. Technical Requirements
 
 ### 2.1 Development Framework
+
 - React Native with Expo SDK (latest stable version)
 - JavaScript implementation (TypeScript optional)
 - No backend server requirements (fully client-side implementation)
 
 ### 2.2 PDF Processing
+
 - Implement PDF processing using React Native compatible libraries (e.g., react-native-pdf-lib, pdf-lib)
 - All PDF operations must be performed on-device to ensure privacy
 - Support for PDF files up to 100MB in size
@@ -26,6 +30,7 @@ Develop a comprehensive React Native Expo application that provides users with a
 - Include progress indicators for operations that may take time
 
 ### 2.3 File Management
+
 - Implement file picking from device storage
 - Request appropriate permissions for file access
 - Support saving modified PDFs to device storage
@@ -63,7 +68,9 @@ Web optimize PDF
 Annotate PDF
 Redact PDF
 Create PDf
+
 ### 3.1 Document Organization
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
@@ -71,7 +78,6 @@ Create PDf
 | Remove Pages | Delete specific pages from a PDF document | High |
 | Extract Pages | Save selected pages as a new PDF document | High |
 | Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
-
 
 PDF to images
 PDF to Word
@@ -92,13 +98,16 @@ PDF to EPUB
 PDF to HTML
 PDF to secure PDF
 PDF to PDF/A
+
 ### 3.2 Conversion Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
 | PDF to JPG/PNG/webp/word/powerpoint/excel/html | Extract pages as images or convert entire document to  other files | High |
 
 ### 3.3 Editing Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
@@ -108,6 +117,7 @@ PDF to PDF/A
 | Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
 
 ### 3.4 Security Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Unlock PDF | Remove password protection from PDF files | High |
@@ -116,6 +126,7 @@ PDF to PDF/A
 | Redact PDF | Permanently remove sensitive information from documents | Low |
 
 ### 3.5 Enhancement Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Compress PDF | Reduce file size while maintaining reasonable quality | High |
@@ -125,6 +136,7 @@ PDF to PDF/A
 | Compare PDF | Show differences between two PDF documents | Low |
 
 ### 3.6 AI Features (Gemini API Integration)
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Chat with PDF | Interactive Q&A with PDF content using RAG | High |
@@ -135,6 +147,7 @@ PDF to PDF/A
 ## 4. AI Implementation Requirements
 
 ### 4.1 Gemini API Integration
+
 - Implement Google's Generative AI capabilities using the official SDK
 - Required installation: `npm install @google/generative-ai`
 - User must provide their own Gemini API key through a settings page
@@ -142,6 +155,7 @@ PDF to PDF/A
 - Implement model selection functionality with appropriate defaults
 
 ### 4.2 Retrieval Augmented Generation (RAG)
+
 - Extract and process text from PDFs for context
 - Implement chunking strategy for large documents (e.g., page-based, section-based)
 - Create appropriate prompts that combine user queries with document context
@@ -149,8 +163,10 @@ PDF to PDF/A
 - Implement fallback mechanisms for when AI features are unavailable
 
 ### 4.3 Model Selection
+
 - Provide interface for users to select from available Gemini models
 - Implement model listing functionality as shown in the example code:
+
 ```javascript
 async function listModels() {
   const models = await client.listModels();
@@ -224,8 +240,8 @@ Model name: models/gemini-1.5-flash
 
 ### 🧠 Notes
 
-* You must have billing enabled and API access.
-* Only accessible via `@google/generative-ai` client or direct REST calls to:
+- You must have billing enabled and API access.
+- Only accessible via `@google/generative-ai` client or direct REST calls to:
 
   ```
   GET https://generativelanguage.googleapis.com/v1beta/models

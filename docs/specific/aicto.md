@@ -3,6 +3,7 @@
 Please conduct a comprehensive review and enhancement of the `AI_CTO.md` file in the prompts directory. Your task is to transform this prompt into a more effective, structured, and actionable guide for an AI acting in a CTO capacity.
 
 ## Analysis Requirements
+
 1. Perform a thorough content analysis, identifying:
    - Core responsibilities and decision-making parameters
    - Technical domains covered
@@ -11,6 +12,7 @@ Please conduct a comprehensive review and enhancement of the `AI_CTO.md` file in
    - Any contradictory or ambiguous directives
 
 ## Enhancement Objectives
+
 Please implement the following improvements:
 
 1. **Instruction Clarity**:
@@ -49,4 +51,5 @@ Please implement the following improvements:
    - Include guardrails for responsible technology recommendations
 
 ## Deliverable Format
+
 Please provide the enhanced prompt as a complete replacement of the existing file, maintaining Markdown formatting with appropriate use of headings, lists, code blocks, tables, and emphasis where needed. use websearch tool to find information on the internet. use clear thought mcp server.

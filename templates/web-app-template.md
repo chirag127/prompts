@@ -69,12 +69,14 @@ This template is specifically designed for **web application projects** (full-st
 ## Key Areas for Web Applications
 
 ### 1. Application Type & Architecture
+
 - Application type (SPA, SSR, SSG, PWA, or hybrid)
 - Target platforms (web browser, mobile web, desktop web)
 - Architecture pattern (monolithic, microservices, serverless)
 - Frontend-backend separation
 
 ### 2. Frontend Requirements
+
 - Framework preference (React, Next.js, Vue, Angular, Svelte, vanilla JS)
 - UI library/framework (Tailwind CSS, Material UI, Chakra UI, custom)
 - State management (Redux, Zustand, Context API, Pinia, etc.)
@@ -82,6 +84,7 @@ This template is specifically designed for **web application projects** (full-st
 - SEO requirements
 
 ### 3. Backend Requirements
+
 - Backend framework (FastAPI, Express, Django, Flask, Next.js API routes)
 - API architecture (REST, GraphQL, tRPC)
 - Server requirements (traditional server, serverless functions, edge functions)
@@ -89,6 +92,7 @@ This template is specifically designed for **web application projects** (full-st
 - Background jobs/workers
 
 ### 4. Database & Storage
+
 - Database type (SQL vs NoSQL)
 - Specific database (MongoDB, PostgreSQL, MySQL, Firebase, Supabase)
 - File storage (local, cloud storage like S3, Cloudinary)
@@ -96,6 +100,7 @@ This template is specifically designed for **web application projects** (full-st
 - Data backup and recovery
 
 ### 5. Authentication & Authorization
+
 - Authentication method (email/password, OAuth, magic links, JWT)
 - Authentication provider (Clerk, Auth0, Firebase Auth, NextAuth, custom)
 - User roles and permissions
@@ -103,6 +108,7 @@ This template is specifically designed for **web application projects** (full-st
 - Security requirements
 
 ### 6. Payment & Monetization (if applicable)
+
 - Payment gateway (Stripe, PayPal, Razorpay, manual)
 - Subscription model vs one-time payment
 - Payment verification process
@@ -110,6 +116,7 @@ This template is specifically designed for **web application projects** (full-st
 - Refund policies
 
 ### 7. Features & Functionality
+
 - Core features list
 - User management (registration, profiles, settings)
 - File upload/download
@@ -119,6 +126,7 @@ This template is specifically designed for **web application projects** (full-st
 - Admin panel requirements
 
 ### 8. Deployment & Infrastructure
+
 - Hosting platform (Vercel, Render, Railway, AWS, Netlify)
 - CI/CD pipeline
 - Domain and SSL
@@ -243,6 +251,7 @@ Prepared by: [Developer Name]
 ## Project Structure
 
 ```
+
 project-root/
 ├── frontend/
 │   ├── src/
@@ -273,6 +282,7 @@ project-root/
 ├── .gitignore
 ├── README.md
 └── docker-compose.yml (optional)
+
 ```
 
 ## Implementation Plan
@@ -444,6 +454,7 @@ project-root/
 ```
 
 ### [Resource] Model
+
 ```javascript
 {
   id: string
@@ -455,6 +466,7 @@ project-root/
 ```
 
 ### Payment Model (if applicable)
+
 ```javascript
 {
   id: string
@@ -473,6 +485,7 @@ project-root/
 ## Environment Variables
 
 ### Frontend
+
 ```
 VITE_API_URL=http://localhost:8000
 VITE_CLERK_PUBLISHABLE_KEY=pk_...
@@ -480,6 +493,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_...
 ```
 
 ### Backend
+
 ```
 # Server
 PORT=8000
@@ -522,12 +536,14 @@ ADMIN_PASSWORD=securepassword
 ## Testing Strategy
 
 ### Frontend Testing
+
 - Unit tests with Jest/Vitest
 - Component tests with React Testing Library
 - E2E tests with Playwright/Cypress
 - Visual regression tests
 
 ### Backend Testing
+
 - Unit tests for services and utilities
 - Integration tests for API endpoints
 - Database testing with test database
@@ -535,6 +551,7 @@ ADMIN_PASSWORD=securepassword
 - Payment flow testing (with test mode)
 
 ### Performance Testing
+
 - Load testing with Artillery/k6
 - Database query optimization
 - Bundle size optimization
@@ -543,6 +560,7 @@ ADMIN_PASSWORD=securepassword
 ## Deployment Strategy
 
 ### Frontend Deployment
+
 - **Platform**: [Vercel/Netlify/Cloudflare Pages]
 - **Build command**: `npm run build`
 - **Output directory**: `dist` or `build`
@@ -551,6 +569,7 @@ ADMIN_PASSWORD=securepassword
 - **SSL**: Automatic via platform
 
 ### Backend Deployment
+
 - **Platform**: [Render/Railway/Heroku/AWS]
 - **Build command**: `pip install -r requirements.txt` or `npm install`
 - **Start command**: `python main.py` or `npm start`
@@ -559,12 +578,14 @@ ADMIN_PASSWORD=securepassword
 - **Auto-scaling**: Configure based on CPU/memory
 
 ### Database Deployment
+
 - **Platform**: [MongoDB Atlas/Supabase/PlanetScale/AWS RDS]
 - **Backup schedule**: Daily automated backups
 - **Scaling**: Configure auto-scaling
 - **Monitoring**: Set up alerts
 
 ### CI/CD Pipeline
+
 - Automated testing on pull requests
 - Automated deployment on merge to main
 - Environment-specific deployments (staging, production)
@@ -573,6 +594,7 @@ ADMIN_PASSWORD=securepassword
 ## Monitoring & Maintenance
 
 ### Monitoring
+
 - Application performance monitoring (Sentry, DataDog)
 - Server monitoring (CPU, memory, disk)
 - Database monitoring (query performance, connections)
@@ -580,17 +602,20 @@ ADMIN_PASSWORD=securepassword
 - User analytics (Google Analytics, Mixpanel)
 
 ### Logging
+
 - Structured logging with log levels
 - Centralized log management
 - Log retention policy
 
 ### Backup & Recovery
+
 - Automated database backups
 - File storage backups
 - Disaster recovery plan
 - Regular backup testing
 
 ### Security Updates
+
 - Regular dependency updates
 - Security vulnerability scanning
 - SSL certificate renewal
@@ -609,6 +634,7 @@ ADMIN_PASSWORD=securepassword
 | Third-party API failures | Medium | Medium | Implement retry logic and fallback options |
 
 ## Future Enhancements
+
 - [Enhancement 1]
 - [Enhancement 2]
 - [Enhancement 3]
@@ -621,6 +647,7 @@ ADMIN_PASSWORD=securepassword
 ## Development Guidelines
 
 ### Code Quality & Design Principles
+
 - Follow SOLID, DRY, and KISS principles
 - Write clean, self-documenting code
 - Use TypeScript for type safety (highly recommended)
@@ -630,6 +657,7 @@ ADMIN_PASSWORD=securepassword
 - Keep functions small and focused
 
 ### Frontend Guidelines
+
 - Component-based architecture
 - Reusable components
 - Proper state management
@@ -640,6 +668,7 @@ ADMIN_PASSWORD=securepassword
 - Modern CSS (Flexbox, Grid, CSS custom properties)
 
 ### Backend Guidelines
+
 - RESTful API design principles
 - Proper HTTP status codes
 - Request validation and sanitization
@@ -650,6 +679,7 @@ ADMIN_PASSWORD=securepassword
 - Rate limiting and throttling
 
 ### Database Guidelines
+
 - Normalize data appropriately
 - Create proper indexes
 - Use transactions for critical operations
@@ -658,6 +688,7 @@ ADMIN_PASSWORD=securepassword
 - Validate data at database level
 
 ### Security Best Practices
+
 - Never commit secrets to repository
 - Use environment variables for sensitive data
 - Implement input validation everywhere
@@ -718,12 +749,14 @@ Deep integration of MCP servers in the implementation plan:
   - Research security best practices
 
 ### System & Environment Considerations
+
 - Target system: Windows 11 Home Single Language 23H2
 - Use semicolon (`;`) as command separator in PowerShell
 - Use `New-Item -ItemType Directory` for creating directories
 - Test on multiple operating systems and browsers
 
 ### Error Handling & Debugging
+
 - Implement comprehensive error logging
 - Use error boundaries in frontend
 - Create custom error classes
@@ -732,7 +765,9 @@ Deep integration of MCP servers in the implementation plan:
 - Set up error monitoring (Sentry)
 
 ## Conclusion
+
 [Final thoughts, recommendations, and next steps for the web application]
+
 ```
 
 ## Raw Idea Processing

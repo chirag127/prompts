@@ -1,8 +1,10 @@
 
-### ** Prompt for Browser Extension Landing Page & Privacy Policy**
+### **Prompt for Browser Extension Landing Page & Privacy Policy**
 
 #### **Objective**
+
 Create a single `index.html` file for a browser extension's landing page, hosted on GitHub Pages. The landing page should:
+
 - Provide an overview of the extension, its features, and installation instructions.
 - Include a **Privacy Policy** link that opens in a new page (`privacy-policy.html`).
 - Have a clean, modern design with a dark theme and a structured layout.
@@ -49,7 +51,7 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 
 ---
 
-## Create a `privacy-policy.html` file in the project root.
+## Create a `privacy-policy.html` file in the project root
 
 ### **Privacy Policy (`privacy-policy.html`) Requirements**
 
@@ -98,6 +100,7 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 ---
 
 ### **Additional Notes**
+
 - Ensure **mobile responsiveness** for both pages.
 - Use **semantic HTML** for accessibility and SEO.
 - Keep text **clear and concise**, avoiding unnecessary legal jargon.
@@ -128,6 +131,6 @@ A separate `privacy-policy.html` should detail data usage, required permissions,
 
 🪪 License
 
- Include a live preview link to the deployed GitHub Pages website (e.g., https://your-username.github.io/your-repo-name).
+ Include a live preview link to the deployed GitHub Pages website (e.g., <https://your-username.github.io/your-repo-name>).
 
  my username is chirag127

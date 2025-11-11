@@ -47,6 +47,7 @@ Located in the `prompts/` directory, these templates are designed for broad appl
 **Purpose**: Generate comprehensive technical masterplans for any product idea.
 
 **When to Use**:
+
 - Starting a new project and need architecture guidance
 - Creating technical specifications for development teams
 - Planning scalability and infrastructure requirements
@@ -55,11 +56,13 @@ Located in the `prompts/` directory, these templates are designed for broad appl
 **How to Use**:
 
 1. **Prepare Your Idea**:
+
    ```
    RAW_IDEA: "Build a browser extension that categorizes bookmarks using AI"
    ```
 
 2. **Provide Context** (optional):
+
    ```
    CONTEXT: Target users are developers, open-source project, Chrome only
    ```
@@ -78,6 +81,7 @@ Located in the `prompts/` directory, these templates are designed for broad appl
    - Receive a complete `masterplan.md` document
 
 **Output**: A comprehensive masterplan including:
+
 - Executive summary
 - Technical stack recommendations
 - Functional and non-functional requirements
@@ -87,6 +91,7 @@ Located in the `prompts/` directory, these templates are designed for broad appl
 - Testing and deployment strategy
 
 **Example Usage**:
+
 ```markdown
 Input: "Create a Chrome extension for bookmark organization using Google Gemini API"
 Output: Complete masterplan with architecture, tech stack, API integration, etc.
@@ -97,11 +102,13 @@ Output: Complete masterplan with architecture, tech stack, API integration, etc.
 **Purpose**: Reusable prompt components and patterns.
 
 **When to Use**:
+
 - Building custom prompts
 - Need consistent formatting across prompts
 - Standardizing AI responses
 
 **Components**:
+
 - Response format templates
 - Error handling patterns
 - Output structure guidelines
@@ -112,17 +119,20 @@ Output: Complete masterplan with architecture, tech stack, API integration, etc.
 **Purpose**: Templates for interacting with Google Gemini API.
 
 **When to Use**:
+
 - Integrating Gemini API into applications
 - Building Gemini-powered features
 - Testing Gemini API capabilities
 
 **Key Features**:
+
 - API authentication patterns
 - Request/response formatting
 - Error handling strategies
 - Rate limiting guidance
 
 **Example Configuration**:
+
 ```javascript
 const { GoogleGenAI } = require("@google/genai");
 const ai = new GoogleGenAI({ apiKey: YOUR_API_KEY });
@@ -140,11 +150,13 @@ const model = "gemini-2.5-flash-preview-04-17";
 **Purpose**: Templates for React Native mobile application development.
 
 **When to Use**:
+
 - Building cross-platform mobile apps
 - Setting up React Native projects
 - Implementing mobile-specific features
 
 **Covered Topics**:
+
 - Project initialization
 - Component structure
 - Navigation setup
@@ -156,12 +168,14 @@ const model = "gemini-2.5-flash-preview-04-17";
 **Purpose**: Guide sprint planning and execution.
 
 **When to Use**:
+
 - Planning sprint cycles
 - Breaking down user stories
 - Estimating development effort
 - Tracking sprint progress
 
 **Structure**:
+
 - Sprint goal definition
 - User story templates
 - Acceptance criteria formats
@@ -172,12 +186,14 @@ const model = "gemini-2.5-flash-preview-04-17";
 **Purpose**: Define persistent behavior for AI assistants.
 
 **When to Use**:
+
 - Setting up long-term AI assistant behavior
 - Defining coding standards
 - Establishing communication protocols
 - Creating custom AI personas
 
 **Example**:
+
 ```markdown
 - Always follow GitHub username: chirag127
 - Use industry-standard best practices
@@ -197,6 +213,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Building AI-powered reply generation for web forms and social media.
 
 **Use Cases**:
+
 - Email composition assistance
 - Social media comment generation
 - Form auto-completion
@@ -207,6 +224,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: YouTube video summarization extension development.
 
 **Features**:
+
 - Video transcript extraction
 - AI-powered summarization
 - Key points highlighting
@@ -217,6 +235,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Chat interfaces for webpage content interaction.
 
 **Capabilities**:
+
 - Page content analysis
 - Question-answering about page content
 - Interactive documentation navigation
@@ -229,6 +248,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Comprehensive PDF manipulation tools.
 
 **Features**:
+
 - PDF merging and splitting
 - Compression and optimization
 - Conversion (PDF to images, Word, etc.)
@@ -236,6 +256,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 - Form filling and signing
 
 **Tech Stack Variations**:
+
 - **allpdftools.md**: JavaScript/TypeScript implementation
 - **allpdf-python.md**: Python-based implementation
 
@@ -246,6 +267,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: QR code generation and management applications.
 
 **Features**:
+
 - QR code generation with customization
 - Batch QR code creation
 - QR code scanning
@@ -259,6 +281,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: VS Code extension development guidance.
 
 **Covered Areas**:
+
 - Extension API usage
 - Command registration
 - Settings and configuration
@@ -272,6 +295,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Managing and tracking project context across sessions.
 
 **Features**:
+
 - Context persistence
 - Session history tracking
 - Decision documentation
@@ -282,6 +306,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Building intelligent sidebar interfaces.
 
 **Use Cases**:
+
 - Context-aware suggestions
 - Dynamic navigation
 - Real-time information display
@@ -294,6 +319,7 @@ Located in the `specific/` directory, these templates are tailored for particula
 **Purpose**: Generating meaningful git commit messages.
 
 **Structure**:
+
 ```
 type(scope): subject
 
@@ -309,6 +335,7 @@ footer
 **Purpose**: MCP server for file download capabilities.
 
 **Use Cases**:
+
 - Automated file retrieval
 - Resource downloading
 - Asset management
@@ -322,6 +349,7 @@ Located in the `other/` directory, these provide helper functionality.
 **Purpose**: Universal development guidelines and best practices.
 
 **Key Principles**:
+
 - No placeholders or TODO notes
 - Complete A-to-Z implementation
 - Industry-standard practices
@@ -336,6 +364,7 @@ Located in the `other/` directory, these provide helper functionality.
 **Purpose**: Grammar checking and writing improvement prompts.
 
 **Use Cases**:
+
 - Code comment refinement
 - Documentation review
 - README polishing
@@ -348,6 +377,7 @@ Located in the `other/` directory, these provide helper functionality.
 **Purpose**: Quality control and assurance workflows.
 
 **Areas Covered**:
+
 - Code review guidelines
 - Testing strategies
 - Quality metrics
@@ -364,6 +394,7 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
 **Available Servers**:
 
 #### 1. Pieces MCP
+
 ```json
 {
   "mcpServers": {
@@ -375,9 +406,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Code snippet management and reuse
 
 #### 2. Context7 MCP
+
 ```json
 {
   "mcpServers": {
@@ -388,9 +421,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Context persistence and management
 
 #### 3. Toolbox MCP (Smithery)
+
 ```json
 {
   "mcpServers": {
@@ -402,9 +437,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Multi-tool integration platform
 
 #### 4. TypeScript SDK Docs MCP
+
 ```json
 {
   "mcpServers": {
@@ -416,9 +453,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: TypeScript SDK documentation access
 
 #### 5. Date and Time MCP
+
 ```json
 {
   "mcpServers": {
@@ -429,9 +468,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Date/time utilities and scheduling
 
 #### 6. Clear Thought MCP
+
 ```json
 {
   "mcpServers": {
@@ -442,9 +483,11 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Enhanced reasoning and analysis
 
 #### 7. URL Content Saver MCP
+
 ```json
 {
   "mcpServers": {
@@ -455,11 +498,13 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
   }
 }
 ```
+
 **Purpose**: Web content archival and retrieval
 
 ### How to Use MCP Configs
 
 1. **Install Required Dependencies**:
+
    ```bash
    npm install -g mcp-remote
    ```
@@ -479,6 +524,7 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
 ### 1. Template Selection
 
 **Choose the Right Template**:
+
 - General task → Use `prompts/` directory
 - Specific project → Check `specific/` directory
 - Need guidelines → See `other/` directory
@@ -487,12 +533,14 @@ Located in the `mcp/` directory, these configure Model Context Protocol servers.
 ### 2. Customization
 
 **Adapt Templates to Your Needs**:
+
 - Replace placeholders with actual values
 - Adjust scope and detail level
 - Add project-specific context
 - Modify output formats as needed
 
 **Example**:
+
 ```markdown
 # Before
 USER_NAME: [Your Name]
@@ -511,6 +559,7 @@ USER_NAME: Chirag Singhal
 4. **Enhancements**: Layer in MCP configurations
 
 **Example Combination**:
+
 ```markdown
 # Building a React Native App
 
@@ -523,6 +572,7 @@ USER_NAME: Chirag Singhal
 ### 4. Version Control
 
 **Track Your Customizations**:
+
 - Keep original templates unchanged
 - Create custom versions in a separate directory
 - Document modifications in comments
@@ -531,6 +581,7 @@ USER_NAME: Chirag Singhal
 ### 5. Documentation
 
 **Document Your Usage**:
+
 - Note which templates you used
 - Record customization decisions
 - Track results and effectiveness
@@ -545,6 +596,7 @@ USER_NAME: Chirag Singhal
 **Steps**:
 
 1. **Use AI_CTO.md**:
+
    ```markdown
    RAW_IDEA: "Chrome extension that organizes bookmarks using Google Gemini API"
    CONTEXT: Open-source, free, minimal setup, front-end only
@@ -556,6 +608,7 @@ USER_NAME: Chirag Singhal
    - Note project structure
 
 3. **Apply Gemini Integration Template** (`prompts/gemini.md`):
+
    ```javascript
    // Use the Gemini API pattern
    const ai = new GoogleGenAI({ apiKey: userProvidedKey });
@@ -569,6 +622,7 @@ USER_NAME: Chirag Singhal
    - Production-ready code
 
 5. **Configure Git** (`specific/commit.md`):
+
    ```bash
    git commit -m "feat(extension): Add bookmark categorization with Gemini AI"
    ```
@@ -580,6 +634,7 @@ USER_NAME: Chirag Singhal
 **Steps**:
 
 1. **Generate Masterplan**:
+
    ```markdown
    Input to AI_CTO.md:
    RAW_IDEA: "Web app for PDF merging, splitting, compression, and conversion"
@@ -593,6 +648,7 @@ USER_NAME: Chirag Singhal
    - Note library recommendations (pdf-lib, pdf.js)
 
 3. **Structure Project**:
+
    ```
    pdf-tools/
    ├── src/
@@ -622,11 +678,13 @@ USER_NAME: Chirag Singhal
    - URL Content Saver: For web research
 
 2. **Install Dependencies**:
+
    ```bash
    npm install -g mcp-remote
    ```
 
 3. **Configure Each Server** (from `mcp/main.md`):
+
    ```json
    {
      "mcpServers": {
@@ -654,6 +712,7 @@ USER_NAME: Chirag Singhal
 **Steps**:
 
 1. **Use Sprint Template** (`prompts/sprint.md`):
+
    ```markdown
    Sprint Goal: Implement user authentication and profile management
    Duration: 2 weeks
@@ -661,6 +720,7 @@ USER_NAME: Chirag Singhal
    ```
 
 2. **Break Down User Stories**:
+
    ```markdown
    Story 1: As a user, I want to sign up with email/password
    - Acceptance Criteria:
@@ -690,6 +750,7 @@ USER_NAME: Chirag Singhal
 **Symptoms**: AI output doesn't match template expectations
 
 **Solutions**:
+
 1. Check if all required parameters are provided
 2. Verify template syntax is correct
 3. Add more specific context
@@ -701,6 +762,7 @@ USER_NAME: Chirag Singhal
 **Symptoms**: MCP server fails to initialize or connect
 
 **Solutions**:
+
 1. Verify paths are absolute and correct
 2. Check if Node.js is installed and accessible
 3. Ensure dependencies are installed (`npm install`)
@@ -712,6 +774,7 @@ USER_NAME: Chirag Singhal
 **Symptoms**: Generated output lacks specificity for your use case
 
 **Solutions**:
+
 1. Add detailed context to your input
 2. Combine multiple templates
 3. Provide examples of desired output
@@ -723,6 +786,7 @@ USER_NAME: Chirag Singhal
 **Symptoms**: Templates have contradictory guidelines
 
 **Solutions**:
+
 1. Prioritize more specific templates over general ones
 2. Create a custom template combining best parts
 3. Document resolution decisions
@@ -758,6 +822,7 @@ If you encounter issues not covered here:
 ### Creating Custom Templates
 
 **When to Create a Custom Template**:
+
 - Repeating similar prompts frequently
 - Need project-specific standardization
 - Want to share patterns with team
@@ -769,6 +834,7 @@ If you encounter issues not covered here:
    - Note its structure and patterns
 
 2. **Define Clear Purpose**:
+
    ```markdown
    # Template Name
    Purpose: [One-line description]
@@ -797,12 +863,14 @@ If you encounter issues not covered here:
 ### Template Maintenance
 
 **Keep Templates Updated**:
+
 - Review regularly for accuracy
 - Update with new best practices
 - Add learnings from usage
 - Archive obsolete versions
 
 **Version Control**:
+
 - Track major changes in CHANGELOG.md
 - Use semantic versioning concepts
 - Document breaking changes
@@ -811,6 +879,7 @@ If you encounter issues not covered here:
 ### Performance Optimization
 
 **Optimize Template Performance**:
+
 - Remove redundant instructions
 - Focus on clear, concise language
 - Provide structured parameters
@@ -818,6 +887,7 @@ If you encounter issues not covered here:
 - Test with different AI models
 
 **Monitor Results**:
+
 - Track quality of outputs
 - Measure time to completion
 - Gather user feedback

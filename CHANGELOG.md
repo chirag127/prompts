@@ -14,6 +14,7 @@ This release represents a comprehensive restructuring of the repository to impro
 ### Added
 
 #### Documentation
+
 - **README.md**: Complete rewrite with comprehensive structure overview
   - Added repository structure diagram
   - Included quick start guide
@@ -45,6 +46,7 @@ This release represents a comprehensive restructuring of the repository to impro
   - Guidelines for using archived content
 
 #### Directory Structure
+
 - Maintained clear separation of concerns:
   - `prompts/` - General purpose templates
   - `specific/` - Project-specific configurations
@@ -57,17 +59,20 @@ This release represents a comprehensive restructuring of the repository to impro
 ### Changed
 
 #### Template Organization
+
 - Clarified purpose of each directory through documentation
 - Established clear naming conventions
 - Documented all template types comprehensively
 
 #### Documentation Quality
+
 - Enhanced all documentation with proper markdown formatting
 - Added table of contents to major documents
 - Included cross-references between related documents
 - Added practical examples throughout
 
 #### README.md
+
 - Transformed from command list to comprehensive project guide
 - Added visual structure representation
 - Included quick start instructions
@@ -79,6 +84,7 @@ This release represents a comprehensive restructuring of the repository to impro
 #### Templates Moved to Archive
 
 **aictoold.md** → Replaced by `prompts/AI_CTO.md`
+
 - **Reason**: New version provides:
   - More structured clarifying questions
   - Enhanced output format with 17+ comprehensive sections
@@ -86,17 +92,19 @@ This release represents a comprehensive restructuring of the repository to impro
   - Detailed implementation guidance
   - Universal platform support
 - **Migration**: Use `prompts/AI_CTO.md` for all new projects
-- **Breaking Changes**: 
+- **Breaking Changes**:
   - Output format restructured
   - Clarifying questions consolidated
   - Added comprehensive implementation plans
 
 **aug.md** (archived copy) → Consolidated to `other/aug.md`
+
 - **Reason**: Eliminate duplicate, single authoritative source
 - **Migration**: Use `other/aug.md` (content identical)
 - **Breaking Changes**: None - files identical
 
 **augg.md** → Removed duplicate
+
 - **Reason**: Unintentional duplicate of `aug.md`
 - **Migration**: Use `other/aug.md`
 - **Breaking Changes**: None
@@ -104,12 +112,14 @@ This release represents a comprehensive restructuring of the repository to impro
 ### Fixed
 
 #### Documentation Issues
+
 - Corrected inconsistent template references
 - Fixed broken internal links
 - Standardized markdown formatting
 - Improved code block syntax highlighting
 
 #### Repository Structure
+
 - Clarified purpose of each directory
 - Documented relationships between templates
 - Established clear template hierarchy
@@ -117,6 +127,7 @@ This release represents a comprehensive restructuring of the repository to impro
 ### Documentation Structure
 
 #### New Documentation Hierarchy
+
 ```
 Repository Root
 ├── README.md (Main entry point)
@@ -133,16 +144,19 @@ Repository Root
 #### For Existing Users
 
 **If you're using aictoold.md:**
+
 1. Review `archive/README.md` for detailed migration instructions
 2. Switch to `prompts/AI_CTO.md` for new projects
 3. Note breaking changes in output format
 4. Test with sample inputs to understand new structure
 
 **If you're using aug.md from archive:**
+
 1. Update references to point to `other/aug.md`
 2. No code changes needed (content identical)
 
 **If you're using augg.md:**
+
 1. Update references to point to `other/aug.md`
 2. No code changes needed (was duplicate)
 
@@ -160,6 +174,7 @@ Repository Root
 ### Template Categories Established
 
 #### General Purpose (`prompts/`)
+
 - AI_CTO.md - Technical masterplan generation
 - common.md - Shared prompt patterns
 - gemini.md - Google Gemini API templates
@@ -169,6 +184,7 @@ Repository Root
 - And more...
 
 #### Project-Specific (`specific/`)
+
 - Browser extensions (aireply, yt summarizer, webpage chat)
 - PDF tools (allpdftools, allpdf-python)
 - QR code apps (qrcode, qrsayapp)
@@ -178,12 +194,14 @@ Repository Root
 - And more...
 
 #### Utilities (`other/`)
+
 - aug.md - General augmentation guidelines
 - grammarly.md - Writing improvement
 - Quality assurance templates (qcw, qsl)
 - And more...
 
 #### MCP Configurations (`mcp/`)
+
 - main.md - Comprehensive MCP server configurations
 - kiro.txt - Kiro MCP settings
 
@@ -192,6 +210,7 @@ Repository Root
 #### Output Formats
 
 **AI_CTO.md (formerly aictoold.md)**
+
 - **Old Format**: Simple masterplan with basic sections
 - **New Format**: 17-section comprehensive masterplan including:
   1. Document Information
@@ -218,6 +237,7 @@ Repository Root
 #### Question Flow
 
 **AI_CTO.md**
+
 - **Old**: Incremental follow-up questions
 - **New**: Single consolidated set of clarifying questions with:
   - Multiple choice options (a, b, c, etc.)
@@ -230,20 +250,24 @@ Repository Root
 ### Technical Details
 
 #### Files Added
+
 - `USAGE_GUIDE.md` (new, ~800 lines)
 - `CHANGELOG.md` (this file)
 - `archive/README.md` (comprehensive deprecation guide)
 
 #### Files Modified
+
 - `README.md` (complete rewrite, transformed from ~40 lines to ~250+ lines)
 - All documentation structure improved
 
 #### Files Moved
+
 - `aictoold.md` → `archive/aictoold.md`
 - `aug.md` → `archive/aug.md` (duplicate copy)
 - `augg.md` → `archive/augg.md`
 
 #### Files Unchanged (Location)
+
 - All active templates remain in original locations
 - `prompts/` directory structure maintained
 - `specific/` directory structure maintained
@@ -262,6 +286,7 @@ Repository Root
 ### Quality Improvements
 
 #### Documentation Quality
+
 - Added table of contents to all major docs
 - Consistent markdown formatting throughout
 - Code blocks with proper syntax highlighting
@@ -269,6 +294,7 @@ Repository Root
 - Comprehensive cross-referencing
 
 #### Usability Enhancements
+
 - Clear navigation from README to all docs
 - Quick start guide for new users
 - Detailed examples for common use cases
@@ -276,6 +302,7 @@ Repository Root
 - Best practices documented
 
 #### Maintainability
+
 - Established clear deprecation process
 - Version history tracking (this file)
 - Migration guides for breaking changes
@@ -284,6 +311,7 @@ Repository Root
 ### Acknowledgments
 
 This reorganization establishes a strong foundation for:
+
 - New contributors to understand the repository
 - Users to find and use appropriate templates
 - Maintainers to track changes and deprecations
@@ -298,6 +326,7 @@ This reorganization establishes a strong foundation for:
 This version represents the repository state before the comprehensive reorganization.
 
 #### Structure
+
 - Mixed organization of templates
 - Basic README with command examples
 - No formal documentation structure
@@ -306,6 +335,7 @@ This version represents the repository state before the comprehensive reorganiza
 - No changelog
 
 #### Contents
+
 - Various prompt templates in multiple directories
 - Python utilities (gce.py, gemini.py)
 - JavaScript utilities (a.js, script/gi.js)
@@ -313,12 +343,14 @@ This version represents the repository state before the comprehensive reorganiza
 - VS Code settings
 
 #### Notable Templates (Pre-reorganization)
+
 - aictoold.md (later deprecated)
 - AI_CTO.md (enhanced in v2.0.0)
 - Various project-specific prompts
 - Utility templates
 
 ### Issues Addressed in v2.0.0
+
 - Lack of clear documentation
 - No usage instructions
 - Unclear template organization
@@ -361,6 +393,7 @@ This documentation repository uses semantic versioning concepts adapted for docu
 ## Future Plans
 
 ### Planned for v2.1.0
+
 - [ ] Additional project-specific templates
 - [ ] Video tutorials for complex templates
 - [ ] Interactive examples
@@ -368,6 +401,7 @@ This documentation repository uses semantic versioning concepts adapted for docu
 - [ ] Community contribution templates
 
 ### Under Consideration
+
 - [ ] Template versioning within files
 - [ ] Automated template testing
 - [ ] Template effectiveness metrics
@@ -375,6 +409,7 @@ This documentation repository uses semantic versioning concepts adapted for docu
 - [ ] Integration with popular AI tools
 
 ### Long-term Vision
+
 - Comprehensive prompt engineering library
 - Industry-standard template collection
 - Active community contributions

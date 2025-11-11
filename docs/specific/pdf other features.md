@@ -3,15 +3,15 @@
 | Extract Pages | Save selected pages as a new PDF document | High |
 | Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
 
-
-
 ### 3.2 Conversion Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
 | PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
 
 ### 3.3 Editing Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
@@ -21,6 +21,7 @@
 | Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
 
 ### 3.4 Security Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Unlock PDF | Remove password protection from PDF files | High |
@@ -29,6 +30,7 @@
 | Redact PDF | Permanently remove sensitive information from documents | Low |
 
 ### 3.5 Enhancement Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Compress PDF | Reduce file size while maintaining reasonable quality | High |
@@ -38,6 +40,7 @@
 | Compare PDF | Show differences between two PDF documents | Low |
 
 ### 3.6 AI Features (Gemini API Integration)
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Chat with PDF | Interactive Q&A with PDF content using RAG | High |
@@ -48,24 +51,28 @@
 ## 4. AI Implementation Requirements
 
 ### 4.1 Gemini API Integration
+
 - Implement Google's Generative AI capabilities using the official SDK using python
 - User must provide their own Gemini API key through a settings page
 - Store API key securely using device secure storage (e.g., Expo SecureStore)
 - Implement model selection functionality for AI features
 - Provide a user-friendly interface for selecting models
+
 ### 4.2 Retrieval Augmented Generation (RAG)
+
 - Extract and process text from PDFs for context
 - Implement chunking strategy for large documents (e.g., page-based, section-based)
 - Create appropriate prompts that combine user queries with document context
 - Handle API rate limiting and token limitations gracefully
 - Implement fallback mechanisms for when AI features are unavailable
+
 11. Localization / Internationalization (i18n):
 Will the app need to support multiple languages?
  English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
 
 ### 4.3 Model Selection
-- Provide interface for users to select from available Gemini models
 
+- Provide interface for users to select from available Gemini models
 
 ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. use retrieval augmented generation for the ai features.
 Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
@@ -129,8 +136,8 @@ Model name: models/gemini-1.5-flash
 
 Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
 
-
 strictly include the above code in the masterplan.md file to get the list of available models.
 
  continue with suggested answers you provided
+
 - Treat this as an indication that the user accepts all your suggested answers and wants to move forward

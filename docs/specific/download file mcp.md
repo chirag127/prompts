@@ -1,7 +1,6 @@
 <!-- Create a Implement a way to download the file and save it to the code baseCurrently, the extension tries to read the file and write the file itself which leading to I'm sorry. I tried to call a tool, but provided too large of an input. How would you like to proceed? create a MPC that lets the ai save a urls contents to a file in the code base. The file should be saved in the same directory as specified by the ai agent -->
 create a URL Content Saver MCP Server that lets the ai agent save a urls contents to a file in the code base. The file should be saved in the same directory as specified by the ai agent. currently the ai agent is trying to read the file and write the file itself which is leading to the error as the content is too large to fit in the token limit.
 
-
 Create a Model Context Protocol (MCP) Server that implements a URL Content Saver functionality. This server should:
 
 1. Provide a tool that allows AI agents to download content from any URL and save it directly to a specified complete absolute file path in the codebase

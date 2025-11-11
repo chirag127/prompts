@@ -154,10 +154,12 @@ _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 ## Project Structure
 ```
+
 project-root/
 ├── [directory structure]
 ├── [with all major files]
 └── [and directories]
+
 ```
 
 ## Implementation Plan
@@ -204,12 +206,16 @@ This section outlines the implementation plan, including phases and tasks. Ensur
 
 ## Environment Variables
 ```
+
 # Required environment variables
+
 VARIABLE_NAME=description
 ANOTHER_VARIABLE=description
 
 # Optional environment variables
+
 OPTIONAL_VARIABLE=description
+
 ```
 
 ## Testing Strategy
@@ -245,9 +251,9 @@ OPTIONAL_VARIABLE=description
 
 Include the following project structure guidelines in the masterplan.md:
 
--   **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
--   **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
--   **Backend Development**: If a backend is needed, organize code in a `backend/` folder
+- **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
+- **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
+- **Backend Development**: If a backend is needed, organize code in a `backend/` folder
 
 ## Development Guidelines
 
@@ -255,49 +261,49 @@ When creating the masterplan.md, incorporate these development guidelines from t
 
 ### Code Quality & Design Principles
 
--   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
--   Apply SOLID, DRY (via abstraction), and KISS principles
--   Design modular, reusable components/functions
--   Optimize for code readability and maintainable structure
--   Add concise, useful function-level comments
--   Implement comprehensive error handling (try-catch, custom errors, async handling)
+- Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
+- Apply SOLID, DRY (via abstraction), and KISS principles
+- Design modular, reusable components/functions
+- Optimize for code readability and maintainable structure
+- Add concise, useful function-level comments
+- Implement comprehensive error handling (try-catch, custom errors, async handling)
 
 ### Frontend Development
 
--   Provide modern, clean, professional, and intuitive UI designs
--   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
--   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
+- Provide modern, clean, professional, and intuitive UI designs
+- Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
+- Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
 
 ### React Native Guidelines (if applicable)
 
--   Use Expo framework with JavaScript
--   Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
--   Use NativeWind, UniStyles, or Tamagui for styling
--   Use react-native-reanimated (complex) or moti (simple) for animations
--   Use TanStack Query (server), Zustand (global) for state management
+- Use Expo framework with JavaScript
+- Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
+- Use NativeWind, UniStyles, or Tamagui for styling
+- Use react-native-reanimated (complex) or moti (simple) for animations
+- Use TanStack Query (server), Zustand (global) for state management
 
 ### Data Handling & APIs
 
--   Integrate with real, live data sources and APIs as specified or implied
--   Prohibit placeholder, mock, or dummy data/API responses in the final code
--   Accept credentials/config exclusively via environment variables
--   Use `.env` files for local secrets/config with a template `.env.example` file
--   Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
--   Never hardcode API endpoint URLs directly in service/component files
+- Integrate with real, live data sources and APIs as specified or implied
+- Prohibit placeholder, mock, or dummy data/API responses in the final code
+- Accept credentials/config exclusively via environment variables
+- Use `.env` files for local secrets/config with a template `.env.example` file
+- Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
+- Never hardcode API endpoint URLs directly in service/component files
 
 ### Asset Generation
 
--   Do not use placeholder images or icons
--   Create necessary graphics as SVG and convert to PNG using the sharp library
--   Write build scripts to handle asset generation
--   Reference only the generated PNG files within the application code
+- Do not use placeholder images or icons
+- Create necessary graphics as SVG and convert to PNG using the sharp library
+- Write build scripts to handle asset generation
+- Reference only the generated PNG files within the application code
 
 ### Documentation Requirements
 
--   Create a comprehensive README.md including project overview, setup instructions, and other essential information
--   Maintain a CHANGELOG.md to document changes using semantic versioning
--   Document required API keys/credentials clearly
--   Ensure all documentation is well-written, accurate, and reflects the final code
+- Create a comprehensive README.md including project overview, setup instructions, and other essential information
+- Maintain a CHANGELOG.md to document changes using semantic versioning
+- Document required API keys/credentials clearly
+- Ensure all documentation is well-written, accurate, and reflects the final code
 
 ## Tool Usage Instructions
 
@@ -305,52 +311,52 @@ Include these instructions in the masterplan.md for the AI code assistant, Deepl
 
 ### MCP Servers and Tools
 
--   Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
+- Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
 
--   Use the clear thought MCP servers for various problem-solving approaches:
+- Use the clear thought MCP servers for various problem-solving approaches:
 
-    -   `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
+  - `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
 
-    -   `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
+  - `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
 
-    -   `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
+  - `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
 
-    -   `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
+  - `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
 
-    -   `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
+  - `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
 
-    -   `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
+  - `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
 
-    -   `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
+  - `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
 
-    -   `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
+  - `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
 
-    -   `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
+  - `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
 
-    -   `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
+  - `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
 
-    -   `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
+  - `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
 
--   Use the date and time MCP server:
+- Use the date and time MCP server:
 
-    -   Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
-    -   Add last updated date and time in UTC format to the `README.md` file
+  - Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
+  - Add last updated date and time in UTC format to the `README.md` file
 
--   Use the websearch tool to find information on the internet when needed
+- Use the websearch tool to find information on the internet when needed
 
 ### System & Environment Considerations
 
--   Target system: Windows 11 Home Single Language 23H2
--   Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
--   Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
--   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
--   Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
+- Target system: Windows 11 Home Single Language 23H2
+- Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
+- Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
+- Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
+- Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
 
 ### Error Handling & Debugging
 
--   First attempt to resolve errors autonomously using available tools
--   Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
--   Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
+- First attempt to resolve errors autonomously using available tools
+- Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
+- Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
 
 ## Raw Idea Processing
 
@@ -399,10 +405,7 @@ When a user provides a raw idea, follow this process:
     - When the user provides a raw idea, it will be placed in the "The raw idea is:" section at the end of this file
     - Process this raw idea according to the instructions above
 
-
-
-## The raw idea is:
-
+## The raw idea is
 
 make a web app that will offer All PDF Tools.
 use clerk for authentication. and mongodb for data storage. only 2 roles are needed: admin and user.
@@ -410,7 +413,7 @@ only 2 uses of each tool are allowed per day for free users. paid users can use 
 users are upgraded to paid users when they pay for the subscription. the app will be hosted on render.com.
 there will a admin panel to manage the users and their subscriptions.
 the payment will be done using upi and admin will mannually verify the payment and upgrade the user to paid user.
-the admin email id will be admin@example.com and password is YOUR_ADMIN_PASSWORD
+the admin email id will be <admin@example.com> and password is YOUR_ADMIN_PASSWORD
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
 Frequently used

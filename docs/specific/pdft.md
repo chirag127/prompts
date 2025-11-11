@@ -5,7 +5,7 @@ only 2 uses of each tool are allowed per day for free users. paid users can use 
 users are upgraded to paid users when they pay for the subscription. the app will be hosted on render.com.
 there will a admin panel to manage the users and their subscriptions.
 the payment will be done using upi and admin will mannually verify the payment and upgrade the user to paid user.
-the admin email id will be admin@example.com and password is YOUR_ADMIN_PASSWORD
+the admin email id will be <admin@example.com> and password is YOUR_ADMIN_PASSWORD
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
 Frequently used

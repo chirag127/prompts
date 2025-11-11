@@ -35,76 +35,76 @@ Your task is to help a developer understand and plan their app idea through a se
 ---
 
 **1. Introduction & Overview**
-_ **1.1. Purpose**
+_**1.1. Purpose**
 _ **1.2. Problem Statement**
 _ **1.3. Vision / High-Level Solution**
 
 **2. Goals & Objectives**
-_ **2.1. Business Goals**
+_**2.1. Business Goals**
 _ **2.2. Product Goals** \* **2.3. Success Metrics (KPIs)**
 
 **3. Scope**
-_ **3.1. In Scope**
+_**3.1. In Scope**
 _ **3.2. Out of Scope**
 
 **4. User Personas & Scenarios**
-_ **4.1. Primary Persona(s)**
+_**4.1. Primary Persona(s)**
 _ **4.2. Key User Scenarios / Use Cases**
 
 **5. User Stories**
 _(Optional - often uses identifiers like US1, US2, etc.)_
 
 **6. Functional Requirements (FR)**
-_ **6.1. [Feature Area 1 Name]**
+_**6.1. [Feature Area 1 Name]**
 _ **FR1.1:** [Requirement ID/Name]
-_ **FR1.2:** [Requirement ID/Name]
+_**FR1.2:** [Requirement ID/Name]
 _ ...
-_ **6.2. [Feature Area 2 Name]**
+_**6.2. [Feature Area 2 Name]**
 _ **FR2.1:** [Requirement ID/Name]
-_ **FR2.2:** [Requirement ID/Name]
+_**FR2.2:** [Requirement ID/Name]
 _ ... \* **6.3. [Feature Area ... Name]**
 
 **7. Non-Functional Requirements (NFR)**
-_ **7.1. Performance**
+_**7.1. Performance**
 _ **NFR1.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.2. Scalability**
-_ **NFR2.1:** [Requirement ID/Name]
+_**NFR2.1:** [Requirement ID/Name]
 _ ...
-_ **7.3. Usability**
+_**7.3. Usability**
 _ **NFR3.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.4. Reliability / Availability**
-_ **NFR4.1:** [Requirement ID/Name]
+_**NFR4.1:** [Requirement ID/Name]
 _ ...
-_ **7.5. Security**
+_**7.5. Security**
 _ **NFR5.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.6. Accessibility**
-_ **NFR6.1:** [Requirement ID/Name]
+_**NFR6.1:** [Requirement ID/Name]
 _ ...
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 **8. UI/UX Requirements & Design**
-_ **8.1. Wireframes / Mockups**
+_**8.1. Wireframes / Mockups**
 _ **8.2. Key UI Elements** \* **8.3. User Flow Diagrams**
 
 **9. Data Requirements**
-_ **9.1. Data Model**
+_**9.1. Data Model**
 _ **9.2. Data Migration** \* **9.3. Analytics & Tracking**
 
 **10. Release Criteria**
-_ **10.1. Functional Criteria**
+_**10.1. Functional Criteria**
 _ **10.2. Non-Functional Criteria**
-_ **10.3. Testing Criteria**
+_**10.3. Testing Criteria**
 _ **10.4. Documentation Criteria**
 
 **11. Open Issues / Future Considerations**
-_ **11.1. Open Issues**
+_**11.1. Open Issues**
 _ **11.2. Future Enhancements (Post-Launch)**
 
 **12. Appendix & Glossary**
-_ **12.1. Glossary**
+_**12.1. Glossary**
 _ **12.2. Related Documents**
 
 **13. Document History / Revisions**
@@ -120,14 +120,9 @@ _ **12.2. Related Documents**
 • Future expansion possibilities
 • Feedback and adjustments
 
-
 Important: Do not generate any code during this conversation. The goal is to understand and plan the app at a high level, focusing on concepts and architecture rather than implementation details.
 
-
 Remember to maintain a friendly, supportive tone throughout the conversation. Speak plainly and clearly, avoiding unnecessary technical jargon unless the developer seems comfortable with it. Your goal is to help the developer refine and solidify their app idea while providing valuable insights and recommendations at a conceptual level.
-
-
-
 
 give me a prd to be given to ai agent, an AI code assistant that will be used for building a browser extension that creates this project with the following requirements:
 make a detailed **Product Requirements Document (PRD)** for the **AI Reply Assistant for Social Media** browser extension.
@@ -137,9 +132,11 @@ make a detailed **Product Requirements Document (PRD)** for the **AI Reply Assis
 # 🧠 AI Reply Assistant for Social Media – PRD
 
 ### 📌 Product Name
+
 **AI Reply Assistant**
 
 ### 🧭 Purpose
+
 Enable users to generate smart, context-aware, tone-adjusted replies to comments/posts on Twitter, LinkedIn, Reddit, etc., directly within the browser using AI.
 
 ---
@@ -147,27 +144,33 @@ Enable users to generate smart, context-aware, tone-adjusted replies to comments
 ## 🔍 Key Features
 
 ### 1. **Context-Aware Reply Suggestions**
+
 - Detect the selected post/comment on social platforms.
 - Send its text to the backend.
 - Receive AI-generated reply suggestions.
 
 ### 2. **Tone Adjustment Options**
+
 - User selects tone (e.g., Friendly, Professional, Witty, Supportive, Sarcastic).
 - AI adjusts the response accordingly.
 
 ### 3. **Inline UI Integration**
+
 - Show a small “💬 AI Reply” button next to posts/comments.
 - Clicking it shows tone selector + generated suggestions (3 max).
 
 ### 4. **One-Click Reply**
+
 - Clicking a suggestion pastes it into the reply box of the platform (Twitter, Reddit, etc.).
 
 ### 5. **Prompt Customization (Optional - Phase 2)**
+
 - Let users tweak the AI prompt for deeper personalization.
 
 ---
 
 ## 🎯 Target Platforms
+
 - **Twitter (X)**
 - **LinkedIn**
 - **Reddit**
@@ -178,12 +181,14 @@ Enable users to generate smart, context-aware, tone-adjusted replies to comments
 ## 🛠 Tech Stack
 
 ### 🧩 Frontend (Browser Extension)
+
 - **Manifest V3**
 - **HTML, CSS, JavaScript**
 - Web scraping + DOM injection per platform
 - Communicates with backend using `fetch` and `chrome.runtime`
 
 ### 🤖 Backend (AI Service)
+
 - **Express.js (Node.js)**
 - Routes: `/generate-reply`
 - Uses **Gemini 2.0 Flash Lite API** for AI generation
@@ -257,6 +262,7 @@ Reply:
 ---
 
 ## 🧪 Testing Plan
+
 - Use dev social media accounts.
 - Test DOM selectors for posts/comments.
 - Mock Gemini API responses.
@@ -265,6 +271,7 @@ Reply:
 ---
 
 ## 🔐 Privacy & Security
+
 - No user data stored.
 - Backend is stateless and only relays post content + tone to Gemini API.
 - Optionally inform users of this in a non-intrusive way.
@@ -272,33 +279,31 @@ Reply:
 ---
 
 ## 🧠 Stretch Features (Phase 2+)
+
 - Tone Training Mode (learn your tone from past tweets)
 - Sentiment Matching (match tone of original post)
 - Summary before reply
 - “Roast” mode (fun use only, with disclaimers)
 
-
-
 The agent should ensure that the browser extension is built with the following setup:
 
--   Frontend: Browser Extension
--   Project Structure:
-    -   extension/ folder for browser extension code.
-    -   backend/ folder for the backend code for the AI model integration.
+- Frontend: Browser Extension
+- Project Structure:
+  - extension/ folder for browser extension code.
+  - backend/ folder for the backend code for the AI model integration.
 
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   ensure the extension is built with a focus on user experience and performance.
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   Don't leave anything for future, this will be a prd for final product not a mvp.
-
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - ensure the extension is built with a focus on user experience and performance.
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - Don't leave anything for future, this will be a prd for final product not a mvp.
 
 Assure that the agent will follow the above instructions and provide a complete and production-ready solution. The agent should also ensure that the code is well-documented, follows best practices, and is easy to maintain. The agent should also ensure that the app is fully functional and tested before delivering it.
 
 Ask the agent to ensure that the frontend is error-free
 
-
 IMPORTANT: use the following code for the gemini integration:
+
 ```javascript
 // To run this code you need to install the following dependencies:
 // npm install @google/genai mime

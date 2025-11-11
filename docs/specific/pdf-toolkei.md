@@ -198,20 +198,26 @@ This section outlines the implementation plan, including phases and tasks.
 
 ## Project Structure
 ```
+
 project-root/
 ├── [directory structure]
 ├── [with all major files]
 └── [and directories]
+
 ```
 
 ## Environment Variables
 ```
+
 # Required environment variables
+
 VARIABLE_NAME=description
 ANOTHER_VARIABLE=description
 
 # Optional environment variables
+
 OPTIONAL_VARIABLE=description
+
 ```
 
 ## Testing Strategy
@@ -247,9 +253,9 @@ OPTIONAL_VARIABLE=description
 
 Include the following project structure guidelines in the masterplan.md:
 
--   **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
--   **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
--   **Backend Development**: If a backend is needed, organize code in a `backend/` folder
+- **Frontend Development**: If making a website or app (not a browser extension), organize code in a `frontend/` folder
+- **Extension Development**: If making a browser/VS Code extension (not an app or website), organize code in an `extension/` folder
+- **Backend Development**: If a backend is needed, organize code in a `backend/` folder
 
 ## Development Guidelines
 
@@ -257,41 +263,41 @@ When creating the masterplan.md, incorporate these development guidelines from t
 
 ### Code Quality & Design Principles
 
--   Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
--   Apply SOLID, DRY (via abstraction), and KISS principles
--   Design modular, reusable components/functions
--   Optimize for code readability and maintainable structure
--   Add concise, useful function-level comments
--   Implement comprehensive error handling (try-catch, custom errors, async handling)
+- Follow industry-standard coding best practices (clean code, modularity, error handling, security, scalability)
+- Apply SOLID, DRY (via abstraction), and KISS principles
+- Design modular, reusable components/functions
+- Optimize for code readability and maintainable structure
+- Add concise, useful function-level comments
+- Implement comprehensive error handling (try-catch, custom errors, async handling)
 
 ### Frontend Development
 
--   Provide modern, clean, professional, and intuitive UI designs
--   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
--   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
+- Provide modern, clean, professional, and intuitive UI designs
+- Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
+- Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
 
 ### Data Handling & APIs
 
--   Integrate with real, live data sources and APIs as specified or implied
--   Prohibit placeholder, mock, or dummy data/API responses in the final code
--   Accept credentials/config exclusively via environment variables
--   Use `.env` files for local secrets/config with a template `.env.example` file
--   Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
--   Never hardcode API endpoint URLs directly in service/component files
+- Integrate with real, live data sources and APIs as specified or implied
+- Prohibit placeholder, mock, or dummy data/API responses in the final code
+- Accept credentials/config exclusively via environment variables
+- Use `.env` files for local secrets/config with a template `.env.example` file
+- Centralize all API endpoint URLs in a single location (config file, constants module, or environment variables)
+- Never hardcode API endpoint URLs directly in service/component files
 
 ### Asset Generation
 
--   Do not use placeholder images or icons
--   Create necessary graphics as SVG and convert to PNG using the sharp library
--   Write build scripts to handle asset generation
--   Reference only the generated PNG files within the application code
+- Do not use placeholder images or icons
+- Create necessary graphics as SVG and convert to PNG using the sharp library
+- Write build scripts to handle asset generation
+- Reference only the generated PNG files within the application code
 
 ### Documentation Requirements
 
--   Create a comprehensive README.md including project overview, setup instructions, and other essential information
--   Maintain a CHANGELOG.md to document changes using semantic versioning
--   Document required API keys/credentials clearly
--   Ensure all documentation is well-written, accurate, and reflects the final code
+- Create a comprehensive README.md including project overview, setup instructions, and other essential information
+- Maintain a CHANGELOG.md to document changes using semantic versioning
+- Document required API keys/credentials clearly
+- Ensure all documentation is well-written, accurate, and reflects the final code
 
 ## Tool Usage Instructions
 
@@ -299,52 +305,52 @@ Include these instructions in the masterplan.md for the AI code assistant, Deepl
 
 ### MCP Servers and Tools
 
--   Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
+- Use the context7 MCP server to gather contextual information about the current task, including relevant libraries, frameworks, and APIs
 
--   Use the clear thought MCP servers for various problem-solving approaches:
+- Use the clear thought MCP servers for various problem-solving approaches:
 
-    -   `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
+  - `mentalmodel_clear_thought`: For applying structured problem-solving approaches (First Principles Thinking, Opportunity Cost Analysis, Error Propagation Understanding, Rubber Duck Debugging, Pareto Principle, Occam's Razor)
 
-    -   `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
+  - `designpattern_clear_thought`: For applying software architecture and implementation patterns (Modular Architecture, API Integration Patterns, State Management, Asynchronous Processing, Scalability Considerations, Security Best Practices, Agentic Design Patterns)
 
-    -   `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
+  - `programmingparadigm_clear_thought`: For applying different programming approaches (Imperative Programming, Procedural Programming, Object-Oriented Programming, Functional Programming, Declarative Programming, Logic Programming, Event-Driven Programming, Aspect-Oriented Programming, Concurrent Programming, Reactive Programming)
 
-    -   `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
+  - `debuggingapproach_clear_thought`: For systematic debugging of technical issues (Binary Search, Reverse Engineering, Divide and Conquer, Backtracking, Cause Elimination, Program Slicing)
 
-    -   `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
+  - `collaborativereasoning_clear_thought`: For simulating expert collaboration with diverse perspectives and expertise (Multi-persona problem-solving, Diverse expertise integration, Structured debate and consensus building, Perspective synthesis)
 
-    -   `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
+  - `decisionframework_clear_thought`: For structured decision analysis and rational choice theory (Structured decision analysis, Multiple evaluation methodologies, Criteria weighting, Risk and uncertainty handling)
 
-    -   `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
+  - `metacognitivemonitoring_clear_thought`: For tracking knowledge boundaries and reasoning quality (Metacognitive Monitoring, Knowledge boundary assessment, Claim certainty evaluation, Reasoning bias detection, Confidence calibration, Uncertainty identification)
 
-    -   `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
+  - `scientificmethod_clear_thought`: For applying formal scientific reasoning to questions and problems (Structured hypothesis testing, Variable identification, Prediction formulation, Experimental design, Evidence evaluation)
 
-    -   `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
+  - `structuredargumentation_clear_thought`: For dialectical reasoning and argument analysis (Thesis-antithesis-synthesis, Argument strength analysis, Premise evaluation, Logical structure mapping)
 
-    -   `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
+  - `visualreasoning_clear_thought`: For visual thinking, problem-solving, and communication (Diagrammatic representation, Visual problem-solving, Spatial relationship analysis, Conceptual mapping, Visual insight generation)
 
-    -   `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
+  - `sequentialthinking_clear_thought`: For breaking down complex problems into manageable steps (Structured thought process, Revision and branching support, Progress tracking, Context maintenance)
 
--   Use the date and time MCP server:
+- Use the date and time MCP server:
 
-    -   Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
-    -   Add last updated date and time in UTC format to the `README.md` file
+  - Use `getCurrentDateTime_node` tool to get the current date and time in UTC format
+  - Add last updated date and time in UTC format to the `README.md` file
 
--   Use the websearch tool to find information on the internet when needed
+- Use the websearch tool to find information on the internet when needed
 
 ### System & Environment Considerations
 
--   Target system: Windows 11 Home Single Language 23H2
--   Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
--   Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
--   Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
--   Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
+- Target system: Windows 11 Home Single Language 23H2
+- Use semicolon (`;`) as the command separator in PowerShell commands, not `&&`
+- Use `New-Item -ItemType Directory -Path "path1", "path2", ... -Force` for creating directories in PowerShell
+- Use language-native path manipulation libraries (e.g., Node.js `path`) for robust path handling
+- Use package manager commands via the launch-process tool to add dependencies; do not edit package.json directly
 
 ### Error Handling & Debugging
 
--   First attempt to resolve errors autonomously using available tools
--   Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
--   Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
+- First attempt to resolve errors autonomously using available tools
+- Perform systematic debugging: consult web resources, documentation, modify code, adjust configuration, retry
+- Report back only if an insurmountable blocker persists after exhausting all self-correction efforts
 
 ## Raw Idea Processing
 
@@ -393,18 +399,17 @@ When a user provides a raw idea, follow this process:
     - When the user provides a raw idea, it will be placed in the "The raw idea is:" section at the end of this file
     - Process this raw idea according to the instructions above
 
-
-
-## The raw idea is:
-
+## The raw idea is
 
 make a react native expo app that will offer All PDF Tools.
 no authentication.
 
 it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
+
 # Project Specification: All PDF Tools - React Native Expo Application
 
 ## 1. Project Overview
+
 Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
 
 **Target Platforms:** iOS and Android and web (Expo)
@@ -414,6 +419,7 @@ Develop a comprehensive React Native Expo application that provides users with a
 ## 2. Technical Requirements
 
 ### 2.1 Development Framework
+
 - React Native with Expo SDK (latest stable version)
 - JavaScript implementation
 - No backend server requirements (fully client-side implementation)
@@ -424,11 +430,10 @@ Allow access to manage all files
 
 Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.
 
-
 show all pdf files in the device storage in a list view with preview thumbnail and file name
 
-
 ### 2.2 PDF Processing
+
 - Implement PDF processing using React Native compatible libraries
 - All PDF operations must be performed on-device to ensure privacy
 - Support for PDF files up to 100MB in size
@@ -436,6 +441,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 - Include progress indicators for operations that may take time
 
 ### 2.3 File Management
+
 - Implement file picking from device storage
 - Request appropriate permissions for file access
 - Support saving modified PDFs to device storage
@@ -444,6 +450,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 ## 3. Feature Categories and Requirements
 
 ### 3.1 Document Organization
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
@@ -452,14 +459,15 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 | Extract Pages | Save selected pages as a new PDF document | High |
 | Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
 
-
 ### 3.2 Conversion Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
 | PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
 
 ### 3.3 Editing Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
@@ -469,6 +477,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 | Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
 
 ### 3.4 Security Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Unlock PDF | Remove password protection from PDF files | High |
@@ -477,6 +486,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 | Redact PDF | Permanently remove sensitive information from documents | Low |
 
 ### 3.5 Enhancement Tools
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Compress PDF | Reduce file size while maintaining reasonable quality | High |
@@ -486,6 +496,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 | Compare PDF | Show differences between two PDF documents | Low |
 
 ### 3.6 AI Features (Gemini API Integration)
+
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | Chat with PDF | Interactive Q&A with PDF content using RAG | High |
@@ -496,6 +507,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 ## 4. AI Implementation Requirements
 
 ### 4.1 Gemini API Integration
+
 - Implement Google's Generative AI capabilities using the official SDK
 - Required installation: `npm install @google/generative-ai`
 - User must provide their own Gemini API key through a settings page
@@ -503,6 +515,7 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 - Implement model selection functionality with appropriate defaults
 
 ### 4.2 Retrieval Augmented Generation (RAG)
+
 - Extract and process text from PDFs for context
 - Implement chunking strategy for large documents (e.g., page-based, section-based)
 - Create appropriate prompts that combine user queries with document context
@@ -510,8 +523,10 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 - Implement fallback mechanisms for when AI features are unavailable
 
 ### 4.3 Model Selection
+
 - Provide interface for users to select from available Gemini models
 - Implement model listing functionality as shown in the example code:
+
 ```javascript
 async function listModels() {
   const models = await client.listModels();
@@ -585,13 +600,13 @@ Model name: models/gemini-1.5-flash
 
 ### 🧠 Notes
 
-* You must have billing enabled and API access.
-* Only accessible via `@google/generative-ai` client or direct REST calls to:
+- You must have billing enabled and API access.
+- Only accessible via `@google/generative-ai` client or direct REST calls to:
 
   ```
   GET https://generativelanguage.googleapis.com/v1beta/models
   ```
 
-
 strictly include the above code in the masterplan.md file to get the list of available models. continue with suggested answers you provided
+
 - Treat this as an indication that the user accepts all your suggested answers and wants to move forward

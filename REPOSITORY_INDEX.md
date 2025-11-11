@@ -31,6 +31,7 @@
 ## Templates
 
 ### Browser Extension Template
+
 **File**: `templates/browser-extension-template.md`
 
 **Purpose**: Generate comprehensive masterplans for browser extensions
@@ -38,6 +39,7 @@
 **Use Case**: Building Chrome, Firefox, or Edge extensions
 
 **Key Features**:
+
 - Content script architecture
 - Background/service worker configuration
 - Popup and sidebar interfaces
@@ -47,6 +49,7 @@
 ---
 
 ### Web Application Template
+
 **File**: `templates/web-app-template.md`
 
 **Purpose**: Generate comprehensive masterplans for web applications
@@ -54,6 +57,7 @@
 **Use Case**: Building full-stack web apps, SPAs, or PWAs
 
 **Key Features**:
+
 - Frontend/backend architecture
 - Database design
 - Authentication flows
@@ -67,6 +71,7 @@
 ### Core Planning Prompts
 
 #### AI_CTO.md
+
 **Path**: `prompts/AI_CTO.md`
 
 **Purpose**: Universal masterplan generator for any software project
@@ -80,6 +85,7 @@
 ---
 
 #### ai_to.md
+
 **Path**: `prompts/ai_to.md`
 
 **Purpose**: Alternative masterplan generator with detailed question-based approach
@@ -93,6 +99,7 @@
 ---
 
 #### masterplan-generator.md
+
 **Path**: `prompts/masterplan-generator.md`
 
 **Purpose**: Generic masterplan generation framework
@@ -104,6 +111,7 @@
 ### Technology-Specific Prompts
 
 #### gemini.md
+
 **Path**: `prompts/gemini.md`
 
 **Purpose**: Google Gemini API integration templates and patterns
@@ -111,6 +119,7 @@
 **Usage**: Reference when integrating Gemini AI into projects
 
 **Contains**:
+
 - API configuration examples
 - Authentication patterns
 - Request/response formatting
@@ -119,11 +128,13 @@
 ---
 
 #### reactnative.md
+
 **Path**: `prompts/reactnative.md`
 
 **Purpose**: React Native development guidelines and 2025 stack recommendations
 
 **Contains**:
+
 - Expo framework setup
 - Navigation patterns (Expo Router)
 - UI/Styling libraries (NativeWind, Tamagui)
@@ -135,11 +146,13 @@
 ### Workflow Prompts
 
 #### sprint.md
+
 **Path**: `prompts/sprint.md`
 
 **Purpose**: Agile sprint planning and execution guidance
 
 **Contains**:
+
 - Sprint goal definition
 - User story templates
 - Acceptance criteria formats
@@ -148,6 +161,7 @@
 ---
 
 #### seq.md
+
 **Path**: `prompts/seq.md`
 
 **Purpose**: Sequential task processing and breakdown
@@ -157,11 +171,13 @@
 ---
 
 #### permanent message.md
+
 **Path**: `prompts/permanent message.md`
 
 **Purpose**: Define persistent behavior for AI assistants
 
 **Contains**:
+
 - Long-term AI assistant configuration
 - Coding standards
 - Communication protocols
@@ -172,11 +188,13 @@
 ### Utility Prompts
 
 #### common.md
+
 **Path**: `prompts/common.md`
 
 **Purpose**: Shared prompt patterns and reusable components
 
 **Contains**:
+
 - Response format templates
 - Error handling patterns
 - Output structure guidelines
@@ -184,6 +202,7 @@
 ---
 
 #### aicon
+
 **Path**: `prompts/aicon`
 
 **Purpose**: Continue command handler snippet
@@ -193,6 +212,7 @@
 ---
 
 #### convert icopn.md
+
 **Path**: `prompts/convert icopn.md`
 
 **Purpose**: Icon conversion workflow instructions
@@ -202,6 +222,7 @@
 ---
 
 #### index.html.md
+
 **Path**: `prompts/index.html.md`
 
 **Purpose**: Landing page generation template
@@ -213,6 +234,7 @@
 ### Agent Configuration Prompts
 
 #### auser guidelised.md
+
 **Path**: `prompts/auser guidelised.md`
 
 **Purpose**: Comprehensive agent operational guidelines (detailed version)
@@ -222,6 +244,7 @@
 ---
 
 #### auser guidelinesprompt.md
+
 **Path**: `prompts/auser guidelinesprompt.md`
 
 **Purpose**: Prompt for generating structured agent guidelines
@@ -249,11 +272,13 @@ Complete PRD (Product Requirements Document) examples:
 ## Scripts
 
 ### gce.py
+
 **Path**: `scripts/gce.py`
 
 **Purpose**: Combine all prompt files into a single `final_prompt.txt`
 
 **Usage**:
+
 ```bash
 python scripts/gce.py
 ```
@@ -265,11 +290,13 @@ python scripts/gce.py
 ---
 
 ### gemini.py
+
 **Path**: `scripts/gemini.py`
 
 **Purpose**: Google Gemini API utility script
 
 **Usage**:
+
 1. Set `GEMINI_API_KEY` environment variable
 2. Modify the input placeholder
 3. Run: `python scripts/gemini.py`
@@ -279,11 +306,13 @@ python scripts/gce.py
 ---
 
 ### gi.js
+
 **Path**: `scripts/gi.js`
 
 **Purpose**: Generate PNG icons from SVG source
 
 **Usage**:
+
 ```bash
 npm install sharp --save-dev
 node scripts/gi.js
@@ -302,11 +331,13 @@ node scripts/gi.js
 ### Core Documentation
 
 #### AGENTS.md
+
 **Path**: `AGENTS.md`
 
 **Purpose**: Configuration guide for AI coding agents
 
 **Contains**:
+
 - Tech stack information
 - Build/lint/test commands
 - Architecture overview
@@ -315,11 +346,13 @@ node scripts/gi.js
 ---
 
 #### USAGE_GUIDE.md
+
 **Path**: `USAGE_GUIDE.md`
 
 **Purpose**: Comprehensive usage guide for all repository templates
 
 **Contains**:
+
 - Template usage instructions
 - Best practices
 - Examples for common scenarios
@@ -330,11 +363,13 @@ node scripts/gi.js
 ---
 
 #### CHANGELOG.md
+
 **Path**: `CHANGELOG.md`
 
 **Purpose**: Version history and migration guides
 
 **Contains**:
+
 - Release notes
 - Breaking changes
 - Migration paths
@@ -345,11 +380,13 @@ node scripts/gi.js
 ---
 
 #### agent-guidelines.md
+
 **Path**: `agent-guidelines.md`
 
 **Purpose**: Detailed operational directives for AI agents
 
 **Contains**:
+
 - Execution workflow
 - Code quality standards
 - Tool usage protocols
@@ -397,17 +434,20 @@ Located in `docs/specific/`:
 Located in `docs/mcp/` and `mcp/`:
 
 #### main.md
+
 **Path**: `mcp/main.md` (also `docs/mcp/main.md`)
 
 **Purpose**: Comprehensive MCP server configuration guide
 
 **Contains**:
+
 - 7+ MCP server configurations
 - Setup instructions
 - Usage examples
 - Integration patterns
 
 **Servers Covered**:
+
 1. Pieces MCP
 2. Context7 MCP
 3. Toolbox MCP (Smithery)
@@ -419,6 +459,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 #### kiro.txt
+
 **Path**: `mcp/kiro.txt`
 
 **Purpose**: Kiro MCP server specific configuration
@@ -426,6 +467,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 #### servers-config.json
+
 **Path**: `mcp/servers-config.json`
 
 **Purpose**: MCP server configuration file (JSON format)
@@ -437,6 +479,7 @@ Located in `docs/mcp/` and `mcp/`:
 ### VS Code Documentation
 
 #### setup.md
+
 **Path**: `docs/vscode/setup.md`
 
 **Purpose**: VS Code integration instructions
@@ -448,11 +491,13 @@ Located in `docs/mcp/` and `mcp/`:
 ## Configuration
 
 ### .gitignore
+
 **Path**: `.gitignore`
 
 **Purpose**: Git exclusion rules
 
 **Contains**:
+
 - Node.js exclusions
 - Python exclusions
 - Environment files
@@ -463,6 +508,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 ### pyproject.toml
+
 **Path**: `pyproject.toml`
 
 **Purpose**: Python project configuration
@@ -472,6 +518,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 ### package-lock.json
+
 **Path**: `package-lock.json`
 
 **Purpose**: Node.js dependency lock file
@@ -481,6 +528,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 ### .flake8
+
 **Path**: `.flake8`
 
 **Purpose**: Python linting configuration
@@ -488,6 +536,7 @@ Located in `docs/mcp/` and `mcp/`:
 ---
 
 ### .gitattributes
+
 **Path**: `.gitattributes`
 
 **Purpose**: Git attributes configuration
@@ -499,6 +548,7 @@ Located in `docs/mcp/` and `mcp/`:
 ### Established Patterns
 
 #### kebab-case (Preferred)
+
 - `all-pdf-tools-nextjs.md`
 - `read-aloud.md`
 - `pdf-toolkei.md`
@@ -507,10 +557,12 @@ Located in `docs/mcp/` and `mcp/`:
 **Usage**: New files, renamed files, consistency
 
 #### snake_case
+
 - `AI_CTO.md` (legacy, kept for compatibility)
 - `permanent message.md` (legacy)
 
 #### No Extension
+
 - `aicon` (small utility prompt)
 
 ### Recommendations
@@ -525,6 +577,7 @@ Located in `docs/mcp/` and `mcp/`:
 ## Archive
 
 ### Purpose
+
 Contains deprecated templates and old versions for reference and migration.
 
 ### Contents
@@ -537,11 +590,13 @@ Contains deprecated templates and old versions for reference and migration.
 | final_prompt.txt | Archived | Regenerate with `scripts/gce.py` |
 
 ### README.md
+
 **Path**: `archive/README.md`
 
 **Purpose**: Deprecation notices and migration guides
 
 **Contains**:
+
 - Detailed deprecation information
 - Migration paths
 - Historical context
@@ -598,29 +653,34 @@ Located in `other/`:
 
 ## Quick Action Guide
 
-### I want to...
+### I want to
 
 **...start a new project**
+
 1. Read `prompts/AI_CTO.md`
 2. Choose template from `templates/`
 3. Follow output structure from template
 
 **...build a browser extension**
+
 1. Use `templates/browser-extension-template.md`
 2. Reference similar projects in `docs/specific/`
 3. Generate icons with `scripts/gi.js`
 
 **...integrate Gemini AI**
+
 1. Read `prompts/gemini.md`
 2. Test with `scripts/gemini.py`
 3. Reference integration examples
 
 **...configure AI agents**
+
 1. Read `AGENTS.md`
 2. Study `agent-guidelines.md`
 3. Configure MCP servers from `mcp/`
 
 **...understand deprecated files**
+
 1. Check `archive/README.md`
 2. Find migration path
 3. Use replacement files

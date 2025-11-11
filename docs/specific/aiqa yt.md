@@ -34,53 +34,53 @@ Your task is to help a developer understand and plan their app idea through a se
 ---
 
 **1. Introduction & Overview**
-_ **1.1. Purpose**
+_**1.1. Purpose**
 _ **1.2. Problem Statement**
 \_ **1.3. Vision / High-Level Solution**
 
 **2. Goals & Objectives**
-_ **2.1. Business Goals**
+_**2.1. Business Goals**
 _ **2.2. Product Goals** \* **2.3. Success Metrics (KPIs)**
 
 **3. Scope**
-_ **3.1. In Scope**
+_**3.1. In Scope**
 _ **3.2. Out of Scope**
 
 **4. User Personas & Scenarios**
-_ **4.1. Primary Persona(s)**
+_**4.1. Primary Persona(s)**
 _ **4.2. Key User Scenarios / Use Cases**
 
 **5. User Stories**
 _(Optional - often uses identifiers like US1, US2, etc.)_
 
 **6. Functional Requirements (FR)**
-_ **6.1. [Feature Area 1 Name]**
+_**6.1. [Feature Area 1 Name]**
 _ **FR1.1:** [Requirement ID/Name]
-_ **FR1.2:** [Requirement ID/Name]
+_**FR1.2:** [Requirement ID/Name]
 _ ...
-_ **6.2. [Feature Area 2 Name]**
+_**6.2. [Feature Area 2 Name]**
 _ **FR2.1:** [Requirement ID/Name]
-_ **FR2.2:** [Requirement ID/Name]
+_**FR2.2:** [Requirement ID/Name]
 _ ... \* **6.3. [Feature Area ... Name]**
 
 **7. Non-Functional Requirements (NFR)**
-_ **7.1. Performance**
+_**7.1. Performance**
 _ **NFR1.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.2. Scalability**
-_ **NFR2.1:** [Requirement ID/Name]
+_**NFR2.1:** [Requirement ID/Name]
 _ ...
-_ **7.3. Usability**
+_**7.3. Usability**
 _ **NFR3.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.4. Reliability / Availability**
-_ **NFR4.1:** [Requirement ID/Name]
+_**NFR4.1:** [Requirement ID/Name]
 _ ...
-_ **7.5. Security**
+_**7.5. Security**
 _ **NFR5.1:** [Requirement ID/Name]
-_ ...
+_...
 _ **7.6. Accessibility**
-_ **NFR6.1:** [Requirement ID/Name]
+_**NFR6.1:** [Requirement ID/Name]
 _ ...
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
@@ -92,9 +92,8 @@ don't give this section
 don't give this section
 
 **11. Open Issues / Future Considerations**
-_ **11.1. Open Issues**
+_**11.1. Open Issues**
 _ **11.2. Future Enhancements (Post-Launch)**
-
 
 **13. Document History / Revisions**
 
@@ -123,17 +122,17 @@ Ask the agent to ensure that the frontend is error-free
 
 The agent should ensure that the browser extension is built with the following setup:
 
--   Frontend: Browser Extension
--   Project Structure:
+- Frontend: Browser Extension
+- Project Structure:
 
-    -   extension/ folder for browser extension code.
-    -   backend/ folder for the backend code for the AI model integration.
+  - extension/ folder for browser extension code.
+  - backend/ folder for the backend code for the AI model integration.
 
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   ensure the extension is built with a focus on user experience and performance.
-    -   ensure the backend is designed to handle AI model requests efficiently.
-    -   Don't leave anything for future, this will be a prd for final product not a mvp.
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - ensure the extension is built with a focus on user experience and performance.
+  - ensure the backend is designed to handle AI model requests efficiently.
+  - Don't leave anything for future, this will be a prd for final product not a mvp.
 
 IMPORTANT: use the following code strictly for the gemini integration:
 
@@ -174,7 +173,6 @@ async function main() {
 main();
 ```
 
-
 Enhance the documentation for each MCP server by adding detailed descriptions of their specific capabilities and methodologies. For each server listed in the selected code, add a new bullet point under each server that lists the specific methodologies/approaches available through that server. Format each addition as a sub-bullet point that maintains the existing documentation structure while providing more detailed information about what each server can do.
 
-For example, under the `mentalmodel` server, add specific mental models like First Principles Thinking, Opportunity Cost Analysis, etc. Under `debuggingapproach`, add specific debugging methodologies like Binary Search, Reverse Engineering, etc. Maintain the existing format and structure while adding this additional level of detail to make the documentation more comprehensive and useful.  add the following 
+For example, under the `mentalmodel` server, add specific mental models like First Principles Thinking, Opportunity Cost Analysis, etc. Under `debuggingapproach`, add specific debugging methodologies like Binary Search, Reverse Engineering, etc. Maintain the existing format and structure while adding this additional level of detail to make the documentation more comprehensive and useful.  add the following

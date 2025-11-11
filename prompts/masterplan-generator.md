@@ -43,33 +43,43 @@ Transform a raw product idea into a comprehensive masterplan.md file through str
 ### Essential Question Categories
 
 #### 1. Product Foundation
+
 - Problem & solution, target users, MVP vs full product
 
 #### 2. Platforms & Form Factor
+
 - Web, mobile, desktop, browser extension, VS Code extension, CLI, SDK
 
 #### 3. Technical Stack
+
 - Programming language, frameworks, database type
 
 #### 4. Architecture Pattern
+
 - Monolith, microservices, serverless, hybrid
 
 #### 5. Data & Integrations
+
 - Storage needs, third-party APIs, offline support
 
 #### 6. Authentication & Security
+
 - Auth method, compliance requirements, data sensitivity
 
 #### 7. UX & Design
+
 - Target audience style, design inspiration, accessibility
 
 #### 8. Non-Functional Requirements
+
 - Performance targets, concurrency, uptime
 
 #### 9. Delivery & Operations
+
 - Hosting, CI/CD, monitoring, release channels
 
 #### 10. Business Context
+
 - Monetization, target scale, timeline
 
 ### Question Format Example
@@ -101,52 +111,64 @@ Answer: [ ]
 Generate masterplan.md with these sections (no omissions):
 
 ### Document Header
+
 - Version, Owner, Status, Prepared for, Last Updated
 
 ### 1. Executive Summary
+
 - Project overview, business value, technical approach, milestones
 
 ### 2. Project Overview
+
 - Problem statement and solution
 - Target audience and user personas (2-3 personas with goals, pain points)
 - Core objectives, constraints, assumptions
 
 ### 3. Technical Stack and Architecture
+
 - Technology stack (frontend, backend, database, infrastructure, third-party services)
 - Architecture pattern with justification
 - System components and data flow
 
 ### 4. Project Scope
+
 - In scope: core features, platforms, workflows
 - Out of scope: deferred features, limitations
 
 ### 5. Functional Requirements
+
 - Organized by feature areas with IDs (FR5.1.1, FR5.1.2, etc.)
 - Each requirement: Description, User Story, Acceptance Criteria, Priority, Dependencies
 
 ### 6. Non-Functional Requirements
+
 - Performance & Scalability
 - Security & Compliance
 - Reliability & Availability
 - Usability & Accessibility
 
 ### 7. Integration Requirements
+
 - Third-party APIs and services
 - RESTful API specifications (if applicable)
 - Data formats and validation
 
 ### 8. Monitoring and Analytics
+
 - APM, error tracking, logging
 - User behavior analytics
 - Business metrics
 
 ### 9. Timeline and Success Criteria
+
 - Project phases with deliverables
 - Dependencies and critical path
 - Success metrics (quantified)
 
 ### 10. Implementation Plan
+
 **CRITICAL**: Granular tasks for AI assistant to implement without additional input
+
 - Phase 1: Setup & Foundation
 - Phase 2: Core Infrastructure
 - Phase 3: Core Features
@@ -155,34 +177,41 @@ Generate masterplan.md with these sections (no omissions):
 Each task: description, commands, acceptance criteria, effort, owner
 
 ### 11. API Endpoints and Data Models
+
 - Full endpoint specifications with request/response schemas
 - Data models with fields, types, relationships, constraints
 
 ### 12. Project Structure
+
 - Complete directory tree
 - File naming conventions
 - Code organization principles
 
 ### 13. Environment Variables
+
 - Complete .env.example with all variables
 - Configuration management best practices
 
 ### 14. Testing Strategy
+
 - Testing approach (unit, integration, E2E)
 - Tools and frameworks
 - Coverage targets and commands
 - Example tests
 
 ### 15. Deployment Strategy
+
 - Deployment architecture
 - CI/CD process
 - Migration and rollback procedures
 
 ### 16. Maintenance and Risk Management
+
 - Maintenance plan
 - Risk assessment and mitigation
 
 ### 17. Future Enhancements
+
 - Roadmap (short/medium/long term)
 - Development guidelines and coding standards
 
@@ -191,33 +220,39 @@ Each task: description, commands, acceptance criteria, effort, owner
 ## Development Guidelines to Include
 
 ### Code Quality
+
 - Follow SOLID, DRY, KISS principles
 - Modular, reusable components
 - Comprehensive error handling
 - Industry-standard best practices
 
 ### Frontend
+
 - Modern, clean, professional UI
 - UI/UX principles (clarity, consistency, accessibility)
 - Appropriate CSS frameworks
 
 ### Data Handling
+
 - Real, live data sources (no placeholders/mocks)
 - Credentials via environment variables only
 - Centralized API endpoint URLs
 - Never hardcode endpoints in components
 
 ### Assets
+
 - No placeholder images/icons
 - Create SVG, convert to PNG with sharp library
 - Build scripts for asset generation
 
 ### Documentation
+
 - Comprehensive README.md
 - CHANGELOG.md with semantic versioning
 - Clear API key/credential documentation
 
 ### Tool Usage (for AI Assistant)
+
 - Use context7 MCP server for contextual information
 - Use websearch tool for internet research
 - Use getCurrentDateTime_node for timestamps
@@ -245,6 +280,6 @@ Each task: description, commands, acceptance criteria, effort, owner
 
 ---
 
-## The raw idea is:
+## The raw idea is
 
 [User will provide their raw product idea here]

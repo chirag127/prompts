@@ -59,36 +59,42 @@ This template is specifically designed for **browser extension projects** (Chrom
 ## Key Areas for Browser Extensions
 
 ### 1. Extension Architecture
+
 - Extension type (popup, sidebar, content injection, background processing, or combination)
 - Which pages/sites will it work on (all websites, specific domains, etc.)
 - Permissions required (activeTab, storage, tabs, host permissions, etc.)
 - Browser compatibility (Chrome, Firefox, Edge, Safari, etc.)
 
 ### 2. User Interface
+
 - Activation methods (toolbar icon, context menu, keyboard shortcut, page action)
 - UI components (popup, sidebar, inline content, overlays)
 - Settings/options page requirements
 - Design style and framework preferences
 
 ### 3. Content Interaction
+
 - What page content needs to be accessed (DOM, metadata, images, text, etc.)
 - How extension modifies or interacts with pages
 - Data extraction requirements
 - Page script injection needs
 
 ### 4. Data & Storage
+
 - Local storage needs (extension storage, localStorage, IndexedDB)
 - Data persistence requirements
 - Sync across devices (if applicable)
 - Privacy considerations
 
 ### 5. Backend Integration (if applicable)
+
 - Need for backend API server
 - API framework preference (FastAPI, Express, etc.)
 - Hosting platform (PaaS like Render, Vercel, Railway, etc.)
 - Third-party API integrations (AI models, etc.)
 
 ### 6. Advanced Features
+
 - Background processing requirements
 - Web requests/fetch interception
 - Native messaging (if needed)
@@ -192,6 +198,7 @@ Prepared by: [Developer Name]
 ## Project Structure
 
 ```
+
 extension/
 ├── manifest.json
 ├── popup/
@@ -224,6 +231,7 @@ backend/ (if applicable)
 ├── requirements.txt (or package.json)
 ├── .env.example
 └── README.md
+
 ```
 
 ## Implementation Plan
@@ -327,6 +335,7 @@ PORT=8000
 ```
 
 ## Testing Strategy
+
 - Unit tests for utility functions
 - Integration tests for API calls
 - Manual testing on supported browsers
@@ -335,6 +344,7 @@ PORT=8000
 ## Deployment Strategy
 
 ### Extension Deployment
+
 - Build production version
 - Test on all supported browsers
 - Submit to Chrome Web Store
@@ -342,6 +352,7 @@ PORT=8000
 - Submit to Edge Add-ons (uses Chrome Web Store)
 
 ### Backend Deployment (if applicable)
+
 - Deploy to [hosting platform]
 - Configure environment variables
 - Set up monitoring
@@ -357,6 +368,7 @@ PORT=8000
 | Performance issues | Medium | Medium | Optimize code and lazy load resources |
 
 ## Future Enhancements
+
 - [Enhancement 1]
 - [Enhancement 2]
 - [Enhancement 3]
@@ -364,6 +376,7 @@ PORT=8000
 ## Development Guidelines
 
 ### Code Quality
+
 - Follow clean code principles
 - Use ESLint for code quality
 - Implement error boundaries
@@ -371,6 +384,7 @@ PORT=8000
 - Use TypeScript (optional but recommended)
 
 ### Extension Best Practices
+
 - Minimize permissions requested
 - Use declarative APIs when possible
 - Implement efficient background processing
@@ -389,12 +403,15 @@ Use the following MCP servers to enhance development:
 - **websearch**: Find documentation for extension APIs and latest best practices
 
 ### System Considerations
+
 - Target system: Windows 11 Home Single Language 23H2
 - Use PowerShell semicolon (`;`) for command separation
 - Test on multiple browsers and OS platforms
 
 ## Conclusion
+
 [Final thoughts and recommendations for the extension]
+
 ```
 
 ## Project Structure Guidelines
