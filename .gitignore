@@ -54,6 +54,11 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+# Jest coverage
+coverage/
+*.lcov
+.nyc_output/
+
 # Optional stylelint cache
 .stylelintcache
 

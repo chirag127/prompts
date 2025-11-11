@@ -1,22 +1,22 @@
 /**
  * Icon Generation Script (gi.js)
- * 
+ *
  * Purpose:
  *   Automatically generates PNG icons in multiple sizes (16x16, 48x48, 128x128)
  *   from a single SVG source file for browser extensions.
- * 
+ *
  * Usage:
  *   1. Place your icon.svg in extension/icons/
  *   2. Install dependencies: npm install sharp --save-dev
  *   3. Run: node script/gi.js
- * 
+ *
  * Output:
  *   Creates extension/icons/icon16.png, icon48.png, icon128.png
- * 
+ *
  * Requirements:
  *   - sharp library (npm install sharp --save-dev)
  *   - extension/icons/icon.svg source file
- * 
+ *
  * Author: Chirag Singhal (@chirag127)
  */
 
