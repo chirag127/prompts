@@ -1,5 +1,19 @@
-# generate the python code for the combining of all files in the directory prompts
-# and the generation of the final prompt
+"""
+Prompt Combiner Script (gce.py)
+
+Purpose:
+    Combines all prompt template files from the 'prompts/' directory into a single
+    'final_prompt.txt' file for easy distribution and usage.
+
+Usage:
+    python script/gce.py
+
+Output:
+    Creates/updates 'final_prompt.txt' in the repository root with combined content
+    from all files in the prompts/ directory.
+
+Author: Chirag Singhal (@chirag127)
+"""
 
 import os
 import re

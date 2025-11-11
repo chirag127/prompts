@@ -158,3 +158,19 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Temporary test directories
+test-output/
+temp/
+tmp/
+
+# Personal/sensitive files
+secrets/
+*.secret
+*.key
+*.pem
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

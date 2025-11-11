@@ -1,3 +1,25 @@
+"""
+Masterplan Template (mstemplate.md)
+
+Purpose:
+    Generic template structure for project masterplans.
+    Provides a standard format for organizing project specifications.
+
+Usage:
+    Use as a reference when creating custom masterplan templates or
+    for understanding the expected masterplan structure.
+
+Sections:
+    - Project Overview
+    - Goals and Target Audience
+    - Technical Stack
+    - Project Structure
+    - Implementation Plan (5 phases)
+    - Additional planning sections
+
+Author: Chirag Singhal (@chirag127)
+"""
+
 # Project Master Plan
 
 ## Project Overview
