@@ -242,7 +242,6 @@
 
 - Profile code for bottlenecks and optimize as needed
 - Test integrations with existing codebases/systems
-- Update `docs/TASK_LIST.md` to track integration tasks systematically
 - Implement code reviews (manual or AI-assisted) to ensure adherence to standards
 
 ### Escalation

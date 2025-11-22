@@ -152,9 +152,19 @@ _ **7.2. Scalability**
 _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 
+## Project Structure
+```
+
+project-root/
+├── [directory structure]
+├── [with all major files]
+└── [and directories]
+
+```
+
 ## Implementation Plan
 
-This section outlines the implementation plan, including phases and tasks. TThis is the most comprehensive section of the masterplan.md and should include all tasks, sub-tasks, and milestones. it should be detailed enough for an AI code assistant to implement the final product without any additional input. This should not leave any of the details of the features out. It should include all the details of the features and the implementation plan for each feature.
+This section outlines the implementation plan, including phases and tasks. Ensure that each MCP server (including mentalmodel, designpattern, programmingparadigm, debuggingapproach, collaborativereasoning, decisionframework, metacognitivemonitoring, scientificmethod, structuredargumentation, visualreasoning, and sequentialthinking) is explicitly incorporated with specific use cases, implementation details, and integration points.
 
 ### Phase 1: Setup & Foundation
 - [Task 1]
@@ -193,17 +203,6 @@ This section outlines the implementation plan, including phases and tasks. TThis
 - `[field]`: [type] - [description]
 - `[field]`: [type] - [description]
 - `[field]`: [type] - [description]
-
-
-## Project Structure
-```
-
-project-root/
-├── [directory structure]
-├── [with all major files]
-└── [and directories]
-
-```
 
 ## Environment Variables
 ```
@@ -407,197 +406,3 @@ When a user provides a raw idea, follow this process:
     - Process this raw idea according to the instructions above
 
 ## The raw idea is
-
-make a react native expo app that will offer All PDF Tools.
-no authentication.
-
-it offers many PDF tools that are tailored to specific problems. All PDF tools are listed below.
-
-# Project Specification: All PDF Tools - React Native Expo Application
-
-## 1. Project Overview
-
-Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
-
-**Target Platforms:** iOS and Android and web (Expo)
-**Authentication:** None required
-**Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
-
-## 2. Technical Requirements
-
-### 2.1 Development Framework
-
-- React Native with Expo SDK (latest stable version)
-- JavaScript implementation
-- the backend will be a python fastapi server that will be hosted on a free tier render.com server with a 0.1 cpu and 512mb ram
-ask for the following permissions as soon as the app is opened:
-All Files Access
-
-Allow access to manage all files
-
-Allow this app to read, modify and delete all files on this device or any connected storage volumes. If granted, app may access files without your explicit knowledge.
-
-show all pdf files in the device storage in a list view with preview thumbnail and file name
-
-### 2.2 PDF Processing
-
-- Implement PDF processing using React Native compatible libraries
-- Support for PDF files up to 100MB in size
-- Implement proper error handling for corrupted or incompatible PDF files
-- Include progress indicators for operations that may take time
-
-### 2.3 File Management
-
-- Implement file picking from device storage
-- Request appropriate permissions for file access
-- Support saving modified PDFs to device storage
-- Implement temporary file cleanup to prevent storage bloat
-
-## 3. Feature Categories and Requirements
-
-### 3.1 Document Organization
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Merge PDF | Combine multiple PDFs into a single document with customizable order | High |
-| Split PDF | Separate PDF into multiple documents by page ranges or individual pages | High |
-| Remove Pages | Delete specific pages from a PDF document | High |
-| Extract Pages | Save selected pages as a new PDF document | High |
-| Organize Pages | Rearrange, rotate, or delete pages within a document | Medium |
-
-### 3.2 Conversion Tools
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub to PDF | Convert single or multiple files to PDF with customizable layout | High |
-| PDF to JPG/PNG/webp/word/powerpoint/excel/html/text/rtf/epub/odt/odg/ods/odp/tiff/svg/heic/docx/pptx/xlsx/doc/ppt/xls/odt/odg/ods/odp/tiff/text/rtf/epub/html/secure PDF/PDF/A | Extract pages as images or convert entire document to  other files | High |
-
-### 3.3 Editing Tools
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Rotate PDF | Change page orientation (90°, 180°, 270°) for some or all pages | High |
-| Add Page Numbers | Insert customizable page numbers with position and format options | Medium |
-| Add Watermark | Apply text or image watermarks with opacity and position controls | Medium |
-| Crop PDF | Adjust page margins or crop to specific dimensions | Medium |
-| Basic Text/Image Editing | Add or edit simple text and images on PDF pages | Low |
-
-### 3.4 Security Tools
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Unlock PDF | Remove password protection from PDF files | High |
-| Protect PDF | Add password protection to PDF files | High |
-| Sign PDF | Add digital signatures to documents | Medium |
-| Redact PDF | Permanently remove sensitive information from documents | Low |
-
-### 3.5 Enhancement Tools
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Compress PDF | Reduce file size while maintaining reasonable quality | High |
-| Repair PDF | Attempt to fix corrupted PDF files | Medium |
-| OCR PDF | Convert scanned documents to searchable text | Medium |
-| Scan to PDF | Use device camera to scan documents and convert to PDF | Medium |
-| Compare PDF | Show differences between two PDF documents | Low |
-
-### 3.6 AI Features (Gemini API Integration)
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| Chat with PDF | Interactive Q&A with PDF content using RAG | High |
-| AI PDF Summarizer | Generate concise summaries of PDF documents | High |
-| Translate PDF | Translate PDF content between languages | Medium |
-| AI Question Generator | Create questions based on PDF content | Low |
-
-## 4. AI Implementation Requirements
-
-### 4.1 Gemini API Integration
-
-- Implement Google's Generative AI capabilities using the official SDK using python
-- User must provide their own Gemini API key through a settings page
-- Store API key securely using device secure storage (e.g., Expo SecureStore)
-- Implement model selection functionality for AI features
-- Provide a user-friendly interface for selecting models
-
-### 4.2 Retrieval Augmented Generation (RAG)
-
-- Extract and process text from PDFs for context
-- Implement chunking strategy for large documents (e.g., page-based, section-based)
-- Create appropriate prompts that combine user queries with document context
-- Handle API rate limiting and token limitations gracefully
-- Implement fallback mechanisms for when AI features are unavailable
-
-11. Localization / Internationalization (i18n):
-Will the app need to support multiple languages?
- English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
-
-### 4.3 Model Selection
-
-- Provide interface for users to select from available Gemini models
-
-ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. as there is no backend . use retrieval augmented generation for the ai features.
-Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
-
----
-
-### ✅ Step-by-step Guide
-
-#### 📦 1. Install the SDK
-
-```bash
-pip install google-generativeai
-```
-
----
-
-#### 🔑 2. Set Your API Key
-
-Get your API key from: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
-
-```python
-import google.generativeai as genai
-
-genai.configure(api_key="YOUR_API_KEY_HERE")
-```
-
----
-
-#### 📋 3. List Available Models
-
-```python
-def list_models():
-    models = genai.list_models()
-    for model in models:
-        print(f"Model name: {model.name}")
-        print(f"  Description: {getattr(model, 'description', 'N/A')}")
-        print(f"  Input token limit: {getattr(model, 'input_token_limit', 'N/A')}")
-        print(f"  Output token limit: {getattr(model, 'output_token_limit', 'N/A')}")
-        print("-" * 40)
-
-list_models()
-```
-
----
-
-### 🧠 Example Output
-
-```text
-Model name: models/gemini-1.5-pro
-  Description: Gemini 1.5 Pro model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-Model name: models/gemini-1.5-flash
-  Description: Gemini 1.5 Flash model
-  Input token limit: 32768
-  Output token limit: 8192
-----------------------------------------
-...
-```
-
-Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
-
-strictly include the above code in the masterplan.md file to get the list of available models. continue with suggested answers you provided
-
-- Treat this as an indication that the user accepts all your suggested answers and wants to move forward
