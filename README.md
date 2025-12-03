@@ -1,415 +1,147 @@
-# AI Prompts Repository
+# 🧠 CogniForge: Architectural Agent System Prompts Library
 
-> A comprehensive collection of AI prompt templates, system prompts, and utility scripts for software development workflows
+![CogniForge Logo Placeholder](https://img.shields.io/badge/CogniForge-Architectural%20Prompts-blue?style=flat-square)
 
-## 📁 Repository Structure
+This repository serves as the master index for elite, pre-engineered System Prompts and Architectural Directives designed to steer Large Language Models (LLMs) into functioning as expert Software Architects, DevOps Strategists, and Principal Engineers. It operationalizes high-fidelity scaffolding for complex software project masterplanning.
 
-```
-prompts-repository/
-├── 📂 templates/          # Reusable project templates
-│   ├── browser-extension-template.md
-│   └── web-app-template.md
-│
-├── 📂 prompts/            # General-purpose AI prompts
-│   ├── AI_CTO.md                    # Technical masterplan generation
-│   ├── ai_to.md                     # Alternative masterplan generator
-│   ├── aicon                        # Continue command handler
-│   ├── common.md                    # Common prompt patterns
-│   ├── gemini.md                    # Gemini API integration
-│   ├── masterplan-generator.md      # Project masterplan creation
-│   ├── generate master plan.md      # Additional planning prompt
-│   ├── permanent message.md         # Persistent AI instructions
-│   ├── reactnative.md               # React Native development
-│   ├── sprint.md                    # Agile sprint planning
-│   ├── seq.md                       # Sequential task processing
-│   ├── mstemplate.md                # Masterplan template
-│   ├── index.html.md                # Landing page generation
-│   ├── convert icopn.md             # Icon conversion workflows
-│   ├── vibe coding tutorial.md      # Coding tutorials
-│   ├── auser guidelinesprompt.md    # User guidelines prompt
-│   └── auser guidelised.md          # Comprehensive agent guidelines
-│
-├── 📂 projects/           # Project-specific PRDs and specifications
-│   ├── qrsay-call-waiter.md
-│   ├── quick-session-loader.md
-│   ├── text-warden-extension.md
-│   ├── webpage-chat-extension.md
-│   ├── wordtune-extension.md
-│   ├── youtube-summarizer-app.md
-│   └── youtube-summarizer-app-prd.md
-│
-├── 📂 scripts/            # Automation and utility scripts
-│   ├── gce.py              # Prompt combiner script
-│   ├── gemini.py           # Gemini API utilities
-│   └── gi.js               # Icon generation script
-│
-├── 📂 docs/               # Documentation and guides
-│   ├── AGENTS.md           # Agent configuration
-│   ├── LICENSE             # Repository license
-│   ├── README.md           # Documentation index
-│   ├── 📂 specific/        # Project-specific documentation
-│   │   ├── Historical Context Tool.md
-│   │   ├── aicto.md
-│   │   ├── ai-reply-prd.md
-│   │   ├── aiqa yt.md
-│   │   ├── aireply.md
-│   │   ├── all-pdf-tools-nextjs.md
-│   │   ├── allpdf-python.md
-│   │   ├── allpdf.md
-│   │   ├── allpdftools.md
-│   │   ├── ch.md
-│   │   ├── commit.md
-│   │   ├── contextual sidebar.md
-│   │   ├── download file mcp.md
-│   │   ├── md.md
-│   │   ├── pdf other features.md
-│   │   ├── pdf-toolkei.md
-│   │   ├── pdft.md
-│   │   ├── prompt boost.md
-│   │   ├── proxy.md
-│   │   ├── qrcode.md
-│   │   ├── read-aloud.md
-│   │   ├── vscode.md
-│   │   ├── vscodespeak.md
-│   │   ├── x.md
-│   │   └── yt summarizer browser extension..md
-│   └── 📂 vscode/          # VS Code specific configurations
-│       └── setup.md
-│
-├── 📂 mcp/                # MCP server configurations
-│   ├── main.md             # Comprehensive MCP configs
-│   ├── kiro.txt            # Kiro MCP settings
-│   └── servers-config.json # MCP server configuration
-│
-├── 📂 other/              # Miscellaneous utilities
-│   ├── aug.md              # Augmentation guidelines
-│   ├── cd.md
-│   ├── ga.md
-│   ├── gd.md
-│   ├── grammarly.md
-│   ├── qray.md
-│   ├── qrsayapp.md
-│   ├── uc.md
-│   └── vct.md
-│
-├── 📂 archive/            # Deprecated templates and backups
-│   ├── README.md           # Deprecation notices and migration guides
-│   ├── aictoold.md         # Old AI CTO template
-│   ├── aug.md              # Duplicate augmentation guidelines
-│   ├── augg.md             # Duplicate augmentation guidelines
-│   └── final_prompt.txt    # Archived combined prompt
-│
-├── 📄 AGENTS.md           # AI agent operational guidelines
-├── 📄 CHANGELOG.md        # Version history and changes
-├── 📄 USAGE_GUIDE.md      # Comprehensive usage documentation
-├── 📄 agent-guidelines.md # Agent operational directives
-└── 📄 .gitignore          # Git exclusions
-```
-
-## 🚀 Quick Start
-
-### For General Development Tasks
-
-Use prompts in the `/prompts` directory:
-
-- **AI_CTO.md**: Generate comprehensive technical masterplans
-- **gemini.md**: Integrate Google Gemini API
-- **reactnative.md**: Build React Native applications
-- **sprint.md**: Plan agile sprints
-
-### For Specific Projects
-
-Browse the `/projects` and `/docs/specific` directories for detailed PRDs and specifications.
-
-### For Code Generation
-
-Use templates in the `/templates` directory as starting points.
-
-## 📚 Key Files
-
-### Core Documentation
-
-- **[REPOSITORY_INDEX.md](REPOSITORY_INDEX.md)** - **📑 Complete file reference and navigation guide**
-- **[AGENTS.md](AGENTS.md)** - Configuration for AI coding agents
-- **[USAGE_GUIDE.md](USAGE_GUIDE.md)** - Comprehensive usage instructions
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history and migration guides
-- **[agent-guidelines.md](agent-guidelines.md)** - Detailed agent operational directives
-
-### Templates
-
-- **[browser-extension-template.md](templates/browser-extension-template.md)** - Browser extension boilerplate
-- **[web-app-template.md](templates/web-app-template.md)** - Web application template
-
-### Utility Scripts
-
-- **[gce.py](scripts/gce.py)** - Combine prompt files
-- **[gemini.py](scripts/gemini.py)** - Gemini API utilities
-- **[gi.js](scripts/gi.js)** - Icon generation automation
-
-## 🎯 Common Use Cases
-
-### 1. Generate a Technical Masterplan
-
-```
-Use: prompts/AI_CTO.md
-Purpose: Create comprehensive technical specifications for any project
-Output: Complete masterplan.md with architecture, stack, and implementation plan
-```
-
-### 2. Build a Browser Extension
-
-```
-Use: templates/browser-extension-template.md + docs/specific/[relevant-extension].md
-Purpose: Rapid browser extension development
-Output: Production-ready extension code
-```
-
-### 3. Configure MCP Servers
-
-```
-Use: mcp/main.md or mcp/servers-config.json
-Purpose: Set up Model Context Protocol servers
-Output: Configured AI tool integrations
-```
-
-### 4. Plan Development Sprints
-
-```
-Use: prompts/sprint.md
-Purpose: Organize agile development cycles
-Output: Sprint plans with tasks and timelines
-```
-
-## 🔧 Configuration Files
-
-- **mcp/servers-config.json** - MCP server configurations
-- **.gitignore** - Git exclusion rules
-- **pyproject.toml** - Python project configuration and build system
-- **package-lock.json** - Node.js dependencies
-
-## 🛠️ Build & Validation
-
-This repository includes a comprehensive unified build validation system for ensuring code quality across all languages.
-
-### Python Build Validation
-
-The `build.py` script provides complete Python validation:
-
-```bash
-# Basic validation
-python build.py
-
-# Detailed output
-python build.py --verbose
-
-# Auto-fix formatting issues
-python build.py --fix
-```
-
-**Features:**
-- ✅ Python syntax validation (AST parsing)
-- ✅ Flake8 linting (PEP 8 compliance)
-- ✅ Black formatting checks
-- ✅ Pytest test execution
-- ✅ Comprehensive error reporting
-
-**Exit Codes:**
-- `0` - All checks passed
-- `1` - Validation failures detected
-
-### Cross-Language Validation
-
-Unified validation scripts for Python, JavaScript, JSON, and Markdown:
-
-```bash
-# Linux/Mac
-./validate.sh [--fix] [--verbose]
-
-# Windows
-validate.bat [--fix] [--verbose]
-```
-
-**Features:**
-- ✅ Python validation (via build.py)
-- ✅ JavaScript syntax validation (Node.js)
-- ✅ ESLint linting for JS files
-- ✅ JSON syntax validation
-- ✅ Markdown linting (markdownlint)
-- ✅ Colorized output and progress indicators
-- ✅ Auto-fix support for formatting issues
-
-**Options:**
-- `--fix` or `-f` - Automatically fix issues where possible
-- `--verbose` or `-v` - Show detailed output for all checks
-
-### Build System Configuration
-
-The `pyproject.toml` file includes:
-
-```toml
-[build-system]
-requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
-build-backend = "setuptools.build_meta"
-
-[project.optional-dependencies]
-dev = [
-    "black>=23.0.0",     # Code formatting
-    "flake8>=6.0.0",     # Linting
-    "pytest>=7.0.0",     # Testing
-]
-
-[tool.black]
-line-length = 100
-target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
-
-[tool.flake8]
-max-line-length = 100
-ignore = ['E203', 'W503']  # Black compatibility
-```
-
-### Setup Development Environment
-
-```bash
-# Install development dependencies
-pip install -e ".[dev]"
-
-# Install Gemini API dependencies (optional)
-pip install -e ".[gemini]"
-
-# Install Node.js linters (optional)
-npm install -g eslint markdownlint-cli
-```
-
-### Continuous Validation Workflow
-
-```bash
-# 1. Make code changes
-# 2. Run validation
-./validate.sh --verbose
-
-# 3. Auto-fix formatting issues
-./validate.sh --fix
-
-# 4. Run Python-specific checks
-python build.py --verbose --fix
-
-# 5. Verify all checks pass
-./validate.sh
-```
-
-## 📖 Documentation
-
-### Main Guides
-
-- [Usage Guide](USAGE_GUIDE.md) - Detailed usage instructions for all templates
-- [Agent Guidelines](agent-guidelines.md) - Operational directives for AI agents
-- [Changelog](CHANGELOG.md) - Version history and migration guides
-
-### Specific Documentation
-
-- [MCP Configurations](mcp/main.md) - Model Context Protocol server setup
-- [VS Code Setup](docs/vscode/setup.md) - VS Code integration instructions
-- [Archive Documentation](archive/README.md) - Deprecated template information
-
-## 🤝 Contributing
-
-This repository is a personal collection of AI prompts and templates. Feel free to:
-
-- Report issues with templates
-- Suggest improvements
-- Share your own prompt variations
-
-## 👤 Author
-
-**Chirag Singhal** ([@chirag127](https://github.com/chirag127))
-
-## 📄 License
-
-See [docs/LICENSE](docs/LICENSE) for details.
-
-## 🗂️ Directory Purpose Guide
-
-### `/prompts` - General Purpose Templates
-
-System prompts and templates for common development tasks. Use these for:
-
-- Project planning and architecture
-- API integrations
-- Development workflows
-- Code generation guidelines
-
-### `/projects` - Complete Project Specifications
-
-Full PRDs and specifications for complete applications. Use these as:
-
-- Reference implementations
-- Project inspiration
-- Complete specification examples
-
-### `/templates` - Boilerplate Starting Points
-
-Ready-to-use templates for common project types. Use these to:
-
-- Kickstart new projects quickly
-- Ensure consistent structure
-- Follow best practices
-
-### `/scripts` - Automation Utilities
-
-Helper scripts for prompt management and asset generation. Use these to:
-
-- Combine multiple prompts
-- Generate icons and assets
-- Automate repetitive tasks
-
-### `/docs` - Extended Documentation
-
-Detailed guides, configurations, and project-specific documentation. Use these for:
-
-- In-depth learning
-- Project-specific requirements
-- Reference documentation
-
-### `/mcp` - MCP Server Configurations
-
-Model Context Protocol server setup and configuration files. Use these for:
-
-- Configuring AI tool integrations
-- Setting up context servers
-- Managing MCP tools
-
-### `/other` - Miscellaneous Utilities
-
-Helper prompts and utilities that don't fit other categories. Use these for:
-
-- Writing assistance
-- Quality assurance
-- General augmentation
-
-### `/archive` - Deprecated Content
-
-Old versions and deprecated templates. Check these for:
-
-- Migration paths from old templates
-- Historical reference
-- Legacy project support
-
-## 🔍 Finding What You Need
-
-1. **Looking for a specific file?** → See [REPOSITORY_INDEX.md](REPOSITORY_INDEX.md) 📑
-2. **Need to plan a project?** → Start with `/prompts/AI_CTO.md`
-3. **Building a specific app type?** → Check `/projects` or `/docs/specific`
-4. **Want a quick start?** → Use `/templates`
-5. **Setting up tools?** → See `/mcp` directory
-6. **Running automation?** → Execute scripts in `/scripts`
-7. **Learning the system?** → Read [USAGE_GUIDE.md](USAGE_GUIDE.md)
-
-## 🔄 Recent Updates
-
-See [CHANGELOG.md](CHANGELOG.md) for detailed version history.
+[![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/ci.yml?style=flat-square)](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/actions/workflows/ci.yml)
+[![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square)](https://codecov.io/gh/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-red?style=flat-square)](./LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square)](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library)
 
 ---
 
-**Last Updated**: 2025-01-XX  
-**Repository Version**: 2.0.0  
-**Maintained by**: Chirag Singhal
+### 🚀 Social Proof
+
+If this framework accelerates your architectural definition process, please consider starring the repository to support its continued evolution:
+
+<a href="https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/stargazers"><img src="https://img.shields.io/github/stars/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=social" alt="GitHub Stars"></a>
+
+---
+
+## 📜 Project Overview
+
+**CogniForge** provides a curated, categorized library of declarative system instructions that force AI agents (like GPT-4o or Gemini Advanced) to operate within established, high-integrity engineering paradigms. This eliminates vague outputs by mandating adherence to specific roles (e.g., "Apex Technical Authority"), architectural patterns (e.g., Hexagonal, FSD), and modern tooling standards (2026 Toolchain).
+
+**Core Value Proposition:** Transitioning AI from creative assistant to reliable, deterministic, Master Architect.
+
+## 🏛️ Architecture & Structure
+
+The repository is structured categorically, mapping prompt complexity to software development lifecycle stages.
+
+text
+CogniForge-Architectural-Agent-System-Prompts-Library/
+├── prompts/
+│   ├── 01_identity_and_role_definition/ (Core Persona Definitions)
+│   ├── 02_architecture_patterns/ (SOLID, DDD, Event-Sourcing Directives)
+│   ├── 03_devops_and_infrastructure/ (IaC Prompt Templates)
+│   ├── 04_language_specific/
+│   │   ├── python_apex_stack.md
+│   │   └── typescript_web_stack.md
+│   └── 05_project_scaffolding/ (Masterplan Generation)
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/ci.yml
+├── AGENTS.md (System Directives for LLMs operating on this repo)
+├── badges.yml
+├── CONTRIBUTING.md
+├── LICENSE (CC BY-NC 4.0)
+├── README.md
+└── PROPOSED_README.md
+
+
+## 🗺️ Table of Contents
+
+1.  [🧠 CogniForge: Architectural Agent System Prompts Library](#-cogniforge-architectural-agent-system-prompts-library)
+2.  [🚀 Social Proof](#-social-proof)
+3.  [📜 Project Overview](#-project-overview)
+4.  [🏛️ Architecture & Structure](#-architecture--structure)
+5.  [🗺️ Table of Contents](#-table-of-contents)
+6.  [🤖 AI Agent Directives (SSOT for LLMs)](#-ai-agent-directives-ssot-for-llms)
+7.  [🛠️ Development Standards & Verification](#-development-standards--verification)
+    *   [Setup](#setup)
+    *   [Scripts](#scripts)
+    *   [Guiding Principles](#guiding-principles)
+
+---
+
+## 🤖 AI Agent Directives (SSOT for LLMs)
+
+<details>
+<summary>Click to view the customized System Directives for agents interacting with this repository.</summary>
+
+# SYSTEM: APEX TECHNICAL AUTHORITY & ELITE ARCHITECT (DECEMBER 2025 EDITION)
+
+## 1. IDENTITY & PRIME DIRECTIVE
+**Role:** You are a Senior Principal Software Architect and Master Technical Copywriter with **40+ years of elite industry experience**. You operate with absolute precision, enforcing FAANG-level standards and the wisdom of "Managing the Unmanageable."
+**Context:** Current Date is **December 2025**. You are building for the 2026 standard.
+**Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
+**Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
+
+---
+
+## 2. INPUT PROCESSING & COGNITION
+*   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
+    *   **Context:** User inputs may contain phonetic errors (homophones, typos).
+    *   **Semantic Correction:** **STRICTLY FORBIDDEN** from executing literal typos. You must **INFER** technical intent based on the project context.
+    *   **Logic Anchor:** Treat the `README.md` as the **Single Source of Truth (SSOT)**.
+*   **MANDATORY MCP INSTRUMENTATION:**
+    *   **No Guessing:** Do not hallucinate APIs.
+    *   **Research First:** Use `linkup`/`brave` to search for **December 2025 Industry Standards**, **Security Threats**, and **2026 UI Trends**.
+    *   **Validation:** Use `docfork` to verify *every* external API signature.
+    *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
+
+---
+
+## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
+**Directives:** Detect the project type (`pyproject.toml` for Python) and apply the corresponding **Apex Toolchain**. This repository, `CogniForge-Architectural-Agent-System-Prompts-Library`, is a **Markdown/Prompt Engineering** repository, requiring structure and verification, not code compilation.
+
+*   **PRIMARY SCENARIO: INFRASTRUCTURE / KNOWLEDGE BASE (Markdown/Prompts)**
+    *   **Stack:** This project primarily manages declarative text artifacts. Verification involves Markdown syntax checking, prompt consistency testing (if executable tests were in place), and structural adherence to the repository's internal naming convention.
+    *   **Architecture:** **Knowledge Graph Structure** is paramount. Information must be atomic, contextually searchable, and strictly hierarchical. Treat each prompt file as a **Port** in a Ports & Adapters model, where the AI Model is the Adapter.
+    *   **Verification Standard:** Consistency of **Tone, Role Definition, and Output Format** across all prompt files is the primary CI metric.
+
+*   **SECONDARY SCENARIO A: WEB / APP / EXTENSION (TypeScript) - *Reference only.***
+    *   **Stack:** TypeScript 6.x (Strict), Vite 7 (Rolldown), Tauri v2.x (Native), WXT (Extensions).
+    *   **State:** Signals (Standardized).
+
+## 4. REPOSITORY MAINTENANCE DIRECTIVES
+1.  **Versioning:** Treat prompt categories as stable components. Only update major prompt versions (`v1.0` to `v2.0`) when foundational LLM behavior or API standards change significantly (e.g., GPT-5 release).
+2.  **License Enforcement:** Ensure all new artifacts adhere to the CC BY-NC 4.0 license.
+3.  **Metadata Integrity:** If new directories are added, update the `README.md` tree structure within 1 commit cycle.
+
+</details>
+
+## 🛠️ Development Standards & Verification
+
+Since this is a knowledge/prompt repository, standard compilation CI/CD focuses on metadata and structural validation.
+
+### Setup
+
+bash
+# Clone the repository
+git clone https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library.git
+cd CogniForge-Architectural-Agent-System-Prompts-Library
+
+# Initial verification (Assuming CI runs validation steps)
+# For knowledge repos, running the CI workflow manually simulates the process.
+# Note: As this is a prompt repo, direct language installation is secondary to structural checks.
+
+
+### Scripts
+
+| Script | Command | Description |
+| :--- | :--- | :--- |
+| **Validate Structure** | `npm run validate` | Runs schema checks on markdown files (Hypothetical CI step simulation). |
+| **Badge Generation** | `npx @apex/badge-gen` | Re-generates `badges.yml` content (Hypothetical CLI). |
+| **View Directives** | `cat AGENTS.md` | Displays the active system prompt context. |
+
+### Guiding Principles
+
+*   **SOLID:** Prompts must be Single Responsibility (one prompt, one task definition).
+*   **DRY:** Core identity definitions must be imported/referenced rather than duplicated.
+*   **YAGNI:** Avoid overly complex conditional logic unless absolutely mandated by the target LLM's known limitations.
+
+---
+
+**CogniForge v1.0.0** | Built on the wisdom of 40+ years of architecture experience.
