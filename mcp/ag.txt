@@ -1,0 +1,162 @@
+{
+  "mcpServers": {
+    "context7-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@upstash/context7-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ]
+    },
+    "toolbox": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery/toolbox",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "mem0-memory-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@mem0ai/mem0-memory-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "fetch": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery-ai/fetch",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "ref-tools-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@ref-tools/ref-tools-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "brightdata-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@luminati-io/brightdata-mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "docfork": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@docfork/mcp",
+        "--key",
+        "YOUR_SMITHERY_KEY"
+      ]
+    },
+    "linkup-mcp-server": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@LinkupPlatform/linkup-mcp-server",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "clear-thought-two": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@Kastalien-Research/clear-thought-two",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "Openrouter": {
+      "serverUrl": "https://glama.ai/endpoints/egf9jvdeyi/mcp",
+      "headers": {
+        "Authorization": "Bearer REDACTED_MCP_KEY",
+        "Content-Type": "application/json"
+      }
+    },
+    "brave": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "brave",
+        "--key",
+        "YOUR_SMITHERY_KEY",
+        "--profile",
+        "YOUR_SMITHERY_PROFILE"
+      ]
+    },
+    "firebase-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "env": {}
+    }
+  }
+}
