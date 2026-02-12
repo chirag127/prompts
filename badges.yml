@@ -1,0 +1,55 @@
+# badges.yml
+# This file centrally manages the Shields.io badges for the repository's README.md.
+# It ensures consistency and simplifies updates.
+# Style: flat-square (Mandatory)
+# For more info: https://shields.io/
+
+badges:
+  - name: "Build Status"
+    imageUrl: "https://img.shields.io/github/actions/workflow/status/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white"
+    targetUrl: "https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/actions/workflows/ci.yml"
+    markdown: "[
+![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/ci.yml?branch=main&style=flat-square&logo=githubactions&logoColor=white)
+](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/actions/workflows/ci.yml)"
+
+  - name: "GitHub Stars"
+    imageUrl: "https://img.shields.io/github/stars/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github&logoColor=white"
+    targetUrl: "https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/stargazers"
+    markdown: "[
+![GitHub Stars](https://img.shields.io/github/stars/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github&logoColor=white)
+](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/stargazers)"
+
+  - name: "License"
+    imageUrl: "https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg?style=flat-square"
+    targetUrl: "https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/blob/main/LICENSE"
+    markdown: "[
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg?style=flat-square)
+](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/blob/main/LICENSE)"
+
+  - name: "Tech Stack"
+    imageUrl: "https://img.shields.io/badge/Tech-Markdown-blue?style=flat-square&logo=markdown"
+    targetUrl: "#"
+    markdown: "
+![Tech Stack](https://img.shields.io/badge/Tech-Markdown-blue?style=flat-square&logo=markdown)
+"
+
+  - name: "Linter"
+    imageUrl: "https://img.shields.io/badge/Lint-markdownlint-blueviolet?style=flat-square&logo=markdown"
+    targetUrl: "https://github.com/DavidAnson/markdownlint"
+    markdown: "[
+![Linter](https://img.shields.io/badge/Lint-markdownlint-blueviolet?style=flat-square&logo=markdown)
+](https://github.com/DavidAnson/markdownlint)"
+
+  - name: "Last Commit"
+    imageUrl: "https://img.shields.io/github/last-commit/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github"
+    targetUrl: "https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/commits/main"
+    markdown: "[
+![Last Commit](https://img.shields.io/github/last-commit/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github)
+](https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library/commits/main)"
+
+  - name: "Repo Size"
+    imageUrl: "https://img.shields.io/github/repo-size/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github"
+    targetUrl: "https://github.com/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library"
+    markdown: "
+![Repo Size](https://img.shields.io/github/repo-size/chirag127/CogniForge-Architectural-Agent-System-Prompts-Library?style=flat-square&logo=github)
+"
