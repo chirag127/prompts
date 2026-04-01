@@ -5,16 +5,15 @@ Tests the prompt combiner script including file operations, content reading,
 and final prompt generation.
 """
 
-import unittest
 import os
-import tempfile
 import shutil
-from unittest.mock import patch, mock_open, call
 import sys
+import tempfile
+import unittest
 
 # Import the functions from gce.py
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
-from gce import get_files_in_directory, get_file_contents, main
+from gce import get_file_contents, get_files_in_directory, main
 
 
 class TestGetFilesInDirectory(unittest.TestCase):
@@ -86,7 +85,7 @@ class TestGetFileContents(unittest.TestCase):
         """Test reading a simple text file."""
         test_content = "Hello, World!"
         test_file = os.path.join(self.test_dir, "test.txt")
-        
+
         with open(test_file, "w") as f:
             f.write(test_content)
 
@@ -97,7 +96,7 @@ class TestGetFileContents(unittest.TestCase):
         """Test reading a file with multiple lines."""
         test_content = "Line 1\nLine 2\nLine 3\n"
         test_file = os.path.join(self.test_dir, "multiline.txt")
-        
+
         with open(test_file, "w") as f:
             f.write(test_content)
 
@@ -114,9 +113,9 @@ class TestGetFileContents(unittest.TestCase):
 
     def test_read_file_with_special_characters(self):
         """Test reading a file with special characters."""
-        test_content = "Special chars: !@#$%^&*()_+-={}[]|\\:\";<>?,./~`"
+        test_content = 'Special chars: !@#$%^&*()_+-={}[]|\\:";<>?,./~`'
         test_file = os.path.join(self.test_dir, "special.txt")
-        
+
         with open(test_file, "w") as f:
             f.write(test_content)
 
@@ -127,7 +126,7 @@ class TestGetFileContents(unittest.TestCase):
         """Test reading a markdown file."""
         test_content = "# Header\n\n## Subheader\n\n- Item 1\n- Item 2\n"
         test_file = os.path.join(self.test_dir, "test.md")
-        
+
         with open(test_file, "w") as f:
             f.write(test_content)
 
@@ -143,7 +142,7 @@ class TestMainFunction(unittest.TestCase):
         self.test_dir = tempfile.mkdtemp()
         self.prompts_dir = os.path.join(self.test_dir, "prompts")
         os.mkdir(self.prompts_dir)
-        
+
         self.original_dir = os.getcwd()
         os.chdir(self.test_dir)
 
@@ -294,7 +293,7 @@ class TestIntegration(unittest.TestCase):
         prompts = {
             "system.md": "# System Prompt\n\nYou are an AI assistant.",
             "guidelines.md": "# Guidelines\n\n1. Be helpful\n2. Be accurate",
-            "examples.md": "# Examples\n\nExample 1: ...\nExample 2: ..."
+            "examples.md": "# Examples\n\nExample 1: ...\nExample 2: ...",
         }
 
         for filename, content in prompts.items():
@@ -306,7 +305,7 @@ class TestIntegration(unittest.TestCase):
 
         # Verify output
         self.assertTrue(os.path.exists("final_prompt.txt"))
-        
+
         with open("final_prompt.txt", "r") as f:
             final_content = f.read()
 

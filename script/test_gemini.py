@@ -5,10 +5,10 @@ Tests the Gemini API utility script configuration and structure.
 Focuses on static analysis and configuration validation.
 """
 
-import unittest
-import os
 import ast
+import os
 import re
+import unittest
 
 
 class TestGeminiConfiguration(unittest.TestCase):
@@ -96,7 +96,7 @@ class TestGeminiScriptStructure(unittest.TestCase):
         """Test that API configuration happens before model creation."""
         config_pos = self.content.find("genai.configure")
         model_pos = self.content.find("GenerativeModel")
-        
+
         self.assertLess(config_pos, model_pos)
         self.assertGreater(config_pos, 0)
 
@@ -104,7 +104,7 @@ class TestGeminiScriptStructure(unittest.TestCase):
         """Test that model is created before chat session."""
         model_pos = self.content.find("GenerativeModel")
         chat_pos = self.content.find("start_chat")
-        
+
         self.assertLess(model_pos, chat_pos)
         self.assertGreater(model_pos, 0)
 
@@ -112,7 +112,7 @@ class TestGeminiScriptStructure(unittest.TestCase):
         """Test that chat is created before sending message."""
         chat_pos = self.content.find("start_chat")
         message_pos = self.content.find("send_message")
-        
+
         self.assertLess(chat_pos, message_pos)
         self.assertGreater(chat_pos, 0)
 
@@ -120,7 +120,7 @@ class TestGeminiScriptStructure(unittest.TestCase):
         """Test that message is sent before printing response."""
         message_pos = self.content.find("send_message")
         print_pos = self.content.find("print(response.text)")
-        
+
         self.assertLess(message_pos, print_pos)
         self.assertGreater(message_pos, 0)
 
@@ -175,17 +175,17 @@ class TestGeminiAPIConfig(unittest.TestCase):
 
     def test_model_variable_name(self):
         """Test that model is assigned to 'model' variable."""
-        pattern = r'model\s*=\s*genai\.GenerativeModel'
+        pattern = r"model\s*=\s*genai\.GenerativeModel"
         self.assertIsNotNone(re.search(pattern, self.content))
 
     def test_chat_session_variable(self):
         """Test that chat session is assigned to 'chat_session' variable."""
-        pattern = r'chat_session\s*=\s*model\.start_chat'
+        pattern = r"chat_session\s*=\s*model\.start_chat"
         self.assertIsNotNone(re.search(pattern, self.content))
 
     def test_response_variable(self):
         """Test that response is assigned to 'response' variable."""
-        pattern = r'response\s*=\s*chat_session\.send_message'
+        pattern = r"response\s*=\s*chat_session\.send_message"
         self.assertIsNotNone(re.search(pattern, self.content))
 
 
@@ -225,23 +225,23 @@ class TestGeminiSyntax(unittest.TestCase):
         """Test that the script has valid Python syntax."""
         with open("script/gemini.py", "r") as f:
             content = f.read()
-        
+
         try:
             ast.parse(content)
             valid = True
         except SyntaxError:
             valid = False
-        
+
         self.assertTrue(valid)
 
     def test_imports_at_top(self):
         """Test that imports are at the beginning of the file."""
         with open("script/gemini.py", "r") as f:
             content = f.read()
-        
+
         # Find first import statement
-        import_pos = content.find('import')
-        
+        import_pos = content.find("import")
+
         # Check that imports appear early in file (within first 1000 chars)
         self.assertGreater(import_pos, 0)
         self.assertLess(import_pos, 1000)
@@ -250,13 +250,13 @@ class TestGeminiSyntax(unittest.TestCase):
         """Test that file can be parsed without syntax errors."""
         with open("script/gemini.py", "r") as f:
             content = f.read()
-        
+
         try:
             compile(content, "gemini.py", "exec")
             has_errors = False
         except SyntaxError:
             has_errors = True
-        
+
         self.assertFalse(has_errors)
 
 
@@ -278,13 +278,7 @@ class TestGeminiConstants(unittest.TestCase):
 
     def test_all_config_keys_present(self):
         """Test that all configuration keys are present."""
-        required_keys = [
-            "temperature",
-            "top_p",
-            "top_k",
-            "max_output_tokens",
-            "response_mime_type"
-        ]
+        required_keys = ["temperature", "top_p", "top_k", "max_output_tokens", "response_mime_type"]
         for key in required_keys:
             self.assertIn(f'"{key}"', self.content)
 

@@ -22,8 +22,6 @@ Author: Chirag Singhal (@chirag127)
 
 import argparse
 import ast
-import glob
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -122,9 +120,7 @@ class BuildValidator:
 
     def run_tests(self) -> bool:
         """Run pytest if test files exist."""
-        test_files = list(Path(".").glob("**/test_*.py")) + list(
-            Path(".").glob("**/*_test.py")
-        )
+        test_files = list(Path(".").glob("**/test_*.py")) + list(Path(".").glob("**/*_test.py"))
         if not test_files:
             self.log("No test files found, skipping tests", "INFO")
             return True
@@ -212,12 +208,8 @@ class BuildValidator:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Validate Python scripts in the repository"
-    )
-    parser.add_argument(
-        "--verbose", "-v", action="store_true", help="Show detailed output"
-    )
+    parser = argparse.ArgumentParser(description="Validate Python scripts in the repository")
+    parser.add_argument("--verbose", "-v", action="store_true", help="Show detailed output")
     parser.add_argument(
         "--fix", "-f", action="store_true", help="Auto-fix linting issues where possible"
     )
