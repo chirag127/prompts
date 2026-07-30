@@ -1,4 +1,3 @@
-
 # Creating a masterplan.md
 
 You are a professional CTO who is very friendly and supportive.
@@ -155,7 +154,7 @@ _(Add other NFR categories as needed: Maintainability, Portability, etc.)_
 
 ## Implementation Plan
 
-This section outlines the implementation plan, including phases and tasks.
+This section outlines the implementation plan, including phases and tasks. TThis is the most comprehensive section of the masterplan.md and should include all tasks, sub-tasks, and milestones. it should be detailed enough for an AI code assistant to implement the final product without any additional input. This should not leave any of the details of the features out. It should include all the details of the features and the implementation plan for each feature.
 
 ### Phase 1: Setup & Foundation
 - [Task 1]
@@ -269,6 +268,14 @@ When creating the masterplan.md, incorporate these development guidelines from t
 -   Provide modern, clean, professional, and intuitive UI designs
 -   Adhere to UI/UX principles (clarity, consistency, simplicity, feedback, accessibility/WCAG)
 -   Use appropriate CSS frameworks/methodologies (e.g., Tailwind, BEM)
+
+### React Native Guidelines (if applicable)
+
+-   Use Expo framework with JavaScript
+-   Prefer Expo Router; consider React Navigation with react-native-bottom-tabs for tabs
+-   Use NativeWind, UniStyles, or Tamagui for styling
+-   Use react-native-reanimated (complex) or moti (simple) for animations
+-   Use TanStack Query (server), Zustand (global) for state management
 
 ### Data Handling & APIs
 
@@ -408,7 +415,7 @@ it offers many PDF tools that are tailored to specific problems. All PDF tools a
 Develop a comprehensive React Native Expo application that provides users with a complete suite of PDF manipulation tools. The application should function as an all-in-one PDF utility that allows users to perform various operations on PDF files directly from their mobile devices.
 
 **Target Platforms:** iOS and Android and web (Expo)
-**Authentication:** None required (serverless implementation)
+**Authentication:** None required
 **Core Value Proposition:** Provide a free, comprehensive set of PDF tools accessible from mobile devices without requiring user accounts or cloud storage.
 
 ## 2. Technical Requirements
@@ -416,7 +423,7 @@ Develop a comprehensive React Native Expo application that provides users with a
 ### 2.1 Development Framework
 - React Native with Expo SDK (latest stable version)
 - JavaScript implementation
-- No backend server requirements (fully client-side implementation)
+- the backend will be a python fastapi server that will be hosted on a free tier render.com server with a 0.1 cpu and 512mb ram
 ask for the following permissions as soon as the app is opened:
 All Files Access
 
@@ -430,7 +437,6 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 
 ### 2.2 PDF Processing
 - Implement PDF processing using React Native compatible libraries
-- All PDF operations must be performed on-device to ensure privacy
 - Support for PDF files up to 100MB in size
 - Implement proper error handling for corrupted or incompatible PDF files
 - Include progress indicators for operations that may take time
@@ -496,101 +502,86 @@ show all pdf files in the device storage in a list view with preview thumbnail a
 ## 4. AI Implementation Requirements
 
 ### 4.1 Gemini API Integration
-- Implement Google's Generative AI capabilities using the official SDK
-- Required installation: `npm install @google/generative-ai`
+- Implement Google's Generative AI capabilities using the official SDK using python
 - User must provide their own Gemini API key through a settings page
 - Store API key securely using device secure storage (e.g., Expo SecureStore)
-- Implement model selection functionality with appropriate defaults
-
+- Implement model selection functionality for AI features
+- Provide a user-friendly interface for selecting models
 ### 4.2 Retrieval Augmented Generation (RAG)
 - Extract and process text from PDFs for context
 - Implement chunking strategy for large documents (e.g., page-based, section-based)
 - Create appropriate prompts that combine user queries with document context
 - Handle API rate limiting and token limitations gracefully
 - Implement fallback mechanisms for when AI features are unavailable
+11. Localization / Internationalization (i18n):
+Will the app need to support multiple languages?
+ English only for the app's UI in the initial version. However, the codebase should be structured to easily support i18n later (e.g., by externalizing all user-facing strings into resource files).
 
 ### 4.3 Model Selection
 - Provide interface for users to select from available Gemini models
-- Implement model listing functionality as shown in the example code:
-```javascript
-async function listModels() {
-  const models = await client.listModels();
-  return models.map(model => ({
-    name: model.name,
-    description: model.description,
-    inputTokenLimit: model.inputTokenLimit,
-    outputTokenLimit: model.outputTokenLimit
-  }));
-}
-```
 
-ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. the ai features will be implemented completely on the frontend. as there is no backend . use retrieval augmented generation for the ai features.
-To get the list of available **Gemini models** (from Google’s Generative AI platform, formerly known as Bard/PaLM) using **JavaScript**, you typically use the **Google Generative AI SDK** (via REST API or Node.js client).
 
-### 📦 1. Install Google Generative AI SDK (for Node.js)
+ai features will be implemented via gemini api use the gemini key entered by the user in the settings page. provide a way for the user to enter the gemini key in the settings page. provide a way for user to select the model to be used for the ai features. as there is no backend . use retrieval augmented generation for the ai features.
+Yes! Here's how you can list available **Gemini models using the Python SDK** for Google Generative AI.
+
+---
+
+### ✅ Step-by-step Guide
+
+#### 📦 1. Install the SDK
 
 ```bash
-npm install @google/generative-ai
+pip install google-generativeai
 ```
 
 ---
 
-### 🔑 2. Setup API Key
+#### 🔑 2. Set Your API Key
 
 Get your API key from: [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
 
-```js
-const genAI = require("@google/generative-ai");
+```python
+import google.generativeai as genai
 
-const API_KEY = "YOUR_API_KEY_HERE";
-
-const client = new genAI.GoogleGenerativeAI(API_KEY);
+genai.configure(api_key="YOUR_API_KEY_HERE")
 ```
 
 ---
 
-### 📋 3. List Available Models
+#### 📋 3. List Available Models
 
-Use the `listModels()` function:
+```python
+def list_models():
+    models = genai.list_models()
+    for model in models:
+        print(f"Model name: {model.name}")
+        print(f"  Description: {getattr(model, 'description', 'N/A')}")
+        print(f"  Input token limit: {getattr(model, 'input_token_limit', 'N/A')}")
+        print(f"  Output token limit: {getattr(model, 'output_token_limit', 'N/A')}")
+        print("-" * 40)
 
-```js
-async function listModels() {
-  const models = await client.listModels();
-  models.forEach((model) => {
-    console.log(`Model name: ${model.name}`);
-    console.log(`  Description: ${model.description}`);
-    console.log(`  Input token limit: ${model.inputTokenLimit}`);
-    console.log(`  Output token limit: ${model.outputTokenLimit}`);
-    console.log("---------------------------");
-  });
-}
-
-listModels().catch(console.error);
+list_models()
 ```
 
 ---
 
-### ✅ Output Example
+### 🧠 Example Output
 
-This will return available models like:
-
-```
+```text
 Model name: models/gemini-1.5-pro
-Model name: models/gemini-1.0-pro
+  Description: Gemini 1.5 Pro model
+  Input token limit: 32768
+  Output token limit: 8192
+----------------------------------------
 Model name: models/gemini-1.5-flash
+  Description: Gemini 1.5 Flash model
+  Input token limit: 32768
+  Output token limit: 8192
+----------------------------------------
 ...
 ```
 
----
-
-### 🧠 Notes
-
-* You must have billing enabled and API access.
-* Only accessible via `@google/generative-ai` client or direct REST calls to:
-
-  ```
-  GET https://generativelanguage.googleapis.com/v1beta/models
-  ```
+Let me know if you want code for **calling a specific Gemini model** or **streaming responses** as well!
 
 
 strictly include the above code in the masterplan.md file to get the list of available models. continue with suggested answers you provided

@@ -1,56 +1,21 @@
 name: CI
 
-# Trigger workflow on push events to the main branch or on pull requests to main
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build-and-test:
-    name: Build and Test
+  validate:
+    name: Validate
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'uv'
-
-      - name: Install dependencies with uv
+      - uses: actions/checkout@v4
+      - name: Check for secrets
         run: |
-          python -m uv pip install --quiet --frozen --system
-          python -m uv pip config set global.quiet true
-          python -m uv pip install --system pytest ruff
-
-      - name: Lint with Ruff
-        run: |
-          # Format code and check for linting errors
-          ruff check . --fix
-          ruff format .
-
-      - name: Test with Pytest
-        run: |
-          # Run tests, including coverage report generation
-          pytest --cov=./ --cov-report=xml
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          name: CogniForge-Architectural-Agent-System-Prompts-Library
-          slug: chirag127/CogniForge-Architectural-Agent-System-Prompts-Library
-          file: ./coverage.xml
-          flags: unittests
-          fail_ci_if_error: true
+          if grep -r "mcp_k1\|43c007274e4c\|whyiswhen1234\|5c1be675-6c37" library/ docs/ 2>/dev/null; then
+            echo "ERROR: secrets detected in library or docs"
+            exit 1
+          fi
+          echo "No secrets found."

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompts — Expert AI Prompt Library</title>
+  <meta name="description" content="Curated expert AI prompt library: software architecture, DevOps, app specs, agent system prompts, and reusable templates." />
+  <style>
+    :root {
+      --bg: #0d0d0f;
+      --surface: #161618;
+      --border: #2a2a2d;
+      --text: #e8e8ea;
+      --muted: #888890;
+      --accent: #6b8cff;
+      --accent-hover: #8aa3ff;
+      --tag-bg: #1e1e24;
+      --tag-text: #9b9baa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; line-height: 1.6; }
+
+    header { border-bottom: 1px solid var(--border); padding: 2rem 0 1.5rem; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; }
+    header p { color: var(--muted); margin-top: 0.4rem; font-size: 0.95rem; }
+    header nav { margin-top: 1rem; display: flex; gap: 1rem; align-items: center; }
+    header nav a { color: var(--accent); text-decoration: none; font-size: 0.875rem; }
+    header nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+    .badge { display: inline-block; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--border); border-radius: 4px; padding: 0.2rem 0.55rem; font-size: 0.75rem; font-weight: 500; }
+
+    main { padding: 2rem 0 4rem; }
+    section { margin-bottom: 2.5rem; }
+    section h2 { font-size: 1rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; text-decoration: none; color: inherit; transition: border-color 0.15s, background 0.15s; }
+    .card:hover { border-color: var(--accent); background: #191921; }
+    .card-title { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+    .card-path { font-size: 0.75rem; color: var(--muted); font-family: monospace; word-break: break-all; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; color: var(--muted); font-size: 0.8rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Prompts</h1>
+    <p>Curated expert AI prompt library — software architecture, DevOps, app specs, agent system prompts, and reusable templates.</p>
+    <nav>
+      <a href="https://github.com/chirag127/prompts">GitHub</a>
+      <a href="https://github.com/chirag127/prompts/blob/main/LICENSE">MIT License</a>
+      <span class="badge">67 prompts</span>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section>
+      <h2>Agent System Prompts</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/ai-cto.md">
+          <div class="card-title">AI CTO — Masterplan Architect</div>
+          <div class="card-path">library/agents/ai-cto.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/ai-cto-simple.md">
+          <div class="card-title">AI CTO — Simple Masterplan</div>
+          <div class="card-path">library/agents/ai-cto-simple.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/masterplan-generator.md">
+          <div class="card-title">Masterplan Generator</div>
+          <div class="card-path">library/agents/masterplan-generator.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/agent-guidelines.md">
+          <div class="card-title">Agent Operational Guidelines</div>
+          <div class="card-path">library/agents/agent-guidelines.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/augment-agent-guidelines.md">
+          <div class="card-title">Augment Agent Guidelines</div>
+          <div class="card-path">library/agents/augment-agent-guidelines.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/augment-code-guidelines.md">
+          <div class="card-title">Augment Code A-Z Guidelines</div>
+          <div class="card-path">library/agents/augment-code-guidelines.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/sprint-planner.md">
+          <div class="card-title">Sprint Planner</div>
+          <div class="card-path">library/agents/sprint-planner.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/react-native-stack-2025.md">
+          <div class="card-title">React Native Stack 2025</div>
+          <div class="card-path">library/agents/react-native-stack-2025.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/sequential-thinking.md">
+          <div class="card-title">Sequential Thinking Pattern</div>
+          <div class="card-path">library/agents/sequential-thinking.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/common-patterns.md">
+          <div class="card-title">Common Prompt Patterns</div>
+          <div class="card-path">library/agents/common-patterns.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/gemini-agent.md">
+          <div class="card-title">Gemini Agent</div>
+          <div class="card-path">library/agents/gemini-agent.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/agents/vibe-coding-tutorial.md">
+          <div class="card-title">Vibe Coding Tutorial</div>
+          <div class="card-path">library/agents/vibe-coding-tutorial.md</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>App Specs &amp; PRDs</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/all-pdf-tools-react-native.md">
+          <div class="card-title">All PDF Tools — React Native</div>
+          <div class="card-path">library/app-specs/all-pdf-tools-react-native.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/all-pdf-tools-nextjs.md">
+          <div class="card-title">All PDF Tools — Next.js</div>
+          <div class="card-path">library/app-specs/all-pdf-tools-nextjs.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/youtube-summarizer-app.md">
+          <div class="card-title">YouTube Summarizer App</div>
+          <div class="card-path">library/app-specs/youtube-summarizer-app.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/youtube-summarizer-prd.md">
+          <div class="card-title">YouTube Summarizer PRD</div>
+          <div class="card-path">library/app-specs/youtube-summarizer-prd.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/youtube-summarizer-browser-ext.md">
+          <div class="card-title">YouTube Summarizer Browser Ext</div>
+          <div class="card-path">library/app-specs/youtube-summarizer-browser-ext.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/wordtune-extension.md">
+          <div class="card-title">Wordtune Clone Extension</div>
+          <div class="card-path">library/app-specs/wordtune-extension.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/webpage-chat-extension.md">
+          <div class="card-title">Webpage Chat Extension</div>
+          <div class="card-path">library/app-specs/webpage-chat-extension.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/qrsay-call-waiter.md">
+          <div class="card-title">QRSay — Call Waiter Feature</div>
+          <div class="card-path">library/app-specs/qrsay-call-waiter.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/text-warden-extension.md">
+          <div class="card-title">Text Warden Extension</div>
+          <div class="card-path">library/app-specs/text-warden-extension.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/quick-session-loader-ext.md">
+          <div class="card-title">Quick Session Loader</div>
+          <div class="card-path">library/app-specs/quick-session-loader-ext.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/vscode-extension-spec.md">
+          <div class="card-title">VS Code Extension Spec</div>
+          <div class="card-path">library/app-specs/vscode-extension-spec.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/git-commit-assistant.md">
+          <div class="card-title">Git Commit Assistant</div>
+          <div class="card-path">library/app-specs/git-commit-assistant.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/contextual-sidebar.md">
+          <div class="card-title">Contextual Sidebar</div>
+          <div class="card-path">library/app-specs/contextual-sidebar.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/historical-context-tool.md">
+          <div class="card-title">Historical Context Tool</div>
+          <div class="card-path">library/app-specs/historical-context-tool.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/prompt-boost.md">
+          <div class="card-title">Prompt Boost</div>
+          <div class="card-path">library/app-specs/prompt-boost.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/app-specs/masterplan-generator-allpdf.md">
+          <div class="card-title">Masterplan Generator (All PDF)</div>
+          <div class="card-path">library/app-specs/masterplan-generator-allpdf.md</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Templates</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/templates/browser-extension-template.md">
+          <div class="card-title">Browser Extension Template</div>
+          <div class="card-path">library/templates/browser-extension-template.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/templates/web-app-template.md">
+          <div class="card-title">Web App Template</div>
+          <div class="card-path">library/templates/web-app-template.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/templates/masterplan-template.md">
+          <div class="card-title">Masterplan.md Template</div>
+          <div class="card-path">library/templates/masterplan-template.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/templates/browser-ext-landing-page.md">
+          <div class="card-title">Browser Ext Landing Page Prompt</div>
+          <div class="card-path">library/templates/browser-ext-landing-page.md</div>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>MCP Server Configs</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/mcp/mcp-servers-guide.md">
+          <div class="card-title">MCP Servers Guide</div>
+          <div class="card-path">library/mcp/mcp-servers-guide.md</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/mcp/mcp-config-augment.json">
+          <div class="card-title">MCP Config — Augment</div>
+          <div class="card-path">library/mcp/mcp-config-augment.json</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/mcp/mcp-config-kiro.json">
+          <div class="card-title">MCP Config — Kiro</div>
+          <div class="card-path">library/mcp/mcp-config-kiro.json</div>
+        </a>
+        <a class="card" href="https://github.com/chirag127/prompts/blob/main/library/mcp/mcp-servers-config.json">
+          <div class="card-title">MCP Servers Config</div>
+          <div class="card-path">library/mcp/mcp-servers-config.json</div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>MIT License &nbsp;·&nbsp; <a href="https://github.com/chirag127/prompts">github.com/chirag127/prompts</a> &nbsp;·&nbsp; by <a href="https://github.com/chirag127">chirag127</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
