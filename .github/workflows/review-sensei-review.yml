@@ -142,7 +142,7 @@ jobs:
             intent=$(python - <<'PYROUTE'
           import os, re
           body = os.environ.get("COMMENT_BODY", "")
-          pattern = r"\A@(?:(?ai:reviewsensei)|sensei)[ \t]+(?:(?ai:re(?:[ \t]|-)?scan)|(?ai:review)[ \t]+(?ai:remaining))(?:[ \t]+(?ai:commit)[ \t]+[a-fA-F0-9]{7,40})?[ \t\r\n]*\Z"
+          pattern = r"\A@(?ai:reviewsensei|sensei)[ \t]+(?:(?ai:re(?:[ \t]|-)?scan)|(?ai:review)[ \t]+(?ai:remaining))(?:[ \t]+(?ai:commit)[ \t]+[a-fA-F0-9]{7,40})?[ \t\r\n]*\Z"
           print("review" if len(body.encode()) <= 4096 and re.fullmatch(pattern, body) else "")
           PYROUTE
             )
@@ -179,8 +179,8 @@ jobs:
           sha_full = re.compile(r"^[a-f0-9]{40}$")
           sha_prefix = re.compile(r"^[a-f0-9]{7,39}$")
           ref = re.compile(r"^[A-Za-z0-9._/-]+$")
-          rescan = re.compile(r"\A(?:@sensei|(?ai:@reviewsensei))[ \t]+(?i:re(?:[ \t]|-)?scan)(?:[ \t]+(?ai:commit)[ \t]+(?P<commit>[a-fA-F0-9]{7,40}))?\s*\Z")
-          remaining = re.compile(r"\A(?:@sensei|(?ai:@reviewsensei))[ \t]+(?ai:review)[ \t]+(?ai:remaining)(?:[ \t]+(?ai:commit)[ \t]+(?P<commit>[a-fA-F0-9]{7,40}))?[ \t\r\n]*\Z")
+          rescan = re.compile(r"\A(?ai:@sensei|@reviewsensei)[ \t]+(?i:re(?:[ \t]|-)?scan)(?:[ \t]+(?ai:commit)[ \t]+(?P<commit>[a-fA-F0-9]{7,40}))?\s*\Z")
+          remaining = re.compile(r"\A(?ai:@sensei|@reviewsensei)[ \t]+(?ai:review)[ \t]+(?ai:remaining)(?:[ \t]+(?ai:commit)[ \t]+(?P<commit>[a-fA-F0-9]{7,40}))?[ \t\r\n]*\Z")
           pull = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
           event_name = sys.argv[2]
           comment_body = sys.argv[3] if len(sys.argv) > 3 else ""
@@ -251,7 +251,7 @@ jobs:
                       print("::error::explicit rescan comment exceeds 4096 UTF-8 bytes", file=sys.stderr)
                       raise SystemExit(1)
                   resolved_head = choose_head(match.group("commit"))
-              elif isinstance(comment_body, str) and len(comment_body.encode("utf-8")) <= 4096 and re.search(r"\A@(?:(?ai:reviewsensei)|sensei)[ \t]+(?:review[ \t]+(?:status|pause|continue|reenroll)|verify|(?:dismiss|defer|accept-risk)[ \t]+[a-f0-9]{16,64}[ \t]+--reason[ \t]+\S[^\r\n]*|(?:review[ \t]+)?accept-coverage-uncertainty[ \t]+--reason[ \t]+\S[^\r\n]*|i[ \t]+reviewed[ \t]+the[ \t]+media[ \t]+files[ \t]+and[ \t]+i[ \t]+approve|override[ \t]+(?:(?:rs-)?[a-f0-9]{6,64})(?:(?:[ \t]*,[ \t]*|[ \t]+)(?:rs-)?[a-f0-9]{6,64}){0,9}(?:[ \t]+acceptable[ \t]+risk)?|(?:(?:rs-)?[a-f0-9]{6,64})(?:(?:[ \t]*,[ \t]*|[ \t]+)(?:rs-)?[a-f0-9]{6,64}){0,9}[ \t]+(?:is|are)[ \t]+acceptable[ \t]+risk)[ \t\r\n]*\Z", comment_body, re.IGNORECASE):
+              elif isinstance(comment_body, str) and len(comment_body.encode("utf-8")) <= 4096 and re.search(r"\A@(?ai:reviewsensei|sensei)[ \t]+(?:review[ \t]+(?:status|pause|continue|reenroll)|verify|(?:dismiss|defer|accept-risk)[ \t]+[a-f0-9]{16,64}[ \t]+--reason[ \t]+\S[^\r\n]*|(?:review[ \t]+)?accept-coverage-uncertainty[ \t]+--reason[ \t]+\S[^\r\n]*|i[ \t]+reviewed[ \t]+the[ \t]+media[ \t]+files[ \t]+and[ \t]+i[ \t]+approve|override[ \t]+(?:(?:rs-)?[a-f0-9]{6,64})(?:(?:[ \t]*,[ \t]*|[ \t]+)(?:rs-)?[a-f0-9]{6,64}){0,9}(?:[ \t]+acceptable[ \t]+risk)?|(?:(?:rs-)?[a-f0-9]{6,64})(?:(?:[ \t]*,[ \t]*|[ \t]+)(?:rs-)?[a-f0-9]{6,64}){0,9}[ \t]+(?:is|are)[ \t]+acceptable[ \t]+risk)[ \t\r\n]*\Z", comment_body, re.IGNORECASE):
                   operation = "command"
               else:
                   operation = "reply"
